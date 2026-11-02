@@ -121,7 +121,7 @@ export class Hemel3D {
     const zon = positie(D.perSlug.zon, t, plek, D);
     this.zon = { ...zon, v: vec(zon.az, zon.hoogte) };
     this.maan = maanfase(t);
-    this.lichamen = D.hemel.filter((x) => (x.ae && x.ae !== "Pluto") || (x.soort === "ster" && x.baan?.ster) || x.slug === "iss" || x.slug === this.markeer)
+    this.lichamen = D.hemel.filter((x) => (x.ae && x.ae !== "Pluto") || (x.soort === "ster" && x.baan?.ster) || x.slug === this.markeer)
       .map((it) => { const p = it.slug === "zon" ? zon : positie(it, t, plek, D); return p ? { it, p, v: vec(p.az, p.hoogte) } : null; }).filter(Boolean);
   }
 
@@ -252,7 +252,7 @@ export class Hemel3D {
     }
     c.globalAlpha = 1;
 
-    // ---------- zon, maan, planeten, het ISS ----------
+    // ---------- zon, maan, planeten ----------
     const plekken = [];
     const verborgen = (it) => it.p.hoogte < randHoogte(it.p.az) - 0.2;
     for (const o of this.lichamen) {
@@ -284,7 +284,7 @@ export class Hemel3D {
         maanTekenen(c, p[0], p[1], rr, this.maan.hoek, hoekZon);
       } else {
         const ster = it.soort === "ster";
-        rr = (ster ? 2.6 : it.slug === "iss" ? 2.8 : 3.6) * Math.min(1.6, zoom);
+        rr = (ster ? 2.6 : 3.6) * Math.min(1.6, zoom);
         const kleur = ster ? "#FFFFFF" : PLANEETKLEUR[it.ae] || "#FFFFFF";
         if (!ster) { c.globalAlpha = 0.7 * (1 - dag * 0.7); const g = rr * 6; c.drawImage(this.gloed, p[0] - g, p[1] - g, 2 * g, 2 * g); c.globalAlpha = 1; }
         c.fillStyle = kleur; c.beginPath(); c.arc(p[0], p[1], rr, 0, 2 * Math.PI); c.fill();

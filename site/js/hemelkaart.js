@@ -118,7 +118,7 @@ export function hemelkaartPagina(app, D, { markeer = null, tijd = null } = {}) {
   function vulKaartje(slug) {
     const h = D.perSlug[slug]; if (!h) return;
     const p = PLEK.huidig(), t = tijdNu(), pos = positie(h, t, p, D);
-    const oo = slug === "iss" ? null : opOnder(h, t, p, D);
+    const oo = opOnder(h, t, p, D);
     const f = D.fotos[h.foto];
     const regels = [];
     if (pos) regels.push(esc(KAART.waarZin(pos)) + ".");
@@ -126,7 +126,6 @@ export function hemelkaartPagina(app, D, { markeer = null, tijd = null } = {}) {
     else if (oo?.onder) regels.push(`Gaat onder om ${klok(oo.onder)}${dag(oo.onder) !== dag(t) ? ` (${dag(oo.onder).split(" ")[0]})` : ""}.`);
     if (slug === "zon") regels.push("Kijk nooit recht in de zon.");
     else if (pos?.hoogte > 0 && doek.zonHoogte > -3 && slug !== "maan") regels.push("Het is nog te licht om te zien.");
-    if (slug === "iss") regels.push("Het ISS schuift in een paar minuten over de hemel.");
     kaartje.innerHTML = `
       <div class="sim-kaartje-beeld">${f ? `<img src="${f.pad}" alt="" width="96" height="96">` : `<span>${esc(h.titel.charAt(0))}</span>`}</div>
       <div class="sim-kaartje-tekst">

@@ -1,12 +1,8 @@
 // Rekenen aan de hemel, helemaal in de browser. Getest in fase 1 tegen JPL Horizons en Skyfield:
-// zon, maan, planeten en Pluto binnen 0,3 boogminuut; op- en ondergang op de minuut; ISS op seconden.
+// zon, maan, planeten en Pluto binnen 0,3 boogminuut; op- en ondergang op de minuut.
 // - astronomy-engine (MIT, Don Cross): zon, maan, planeten, manen van Jupiter, sterren
-// - satellite.js (MIT): het ISS uit de baangegevens (TLE), elke dag ververst door een GitHub Action
 // - Ceres, Eris en kometen: een Kepler-baan uit de JPL Small-Body Database (zonder storingen door planeten)
 import * as A from "./vendor/astronomy.js";
-import { twoline2satrec } from "./vendor/satellite/io.js";
-import { propagate, gstime } from "./vendor/satellite/propagation.js";
-import { eciToEcf, ecfToLookAngles, eciToGeodetic } from "./vendor/satellite/transforms.js";
 
 export { A };
 // Als je nog geen plek hebt gekozen: het midden van Nederland. Tussen Groningen en Maastricht scheelt dat hooguit een paar minuten.
@@ -48,42 +44,6 @@ export function helio(item, datum) {
   return null;
 }
 
-let satCache = null;
-function satrec(tle) {
-  if (!satCache || satCache.l1 !== tle.line1) satCache = { l1: tle.line1, rec: twoline2satrec(tle.line1, tle.line2) };
-  return satCache.rec;
-}
-export function issNu(tle, datum = new Date()) {
-  const pv = propagate(satrec(tle), datum);
-  if (!pv?.position) return null;
-  const g = eciToGeodetic(pv.position, gstime(datum));
-  return { lat: g.latitude * 180 / Math.PI, lon: g.longitude * 180 / Math.PI, hoogte_km: g.height };
-}
-
-// Ruimtesondes: hun plek komt van JPL Horizons (een Action haalt die elke maand op, per dag voor de komende twee maanden).
-// Hier alleen tussen twee dagen in schatten. Geeft { ra, dec, km } of null als de gegevens te oud zijn.
-const MAANDEN = { Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5, Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11 };
-export function sondeNu(D, slug, datum = new Date()) {
-  const rijen = D?.sondes?.[slug]?.nu;
-  if (!rijen) return null;
-  const t = (r) => { const [j, m, d] = r[0].split("-"); return Date.UTC(+j, MAANDEN[m], +d); };
-  for (let i = 0; i < rijen.length - 1; i++) {
-    const a = t(rijen[i]), b = t(rijen[i + 1]);
-    if (+datum >= a && +datum <= b) {
-      const f = (+datum - a) / (b - a), r0 = rijen[i], r1 = rijen[i + 1];
-      return { ra: r0[1] + (r1[1] - r0[1]) * f, dec: r0[2] + (r1[2] - r0[2]) * f, km: r0[3] + (r1[3] - r0[3]) * f };
-    }
-  }
-  return null;
-}
-function sondeAlsSter(D, item, datum) {
-  const s = sondeNu(D, item.sonde, datum);
-  if (!s) return null;
-  // voor op- en ondergang: als een (zeer verre) ster; astronomy-engine wil minstens 1 lichtjaar
-  A.DefineStar(A.Body.Star2, s.ra / 15, s.dec, Math.max(1, s.km / 9.4607e12));
-  return { body: A.Body.Star2, ...s };
-}
-
 // Waar staat het? { az, hoogte, mag, bij } of null (de aarde; of geen gegevens)
 // bij: als het te klein is om los te zien, het hemellichaam waar het vlak naast staat
 export function positie(item, datum, plek, D) {
@@ -119,26 +79,6 @@ export function positie(item, datum, plek, D) {
     }
     return { ...horVanVector(new A.Vector(v.x - aarde.x - o.x, v.y - aarde.y - o.y, v.z - aarde.z - o.z, t), t, obs), afstand_ae: Math.hypot(v.x - aarde.x, v.y - aarde.y, v.z - aarde.z) };
   }
-  if (item.sonde && sondeNu(D, item.sonde, datum)) {
-    const z = sondeNu(D, item.sonde, datum);
-    // vector vanuit het middelpunt van de aarde (AE, J2000), min de plek van de waarnemer: dat telt voor de Webb-telescoop
-    const r = Math.PI / 180, ae = z.km / 149597870.7, cd = Math.cos(z.dec * r), o = A.ObserverVector(t, obs, false);
-    const p = horVanVector(new A.Vector(ae * cd * Math.cos(z.ra * r) - o.x, ae * cd * Math.sin(z.ra * r) - o.y, ae * Math.sin(z.dec * r) - o.z, t), t, obs);
-    return { ...p, afstand_km: z.km, ...(item.ouder ? { bij: item.ouder } : {}) };
-  }
-  if (item.plek && D) {
-    const ouder = D.perSlug[item.plek];
-    const p = ouder && positie(ouder, datum, plek, D);
-    return p ? { az: p.az, hoogte: p.hoogte, bij: item.plek } : null;
-  }
-  if (item.slug === "iss") {
-    const tle = D?.iss;
-    if (!tle) return null;
-    const pv = propagate(satrec(tle), datum);
-    if (!pv?.position) return null;
-    const la = ecfToLookAngles({ longitude: plek.lon * Math.PI / 180, latitude: plek.lat * Math.PI / 180, height: (plek.hoogte || 0) / 1000 }, eciToEcf(pv.position, gstime(datum)));
-    return { az: la.azimuth * 180 / Math.PI, hoogte: la.elevation * 180 / Math.PI, afstand_km: la.rangeSat };
-  }
   if (item.ouder && D) { // kleine manen: vlak bij hun planeet
     const ouder = D.perSlug[item.ouder];
     const p = ouder && positie(ouder, datum, plek, D);
@@ -147,16 +87,13 @@ export function positie(item, datum, plek, D) {
   return null;
 }
 
-// Op en onder in de komende 24 uur. Voor manen: die van hun planeet. Voor het ISS: niet (zie issOvergangen).
+// Op en onder in de komende 24 uur. Voor manen: die van hun planeet.
 export function opOnder(item, datum, plek, D) {
   const obs = waarnemer(plek), t = A.MakeTime(datum);
   let body = null;
   if (item.ae) body = A.Body[item.ae];
   else if (item.baan?.ster) { const s = item.baan.ster; A.DefineStar(A.Body.Star1, s.ra / 15, s.dec, 3.26156 / (s.parallax_mas / 1000)); body = A.Body.Star1; }
   else if (MANEN_JUPITER[item.slug]) body = A.Body.Jupiter;
-  else if (item.sonde && sondeNu(D, item.sonde, datum)) body = sondeAlsSter(D, item, datum)?.body;
-  else if (item.sonde && D?.perSlug[item.ouder]?.ae) body = A.Body[D.perSlug[item.ouder].ae];
-  else if (item.plek && D?.perSlug[item.plek]?.ae) body = A.Body[D.perSlug[item.plek].ae];
   else if (item.ouder && D?.perSlug[item.ouder]?.ae) body = A.Body[D.perSlug[item.ouder].ae];
   if (!body) return null;
   const op = A.SearchRiseSet(body, obs, +1, t, 1), onder = A.SearchRiseSet(body, obs, -1, t, 1);
@@ -224,38 +161,6 @@ function sterMag(h) {
   const c = h.cijfers.find((c) => c.naam === "Helderheid");
   return c ? parseFloat(c.tekst.replace(",", ".")) : null;
 }
-
-// ISS-overgangen boven 10°, met de vraag of je hem ziet: het ISS moet in de zon staan en het bij jou donker zijn.
-export function issOvergangen(tle, plek, van, uren = 36) {
-  if (!tle) return [];
-  const rec = satrec(tle), obs = waarnemer(plek), uit = [];
-  let bezig = null;
-  for (let d = +van; d < +van + uren * 3600e3; d += 10e3) {
-    const datum = new Date(d), pv = propagate(rec, datum);
-    if (!pv?.position) continue;
-    const la = ecfToLookAngles({ longitude: plek.lon * Math.PI / 180, latitude: plek.lat * Math.PI / 180, height: 0 }, eciToEcf(pv.position, gstime(datum)));
-    const h = la.elevation * 180 / Math.PI;
-    if (h > 10) {
-      if (!bezig) bezig = { op: d, max: -90, azOp: la.azimuth * 180 / Math.PI };
-      bezig.azOnder = la.azimuth * 180 / Math.PI;
-      if (h > bezig.max) {
-        const t = A.MakeTime(datum), zon = A.GeoVector(A.Body.Sun, t, false), zl = zon.Length();
-        const s = [zon.x / zl, zon.y / zl, zon.z / zl], r = pv.position, dot = r.x * s[0] + r.y * s[1] + r.z * s[2];
-        const loodrecht = Math.hypot(r.x - dot * s[0], r.y - dot * s[1], r.z - dot * s[2]);
-        const zq = A.Equator(A.Body.Sun, t, obs, true, true);
-        Object.assign(bezig, { max: h, top: d, azTop: la.azimuth * 180 / Math.PI, inZon: dot > 0 || loodrecht > 6371,
-          zonHoogte: A.Horizon(t, obs, zq.ra, zq.dec, null).altitude });
-      }
-    } else if (bezig) {
-      uit.push({ ...bezig, onder: d, zichtbaar: bezig.inZon && bezig.zonHoogte < -6 });
-      bezig = null;
-    }
-  }
-  return uit;
-}
-
-// Hoe oud zijn de baangegevens van het ISS? In uren.
-export const tleLeeftijd = (tle) => tle ? (Date.now() / 1000 - tle.epoch) / 3600 : null;
 
 // Hemelkaart: azimut en hoogte van een punt RA/Dec (J2000, graden) voor de sterrenkaart
 export function sterHor(ra, dec, t, obs) {

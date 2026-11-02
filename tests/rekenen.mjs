@@ -3,14 +3,14 @@
 import { readFileSync } from "node:fs";
 import { positie, vanavond, avond, A, waarnemer } from "../site/js/hemel.js";
 const hemel = JSON.parse(readFileSync(new URL("../site/data/hemel.json", import.meta.url)));
-const D = { hemel, perSlug: Object.fromEntries(hemel.map((h) => [h.slug, h])), iss: null };
+const D = { hemel, perSlug: Object.fromEntries(hemel.map((h) => [h.slug, h])) };
 const hz = JSON.parse(readFileSync(new URL("../datacheck/uitkomsten/horizons.json", import.meta.url)));
 const plek = { lat: hz.plek.lat, lon: hz.plek.lon, hoogte: hz.plek.hoogte_m };
 const hoek = (a1, h1, a2, h2) => { const r = Math.PI / 180; return Math.acos(Math.min(1, Math.sin(h1 * r) * Math.sin(h2 * r) + Math.cos(h1 * r) * Math.cos(h2 * r) * Math.cos((a1 - a2) * r))) / r * 60; };
 // Horizons is zonder breking; positie() rekent met breking. Vergelijk daarom alleen boven 10° hoogte, met een ruime marge voor breking (< 6').
 let fout = 0;
 for (const [slug, rijen] of Object.entries(hz.uitkomsten)) {
-  const h = D.perSlug[slug]; if (!h || slug === "iss") continue;
+  const h = D.perSlug[slug]; if (!h) continue;
   hz.momenten_utc.forEach((m, i) => {
     const r = rijen[i]; if (!r || r.fout) return;
     const hh = +r["Elevation_(a-app)"]; if (hh < 10) return;

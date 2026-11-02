@@ -82,46 +82,7 @@
  "tsjoerjoemov": {
   "nasa_id": "PIA21068"
  },
- "iss": {
-  "nasa_id": "iss066e080762"
- },
  "betelgeuze": {
   "eso": "eso2003c"
- },
- "voyager-1": {
-  "nasa_id": "PIA21729"
- },
- "voyager-2": {
-  "nasa_id": "PIA21733"
- },
- "new-horizons": {
-  "nasa_id": "KSC-05pd2494"
- },
- "juno": {
-  "nasa_id": "PIA13928"
- },
- "cassini": {
-  "nasa_id": "KSC-97PC1385"
- },
- "perseverance": {
-  "nasa_id": "PIA24542"
- },
- "hubble": {
-  "nasa_id": "s125e011763"
- },
- "jwst": {
-  "nasa_id": "GSFC_20171208_Archive_e000079"
- },
- "apollo-11": {
-  "nasa_id": "as11-40-5903"
- },
- "armstrong": {
-  "nasa_id": "9018112"
- },
- "kuipers": {
-  "nasa_id": "iss030e033548"
- },
- "ockels": {
-  "nasa_id": "S81-33399"
  }
 }

@@ -14,17 +14,17 @@ site/                 alles wat live gaat
   js/                 app (router, scherm per hemellichaam), hemel (rekenen), kaart (sterrenkaart), baan (simulatie),
                       hemelkaart (de hemel op het hele scherm), hemel3d (om je heen: stereografisch, Melkweg, landschap),
                       vanavond, plek (locatie, alleen in het geheugen), wikidata (zoeken buiten de lijst),
-                      kinderen, onderzoekjes, mijn, geluid; vendor/ astronomy-engine en satellite.js (MIT)
-  data/               hemel.json, fotos.json, geluid.json, iss.json, sterren.json, sterrenbeelden.json, melkweg.json (gebouwd)
+                      kinderen, onderzoekjes, mijn, geluid; vendor/ astronomy-engine (MIT)
+  data/               hemel.json, fotos.json, geluid.json, bollen.json, sterren.json, sterrenbeelden.json, melkweg.json (gebouwd)
   fotos/ klanken/ fonts/
 data/
-  kern.json           de vaste kern van 41 (hemellichamen, ruimtevaartuigen, astronauten), met de hand gekozen
+  kern.json           de vaste kern van 27 hemellichamen, met de hand gekozen
   handwerk/<slug>     weetjes met bron en controlezin, kleur van de foto, zin voor de kinderversie
   foto_keuze.json     welke foto (NASA-id), met de hand gekozen en bekeken
   geluid_keuze.json   welk geluid, en wat voor soort (opname, plasma, sonificatie, reconstructie)
   nagekeken.json      uitkomst van scripts/nakijken.py
   ruw/                automatisch opgehaald
-scripts/              ruw_ophalen, sondes_ophalen (JPL Horizons), nakijken, bouw_site_data, fotos_nasa, geluid_ophalen, tle_ophalen, server
+scripts/              ruw_ophalen, nakijken, bouw_site_data, fotos_nasa, geluid_ophalen, bollen_ophalen, server
 tests/                schermen.js (zes breedtes), klikken.js (interactie), rekenen.mjs (tegen JPL Horizons)
 datacheck/            fase 1
 docs/                 briefing, fase1-datacheck

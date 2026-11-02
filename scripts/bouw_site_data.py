@@ -28,12 +28,8 @@ WD = "https://www.wikidata.org/wiki/"
 # met de hand, met bron: wat in geen van de tabellen staat
 HAND = {
     "eris": [("Diameter", "ongeveer 2400 km", "https://science.nasa.gov/dwarf-planets/eris/", 2400)],
-    "iss": [("Hoogte", "ongeveer 400 km", "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/", None),
-            ("Lengte", "109 m", "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/", 0.109),
-            ("Rondje om de aarde", "ongeveer 90 minuten", "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/", None),
-            ("Bemanning", "meestal 7 mensen", "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/", None)],
 }
-STERRENBEELD = {"poolster": "Kleine Beer", "sirius": "Grote Hond", "betelgeuze": "Orion", "vega": "Lier"}
+STERRENBEELD = {"sirius": "Grote Hond", "betelgeuze": "Orion", "vega": "Lier"}
 STERRENBEELD_FIX = {"Scl": "Beeldhouwer", "Ari": "Ram", "Cnc": "Kreeft"}
 
 
@@ -183,20 +179,11 @@ def main():
             if w.get("mag"): c.append(cijfer("Helderheid", f"{getal(float(w['mag']), 1)}", WD + w["qid"], uitleg="hoe lager, hoe helderder; de zwakste sterren die je ziet zijn ongeveer 6"))
             c.append(cijfer("Sterrenbeeld", STERRENBEELD[s], "https://www.iau.org/public/themes/constellations/"))
             baan["ster"] = {"ra": float(w["ra"]), "dec": float(w["dec"]), "parallax_mas": par}
-        elif k["soort"] in ("ruimtevaartuig", "astronaut"):
-            for naam, tekst, bron in k.get("cijfers", []):
-                c.append(cijfer(naam, tekst, bron))
-            if s == "hubble": baan.update(a_km=6371 + 560, periode_d=95 / 1440, om="aarde")
-        elif s == "iss":
-            for naam, tekst, bron, d in HAND["iss"]:
-                c.append(cijfer(naam, tekst, bron))
-                if d: schaal["lengte_km"] = d
-            baan.update(a_km=6371 + 415, periode_d=92.9 / 1440, om="aarde")
 
         n = nk.get(s, {})
         item = {
             "slug": s, "naam": k["naam"], "titel": k["kort"], "soort": k["soort"], "ouder": k.get("ouder"), "nr": k.get("nr"),
-            "ae": k.get("ae"), "qid": w.get("qid"), "wiki": w.get("nlwiki"), "sonde": k.get("sonde"), "plek": k.get("plek"),
+            "ae": k.get("ae"), "qid": w.get("qid"), "wiki": w.get("nlwiki"),
             "kort": hw.get("kort", ""), "kinderzin": hw.get("kinderzin", ""),
             "weetjes": [{"tekst": x["tekst"], "bron": x["bron"]} for x in hw.get("weetjes", [])],
             "nagekeken": bool(hw) and n.get("alles", False), "nagekeken_datum": n.get("datum"),

@@ -1,6 +1,6 @@
 // Wat zie je vanavond? Uitgerekend in je browser voor jouw plek (of het midden van Nederland).
 // De sterrenkaart is een donker paneel binnen het lichte thema. Met een tijdschuif van zonsondergang tot de ochtend.
-import { vanavond, avond, maanfase, issOvergangen, tleLeeftijd, klok, dag, richting, positie, opOnder, middernachtNa } from "./hemel.js";
+import { vanavond, avond, maanfase, klok, dag, richting, positie, opOnder, middernachtNa } from "./hemel.js";
 import * as KAART from "./kaart.js";
 import * as PLEK from "./plek.js";
 import { maanSvg, esc, naar, GROOT_KNOP } from "./app.js";
@@ -14,7 +14,7 @@ export function vanavondPagina(app, D) {
   app.innerHTML = `<section class="breed vanavond">
     <p class="etiket" data-datum></p>
     <h1 class="index-kop">Wat zie je <span class="accent">vanavond</span>?</h1>
-    <p class="held-sub">Uitgerekend in je eigen browser: welke planeten, de maan, sterren en het ISS je vanavond kunt zien, en waar je moet kijken. Of het bewolkt is, weet de site niet. Kijk dus even naar buiten.</p>
+    <p class="held-sub">Uitgerekend in je eigen browser: welke planeten, de maan en sterren je vanavond kunt zien, en waar je moet kijken. Of het bewolkt is, weet de site niet. Kijk dus even naar buiten.</p>
     <div data-plek></div>
     <div class="vv-twee">
       <div class="vv-kaart">
@@ -26,7 +26,6 @@ export function vanavondPagina(app, D) {
     </div>
     <div class="vv-blokken">
       <div class="vv-blok" data-maan></div>
-      <div class="vv-blok" data-iss></div>
       <div class="vv-blok" data-beelden></div>
       <div class="vv-blok" data-wolken></div>
     </div>
@@ -59,12 +58,6 @@ export function vanavondPagina(app, D) {
     const f = maanfase(nu), m = D.perSlug.maan, oo = opOnder(m, nu, p, D);
     app.querySelector("[data-maan]").innerHTML = `<h2>De maan</h2><div class="vv-maan">${maanSvg(f.hoek, 96)}<div><p class="vv-groot">${Math.round(f.verlicht * 100)}% verlicht</p><p>${esc(f.naam[0].toUpperCase() + f.naam.slice(1))}. ${oo?.op ? `Komt op ${dag(oo.op)} om ${klok(oo.op)}.` : ""} ${oo?.onder ? `Gaat onder ${dag(oo.onder)} om ${klok(oo.onder)}.` : ""}</p></div></div>
       <ul class="vv-fasen">${f.kwartieren.map((k) => `<li><b>${esc(k.naam)}</b> ${new Date(k.datum).toLocaleDateString("nl-NL", { weekday: "short", day: "numeric", month: "long" })}</li>`).join("")}</ul>`;
-    // het ISS
-    const pas = issOvergangen(D.iss, p, av.zonOnder, 16).filter((o) => o.op < +av.ochtend + 3600e3);
-    const zicht = pas.filter((o) => o.zichtbaar), oud = tleLeeftijd(D.iss);
-    app.querySelector("[data-iss]").innerHTML = `<h2>Het ISS</h2>${zicht.length ? `<ul class="overgangen">${zicht.map((o) => `<li class="zichtbaar"><strong>${klok(o.op)}</strong> tot ${klok(o.onder)}: van het ${richting(o.azOp)} naar het ${richting(o.azOnder)}, hoogst ${Math.round(o.max)}°.</li>`).join("")}</ul><p>Je ziet een heldere stip die in een paar minuten over de hemel schuift, zonder te knipperen.</p>`
-      : `<p>Vannacht ${pas.length ? `komt het ISS ${pas.length} keer over, maar steeds in de schaduw van de aarde of terwijl het nog licht is. Dan zie je het niet.` : "komt het ISS niet hoog genoeg over."}</p>`}
-      <p class="noot zacht">Je ziet het ISS alleen als het bij jou donker is en het ISS zelf nog in de zon hangt. Baangegevens ${oud != null ? `van ${Math.round(oud)} uur geleden` : "ontbreken"}. <a href="/hemel/iss?tab=nu" data-link>Meer over het ISS</a></p>`;
     kaart();
   }
 

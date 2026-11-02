@@ -18,10 +18,10 @@ const mix = (a, b, t) => a.map((x, i) => Math.round(x + (b[i] - x) * t));
 const sterKleur = (bv) => bv == null ? WIT : bv < 0 ? "#DCE6FF" : bv < 0.5 ? WIT : bv < 1 ? "#FFF2D6" : bv < 1.4 ? "#FFDDB0" : "#FFC89A";
 
 // Welke hemellichamen uit onze lijst op de kaart staan: zon, maan, planeten (niet Pluto), en op de grote kaart ook
-// de sterren uit de lijst en het ISS. Het gemarkeerde hemellichaam altijd.
+// de sterren uit de lijst. Het gemarkeerde hemellichaam altijd.
 function opKaart(D, opt) {
   return D.hemel.filter((x) => x.slug === opt.markeer || (opt.planeten !== false && x.ae && x.ae !== "Pluto")
-    || (opt.groot && (x.soort === "ster" && x.baan?.ster || x.slug === "iss")));
+    || (opt.groot && x.soort === "ster" && x.baan?.ster));
 }
 
 // opties: { markeer, beeldNamen, sterNamen, lijnen, planeten, klein, groot, uitgelicht: [afkortingen],

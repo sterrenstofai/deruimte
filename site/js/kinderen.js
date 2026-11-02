@@ -9,7 +9,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<
 let opruimen = null;
 
 // Volgorde: eerst wat een kind al kent
-const LIJST = ["maan", "zon", "aarde", "mars", "jupiter", "saturnus", "apollo-11", "kuipers", "iss", "venus", "mercurius", "uranus", "neptunus", "pluto", "perseverance", "hubble", "voyager-1", "armstrong", "io", "europa", "titan", "ceres", "halley", "tsjoerjoemov", "ganymedes", "triton", "charon", "enceladus", "callisto", "phobos", "betelgeuze"];
+const LIJST = ["maan", "zon", "aarde", "mars", "jupiter", "saturnus", "venus", "mercurius", "uranus", "neptunus", "pluto", "io", "europa", "titan", "ceres", "halley", "tsjoerjoemov", "ganymedes", "triton", "charon", "enceladus", "callisto", "phobos", "betelgeuze"];
 
 /* ---------- de stem ---------- */
 
