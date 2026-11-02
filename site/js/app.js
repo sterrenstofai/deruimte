@@ -16,11 +16,11 @@ const ruimOp = () => { for (const f of opruimers) f?.(); opruimers = []; tabOpru
 let _data = null;
 async function data() {
   if (_data) return _data;
-  const [hemel, fotos, geluid, iss, sondes] = await Promise.all(
-    ["/data/hemel.json", "/data/fotos.json", "/data/geluid.json", "/data/iss.json", "/data/sondes.json"].map((u) => fetch(u).then((r) => (r.ok ? r.json() : null)).catch(() => null)),
+  const [hemel, fotos, geluid, iss, sondes, bollen] = await Promise.all(
+    ["/data/hemel.json", "/data/fotos.json", "/data/geluid.json", "/data/iss.json", "/data/sondes.json", "/data/bollen.json"].map((u) => fetch(u).then((r) => (r.ok ? r.json() : null)).catch(() => null)),
   );
   const perSlug = Object.fromEntries(hemel.map((h) => [h.slug, h]));
-  _data = { hemel, perSlug, fotos: fotos || {}, geluid: geluid || {}, iss, sondes: sondes?.sondes || {}, sondesDatum: sondes?.opgehaald };
+  _data = { hemel, perSlug, fotos: fotos || {}, geluid: geluid || {}, iss, sondes: sondes?.sondes || {}, sondesDatum: sondes?.opgehaald, bollen: bollen || {} };
   return _data;
 }
 
@@ -350,6 +350,7 @@ function koppelLijst(D) {
     werkMijnBij();
   };
   veld.addEventListener("input", teken);
+  koppelBollen(D, raster);
   for (const b of app.querySelectorAll("[data-soort]")) b.addEventListener("click", () => {
     const k = b.dataset.soort;
     if (aan.has(k)) aan.delete(k); else aan.add(k);
@@ -357,6 +358,50 @@ function koppelLijst(D) {
     teken();
   });
   teken();
+}
+
+// Met de muis over een foto: de foto wordt een langzaam draaiende bol, gemaakt van een kaart van echte foto's.
+// Alleen met een muis (op een telefoon tik je door), alleen waar zo'n kaart bestaat, en één bol tegelijk.
+function koppelBollen(D, raster) {
+  if (!Object.keys(D.bollen).length || !matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+  const stil = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let actief = null;
+  const stop = () => {
+    if (!actief) return;
+    const { vak, doek, label } = actief;
+    cancelAnimationFrame(actief.anim); actief = null;
+    vak.classList.remove("met-bol");
+    setTimeout(() => { if (!vak.classList.contains("met-bol")) { doek.remove(); label.remove(); } }, 400);
+  };
+  raster.addEventListener("pointerover", (e) => {
+    if (e.pointerType !== "mouse") return;
+    const vak = e.target.closest(".hemel-beeld");
+    if (!vak || vak === actief?.vak) return;
+    const b = D.bollen[vak.getAttribute("href").split("/")[2]];
+    if (!b) return;
+    stop();
+    vak.querySelectorAll(".hemel-bol, .hemel-bol-label").forEach((x) => x.remove());
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    const doek = Object.assign(document.createElement("canvas"), { className: "hemel-bol" });
+    doek.width = doek.height = Math.round(vak.clientWidth * (b.maat || 0.8) * dpr);
+    doek.style.width = doek.style.height = `${(b.maat || 0.8) * 100}%`;
+    const label = Object.assign(document.createElement("span"), { className: "hemel-bol-label", textContent: b.label });
+    vak.append(doek, label);
+    const mij = actief = { vak, doek, label, anim: 0 };
+    Promise.all([import("./bol.js"), import("./bol.js").then((B) => B.laadKaart(b.pad))]).then(([B, k]) => {
+      if (actief !== mij) return;
+      let draai = b.begin || 0, vorige = performance.now();
+      const stap = (nu) => {
+        if (actief !== mij) return;
+        draai += stil ? 0 : (nu - vorige) / 20000; vorige = nu; // een omwenteling in twintig seconden
+        B.tekenBol(doek, k, draai, { kanteling: (b.kanteling || 0) * Math.PI / 180 });
+        if (!vak.classList.contains("met-bol")) vak.classList.add("met-bol");
+        if (!stil) mij.anim = requestAnimationFrame(stap);
+      };
+      mij.anim = requestAnimationFrame(stap);
+    }).catch(() => {});
+  });
+  raster.addEventListener("pointerout", (e) => { if (actief && !actief.vak.contains(e.relatedTarget)) stop(); });
 }
 
 /* ---------- Eén scherm per hemellichaam ---------- */

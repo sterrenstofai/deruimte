@@ -981,3 +981,11 @@ button.sim-chip, a.sim-chip { cursor: pointer; min-height: 40px; }
 .held-onder:hover .held-pijl { color: var(--mint); }
 @media (prefers-reduced-motion: reduce) { .held-doek { transition: none; } }
 .held-hemel .etiket::before { background: var(--mint); }
+
+/* Met de muis over een foto in het overzicht: een draaiende bol van een kaart van echte foto's */
+.hemel-beeld { position: relative; }
+.hemel-bol { position: absolute; left: 50%; top: 50%; translate: -50% -50%; opacity: 0; transition: opacity 350ms ease; pointer-events: none; }
+.hemel-bol-label { position: absolute; left: .45rem; bottom: .45rem; font: 500 .62rem/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--papier); background: rgb(26 26 26 / .7); padding: .3rem .45rem; border-radius: 999px; opacity: 0; transition: opacity 350ms ease; pointer-events: none; }
+.hemel-beeld img { transition: transform 500ms cubic-bezier(.2, .7, .1, 1), opacity 350ms ease; }
+.met-bol .hemel-bol, .met-bol .hemel-bol-label { opacity: 1; }
+.met-bol img { opacity: 0; }
