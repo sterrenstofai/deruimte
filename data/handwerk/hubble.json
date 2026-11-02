@@ -1,0 +1,25 @@
+{
+ "kort": "Een ruimtetelescoop die sinds 1990 om de aarde draait.",
+ "kinderzin": "Hubble is een telescoop in de ruimte. Hij maakt foto's van sterren en sterrenstelsels.",
+ "weetjes": [
+  {
+   "tekst": "Hubble werd op 24 april 1990 gelanceerd.",
+   "bron": "https://science.nasa.gov/mission/hubble/",
+   "controle": "Launch APR 24, 1990"
+  },
+  {
+   "tekst": "Hubble draait op 560 kilometer hoogte om de aarde.",
+   "bron": "https://science.nasa.gov/mission/webb/",
+   "controle": "Hubble orbits 560 kilometers above the Earth"
+  },
+  {
+   "tekst": "Astronauten hebben Hubble in de ruimte gerepareerd. Daardoor werkt hij al zo lang.",
+   "bron": "https://science.nasa.gov/mission/hubble/",
+   "controle": "Its design, technology and serviceability"
+  }
+ ],
+ "foto": {
+  "kleur": "echt",
+  "uitleg": "Hubble wordt losgelaten door de robotarm van de spaceshuttle Atlantis, 19 mei 2009, na de laatste reparatie."
+ }
+}

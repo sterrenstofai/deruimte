@@ -8,6 +8,24 @@
   "alles": true,
   "datum": "2026-11-02"
  },
+ "apollo-11": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "armstrong": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
  "betelgeuze": {
   "weetjes": [
    true,
@@ -18,6 +36,14 @@
   "datum": "2026-11-02"
  },
  "callisto": {
+  "weetjes": [
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "cassini": {
   "weetjes": [
    true,
    true
@@ -86,6 +112,15 @@
   "alles": true,
   "datum": "2026-11-02"
  },
+ "hubble": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
  "io": {
   "weetjes": [
    true,
@@ -104,7 +139,34 @@
   "alles": true,
   "datum": "2026-11-02"
  },
+ "juno": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
  "jupiter": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "jwst": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "kuipers": {
   "weetjes": [
    true,
    true,
@@ -141,6 +203,33 @@
   "datum": "2026-11-02"
  },
  "neptunus": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "new-horizons": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "ockels": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "perseverance": {
   "weetjes": [
    true,
    true,
@@ -238,6 +327,25 @@
   "datum": "2026-11-02"
  },
  "venus": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "voyager-1": {
+  "weetjes": [
+   true,
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "voyager-2": {
   "weetjes": [
    true,
    true,

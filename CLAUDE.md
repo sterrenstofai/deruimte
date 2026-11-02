@@ -1,4 +1,4 @@
-# Heelal (werktitel): werkafspraken
+# De Ruimte (werktitel): werkafspraken
 
 De volledige achtergrond staat in `docs/briefing.md`. Dit zijn de regels die altijd gelden.
 

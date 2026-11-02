@@ -10,7 +10,7 @@ from pathlib import Path
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
-UA = "heelal/0.1 (github.com/sterrenstofai)"
+UA = "de-ruimte/0.1 (github.com/sterrenstofai)"
 
 def haal(url, ruw=False):
     for p in range(4):

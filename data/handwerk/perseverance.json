@@ -1,0 +1,25 @@
+{
+ "kort": "Een robotauto op Mars, die stenen verzamelt.",
+ "kinderzin": "Perseverance is een robotauto op Mars. Hij had een helikoptertje bij zich.",
+ "weetjes": [
+  {
+   "tekst": "Perseverance landde op 18 februari 2021 in een krater op Mars.",
+   "bron": "https://science.nasa.gov/mission/mars-2020-perseverance/",
+   "controle": "18, 2021 Target Jezero Crater, Mars"
+  },
+  {
+   "tekst": "Geen voertuig heeft op een andere wereld zo ver gereden als Perseverance.",
+   "bron": "https://science.nasa.gov/mission/mars-2020-perseverance/",
+   "controle": "has driven farther, faster than any vehicle ever has on the surface of another world"
+  },
+  {
+   "tekst": "Onder Perseverance zat een helikoptertje, Ingenuity. Dat was het eerste vliegtuigje dat op een andere planeet vloog.",
+   "bron": "https://science.nasa.gov/mission/mars-2020-perseverance/",
+   "controle": "Ingenuity became the first aircraft to achieve powered, controlled flight on another planet"
+  }
+ ],
+ "foto": {
+  "kleur": "echt",
+  "uitleg": "Een selfie op Mars, 6 april 2021, met rechts het helikoptertje Ingenuity. Gemaakt met een camera aan de arm van de robot: 62 foto's aan elkaar gezet, daarom zie je de arm niet."
+ }
+}

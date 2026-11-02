@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-UA = "heelal/0.1 (github.com/sterrenstofai)"
+UA = "de-ruimte/0.1 (github.com/sterrenstofai)"
 
 def lees(url):
     with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=60) as r:

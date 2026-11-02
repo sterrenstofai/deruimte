@@ -1,4 +1,4 @@
-# Heelal (werktitel)
+# De Ruimte (werktitel)
 
 De zon, de maan, de planeten, manen, kometen en sterren, voor ouders en kinderen. Met echte foto's, en uitgerekend in de browser: wat zie je vanavond aan de hemel?
 
@@ -17,13 +17,13 @@ site/                 alles wat live gaat
   data/               hemel.json, fotos.json, geluid.json, iss.json, sterren.json, sterrenbeelden.json (gebouwd)
   fotos/ klanken/ fonts/
 data/
-  kern.json           de vaste kern van 29, met de hand gekozen
+  kern.json           de vaste kern van 41 (hemellichamen, ruimtevaartuigen, astronauten), met de hand gekozen
   handwerk/<slug>     weetjes met bron en controlezin, kleur van de foto, zin voor de kinderversie
   foto_keuze.json     welke foto (NASA-id), met de hand gekozen en bekeken
   geluid_keuze.json   welk geluid, en wat voor soort (opname, plasma, sonificatie, reconstructie)
   nagekeken.json      uitkomst van scripts/nakijken.py
   ruw/                automatisch opgehaald
-scripts/              ruw_ophalen, nakijken, bouw_site_data, fotos_nasa, geluid_ophalen, tle_ophalen, server
+scripts/              ruw_ophalen, sondes_ophalen (JPL Horizons), nakijken, bouw_site_data, fotos_nasa, geluid_ophalen, tle_ophalen, server
 tests/                schermen.js (zes breedtes), klikken.js (interactie), rekenen.mjs (tegen JPL Horizons)
 datacheck/            fase 1
 docs/                 briefing, fase1-datacheck

@@ -1,0 +1,25 @@
+{
+ "kort": "De ruimtesonde die als eerste Pluto van dichtbij zag.",
+ "kinderzin": "New Horizons vloog langs Pluto en maakte de eerste scherpe foto's van Pluto.",
+ "weetjes": [
+  {
+   "tekst": "New Horizons was de eerste ruimtesonde die Pluto van dichtbij bekeek, op 14 juli 2015.",
+   "bron": "https://science.nasa.gov/mission/new-horizons/",
+   "controle": "was the first spacecraft to explore Pluto up close"
+  },
+  {
+   "tekst": "Hij vloog op 12.500 kilometer langs Pluto.",
+   "bron": "https://science.nasa.gov/mission/new-horizons/",
+   "controle": "coming within 7,800 miles (12,500 kilometers) of Pluto"
+  },
+  {
+   "tekst": "Begin 2024 was New Horizons 60 keer zo ver van de zon als de aarde.",
+   "bron": "https://science.nasa.gov/mission/new-horizons/",
+   "controle": "New Horizons passed 60 times as far from the Sun as Earth is"
+  }
+ ],
+ "foto": {
+  "kleur": "echt",
+  "uitleg": "New Horizons in een hal van NASA in Florida, november 2005, twee maanden voor de lancering."
+ }
+}

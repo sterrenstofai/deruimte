@@ -9,7 +9,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<
 let opruimen = null;
 
 // Volgorde: eerst wat een kind al kent
-const LIJST = ["maan", "zon", "aarde", "mars", "jupiter", "saturnus", "venus", "mercurius", "uranus", "neptunus", "pluto", "iss", "io", "europa", "titan", "ceres", "halley", "tsjoerjoemov", "ganymedes", "triton", "charon", "enceladus", "callisto", "phobos", "betelgeuze"];
+const LIJST = ["maan", "zon", "aarde", "mars", "jupiter", "saturnus", "apollo-11", "kuipers", "iss", "venus", "mercurius", "uranus", "neptunus", "pluto", "perseverance", "hubble", "voyager-1", "armstrong", "io", "europa", "titan", "ceres", "halley", "tsjoerjoemov", "ganymedes", "triton", "charon", "enceladus", "callisto", "phobos", "betelgeuze"];
 
 /* ---------- de stem ---------- */
 
@@ -51,7 +51,7 @@ export function kinderPagina(app, D) {
 
   app.innerHTML = `
   <section class="kids" aria-label="De ruimte voor kinderen">
-    <a class="kids-weg" href="/" data-link aria-label="Terug naar Heelal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></a>
+    <a class="kids-weg" href="/" data-link aria-label="Terug naar De Ruimte"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></a>
     <p class="kids-bron"></p>
     <div class="kids-podium">
       <button class="kids-pijl kids-vorige" type="button" aria-label="Vorige"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -84,7 +84,7 @@ export function kinderPagina(app, D) {
   let ballonTimer = 0, geveegd = false;
   // de eerste keer wijst een kloppend handje op de foto. Daarna onthouden we (alleen op dit toestel) dat het bekend is.
   const tip = wrap.querySelector(".kids-tip");
-  const TIP = "heelal-kinderen-tik";
+  const TIP = "ruimte-kinderen-tik";
   let tipGezien = false;
   try { tipGezien = localStorage.getItem(TIP) === "1"; } catch {}
   tip.hidden = tipGezien;

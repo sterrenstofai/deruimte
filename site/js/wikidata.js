@@ -6,7 +6,7 @@ const SPARQL = "https://query.wikidata.org/sparql";
 let laatste = 0;
 async function rij() { const wacht = Math.max(0, laatste + 1100 - Date.now()); laatste = Date.now() + wacht; if (wacht) await new Promise((r) => setTimeout(r, wacht)); }
 async function haal(url) {
-  const k = "heelal-wd:" + url;
+  const k = "ruimte-wd:" + url;
   try { const c = sessionStorage.getItem(k); if (c) return JSON.parse(c); } catch {}
   await rij();
   const r = await fetch(url, { headers: { Accept: "application/sparql-results+json, application/json" }, referrerPolicy: "no-referrer" });

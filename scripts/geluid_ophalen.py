@@ -4,7 +4,7 @@ Omzetten naar mp3 en inkorten is een bewerking; bij CC BY mag dat, met vermeldin
 import json, subprocess, tempfile, urllib.request
 from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
-UA = "Mozilla/5.0 (heelal; github.com/sterrenstofai)"
+UA = "Mozilla/5.0 (de-ruimte; github.com/sterrenstofai)"
 keuze = {k: v for k, v in json.loads((ROOT / "data" / "geluid_keuze.json").read_text()).items() if not k.startswith("_")}
 doel = ROOT / "site" / "klanken"; doel.mkdir(parents=True, exist_ok=True)
 uit = {}

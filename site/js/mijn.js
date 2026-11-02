@@ -2,7 +2,7 @@
 // Staat alleen in de browser van dit apparaat (localStorage). Overgenomen van "Mijn vogels" bij Voggels
 // en "Mijn nummers" bij ikhooreengeluidje.
 
-const SLEUTEL = "heelal-mijn-hemel";
+const SLEUTEL = "ruimte-mijn-hemel";
 const luisteraars = new Set();
 
 export function lees() {

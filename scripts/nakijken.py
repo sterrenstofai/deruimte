@@ -9,7 +9,7 @@ from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-UA = "Mozilla/5.0 (heelal-nakijken; github.com/sterrenstofai)"
+UA = "Mozilla/5.0 (de-ruimte-nakijken; github.com/sterrenstofai)"
 
 def norm(s):
     s = html.unescape(s).replace("’", "'").replace("‘", "'").replace("“", '"').replace("”", '"').replace(" ", " ")

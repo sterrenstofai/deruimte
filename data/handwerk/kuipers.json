@@ -1,0 +1,25 @@
+{
+ "kort": "Een Nederlandse astronaut. Hij woonde een half jaar in het ISS.",
+ "kinderzin": "André Kuipers komt uit Nederland. Hij woonde een half jaar in het ruimtestation.",
+ "weetjes": [
+  {
+   "tekst": "André Kuipers werd geboren op 5 oktober 1958 in Amsterdam.",
+   "bron": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Astronauts/Andre_Kuipers",
+   "controle": "Born on 5 October 1958 in Amsterdam"
+  },
+  {
+   "tekst": "Zijn eerste ruimtevlucht was in april 2004: elf dagen naar het ISS.",
+   "bron": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Astronauts/Andre_Kuipers",
+   "controle": "took place from 19–30 April 2004"
+  },
+  {
+   "tekst": "Op 21 december 2011 vertrok hij opnieuw, en bleef tot 1 juli 2012 in het ISS.",
+   "bron": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Astronauts/Andre_Kuipers",
+   "controle": "André and his crewmates returned to Earth on 1 July 2012"
+  }
+ ],
+ "foto": {
+  "kleur": "echt",
+  "uitleg": "André Kuipers knipt zijn haar in het ISS, 30 december 2011. Aan de tondeuse zit een zuigertje dat de haartjes opvangt, anders zweven ze door het station."
+ }
+}

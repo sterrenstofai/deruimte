@@ -60,6 +60,30 @@ export function issNu(tle, datum = new Date()) {
   return { lat: g.latitude * 180 / Math.PI, lon: g.longitude * 180 / Math.PI, hoogte_km: g.height };
 }
 
+// Ruimtesondes: hun plek komt van JPL Horizons (een Action haalt die elke maand op, per dag voor de komende twee maanden).
+// Hier alleen tussen twee dagen in schatten. Geeft { ra, dec, km } of null als de gegevens te oud zijn.
+const MAANDEN = { Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5, Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11 };
+export function sondeNu(D, slug, datum = new Date()) {
+  const rijen = D?.sondes?.[slug]?.nu;
+  if (!rijen) return null;
+  const t = (r) => { const [j, m, d] = r[0].split("-"); return Date.UTC(+j, MAANDEN[m], +d); };
+  for (let i = 0; i < rijen.length - 1; i++) {
+    const a = t(rijen[i]), b = t(rijen[i + 1]);
+    if (+datum >= a && +datum <= b) {
+      const f = (+datum - a) / (b - a), r0 = rijen[i], r1 = rijen[i + 1];
+      return { ra: r0[1] + (r1[1] - r0[1]) * f, dec: r0[2] + (r1[2] - r0[2]) * f, km: r0[3] + (r1[3] - r0[3]) * f };
+    }
+  }
+  return null;
+}
+function sondeAlsSter(D, item, datum) {
+  const s = sondeNu(D, item.sonde, datum);
+  if (!s) return null;
+  // voor op- en ondergang: als een (zeer verre) ster; astronomy-engine wil minstens 1 lichtjaar
+  A.DefineStar(A.Body.Star2, s.ra / 15, s.dec, Math.max(1, s.km / 9.4607e12));
+  return { body: A.Body.Star2, ...s };
+}
+
 // Waar staat het? { az, hoogte, mag, bij } of null (de aarde; of geen gegevens)
 // bij: als het te klein is om los te zien, het hemellichaam waar het vlak naast staat
 export function positie(item, datum, plek, D) {
@@ -95,6 +119,18 @@ export function positie(item, datum, plek, D) {
     }
     return { ...horVanVector(new A.Vector(v.x - aarde.x - o.x, v.y - aarde.y - o.y, v.z - aarde.z - o.z, t), t, obs), afstand_ae: Math.hypot(v.x - aarde.x, v.y - aarde.y, v.z - aarde.z) };
   }
+  if (item.sonde && sondeNu(D, item.sonde, datum)) {
+    const z = sondeNu(D, item.sonde, datum);
+    // vector vanuit het middelpunt van de aarde (AE, J2000), min de plek van de waarnemer: dat telt voor de Webb-telescoop
+    const r = Math.PI / 180, ae = z.km / 149597870.7, cd = Math.cos(z.dec * r), o = A.ObserverVector(t, obs, false);
+    const p = horVanVector(new A.Vector(ae * cd * Math.cos(z.ra * r) - o.x, ae * cd * Math.sin(z.ra * r) - o.y, ae * Math.sin(z.dec * r) - o.z, t), t, obs);
+    return { ...p, afstand_km: z.km, ...(item.ouder ? { bij: item.ouder } : {}) };
+  }
+  if (item.plek && D) {
+    const ouder = D.perSlug[item.plek];
+    const p = ouder && positie(ouder, datum, plek, D);
+    return p ? { az: p.az, hoogte: p.hoogte, bij: item.plek } : null;
+  }
   if (item.slug === "iss") {
     const tle = D?.iss;
     if (!tle) return null;
@@ -118,6 +154,9 @@ export function opOnder(item, datum, plek, D) {
   if (item.ae) body = A.Body[item.ae];
   else if (item.baan?.ster) { const s = item.baan.ster; A.DefineStar(A.Body.Star1, s.ra / 15, s.dec, 3.26156 / (s.parallax_mas / 1000)); body = A.Body.Star1; }
   else if (MANEN_JUPITER[item.slug]) body = A.Body.Jupiter;
+  else if (item.sonde && sondeNu(D, item.sonde, datum)) body = sondeAlsSter(D, item, datum)?.body;
+  else if (item.sonde && D?.perSlug[item.ouder]?.ae) body = A.Body[D.perSlug[item.ouder].ae];
+  else if (item.plek && D?.perSlug[item.plek]?.ae) body = A.Body[D.perSlug[item.plek].ae];
   else if (item.ouder && D?.perSlug[item.ouder]?.ae) body = A.Body[D.perSlug[item.ouder].ae];
   if (!body) return null;
   const op = A.SearchRiseSet(body, obs, +1, t, 1), onder = A.SearchRiseSet(body, obs, -1, t, 1);

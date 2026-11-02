@@ -1,0 +1,25 @@
+{
+ "kort": "De enige ruimtesonde die bij Uranus en Neptunus is geweest.",
+ "kinderzin": "Voyager 2 is de enige die bij Uranus en Neptunus is geweest.",
+ "weetjes": [
+  {
+   "tekst": "Voyager 2 is de enige ruimtesonde die bij Uranus en Neptunus is geweest.",
+   "bron": "https://science.nasa.gov/mission/voyager/voyager-2/",
+   "controle": "Voyager 2 is the only spacecraft to visit Uranus and Neptune"
+  },
+  {
+   "tekst": "Bij Uranus vond Voyager 2 tien nieuwe manen en twee ringen.",
+   "bron": "https://science.nasa.gov/mission/voyager/voyager-2/",
+   "controle": "At Uranus, Voyager 2 discovered 10 new moons and two new rings"
+  },
+  {
+   "tekst": "Voyager 2 werd eerder gelanceerd dan Voyager 1: op 20 augustus 1977.",
+   "bron": "https://science.nasa.gov/mission/voyager/fact-sheet/",
+   "controle": "Voyager 2 was launched first, on August 20, 1977"
+  }
+ ],
+ "foto": {
+  "kleur": "echt",
+  "uitleg": "Een technicus werkt aan een van de twee Voyagers tijdens een test op aarde, 18 november 1976."
+ }
+}

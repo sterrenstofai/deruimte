@@ -1,12 +1,12 @@
-// Heelal: één pagina met een router (history.pushState en <a data-link>), zoals ikhooreengeluidje en Voggels.
+// De Ruimte: één pagina met een router (history.pushState en <a data-link>), zoals ikhooreengeluidje en Voggels.
 import * as G from "./geluid.js";
 import * as MIJN from "./mijn.js";
 import * as PLEK from "./plek.js";
-import { positie, opOnder, klok, richting, issOvergangen, tleLeeftijd, maanfase, vanavond, dag } from "./hemel.js";
+import { positie, opOnder, klok, richting, issOvergangen, tleLeeftijd, maanfase, vanavond, dag, sondeNu } from "./hemel.js";
 import * as KAART from "./kaart.js";
 
 const app = document.getElementById("app");
-const TITEL = "Heelal";
+const TITEL = "De Ruimte";
 let opruimers = [];
 let kinderModule = null, ozModule = null;
 const ruimOp = () => { for (const f of opruimers) f?.(); opruimers = []; tabOpruimen?.(); tabOpruimen = null; };
@@ -16,11 +16,11 @@ const ruimOp = () => { for (const f of opruimers) f?.(); opruimers = []; tabOpru
 let _data = null;
 async function data() {
   if (_data) return _data;
-  const [hemel, fotos, geluid, iss] = await Promise.all(
-    ["/data/hemel.json", "/data/fotos.json", "/data/geluid.json", "/data/iss.json"].map((u) => fetch(u).then((r) => (r.ok ? r.json() : null)).catch(() => null)),
+  const [hemel, fotos, geluid, iss, sondes] = await Promise.all(
+    ["/data/hemel.json", "/data/fotos.json", "/data/geluid.json", "/data/iss.json", "/data/sondes.json"].map((u) => fetch(u).then((r) => (r.ok ? r.json() : null)).catch(() => null)),
   );
   const perSlug = Object.fromEntries(hemel.map((h) => [h.slug, h]));
-  _data = { hemel, perSlug, fotos: fotos || {}, geluid: geluid || {}, iss };
+  _data = { hemel, perSlug, fotos: fotos || {}, geluid: geluid || {}, iss, sondes: sondes?.sondes || {}, sondesDatum: sondes?.opgehaald };
   return _data;
 }
 
@@ -36,8 +36,13 @@ const bronLink = (url) => {
   return `<a class="bron" href="${esc(url)}" rel="noopener">${esc(host)}</a>`;
 };
 const hoofd = (s) => s.charAt(0).toUpperCase() + s.slice(1);
-const SOORTEN = { planeet: "Planeten", maan: "Manen", dwergplaneet: "Dwergplaneten", komeet: "Kometen", ster: "Sterren", ruimtestation: "Ruimtestation" };
-const SOORT_EEN = { planeet: "Planeet", maan: "Maan", dwergplaneet: "Dwergplaneet", komeet: "Komeet", ster: "Ster", ruimtestation: "Ruimtestation" };
+const SOORTEN = { planeet: "Planeten", maan: "Manen", dwergplaneet: "Dwergplaneten", komeet: "Kometen", ster: "Sterren", ruimtevaartuig: "Ruimtevaart", astronaut: "Astronauten" };
+const inSoort = (h, k) => h.soort === k || (k === "ruimtevaartuig" && h.soort === "ruimtestation");
+const SOORT_EEN = { planeet: "Planeet", maan: "Maan", dwergplaneet: "Dwergplaneet", komeet: "Komeet", ster: "Ster", ruimtestation: "Ruimtestation", ruimtevaartuig: "Ruimtevaartuig", astronaut: "Astronaut" };
+// Het plusje van Mijn hemel alleen bij wat je zelf aan de hemel kunt zien (geen astronauten, geen verre ruimtesondes)
+const kunJeZien = (h) => h.slug !== "aarde" && h.soort !== "astronaut" && (h.soort !== "ruimtevaartuig" || h.slug === "hubble");
+// Welke tabjes passen bij wat
+const tabsVoor = (h) => h.soort === "astronaut" ? TABS.filter(([k]) => k === "foto") : TABS;
 const KLEUR = { echt: "echte kleur", benaderd: "kleur benaderd", versterkt: "kleur versterkt", vals: "valse kleur" };
 const SPEEL_SVG = `<svg viewBox="0 0 44 44" aria-hidden="true"><circle class="ring-bg" cx="22" cy="22" r="20"/><circle class="ring" cx="22" cy="22" r="20"/><path class="ico-pauze" d="M17 15v14M27 15v14"/><path class="ico-speel" d="M18 14l12 8-12 8z"/></svg>`;
 const STER_SVG = `<svg class="ster-teken" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="7" fill="currentColor"/><path d="M50 18v20M50 62v20M18 50h20M62 50h20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>`;
@@ -191,7 +196,7 @@ function kaart(D, h) {
   const labels = [h.nagekeken ? "nagekeken" : null].filter(Boolean);
   return `<article class="hemel-kaart">
     <a class="hemel-beeld${h.soort === "ster" ? " is-ster" : ""}" href="/hemel/${h.slug}" data-link aria-hidden="true" tabindex="-1">${beeld(D, h, true)}</a>
-    ${h.slug !== "aarde" ? mijnKnop(h.slug, infoVan(D, h), true) : ""}
+    ${kunJeZien(h) ? mijnKnop(h.slug, infoVan(D, h), true) : ""}
     <div class="hemel-tekst">
       <a class="hemel-titel" href="/hemel/${h.slug}" data-link>${esc(h.titel)}</a>
       <span class="hemel-soort">${SOORT_EEN[h.soort]}${h.ouder && h.soort === "maan" ? ` van ${esc(D.perSlug[h.ouder]?.naam)}` : ""}</span>
@@ -269,7 +274,7 @@ function koppelLijst(D) {
   const aan = new Set();
   const teken = () => {
     const q = norm(veld.value);
-    const l = D.hemel.filter((h) => (!q || norm(`${h.titel} ${h.naam}`).includes(q)) && (!aan.size || aan.has(h.soort)));
+    const l = D.hemel.filter((h) => (!q || norm(`${h.titel} ${h.naam}`).includes(q)) && (!aan.size || [...aan].some((k) => inSoort(h, k))));
     raster.innerHTML = l.map((h) => kaart(D, h)).join("") || `<p class="zacht">Niets gevonden met deze filters.</p>`;
     teller.textContent = `${l.length} van ${D.hemel.length}`;
     werkMijnBij();
@@ -294,7 +299,9 @@ function verwant(D, h) {
     return [ouder, ...D.hemel.filter((x) => x.ouder === ouder.slug && x.soort === "maan")];
   }
   if (h.soort === "planeet" || h.slug === "zon") return [D.perSlug.zon, ...D.hemel.filter((x) => x.soort === "planeet").sort((a, b) => a.nr - b.nr)];
-  return D.hemel.filter((x) => x.soort === h.soort || (h.soort === "dwergplaneet" && x.slug === "pluto") || (h.soort === "ruimtestation" && x.slug === "aarde"));
+  if (h.soort === "ruimtevaartuig" || h.soort === "ruimtestation") return D.hemel.filter((x) => x.soort === "ruimtevaartuig" || x.soort === "ruimtestation");
+  if (h.soort === "astronaut") return [...D.hemel.filter((x) => x.soort === "astronaut"), D.perSlug["apollo-11"], D.perSlug.iss];
+  return D.hemel.filter((x) => x.soort === h.soort || (h.soort === "dwergplaneet" && x.slug === "pluto"));
 }
 
 function hemelPagina(D, slug) {
@@ -302,7 +309,8 @@ function hemelPagina(D, slug) {
   if (!h) return nietGevonden();
   document.title = `${hoofd(h.naam)} · ${TITEL}`;
   const v = verwant(D, h).filter(Boolean);
-  const startTab = new URLSearchParams(location.search).get("tab") || "foto";
+  const tabs = tabsVoor(h);
+  const startTab = tabs.some(([k]) => k === new URLSearchParams(location.search).get("tab")) ? new URLSearchParams(location.search).get("tab") : "foto";
   const weetjes = [
     ["Soort", `${SOORT_EEN[h.soort]}${h.soort === "maan" && h.ouder ? ` van ${esc(D.perSlug[h.ouder]?.naam)}` : ""}`],
     ...h.cijfers.slice(0, 5).map((c) => [esc(c.naam), `${esc(c.tekst)} ${bronLink(c.bron)}`]),
@@ -311,13 +319,13 @@ function hemelPagina(D, slug) {
   app.innerHTML = `
   <section class="scherm" data-hemel="${h.slug}">
     <div class="podium">
-      ${TABS.map(([k]) => `<div class="podium-paneel paneel-${k}" id="paneel-${k}" role="tabpanel" aria-labelledby="tab-${k}" ${k === startTab ? "" : "hidden"}></div>`).join("")}
-      <div class="weergave" role="tablist" aria-label="Weergave">${TABS.map(([k, t]) => `<button type="button" role="tab" id="tab-${k}" aria-controls="paneel-${k}" aria-selected="${k === startTab}" data-tab="${k}">${t}</button>`).join("")}</div>
+      ${tabs.map(([k]) => `<div class="podium-paneel paneel-${k}" id="paneel-${k}" role="tabpanel" aria-labelledby="tab-${k}" ${k === startTab ? "" : "hidden"}></div>`).join("")}
+      <div class="weergave" role="tablist" aria-label="Weergave" ${tabs.length < 2 ? "hidden" : ""}>${tabs.map(([k, t]) => `<button type="button" role="tab" id="tab-${k}" aria-controls="paneel-${k}" aria-selected="${k === startTab}" data-tab="${k}">${t}</button>`).join("")}</div>
     </div>
     <div class="scherm-titel">
       <div class="titel-rij"><h1>${esc(h.titel)}</h1></div>
       <p class="scherm-sub">${esc(h.kort)}</p>
-      ${h.slug !== "aarde" ? mijnKnop(h.slug, infoVan(D, h)) : ""}
+      ${kunJeZien(h) ? mijnKnop(h.slug, infoVan(D, h)) : ""}
       <dl class="weetjes">${weetjes.map(([k, w]) => `<dt>${k}</dt><dd>${w}</dd>`).join("")}</dl>
     </div>
     <div class="scherm-strook">
@@ -327,11 +335,12 @@ function hemelPagina(D, slug) {
   </section>`;
   for (const b of app.querySelectorAll("[data-tab]")) b.addEventListener("click", () => kiesTab(D, h, b.dataset.tab));
   app.querySelector("[data-tab-link]").addEventListener("click", (e) => { e.preventDefault(); kiesTab(D, h, "nu"); app.querySelector(".podium").scrollIntoView({ behavior: "smooth", block: "start" }); });
-  kiesTab(D, h, TABS.some(([k]) => k === startTab) ? startTab : "foto");
+  kiesTab(D, h, startTab);
   const mini = () => {
     const doek = app.querySelector(".omgeving-kaart");
     if (!doek) return;
-    if (h.slug === "aarde") { doek.replaceWith(Object.assign(document.createElement("p"), { className: "omgeving-leeg", textContent: "Hier sta je op." })); return; }
+    const leeg = h.slug === "aarde" ? "Hier sta je op." : h.soort === "astronaut" ? "Een mens, geen hemellichaam." : null;
+    if (leeg) { const a = doek.closest(".omgeving"); a.replaceWith(Object.assign(document.createElement("p"), { className: "omgeving omgeving-leeg", textContent: leeg })); return; }
     KAART.teken(doek, D, PLEK.huidig(), new Date(), { klein: true, markeer: h.slug, lijnen: false });
   };
   requestAnimationFrame(mini);
@@ -396,7 +405,8 @@ function paneelSchaal(D, h) {
     groot = `${etiket("Hoe groot")}<p class="schaal-zin">Hoe groot een ster precies is, is lastig te meten. Wat wel zeker is: ook de kleinste ster die je met je blote oog ziet, is veel groter dan de aarde.</p>`;
   }
   // hoe ver: met de auto (100 km/u, zonder stoppen) en met het licht
-  const km = h.soort === "ster" ? null : h.slug === "iss" ? 400 : h.soort === "maan" && h.ouder !== "aarde" ? D.perSlug[h.ouder]?.baan?.a_km : h.slug === "maan" ? 384400 : h.slug === "zon" ? 149.6e6 : h.baan?.a_km ? Math.abs(h.baan.a_km - 149.6e6) : null;
+  const sz = h.sonde && sondeNu(D, h.sonde, new Date());
+  const km = sz ? sz.km : h.slug === "hubble" ? 560 : h.slug === "apollo-11" ? 384400 : h.plek && D.perSlug[h.plek]?.baan?.a_km ? Math.abs(D.perSlug[h.plek].baan.a_km - 149.6e6) : h.soort === "ster" ? null : h.slug === "iss" ? 400 : h.soort === "maan" && h.ouder !== "aarde" ? D.perSlug[h.ouder]?.baan?.a_km : h.slug === "maan" ? 384400 : h.slug === "zon" ? 149.6e6 : h.baan?.a_km ? Math.abs(h.baan.a_km - 149.6e6) : null;
   const lj = h.soort === "ster" ? parseFloat((h.cijfers.find((c) => c.naam === "Afstand")?.tekst || "").replace(/\./g, "").replace(",", ".")) : null;
   const ver = km ? autoZin(h, km) : lj ? `Het licht van ${esc(h.naam)} doet er ${lj.toLocaleString("nl-NL")} jaar over om bij ons te komen. Het licht dat je vanavond ziet, vertrok dus ${lj > 50 ? "lang voordat je opa en oma geboren werden" : lj > 20 ? "toen je ouders misschien nog kinderen waren" : "een paar jaar geleden"}. Met de auto zou je er nooit komen.` : h.slug === "aarde" ? "" : "";
   return `<div class="paneel-binnen schaal">${groot}${ver ? `${etiket("Hoe ver")}<p class="schaal-zin">${ver}</p>` : ""}
@@ -407,7 +417,7 @@ function autoZin(h, km) {
   const auto = uren < 48 ? `${Math.round(uren)} uur` : jaren < 1 ? `${Math.round(uren / 24)} dagen` : `${Math.round(jaren).toLocaleString("nl-NL")} jaar`;
   const licht = km / 299792.458;
   const lichtZin = licht < 2 ? `${licht.toLocaleString("nl-NL", { maximumFractionDigits: 2 })} seconde` : licht < 120 ? `${Math.round(licht)} seconden` : licht < 7200 ? `${Math.round(licht / 60)} minuten` : `${(licht / 3600).toLocaleString("nl-NL", { maximumFractionDigits: 1 })} uur`;
-  const van = h.slug === "iss" ? "van de grond naar het ISS" : h.soort === "maan" && h.ouder !== "aarde" ? `van de aarde naar ${D_naam(h)}` : h.slug === "maan" || h.slug === "zon" ? `van de aarde naar ${h.naam}` : `van de aarde naar ${h.naam}, als die ongeveer het dichtst bij staat,`;
+  const van = h.slug === "iss" || h.slug === "hubble" ? `van de grond naar ${h.naam}` : h.sonde && sondeNu(_data, h.sonde, new Date()) ? `van de aarde naar ${h.naam}, zoals hij nu staat,` : h.plek ? `van de aarde naar ${_data.perSlug[h.plek].naam}` : h.soort === "maan" && h.ouder !== "aarde" ? `van de aarde naar ${D_naam(h)}` : h.slug === "maan" || h.slug === "zon" ? `van de aarde naar ${h.naam}` : `van de aarde naar ${h.naam}, als die ongeveer het dichtst bij staat,`;
   return `Met de auto, 100 kilometer per uur en zonder stoppen, doe je ${van} ${auto} over. Het licht doet er ${lichtZin} over.`;
 }
 const D_naam = (h) => _data.perSlug[h.ouder]?.naam;
@@ -466,6 +476,7 @@ function paneelNu(D, h, vak) {
     if (pos?.bij && h.soort === "maan") zinnen.push(`<p>${esc(hoofd(h.naam))} staat vlak bij ${esc(D.perSlug[pos.bij].naam)}. Met het blote oog zie je ${h.slug === "maan" ? "hem" : "alleen de planeet"}; ${["io", "europa", "ganymedes", "callisto"].includes(h.slug) ? "met een gewone verrekijker zie je de vier grote manen van Jupiter als stipjes naast de planeet." : "deze maan is te zwak, zelfs voor een verrekijker."}</p>`);
     if (oo) zinnen.push(`<dl class="weetjes">${oo.op ? `<dt>Komt op</dt><dd>${dag(oo.op)} om ${klok(oo.op)}</dd>` : ""}${oo.hoogst ? `<dt>Hoogst</dt><dd>${klok(oo.hoogst)}, ${Math.round(oo.hoogsteHoogte)}° hoog</dd>` : ""}${oo.onder ? `<dt>Gaat onder</dt><dd>${dag(oo.onder)} om ${klok(oo.onder)}</dd>` : ""}${!oo.op && !oo.onder ? `<dt>De hele nacht</dt><dd>${pos?.hoogte > 0 ? "gaat hier nooit onder" : "komt hier nooit op"}</dd>` : ""}</dl>`);
     if (pos?.mag != null && h.ae !== "Sun") zinnen.push(`<p>Helderheid nu: ${pos.mag.toLocaleString("nl-NL", { maximumFractionDigits: 1 })}. ${pos.mag < 1 ? "Een van de helderste dingen aan de hemel." : pos.mag < 5.5 ? "Met het blote oog te zien als het donker is." : "Te zwak voor het blote oog; je hebt een telescoop nodig."}</p>`);
+    if (h.soort === "ruimtevaartuig") zinnen.push(ruimtevaartZin(D, h, nu));
     if (h.slug === "zon") zinnen.push(`<p class="let-op">Kijk nooit recht in de zon, ook niet met een zonnebril, verrekijker of telescoop.</p>`);
     if (h.slug === "iss") {
       const lijst = issOvergangen(D.iss, p, nu, 48);
@@ -486,6 +497,22 @@ function paneelNu(D, h, vak) {
   const klokje = setInterval(teken, 60000);
   vak.querySelector(".sterrenkaart").addEventListener("click", (e) => { const s = KAART.welke(e.currentTarget, e); if (s && s !== h.slug) naar(`/hemel/${s}?tab=nu`); });
   tabOpruimen = () => { weg(); clearInterval(klokje); };
+}
+const LICHT_KM_S = 299792.458;
+const afstandTekst = (km) => km >= 1e9 ? `${(km / 1e9).toLocaleString("nl-NL", { maximumFractionDigits: 2 })} miljard km` : km >= 1e6 ? `${(km / 1e6).toLocaleString("nl-NL", { maximumFractionDigits: 1 })} miljoen km` : `${Math.round(km).toLocaleString("nl-NL")} km`;
+const reistijd = (s) => s < 120 ? `${Math.round(s)} seconden` : s < 7200 ? `${Math.round(s / 60)} minuten` : `${Math.floor(s / 3600)} uur en ${Math.round((s % 3600) / 60)} minuten`;
+function ruimtevaartZin(D, h, nu) {
+  const z = h.sonde && sondeNu(D, h.sonde, nu);
+  const delen = [];
+  if (z) {
+    delen.push(`<p class="nu-groot">Nu ${afstandTekst(z.km)} van de aarde.</p><p>Een radiosignaal, dat net zo snel gaat als licht, doet er ${reistijd(z.km / LICHT_KM_S)} over.</p>`);
+    if (h.sonde === "voyager-1") delen.push(`<p>NASA verwacht dat Voyager 1 op 18 november 2026 één lichtdag ver is: dan is zijn signaal een hele dag onderweg.</p>`);
+    delen.push(`<p>Veel te klein en te ver weg om te zien, ook met een telescoop. Op de kaart zie je wel waar hij aan de hemel staat.</p><p class="noot zacht">Plek en afstand: JPL Horizons, opgehaald op ${esc(D.sondesDatum || "?")}; daartussen geschat.</p>`);
+  } else if (h.slug === "cassini") delen.push(`<p>Cassini bestaat niet meer: in 2017 vloog hij Saturnus in. Op de kaart zie je waar Saturnus nu staat.</p>`);
+  else if (h.slug === "perseverance") delen.push(`<p>Perseverance rijdt op Mars. Je kunt Mars zien, als een oranje ster, maar de robot zelf natuurlijk niet.</p>`);
+  else if (h.slug === "apollo-11") delen.push(`<p>Apollo 11 landde op de maan. De landingsplek kun je niet zien, ook niet met een grote telescoop: daarvoor is alles wat er staat veel te klein. De maan zelf wel.</p>`);
+  else if (h.slug === "hubble") delen.push(`<p>Hubble vliegt om de aarde, net als het ISS. Soms kun je hem zien als een stip die over de hemel schuift. Wanneer, rekent de site nog niet uit: daarvoor zijn baangegevens nodig die we nog niet ophalen.</p>`);
+  return delen.join("");
 }
 const STERRENBEELD_AFK = { poolster: "UMi", sirius: "CMa", betelgeuze: "Ori", vega: "Lyr" };
 

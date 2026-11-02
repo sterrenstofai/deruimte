@@ -1,6 +1,6 @@
 name: Maandelijks verversen
 
-# Haalt de ruwe data opnieuw op (NASA, JPL, Wikidata, d3-celestial), kijkt de weetjes na tegen hun bronnen
+# Haalt de ruwe data opnieuw op (NASA, JPL, Wikidata, d3-celestial) en de posities van de ruimtesondes (JPL Horizons), kijkt de weetjes na tegen hun bronnen
 # en bouwt site/data opnieuw. Een weetje dat niet meer op zijn bronpagina staat, verliest het label "nagekeken".
 on:
   schedule:
@@ -20,6 +20,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: python3 scripts/ruw_ophalen.py
+      - run: python3 scripts/sondes_ophalen.py
       - run: python3 scripts/nakijken.py
       - run: python3 scripts/bouw_site_data.py
       - name: Committen

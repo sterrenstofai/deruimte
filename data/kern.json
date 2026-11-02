@@ -1,34 +1,495 @@
 {
  "_uitleg": "De vaste kern: met de hand gekozen. naam = zoals in een zin (met lidwoord), kort = zonder lidwoord, met hoofdletter. ae = naam in astronomy-engine (posities in de browser). sbdb = zoekterm voor de JPL Small-Body Database. en = Engels label voor Wikidata.",
  "lijst": [
-  {"slug": "zon", "naam": "de zon", "kort": "Zon", "soort": "ster", "en": "Sun", "ae": "Sun"},
-  {"slug": "mercurius", "naam": "Mercurius", "kort": "Mercurius", "soort": "planeet", "en": "Mercury", "ae": "Mercury", "fs": "MERCURY", "nr": 1},
-  {"slug": "venus", "naam": "Venus", "kort": "Venus", "soort": "planeet", "en": "Venus", "ae": "Venus", "fs": "VENUS", "nr": 2},
-  {"slug": "aarde", "naam": "de aarde", "kort": "Aarde", "soort": "planeet", "en": "Earth", "fs": "EARTH", "nr": 3},
-  {"slug": "mars", "naam": "Mars", "kort": "Mars", "soort": "planeet", "en": "Mars", "ae": "Mars", "fs": "MARS", "nr": 4},
-  {"slug": "jupiter", "naam": "Jupiter", "kort": "Jupiter", "soort": "planeet", "en": "Jupiter", "ae": "Jupiter", "fs": "JUPITER", "nr": 5},
-  {"slug": "saturnus", "naam": "Saturnus", "kort": "Saturnus", "soort": "planeet", "en": "Saturn", "ae": "Saturn", "fs": "SATURN", "nr": 6},
-  {"slug": "uranus", "naam": "Uranus", "kort": "Uranus", "soort": "planeet", "en": "Uranus", "ae": "Uranus", "fs": "URANUS", "nr": 7},
-  {"slug": "neptunus", "naam": "Neptunus", "kort": "Neptunus", "soort": "planeet", "en": "Neptune", "ae": "Neptune", "fs": "NEPTUNE", "nr": 8},
-  {"slug": "pluto", "naam": "Pluto", "kort": "Pluto", "soort": "dwergplaneet", "en": "Pluto", "ae": "Pluto", "fs": "PLUTO"},
-  {"slug": "ceres", "naam": "Ceres", "kort": "Ceres", "soort": "dwergplaneet", "en": "Ceres", "sbdb": "1"},
-  {"slug": "eris", "naam": "Eris", "kort": "Eris", "soort": "dwergplaneet", "en": "Eris", "sbdb": "136199"},
-  {"slug": "maan", "naam": "de maan", "kort": "Maan", "soort": "maan", "en": "Moon", "ae": "Moon", "fs": "MOON", "ouder": "aarde", "jpl": "Moon"},
-  {"slug": "phobos", "naam": "Phobos", "kort": "Phobos", "soort": "maan", "en": "Phobos", "ouder": "mars", "jpl": "Phobos"},
-  {"slug": "io", "naam": "Io", "kort": "Io", "soort": "maan", "en": "Io", "ouder": "jupiter", "jpl": "Io"},
-  {"slug": "europa", "naam": "Europa", "kort": "Europa", "soort": "maan", "en": "Europa", "ouder": "jupiter", "jpl": "Europa"},
-  {"slug": "ganymedes", "naam": "Ganymedes", "kort": "Ganymedes", "soort": "maan", "en": "Ganymede", "ouder": "jupiter", "jpl": "Ganymede"},
-  {"slug": "callisto", "naam": "Callisto", "kort": "Callisto", "soort": "maan", "en": "Callisto", "ouder": "jupiter", "jpl": "Callisto"},
-  {"slug": "titan", "naam": "Titan", "kort": "Titan", "soort": "maan", "en": "Titan", "ouder": "saturnus", "jpl": "Titan"},
-  {"slug": "enceladus", "naam": "Enceladus", "kort": "Enceladus", "soort": "maan", "en": "Enceladus", "ouder": "saturnus", "jpl": "Enceladus"},
-  {"slug": "triton", "naam": "Triton", "kort": "Triton", "soort": "maan", "en": "Triton", "ouder": "neptunus", "jpl": "Triton"},
-  {"slug": "charon", "naam": "Charon", "kort": "Charon", "soort": "maan", "en": "Charon", "ouder": "pluto", "jpl": "Charon"},
-  {"slug": "halley", "naam": "de komeet Halley", "kort": "Komeet Halley", "soort": "komeet", "en": "Halley's Comet", "sbdb": "1P"},
-  {"slug": "tsjoerjoemov", "naam": "de komeet Tsjoerjoemov-Gerasimenko", "kort": "Komeet 67P", "soort": "komeet", "en": "67P/Churyumov–Gerasimenko", "sbdb": "67P"},
-  {"slug": "poolster", "naam": "de Poolster", "kort": "Poolster", "soort": "ster", "en": "Polaris"},
-  {"slug": "sirius", "naam": "Sirius", "kort": "Sirius", "soort": "ster", "en": "Sirius"},
-  {"slug": "betelgeuze", "naam": "Betelgeuze", "kort": "Betelgeuze", "soort": "ster", "en": "Betelgeuse"},
-  {"slug": "vega", "naam": "Wega", "kort": "Wega", "soort": "ster", "en": "Vega"},
-  {"slug": "iss", "naam": "het ISS", "kort": "ISS", "soort": "ruimtestation", "en": "International Space Station", "ouder": "aarde"}
+  {
+   "slug": "zon",
+   "naam": "de zon",
+   "kort": "Zon",
+   "soort": "ster",
+   "en": "Sun",
+   "ae": "Sun"
+  },
+  {
+   "slug": "mercurius",
+   "naam": "Mercurius",
+   "kort": "Mercurius",
+   "soort": "planeet",
+   "en": "Mercury",
+   "ae": "Mercury",
+   "fs": "MERCURY",
+   "nr": 1
+  },
+  {
+   "slug": "venus",
+   "naam": "Venus",
+   "kort": "Venus",
+   "soort": "planeet",
+   "en": "Venus",
+   "ae": "Venus",
+   "fs": "VENUS",
+   "nr": 2
+  },
+  {
+   "slug": "aarde",
+   "naam": "de aarde",
+   "kort": "Aarde",
+   "soort": "planeet",
+   "en": "Earth",
+   "fs": "EARTH",
+   "nr": 3
+  },
+  {
+   "slug": "mars",
+   "naam": "Mars",
+   "kort": "Mars",
+   "soort": "planeet",
+   "en": "Mars",
+   "ae": "Mars",
+   "fs": "MARS",
+   "nr": 4
+  },
+  {
+   "slug": "jupiter",
+   "naam": "Jupiter",
+   "kort": "Jupiter",
+   "soort": "planeet",
+   "en": "Jupiter",
+   "ae": "Jupiter",
+   "fs": "JUPITER",
+   "nr": 5
+  },
+  {
+   "slug": "saturnus",
+   "naam": "Saturnus",
+   "kort": "Saturnus",
+   "soort": "planeet",
+   "en": "Saturn",
+   "ae": "Saturn",
+   "fs": "SATURN",
+   "nr": 6
+  },
+  {
+   "slug": "uranus",
+   "naam": "Uranus",
+   "kort": "Uranus",
+   "soort": "planeet",
+   "en": "Uranus",
+   "ae": "Uranus",
+   "fs": "URANUS",
+   "nr": 7
+  },
+  {
+   "slug": "neptunus",
+   "naam": "Neptunus",
+   "kort": "Neptunus",
+   "soort": "planeet",
+   "en": "Neptune",
+   "ae": "Neptune",
+   "fs": "NEPTUNE",
+   "nr": 8
+  },
+  {
+   "slug": "pluto",
+   "naam": "Pluto",
+   "kort": "Pluto",
+   "soort": "dwergplaneet",
+   "en": "Pluto",
+   "ae": "Pluto",
+   "fs": "PLUTO"
+  },
+  {
+   "slug": "ceres",
+   "naam": "Ceres",
+   "kort": "Ceres",
+   "soort": "dwergplaneet",
+   "en": "Ceres",
+   "sbdb": "1"
+  },
+  {
+   "slug": "eris",
+   "naam": "Eris",
+   "kort": "Eris",
+   "soort": "dwergplaneet",
+   "en": "Eris",
+   "sbdb": "136199"
+  },
+  {
+   "slug": "maan",
+   "naam": "de maan",
+   "kort": "Maan",
+   "soort": "maan",
+   "en": "Moon",
+   "ae": "Moon",
+   "fs": "MOON",
+   "ouder": "aarde",
+   "jpl": "Moon"
+  },
+  {
+   "slug": "phobos",
+   "naam": "Phobos",
+   "kort": "Phobos",
+   "soort": "maan",
+   "en": "Phobos",
+   "ouder": "mars",
+   "jpl": "Phobos"
+  },
+  {
+   "slug": "io",
+   "naam": "Io",
+   "kort": "Io",
+   "soort": "maan",
+   "en": "Io",
+   "ouder": "jupiter",
+   "jpl": "Io"
+  },
+  {
+   "slug": "europa",
+   "naam": "Europa",
+   "kort": "Europa",
+   "soort": "maan",
+   "en": "Europa",
+   "ouder": "jupiter",
+   "jpl": "Europa"
+  },
+  {
+   "slug": "ganymedes",
+   "naam": "Ganymedes",
+   "kort": "Ganymedes",
+   "soort": "maan",
+   "en": "Ganymede",
+   "ouder": "jupiter",
+   "jpl": "Ganymede"
+  },
+  {
+   "slug": "callisto",
+   "naam": "Callisto",
+   "kort": "Callisto",
+   "soort": "maan",
+   "en": "Callisto",
+   "ouder": "jupiter",
+   "jpl": "Callisto"
+  },
+  {
+   "slug": "titan",
+   "naam": "Titan",
+   "kort": "Titan",
+   "soort": "maan",
+   "en": "Titan",
+   "ouder": "saturnus",
+   "jpl": "Titan"
+  },
+  {
+   "slug": "enceladus",
+   "naam": "Enceladus",
+   "kort": "Enceladus",
+   "soort": "maan",
+   "en": "Enceladus",
+   "ouder": "saturnus",
+   "jpl": "Enceladus"
+  },
+  {
+   "slug": "triton",
+   "naam": "Triton",
+   "kort": "Triton",
+   "soort": "maan",
+   "en": "Triton",
+   "ouder": "neptunus",
+   "jpl": "Triton"
+  },
+  {
+   "slug": "charon",
+   "naam": "Charon",
+   "kort": "Charon",
+   "soort": "maan",
+   "en": "Charon",
+   "ouder": "pluto",
+   "jpl": "Charon"
+  },
+  {
+   "slug": "halley",
+   "naam": "de komeet Halley",
+   "kort": "Komeet Halley",
+   "soort": "komeet",
+   "en": "Halley's Comet",
+   "sbdb": "1P"
+  },
+  {
+   "slug": "tsjoerjoemov",
+   "naam": "de komeet Tsjoerjoemov-Gerasimenko",
+   "kort": "Komeet 67P",
+   "soort": "komeet",
+   "en": "67P/Churyumov–Gerasimenko",
+   "sbdb": "67P"
+  },
+  {
+   "slug": "poolster",
+   "naam": "de Poolster",
+   "kort": "Poolster",
+   "soort": "ster",
+   "en": "Polaris"
+  },
+  {
+   "slug": "sirius",
+   "naam": "Sirius",
+   "kort": "Sirius",
+   "soort": "ster",
+   "en": "Sirius"
+  },
+  {
+   "slug": "betelgeuze",
+   "naam": "Betelgeuze",
+   "kort": "Betelgeuze",
+   "soort": "ster",
+   "en": "Betelgeuse"
+  },
+  {
+   "slug": "vega",
+   "naam": "Wega",
+   "kort": "Wega",
+   "soort": "ster",
+   "en": "Vega"
+  },
+  {
+   "slug": "iss",
+   "naam": "het ISS",
+   "kort": "ISS",
+   "soort": "ruimtestation",
+   "en": "International Space Station",
+   "ouder": "aarde"
+  },
+  {
+   "slug": "voyager-1",
+   "naam": "Voyager 1",
+   "kort": "Voyager 1",
+   "soort": "ruimtevaartuig",
+   "en": "Voyager 1",
+   "sonde": "voyager-1",
+   "cijfers": [
+    [
+     "Gelanceerd",
+     "5 september 1977",
+     "https://science.nasa.gov/mission/voyager/fact-sheet/"
+    ],
+    [
+     "Waar nu",
+     "in de ruimte tussen de sterren",
+     "https://science.nasa.gov/mission/voyager/voyager-1/"
+    ]
+   ]
+  },
+  {
+   "slug": "voyager-2",
+   "naam": "Voyager 2",
+   "kort": "Voyager 2",
+   "soort": "ruimtevaartuig",
+   "en": "Voyager 2",
+   "sonde": "voyager-2",
+   "cijfers": [
+    [
+     "Gelanceerd",
+     "20 augustus 1977",
+     "https://science.nasa.gov/mission/voyager/fact-sheet/"
+    ],
+    [
+     "Waar nu",
+     "in de ruimte tussen de sterren",
+     "https://science.nasa.gov/mission/voyager/voyager-2/"
+    ]
+   ]
+  },
+  {
+   "slug": "new-horizons",
+   "naam": "New Horizons",
+   "kort": "New Horizons",
+   "soort": "ruimtevaartuig",
+   "en": "New Horizons",
+   "sonde": "new-horizons",
+   "cijfers": [
+    [
+     "Gelanceerd",
+     "19 januari 2006",
+     "https://science.nasa.gov/mission/new-horizons/"
+    ],
+    [
+     "Bij Pluto",
+     "14 juli 2015",
+     "https://science.nasa.gov/mission/new-horizons/"
+    ]
+   ]
+  },
+  {
+   "slug": "juno",
+   "naam": "Juno",
+   "kort": "Juno",
+   "soort": "ruimtevaartuig",
+   "en": "Juno (spacecraft)",
+   "sonde": "juno",
+   "ouder": "jupiter",
+   "cijfers": [
+    [
+     "Bij Jupiter",
+     "sinds 2016",
+     "https://science.nasa.gov/mission/juno/"
+    ]
+   ]
+  },
+  {
+   "slug": "cassini",
+   "naam": "Cassini",
+   "kort": "Cassini",
+   "soort": "ruimtevaartuig",
+   "en": "Cassini–Huygens",
+   "sonde": "cassini",
+   "ouder": "saturnus",
+   "cijfers": [
+    [
+     "Gelanceerd",
+     "15 oktober 1997",
+     "https://science.nasa.gov/mission/cassini/"
+    ],
+    [
+     "Einde",
+     "15 september 2017, in Saturnus",
+     "https://science.nasa.gov/mission/cassini/"
+    ]
+   ]
+  },
+  {
+   "slug": "perseverance",
+   "naam": "Perseverance",
+   "kort": "Perseverance",
+   "soort": "ruimtevaartuig",
+   "en": "Perseverance (rover)",
+   "plek": "mars",
+   "cijfers": [
+    [
+     "Geland",
+     "18 februari 2021",
+     "https://science.nasa.gov/mission/mars-2020-perseverance/"
+    ],
+    [
+     "Waar",
+     "Jezero-krater, op Mars",
+     "https://science.nasa.gov/mission/mars-2020-perseverance/"
+    ]
+   ]
+  },
+  {
+   "slug": "hubble",
+   "naam": "Hubble",
+   "kort": "Hubble",
+   "soort": "ruimtevaartuig",
+   "en": "Hubble Space Telescope",
+   "ouder": "aarde",
+   "cijfers": [
+    [
+     "Gelanceerd",
+     "24 april 1990",
+     "https://science.nasa.gov/mission/hubble/"
+    ],
+    [
+     "Hoogte",
+     "ongeveer 560 km boven de aarde",
+     "https://science.nasa.gov/mission/webb/"
+    ]
+   ]
+  },
+  {
+   "slug": "jwst",
+   "naam": "de James Webb-telescoop",
+   "kort": "James Webb",
+   "soort": "ruimtevaartuig",
+   "en": "James Webb Space Telescope",
+   "sonde": "jwst",
+   "cijfers": [
+    [
+     "Afstand tot de aarde",
+     "1,5 miljoen km",
+     "https://science.nasa.gov/mission/webb/"
+    ]
+   ]
+  },
+  {
+   "slug": "apollo-11",
+   "naam": "Apollo 11",
+   "kort": "Apollo 11",
+   "soort": "ruimtevaartuig",
+   "en": "Apollo 11",
+   "plek": "maan",
+   "cijfers": [
+    [
+     "Gelanceerd",
+     "16 juli 1969",
+     "https://www.nasa.gov/mission/apollo-11/"
+    ],
+    [
+     "Terug op aarde",
+     "24 juli 1969",
+     "https://www.nasa.gov/mission/apollo-11/"
+    ],
+    [
+     "Bemanning",
+     "Neil Armstrong, Buzz Aldrin, Michael Collins",
+     "https://www.nasa.gov/mission/apollo-11/"
+    ]
+   ]
+  },
+  {
+   "slug": "armstrong",
+   "naam": "Neil Armstrong",
+   "kort": "Neil Armstrong",
+   "soort": "astronaut",
+   "en": "Neil Armstrong",
+   "cijfers": [
+    [
+     "Land",
+     "Verenigde Staten",
+     "https://www.nasa.gov/people/neil-a-armstrong/"
+    ],
+    [
+     "In de ruimte",
+     "8 dagen en 14 uur, in twee vluchten",
+     "https://www.nasa.gov/people/neil-a-armstrong/"
+    ]
+   ]
+  },
+  {
+   "slug": "kuipers",
+   "naam": "André Kuipers",
+   "kort": "André Kuipers",
+   "soort": "astronaut",
+   "en": "André Kuipers",
+   "cijfers": [
+    [
+     "Geboren",
+     "5 oktober 1958, Amsterdam",
+     "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Astronauts/Andre_Kuipers"
+    ],
+    [
+     "Ruimtevluchten",
+     "2004 en 2011–2012",
+     "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Astronauts/Andre_Kuipers"
+    ]
+   ]
+  },
+  {
+   "slug": "ockels",
+   "naam": "Wubbo Ockels",
+   "kort": "Wubbo Ockels",
+   "soort": "astronaut",
+   "en": "Wubbo Ockels",
+   "cijfers": [
+    [
+     "Ruimtevlucht",
+     "30 oktober tot 6 november 1985",
+     "https://www.nasa.gov/mission/sts-61a/"
+    ],
+    [
+     "Met",
+     "de spaceshuttle Challenger",
+     "https://www.nasa.gov/mission/sts-61a/"
+    ]
+   ]
+  }
  ]
 }

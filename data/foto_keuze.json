@@ -1,28 +1,127 @@
 {
  "_uitleg": "Met de hand gekozen en bekeken (november 2026). Bron: NASA Image and Video Library, tenzij anders. uitsnede: [links, boven, rechts, onder] als fractie, of 'helder' = rond het heldere deel. kleur: 'echt', 'versterkt' of 'vals', met de hand gezet na het lezen van de beschrijving.",
- "zon": {"nasa_id": "PIA26681"},
- "mercurius": {"nasa_id": "PIA15160"},
- "venus": {"nasa_id": "PIA23791", "uitsnede": [0, 0, 0.5, 1]},
- "aarde": {"nasa_id": "as17-148-22727"},
- "maan": {"nasa_id": "iss072e188790", "uitsnede": "helder"},
- "mars": {"nasa_id": "GSFC_20171208_Archive_e000332"},
- "jupiter": {"nasa_id": "PIA02873"},
- "saturnus": {"nasa_id": "PIA06193"},
- "uranus": {"nasa_id": "PIA00032", "uitsnede": [0, 0, 0.5, 1]},
- "neptunus": {"nasa_id": "PIA01492"},
- "pluto": {"nasa_id": "PIA20291"},
- "ceres": {"nasa_id": "PIA21906"},
- "phobos": {"nasa_id": "PIA10369"},
- "io": {"nasa_id": "PIA02308"},
- "europa": {"nasa_id": "PIA19048"},
- "ganymedes": {"nasa_id": "PIA24681"},
- "callisto": {"nasa_id": "PIA03456"},
- "titan": {"nasa_id": "PIA14602"},
- "enceladus": {"nasa_id": "PIA00347"},
- "triton": {"nasa_id": "PIA00317"},
- "charon": {"nasa_id": "PIA19968"},
- "halley": {"nasa_id": "PIA17485"},
- "tsjoerjoemov": {"nasa_id": "PIA21068"},
- "iss": {"nasa_id": "iss066e080762"},
- "betelgeuze": {"eso": "eso2003c"}
+ "zon": {
+  "nasa_id": "PIA26681"
+ },
+ "mercurius": {
+  "nasa_id": "PIA15160"
+ },
+ "venus": {
+  "nasa_id": "PIA23791",
+  "uitsnede": [
+   0,
+   0,
+   0.5,
+   1
+  ]
+ },
+ "aarde": {
+  "nasa_id": "as17-148-22727"
+ },
+ "maan": {
+  "nasa_id": "iss072e188790",
+  "uitsnede": "helder"
+ },
+ "mars": {
+  "nasa_id": "GSFC_20171208_Archive_e000332"
+ },
+ "jupiter": {
+  "nasa_id": "PIA02873"
+ },
+ "saturnus": {
+  "nasa_id": "PIA06193"
+ },
+ "uranus": {
+  "nasa_id": "PIA00032",
+  "uitsnede": [
+   0,
+   0,
+   0.5,
+   1
+  ]
+ },
+ "neptunus": {
+  "nasa_id": "PIA01492"
+ },
+ "pluto": {
+  "nasa_id": "PIA20291"
+ },
+ "ceres": {
+  "nasa_id": "PIA21906"
+ },
+ "phobos": {
+  "nasa_id": "PIA10369"
+ },
+ "io": {
+  "nasa_id": "PIA02308"
+ },
+ "europa": {
+  "nasa_id": "PIA19048"
+ },
+ "ganymedes": {
+  "nasa_id": "PIA24681"
+ },
+ "callisto": {
+  "nasa_id": "PIA03456"
+ },
+ "titan": {
+  "nasa_id": "PIA14602"
+ },
+ "enceladus": {
+  "nasa_id": "PIA00347"
+ },
+ "triton": {
+  "nasa_id": "PIA00317"
+ },
+ "charon": {
+  "nasa_id": "PIA19968"
+ },
+ "halley": {
+  "nasa_id": "PIA17485"
+ },
+ "tsjoerjoemov": {
+  "nasa_id": "PIA21068"
+ },
+ "iss": {
+  "nasa_id": "iss066e080762"
+ },
+ "betelgeuze": {
+  "eso": "eso2003c"
+ },
+ "voyager-1": {
+  "nasa_id": "PIA21729"
+ },
+ "voyager-2": {
+  "nasa_id": "PIA21733"
+ },
+ "new-horizons": {
+  "nasa_id": "KSC-05pd2494"
+ },
+ "juno": {
+  "nasa_id": "PIA13928"
+ },
+ "cassini": {
+  "nasa_id": "KSC-97PC1385"
+ },
+ "perseverance": {
+  "nasa_id": "PIA24542"
+ },
+ "hubble": {
+  "nasa_id": "s125e011763"
+ },
+ "jwst": {
+  "nasa_id": "GSFC_20171208_Archive_e000079"
+ },
+ "apollo-11": {
+  "nasa_id": "as11-40-5903"
+ },
+ "armstrong": {
+  "nasa_id": "9018112"
+ },
+ "kuipers": {
+  "nasa_id": "iss030e033548"
+ },
+ "ockels": {
+  "nasa_id": "S81-33399"
+ }
 }

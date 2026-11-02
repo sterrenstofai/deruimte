@@ -11,7 +11,7 @@ const schud = (a) => { const b = [...a]; for (let i = b.length - 1; i > 0; i--) 
 const MAANDNAMEN = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"];
 
 /* ---------- Logboek (alleen op dit apparaat) ---------- */
-const SLEUTEL = "heelal-onderzoekjes";
+const SLEUTEL = "ruimte-onderzoekjes";
 function leesLogboek() { try { return JSON.parse(localStorage.getItem(SLEUTEL)) || {}; } catch { return {}; } }
 function schrijfLogboek(lb) { try { localStorage.setItem(SLEUTEL, JSON.stringify(lb)); } catch {} }
 function bewaar(slug, veld, waarde) { const lb = leesLogboek(); lb[slug] = { ...(lb[slug] || {}), [veld]: waarde }; schrijfLogboek(lb); }
@@ -188,7 +188,7 @@ async function tekenCertificaat(doek, naam, lb) {
   const label = (tekst, lx, ly, kleur = inkt) => { c.fillStyle = kleur; c.font = `400 ${11 * u}px "Geist Mono", monospace`; spatie(11 * u, -0.02); c.fillText(tekst.toUpperCase(), lx, ly); };
   c.textBaseline = "alphabetic";
   c.fillStyle = inkt; c.fillRect(x, 92 * u, 7 * u, 7 * u);
-  label("Heelal · Onderzoekjes met Fos", x + 16 * u, 99 * u);
+  label("De Ruimte · Onderzoekjes met Fos", x + 16 * u, 99 * u);
   c.fillStyle = inkt; c.font = `300 ${84 * u}px "Geist", sans-serif`; spatie(84 * u, -0.05);
   c.fillText("Certificaat", x - 4 * u, 195 * u);
   label("Dit certificaat is voor", x, 262 * u, zacht);
@@ -216,7 +216,7 @@ async function tekenCertificaat(doek, naam, lb) {
   c.restore();
   c.textAlign = "left";
   const d = new Date();
-  label(`${d.getDate()} ${MAANDNAMEN[d.getMonth()]} ${d.getFullYear()} · Heelal`, x, H - 52 * u, zacht);
+  label(`${d.getDate()} ${MAANDNAMEN[d.getMonth()]} ${d.getFullYear()} · De Ruimte`, x, H - 52 * u, zacht);
   if (certBron) label(certBron, midden + 24 * u, H - 52 * u, zacht);
   spatie(1, 0);
 }

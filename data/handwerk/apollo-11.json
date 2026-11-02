@@ -1,0 +1,25 @@
+{
+ "kort": "De eerste keer dat mensen op de maan liepen: juli 1969.",
+ "kinderzin": "Met Apollo 11 liepen voor het eerst mensen op de maan.",
+ "weetjes": [
+  {
+   "tekst": "Apollo 11 vertrok op 16 juli 1969 met Neil Armstrong, Buzz Aldrin en Michael Collins.",
+   "bron": "https://www.nasa.gov/mission/apollo-11/",
+   "controle": "Apollo 11 launched on July 16, 1969"
+  },
+  {
+   "tekst": "Neil Armstrong was de eerste mens die op de maan stond. Buzz Aldrin was de tweede.",
+   "bron": "https://www.nasa.gov/mission/apollo-11/",
+   "controle": "The second human to set foot on the Moon"
+  },
+  {
+   "tekst": "Op deze foto staat Buzz Aldrin. Neil Armstrong maakte de foto.",
+   "bron": "https://www.nasa.gov/mission/apollo-11/",
+   "controle": "walks on the surface of the moon near the leg of the Lunar Module"
+  }
+ ],
+ "foto": {
+  "kleur": "echt",
+  "uitleg": "Buzz Aldrin op de maan, 20 juli 1969, naast de maanlander Eagle. Neil Armstrong maakte de foto."
+ }
+}

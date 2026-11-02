@@ -1,0 +1,25 @@
+{
+ "kort": "De eerste mens op de maan.",
+ "kinderzin": "Neil Armstrong was de eerste mens die op de maan liep.",
+ "weetjes": [
+  {
+   "tekst": "Neil Armstrong zette op 20 juli 1969 als eerste mens voet op de maan.",
+   "bron": "https://www.nasa.gov/people/neil-a-armstrong/",
+   "controle": "the first person to set foot on the moon on July 20, 1969"
+  },
+  {
+   "tekst": "Hij liep 2 uur en 14 minuten op de maan.",
+   "bron": "https://www.nasa.gov/people/neil-a-armstrong/",
+   "controle": "two hours and 14 minutes walking on the moon"
+  },
+  {
+   "tekst": "Eerder koppelde hij in 1966 met de Gemini 8 als eerste twee ruimtevaartuigen aan elkaar.",
+   "bron": "https://www.nasa.gov/people/neil-a-armstrong/",
+   "controle": "the first successful docking of two vehicles in orbit"
+  }
+ ],
+ "foto": {
+  "kleur": "echt",
+  "uitleg": "Het officiële portret van Neil Armstrong voor Apollo 11, januari 1969."
+ }
+}

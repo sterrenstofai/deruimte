@@ -183,6 +183,10 @@ def main():
             if w.get("mag"): c.append(cijfer("Helderheid", f"{getal(float(w['mag']), 1)}", WD + w["qid"], uitleg="hoe lager, hoe helderder; de zwakste sterren die je ziet zijn ongeveer 6"))
             c.append(cijfer("Sterrenbeeld", STERRENBEELD[s], "https://www.iau.org/public/themes/constellations/"))
             baan["ster"] = {"ra": float(w["ra"]), "dec": float(w["dec"]), "parallax_mas": par}
+        elif k["soort"] in ("ruimtevaartuig", "astronaut"):
+            for naam, tekst, bron in k.get("cijfers", []):
+                c.append(cijfer(naam, tekst, bron))
+            if s == "hubble": baan.update(a_km=6371 + 560, periode_d=95 / 1440, om="aarde")
         elif s == "iss":
             for naam, tekst, bron, d in HAND["iss"]:
                 c.append(cijfer(naam, tekst, bron))
@@ -192,7 +196,7 @@ def main():
         n = nk.get(s, {})
         item = {
             "slug": s, "naam": k["naam"], "titel": k["kort"], "soort": k["soort"], "ouder": k.get("ouder"), "nr": k.get("nr"),
-            "ae": k.get("ae"), "qid": w.get("qid"), "wiki": w.get("nlwiki"),
+            "ae": k.get("ae"), "qid": w.get("qid"), "wiki": w.get("nlwiki"), "sonde": k.get("sonde"), "plek": k.get("plek"),
             "kort": hw.get("kort", ""), "kinderzin": hw.get("kinderzin", ""),
             "weetjes": [{"tekst": x["tekst"], "bron": x["bron"]} for x in hw.get("weetjes", [])],
             "nagekeken": bool(hw) and n.get("alles", False), "nagekeken_datum": n.get("datum"),

@@ -1,0 +1,25 @@
+{
+ "kort": "Een ruimtesonde die sinds 2016 rondjes draait om Jupiter.",
+ "kinderzin": "Juno vliegt rondjes om Jupiter. Hij werkt op zonnepanelen.",
+ "weetjes": [
+  {
+   "tekst": "Juno draait sinds 2016 om Jupiter.",
+   "bron": "https://science.nasa.gov/mission/juno/",
+   "controle": "Since it arrived at Jupiter in 2016"
+  },
+  {
+   "tekst": "Juno werkt op zonnepanelen. Geen ruimtesonde die op zonlicht werkt, is zo ver van de aarde.",
+   "bron": "https://science.nasa.gov/mission/juno/",
+   "controle": "Farthest solar-powered spacecraft from Earth"
+  },
+  {
+   "tekst": "Juno is de eerste ruimtesonde die over de polen van een buitenplaneet vliegt.",
+   "bron": "https://science.nasa.gov/mission/juno/",
+   "controle": "First mission to orbit an outer planet from pole to pole"
+  }
+ ],
+ "foto": {
+  "kleur": "echt",
+  "uitleg": "Technici testen een van de drie grote zonnepanelen van Juno, op aarde, 2009."
+ }
+}

@@ -189,8 +189,8 @@ export function speel(item, { geheim = false } = {}) {
   audio.src = item.url;
   if ("mediaSession" in navigator) {
     navigator.mediaSession.metadata = geheim
-      ? new MediaMetadata({ title: "Wat hoor ik?", artist: "Heelal" })
-      : new MediaMetadata({ title: item.titel, artist: item.artiest, album: "Heelal", artwork: item.hoes ? [{ src: item.hoes, sizes: "600x600", type: "image/jpeg" }] : [] });
+      ? new MediaMetadata({ title: "Wat hoor ik?", artist: "De Ruimte" })
+      : new MediaMetadata({ title: item.titel, artist: item.artiest, album: "De Ruimte", artwork: item.hoes ? [{ src: item.hoes, sizes: "600x600", type: "image/jpeg" }] : [] });
   }
   start();
   if (!item.eigen) maakSpectrum(item.id, item.url);

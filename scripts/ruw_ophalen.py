@@ -13,7 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 RUW = ROOT / "data" / "ruw"
-UA = "heelal/0.1 (github.com/sterrenstofai)"
+UA = "de-ruimte/0.1 (github.com/sterrenstofai)"
 
 def haal(url, ruw=False):
     for poging in range(5):

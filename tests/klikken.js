@@ -54,7 +54,7 @@ const ok = (v, wat) => { console.log(`${v ? "ok  " : "FOUT"} ${wat}`); if (!v) f
   await page.reload({ waitUntil: "networkidle" });
   ok((await page.locator(".oz-logboek textarea").inputValue()) === "Saturnus heeft ringen", "logboek bewaard na herladen");
   // alle zes klaar, dan het certificaat
-  await page.evaluate(() => { const lb = JSON.parse(localStorage.getItem("heelal-onderzoekjes") || "{}"); for (const s of ["wat-zie-je-vanavond", "maan-dagboek", "hoe-groot-is-de-zon", "welke-planeet", "zwaar-en-licht", "sterrenbeeld-leggen"]) lb[s] = { ...(lb[s] || {}), klaar: "2 november 2026" }; localStorage.setItem("heelal-onderzoekjes", JSON.stringify(lb)); });
+  await page.evaluate(() => { const lb = JSON.parse(localStorage.getItem("ruimte-onderzoekjes") || "{}"); for (const s of ["wat-zie-je-vanavond", "maan-dagboek", "hoe-groot-is-de-zon", "welke-planeet", "zwaar-en-licht", "sterrenbeeld-leggen"]) lb[s] = { ...(lb[s] || {}), klaar: "2 november 2026" }; localStorage.setItem("ruimte-onderzoekjes", JSON.stringify(lb)); });
   await page.goto(BASIS + "/onderzoekjes", { waitUntil: "networkidle" });
   await page.fill(".oz-certificaat input", "Fos");
   const [dl] = await Promise.all([page.waitForEvent("download"), page.locator("[data-certificaat]").click()]);
@@ -65,7 +65,7 @@ const ok = (v, wat) => { console.log(`${v ? "ok  " : "FOUT"} ${wat}`); if (!v) f
   require("fs").copyFileSync(pad, "/tmp/claude-0/certificaat.png");
   await page.locator("[data-opnieuw-vraag]").click();
   await page.locator("[data-opnieuw-ja]").click();
-  ok(await page.evaluate(() => JSON.parse(localStorage.getItem("heelal-onderzoekjes"))._naam === "Fos"), "opnieuw beginnen: naam blijft bewaard");
+  ok(await page.evaluate(() => JSON.parse(localStorage.getItem("ruimte-onderzoekjes"))._naam === "Fos"), "opnieuw beginnen: naam blijft bewaard");
 
   // onderzoekjes met invoer
   await page.goto(BASIS + "/onderzoekjes/zwaar-en-licht", { waitUntil: "networkidle" });
