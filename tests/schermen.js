@@ -16,6 +16,8 @@ const PAGINAS = [
   ["iss-nu", "/hemel/iss?tab=nu"],
   ["io-baan", "/hemel/io?tab=baan"],
   ["vanavond", "/vanavond"],
+  ["hemelkaart", "/hemelkaart"],
+  ["hemelkaart-mars", "/hemelkaart?markeer=mars"],
   ["voyager", "/hemel/voyager-1?tab=nu"],
   ["voyager-baan", "/hemel/voyager-1?tab=baan"],
   ["perseverance", "/hemel/perseverance"],

@@ -873,3 +873,88 @@ main > .blok:first-child { margin-top: 1.5rem; }
   .scherm-strook { grid-template-columns: minmax(0, 1fr) 10rem; }
   .omgeving { width: 10rem; height: 10rem; }
 }
+
+/* ---------- De grote sterrenkaart (opzet van de kaartpagina van Voggels) ---------- */
+.kaart-vak { position: relative; max-width: 34rem; }
+.vv-kaart .kaart-vak { max-width: 44rem; }
+.kaart-groot { position: absolute; top: .6rem; right: .6rem; display: inline-flex; align-items: center; gap: .35rem; min-height: 36px; padding: 0 .75rem; border-radius: 999px;
+  background: rgb(26 26 26 / .78); color: var(--papier); border: 1px solid rgb(255 255 255 / .3); font: 500 .82rem var(--letter); text-decoration: none; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.kaart-groot svg { width: 16px; height: 16px; }
+.kaart-groot:hover { background: var(--mint); color: var(--inkt); border-color: var(--mint); }
+
+.kaartmodus .voet { display: none; }
+.kaartmodus .balk { background: var(--papier); }
+.sim { position: fixed; inset: var(--kop-h, 0px) 0 0 0; background: var(--nacht); overflow: hidden; color: var(--papier); font-family: var(--letter); z-index: 20; }
+.hk-doek { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; cursor: grab; outline: none; }
+.hk-doek:active { cursor: grabbing; }
+.hk-doek:focus-visible { box-shadow: inset 0 0 0 2px var(--mint); }
+.sim-ui { position: absolute; z-index: 5; }
+.sim-boven { top: .9rem; left: var(--rand); right: var(--rand); display: flex; flex-wrap: wrap; gap: .5rem; pointer-events: none; }
+.sim-boven > * { pointer-events: auto; }
+.sim-chip { display: inline-flex; align-items: center; gap: .45rem; background: rgb(26 26 26 / .82); color: var(--papier); border: 1px solid rgb(255 255 255 / .3); border-radius: 999px; padding: .45rem .8rem; font: 500 .85rem var(--letter); text-decoration: none; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+button.sim-chip, a.sim-chip { cursor: pointer; min-height: 40px; }
+.sim-chip svg { width: 16px; height: 16px; }
+.sim-stip { width: 8px; height: 8px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 0 3px rgb(161 255 203 / .25); }
+.sim-van { background: var(--mint); border-color: var(--mint); color: var(--inkt); }
+.sim-info { top: 4.2rem; left: var(--rand); right: var(--rand); max-width: 28rem; max-height: calc(100% - 6rem); overflow: auto; background: rgb(255 255 255 / .97); color: var(--inkt); border-radius: 20px; padding: 1rem 1.2rem; font: 400 .95rem/1.5 var(--letter); box-shadow: 0 20px 40px -18px rgb(0 0 0 / .6); }
+.sim-info p { margin: 0 0 .6rem; }
+.hk-plek .plek-rij { flex-wrap: wrap; }
+.sim-hint { left: 50%; top: 42%; transform: translate(-50%, -50%); margin: 0; background: rgb(26 26 26 / .78); color: var(--papier); border: 1px solid rgb(255 255 255 / .25); border-radius: 999px; padding: .55rem 1rem; font: 500 .85rem var(--letter); white-space: nowrap; pointer-events: none; transition: opacity 800ms; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.sim-hint.weg { opacity: 0; }
+.sim-knoppen { right: var(--rand); top: .9rem; display: grid; gap: .5rem; }
+.sim-boven { right: calc(var(--rand) + 56px); }
+.sim-knoppen .knop-icoon { background: rgb(244 244 244 / .92); color: var(--inkt); border-color: transparent; position: relative; }
+.hk-draai b { position: absolute; right: -4px; bottom: -4px; min-width: 20px; height: 20px; border-radius: 999px; background: var(--mint); color: var(--inkt); font: 600 .7rem/20px var(--mono); }
+.sim:has(.sim-info:not([hidden])) .sim-knoppen { display: none; }
+.sim-paneel { left: 0; right: 0; bottom: 0; padding: 1rem var(--rand) max(1rem, env(safe-area-inset-bottom)); background: linear-gradient(transparent, rgb(26 26 26 / .94) 22%); display: grid; gap: .6rem; }
+.sim-tijd { display: flex; align-items: center; gap: .9rem; }
+.knop-speel { width: 56px; height: 56px; border-radius: 50%; border: 0; background: var(--papier); color: var(--inkt); display: grid; place-items: center; cursor: pointer; flex: none; }
+.knop-speel svg { width: 24px; height: 24px; }
+.knop-speel path { fill: currentColor; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; }
+.knop-speel .ico-pauze { display: none; fill: none; }
+.knop-speel[aria-pressed="true"] .ico-pauze { display: block; }
+.knop-speel[aria-pressed="true"] .ico-speel { display: none; }
+.sim-maand { flex: 1; min-width: 0; display: grid; gap: .3rem; }
+.sim-maandnaam { font: 300 2rem/1 var(--letter); letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.sim-maandnaam small { font: 500 .8rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--mint); margin-left: .3rem; vertical-align: middle; }
+.sim-maand input { width: 100%; accent-color: var(--mint); }
+.hk-nu { flex: none; min-height: 40px; padding: 0 .9rem; border-radius: 999px; border: 1px solid rgb(255 255 255 / .35); background: none; color: var(--papier); font: 500 .85rem var(--letter); cursor: pointer; }
+.sim-noot { margin: 0; font: 400 .82rem/1.35 var(--letter); color: rgb(255 255 255 / .75); }
+.sim-groepen { display: flex; gap: .4rem; overflow-x: auto; padding-bottom: .2rem; }
+.sim-groep { display: inline-flex; align-items: center; gap: .4rem; background: rgb(255 255 255 / .1); color: var(--papier); border: 1px solid rgb(255 255 255 / .25); border-radius: 999px; padding: .4rem .75rem; min-height: 38px; cursor: pointer; font: 500 .82rem var(--letter); white-space: nowrap; }
+.sim-groep i { width: 9px; height: 9px; border-radius: 50%; background: var(--mint); }
+.sim-groep[aria-pressed="false"] { opacity: .45; }
+.sim-groep[aria-pressed="false"] i { background: transparent; outline: 1px solid currentColor; }
+.sim-kaartje { position: relative; display: grid; grid-template-columns: 80px 1fr; gap: 1rem; background: rgb(255 255 255 / .97); color: var(--inkt); border-radius: 22px; padding: .8rem; box-shadow: 0 20px 40px -18px rgb(0 0 0 / .6); }
+.sim-kaartje[hidden] { display: none; }
+.sim-kaartje-beeld { background: var(--nacht); color: var(--papier); border-radius: 12px; overflow: hidden; aspect-ratio: 1; display: grid; place-items: center; font: 300 2rem var(--letter); }
+.sim-kaartje-beeld img { width: 100%; height: 100%; object-fit: cover; }
+.sim-kaartje-naam { font: 400 1.5rem/1.05 var(--letter); letter-spacing: -.02em; text-decoration: none; display: block; padding-right: 2rem; }
+.sim-kaartje p { margin: .35rem 0 .6rem; font: 400 .9rem/1.4 var(--letter); }
+.sim-kaartje-acties { display: flex; gap: .4rem; flex-wrap: wrap; }
+.sim-kaartje .knop-pil { min-height: 40px; padding: .45rem .9rem; font-size: .9rem; }
+.sim-kaartje-sluit { position: absolute; top: .4rem; right: .4rem; width: 40px; height: 40px; border: 0; background: none; font-size: 1.5rem; cursor: pointer; color: var(--inkt-zacht); }
+@media (min-width: 900px) {
+  .sim-paneel { right: auto; width: min(26rem, 34vw); left: var(--rand); bottom: 1rem; padding: 1rem 1.1rem; border-radius: 24px; background: rgb(26 26 26 / .86); border: 1px solid rgb(255 255 255 / .12); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+  .sim-groepen { flex-wrap: wrap; }
+  .sim-knoppen { top: auto; bottom: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) { .sim-hint { transition: none; } }
+/* Op een telefoon: in de kaartmodus geen zoekveld in de kop, zodat de hemel meer ruimte krijgt */
+@media (max-width: 999px) { .kaartmodus .balk .zoek { display: none; } }
+
+/* Om je heen (3D) */
+.sim-bron { display: inline-flex; padding: 3px; border-radius: 999px; background: rgb(26 26 26 / .82); border: 1px solid rgb(255 255 255 / .22); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.sim-bron button { border: 0; background: none; color: var(--papier); font: 500 .88rem var(--letter); height: 34px; padding: 0 .9rem; border-radius: 999px; cursor: pointer; }
+.sim-bron button[aria-pressed="true"] { background: var(--papier); color: var(--inkt); }
+.hk-richt[aria-pressed="true"] { background: var(--mint) !important; }
+.hk-intro { position: absolute; inset: 0; z-index: 4; display: grid; place-content: center; justify-items: center; gap: .9rem; text-align: center; pointer-events: none; padding: 0 var(--rand); opacity: 0; }
+.hk-opening .hk-intro { animation: hk-intro 3.4s cubic-bezier(.2, .7, .1, 1) .2s both; }
+.hk-intro-etiket { font: 500 .78rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--mint); }
+.hk-intro-kop { font: 200 clamp(2.6rem, 8vw, 7rem)/.95 var(--letter); letter-spacing: -.045em; color: var(--papier); text-shadow: 0 6px 40px rgb(0 0 0 / .5); max-width: 14ch; }
+.hk-intro-kop em { font-style: normal; color: var(--mint); }
+@keyframes hk-intro { 0% { opacity: 0; transform: translateY(18px); filter: blur(8px); } 22% { opacity: 1; transform: none; filter: none; } 70% { opacity: 1; } 100% { opacity: 0; transform: translateY(-10px); } }
+.hk-opening:not(.hk-begonnen) .sim-ui { opacity: 0; }
+.hk .sim-ui { transition: opacity 700ms ease; }
+.hk-3d .hk-doek { cursor: grab; }
+@media (prefers-reduced-motion: reduce) { .hk-opening .hk-intro { animation: none; } .hk .sim-ui { transition: none; } }

@@ -34,7 +34,7 @@ def main():
     (RUW / "nasa_sunfact.html").write_bytes(haal("https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html", True))
     # sterren en lijnen van sterrenbeelden: d3-celestial (Olaf Frohn, BSD-3-Clause)
     D3 = "https://raw.githubusercontent.com/ofrohn/d3-celestial/master/data/"
-    for f in ("stars.6.json", "constellations.lines.json", "starnames.json"):
+    for f in ("stars.6.json", "constellations.lines.json", "starnames.json", "mw.json"):
         (RUW / f"d3_{f}").write_bytes(haal(D3 + f, True))
     # Nederlandse namen van de sterrenbeelden
     q88 = """SELECT ?afk ?nl ?en WHERE { ?item wdt:P31 wd:Q8928 ; wdt:P1813 ?afk . FILTER(STRLEN(STR(?afk)) = 3)

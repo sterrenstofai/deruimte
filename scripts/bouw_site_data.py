@@ -228,6 +228,24 @@ def main():
         naam = STERRENBEELD_FIX.get(a) or (nl.get(a) or {}).get("nl") or a
         sb_uit[a] = {"nl": naam, "lijnen": [[[round(p[0] % 360, 2), round(p[1], 2)] for p in l] for l in f["geometry"]["coordinates"]]}
     (SITE / "sterrenbeelden.json").write_text(json.dumps(sb_uit, ensure_ascii=False, separators=(",", ":")))
+    # de Melkweg: vijf lagen van zwak naar helder (d3-celestial), vereenvoudigd tot ongeveer een punt per graad
+    import math
+    mw = json.loads((RUW / "d3_mw.json").read_text())
+    def hoek(a, b):
+        r = math.radians
+        c = math.sin(r(a[1])) * math.sin(r(b[1])) + math.cos(r(a[1])) * math.cos(r(b[1])) * math.cos(r(a[0] - b[0]))
+        return math.degrees(math.acos(max(-1, min(1, c))))
+    lagen = []
+    for f in sorted(mw["features"], key=lambda f: f["id"]):
+        ringen = []
+        for poly in f["geometry"]["coordinates"]:
+            for ring in poly:
+                kort = [ring[0]]
+                for q in ring[1:]:
+                    if hoek(kort[-1], q) >= 0.8: kort.append(q)
+                if len(kort) >= 4: ringen.append([[round(q[0] % 360, 1), round(q[1], 1)] for q in kort])
+        lagen.append(ringen)
+    (SITE / "melkweg.json").write_text(json.dumps(lagen, separators=(",", ":")))
     print(f"{len(uit)} hemellichamen ({sum(x['nagekeken'] for x in uit)} nagekeken), {len(sterren)} sterren, {len(sb_uit)} sterrenbeelden")
 
 

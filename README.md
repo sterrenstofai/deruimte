@@ -12,9 +12,10 @@ site/                 alles wat live gaat
   hoe-dit-werkt.html
   css/stijl.css       één bestand (overgenomen van ikhooreengeluidje)
   js/                 app (router, scherm per hemellichaam), hemel (rekenen), kaart (sterrenkaart), baan (simulatie),
+                      hemelkaart (de hemel op het hele scherm), hemel3d (om je heen: stereografisch, Melkweg, landschap),
                       vanavond, plek (locatie, alleen in het geheugen), wikidata (zoeken buiten de lijst),
                       kinderen, onderzoekjes, mijn, geluid; vendor/ astronomy-engine en satellite.js (MIT)
-  data/               hemel.json, fotos.json, geluid.json, iss.json, sterren.json, sterrenbeelden.json (gebouwd)
+  data/               hemel.json, fotos.json, geluid.json, iss.json, sterren.json, sterrenbeelden.json, melkweg.json (gebouwd)
   fotos/ klanken/ fonts/
 data/
   kern.json           de vaste kern van 41 (hemellichamen, ruimtevaartuigen, astronauten), met de hand gekozen

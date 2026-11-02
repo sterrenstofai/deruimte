@@ -3,7 +3,7 @@
 import { vanavond, avond, maanfase, issOvergangen, tleLeeftijd, klok, dag, richting, positie, opOnder, middernachtNa } from "./hemel.js";
 import * as KAART from "./kaart.js";
 import * as PLEK from "./plek.js";
-import { maanSvg, esc, naar } from "./app.js";
+import { maanSvg, esc, naar, GROOT_KNOP } from "./app.js";
 
 const BEELDEN = [["UMa", "de Grote Beer", "Zeven sterren in de vorm van een steelpan. Altijd te zien in Nederland."], ["Cas", "Cassiopeia", "Vijf sterren in de vorm van een W (of een M). Altijd te zien in Nederland."],
   ["Ori", "Orion", "Drie sterren op een rij: de gordel van de jager. In de winter."], ["Cyg", "de Zwaan", "Een groot kruis. In de zomer en de herfst."], ["Leo", "de Leeuw", "Een achterstevoren vraagteken. In de lente."],
@@ -18,7 +18,7 @@ export function vanavondPagina(app, D) {
     <div data-plek></div>
     <div class="vv-twee">
       <div class="vv-kaart">
-        <canvas class="sterrenkaart groot" aria-label="Sterrenkaart van vanavond"></canvas>
+        <div class="kaart-vak"><canvas class="sterrenkaart groot" aria-label="Sterrenkaart van vanavond"></canvas>${GROOT_KNOP("/hemelkaart")}</div>
         <label class="vv-tijd"><span>Tijd: <b data-tijd></b></span><input type="range" min="0" max="48" step="1" value="0" aria-label="Kies een tijd vanavond of vannacht"></label>
         <p class="noot zacht">Zo staat de hemel boven je als je op je rug ligt, met je hoofd naar het noorden. De rand is de horizon; in het midden is het recht boven je. Tik op een planeet voor meer. <span class="label">simulatie</span></p>
       </div>
@@ -72,6 +72,7 @@ export function vanavondPagina(app, D) {
     const p = PLEK.huidig(), t = tijdVan();
     app.querySelector("[data-tijd]").textContent = `${klok(t)}${t >= middernachtNa(av.schemering) ? " (na middernacht)" : ""}`;
     KAART.teken(doek, D, p, t, { beeldNamen: true, sterNamen: true, uitgelicht: BEELDEN.map((b) => b[0]) });
+    app.querySelector(".kaart-groot").href = `/hemelkaart?tijd=${+t}`;
     // sterrenbeelden om te zoeken: welke staan er nu hoog genoeg?
     KAART.laadSterren().then(({ beelden }) => {
       const nu = BEELDEN.map(([afk, naam, uitleg]) => {

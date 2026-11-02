@@ -45,6 +45,7 @@ const kunJeZien = (h) => h.slug !== "aarde" && h.soort !== "astronaut" && (h.soo
 const tabsVoor = (h) => h.soort === "astronaut" ? TABS.filter(([k]) => k === "foto") : TABS;
 const KLEUR = { echt: "echte kleur", benaderd: "kleur benaderd", versterkt: "kleur versterkt", vals: "valse kleur" };
 const SPEEL_SVG = `<svg viewBox="0 0 44 44" aria-hidden="true"><circle class="ring-bg" cx="22" cy="22" r="20"/><circle class="ring" cx="22" cy="22" r="20"/><path class="ico-pauze" d="M17 15v14M27 15v14"/><path class="ico-speel" d="M18 14l12 8-12 8z"/></svg>`;
+export const GROOT_KNOP = (href) => `<a class="kaart-groot" href="${href}" data-link><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Grote kaart</a>`;
 const STER_SVG = `<svg class="ster-teken" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="7" fill="currentColor"/><path d="M50 18v20M50 62v20M18 50h20M62 50h20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>`;
 
 function beeld(D, h, klein = false) {
@@ -74,12 +75,18 @@ async function toon() {
     ruimOp();
     document.body.classList.toggle("onder-kop", !pad.startsWith("/hemel/"));
     document.body.classList.toggle("kindermodus", pad === "/kinderen");
+    document.body.classList.toggle("kaartmodus", pad === "/hemelkaart");
     kinderModule?.verlaat();
     ozModule?.verlaat();
     if (pad === "/") home(D);
     else if (pad.startsWith("/hemel/")) hemelPagina(D, decodeURIComponent(pad.slice(7)));
     else if (pad === "/hemellichamen") index(D);
     else if (pad === "/vanavond") import("./vanavond.js").then((V) => { document.title = `Wat zie je vanavond? · ${TITEL}`; opruimers.push(V.vanavondPagina(app, D)); });
+    else if (pad === "/hemelkaart") import("./hemelkaart.js").then((K) => {
+      const q = new URLSearchParams(location.search), t = q.get("tijd");
+      document.title = `De hemel boven je · ${TITEL}`;
+      opruimers.push(K.hemelkaartPagina(app, D, { markeer: q.get("markeer"), tijd: t && !isNaN(+t) ? new Date(+t) : null }));
+    });
     else if (pad === "/mijn") mijnPagina(D);
     else if (pad === "/zoek") zoekPagina(D, new URLSearchParams(location.search).get("q") || "");
     else if (pad.startsWith("/gevonden/")) gevondenPagina(D, pad.slice(10));
@@ -214,6 +221,7 @@ function home(D) {
     <p class="held-sub">De zon, de maan, de planeten, hun manen, kometen en sterren. Met echte foto's, en uitgerekend in je eigen browser: wat je vanavond kunt zien, en waar je moet kijken.</p>
     <div class="held-knoppen">
       <a class="knop-pil knop-accent" href="/vanavond" data-link>Wat zie je vanavond?</a>
+      <a class="knop-pil" href="/hemelkaart" data-link>De hemel boven je</a>
       <a class="knop-pil" href="/hemel/maan" data-link>Begin bij de maan</a>
       <a class="knop-pil" href="/kinderen" data-link>Voor kinderen</a>
     </div>
@@ -458,7 +466,7 @@ function koppelGeluid(D, h, vak) {
 function paneelNu(D, h, vak) {
   vak.innerHTML = `<div class="paneel-binnen nu">
     <div class="nu-twee">
-      <div class="nu-kaart"><canvas class="sterrenkaart" aria-label="Sterrenkaart met ${esc(h.naam)}"></canvas><p class="noot zacht kaart-uitleg">Zo staat de hemel nu boven je, als je op je rug ligt met je hoofd naar het noorden. De rand is de horizon.</p></div>
+      <div class="nu-kaart"><div class="kaart-vak"><canvas class="sterrenkaart" aria-label="Sterrenkaart met ${esc(h.naam)}"></canvas>${GROOT_KNOP(`/hemelkaart?markeer=${h.slug}`)}</div><p class="noot zacht kaart-uitleg">Zo staat de hemel nu boven je, als je op je rug ligt met je hoofd naar het noorden. De rand is de horizon.</p></div>
       <div class="nu-tekst" data-nu-tekst></div>
     </div>
     <div data-plek></div>
@@ -647,6 +655,10 @@ function koppelSpeler() {
     }
   });
 }
+
+// hoogte van de kop, voor de grote kaart die eronder begint (zoals bij Voggels)
+const balk = document.querySelector(".balk");
+new ResizeObserver(() => document.documentElement.style.setProperty("--kop-h", `${balk.offsetHeight}px`)).observe(balk);
 
 koppelZoeken();
 koppelSpeler();

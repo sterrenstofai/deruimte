@@ -80,6 +80,43 @@ const ok = (v, wat) => { console.log(`${v ? "ok  " : "FOUT"} ${wat}`); if (!v) f
   const wd = await page.locator("[data-resultaten]").textContent();
   ok(/Deimos|druk|geen antwoord/.test(wd), `Wikidata-zoeken geeft een resultaat of een eerlijke melding: "${wd.trim().slice(0, 80)}"`);
 
+  // de hemel op het hele scherm: openen vanaf vanavond, om je heen (3D), tikken, zoomen, draaien, afspelen, en de platte kaart
+  await page.goto(BASIS + "/vanavond", { waitUntil: "networkidle" });
+  await page.locator(".kaart-groot").click();
+  await page.waitForSelector(".hk-doek");
+  await page.waitForTimeout(4800); // de opening
+  ok(await page.evaluate(() => document.body.classList.contains("kaartmodus")), "hemel: schermvullend");
+  for (const modus of ["3d", "plat"]) {
+    await page.locator(`[data-modus="${modus}"]`).click();
+    await page.waitForTimeout(500);
+    const pl = await page.evaluate(() => document.querySelector(".hk-doek").plekken || []);
+    ok(pl.length > 0, `hemel (${modus}): ${pl.length} hemellichamen in beeld`);
+    if (pl.length) {
+      const b = await page.locator(".hk-doek").boundingBox();
+      await page.mouse.click(b.x + pl[0].x, b.y + pl[0].y);
+      await page.waitForTimeout(300);
+      ok(await page.locator(".sim-kaartje:not([hidden]) .sim-kaartje-naam").count() === 1, `hemel (${modus}): tik op ${pl[0].slug} toont het kaartje`);
+      await page.locator(".sim-kaartje-sluit").click();
+    }
+    await page.locator("[data-zoom='1.6']").click();
+    await page.locator("[data-draai]").click();
+    await page.waitForTimeout(1200);
+    ok((await page.locator("[data-kijk-letter]").textContent()) === "W", `hemel (${modus}): een kwartslag draaien, naar het westen`);
+  }
+  await page.locator('[data-modus="3d"]').click();
+  const voorSlepen = await page.locator("[data-noot]").textContent();
+  const bb = await page.locator(".hk-doek").boundingBox();
+  await page.mouse.move(bb.x + bb.width / 2, bb.y + 300); await page.mouse.down(); await page.mouse.move(bb.x + bb.width / 2 + 500, bb.y + 300, { steps: 10 }); await page.mouse.up();
+  await page.waitForTimeout(800);
+  ok(voorSlepen !== await page.locator("[data-noot]").textContent(), "hemel (3d): slepen draait je om");
+  await page.locator(".knop-speel").click();
+  await page.waitForTimeout(1200);
+  await page.locator(".knop-speel").click();
+  ok(+(await page.locator(".hk input[type=range]").inputValue()) > 0, "hemel: afspelen laat de tijd lopen");
+  await page.locator(".balk .merk").click();
+  await page.waitForTimeout(400);
+  ok(await page.evaluate(() => !document.body.classList.contains("kaartmodus")), "hemel: weg van de kaart, kaartmodus uit");
+
   // kinderversie: vegen en de knop
   await page.goto(BASIS + "/kinderen", { waitUntil: "networkidle" });
   const voor = await page.locator(".kids-plaat img").getAttribute("src");
