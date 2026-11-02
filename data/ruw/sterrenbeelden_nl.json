@@ -1,0 +1,346 @@
+{
+ "Boo": {
+  "nl": "Ossenhoeder",
+  "en": "Boötes"
+ },
+ "Dra": {
+  "nl": "Draak",
+  "en": "Draco"
+ },
+ "Psc": {
+  "nl": "Vissen",
+  "en": "Pisces"
+ },
+ "Cam": {
+  "nl": "Giraffe",
+  "en": "Camelopardalis"
+ },
+ "Cet": {
+  "nl": "Walvis",
+  "en": "Cetus"
+ },
+ "Dor": {
+  "nl": "Goudvis",
+  "en": "Dorado"
+ },
+ "Vir": {
+  "nl": "Maagd",
+  "en": "Virgo"
+ },
+ "Cen": {
+  "nl": "Centaur",
+  "en": "Centaurus"
+ },
+ "Leo": {
+  "nl": "Leeuw",
+  "en": "Leo"
+ },
+ "Ori": {
+  "nl": "Orion",
+  "en": "Orion"
+ },
+ "Peg": {
+  "nl": "Pegasus",
+  "en": "Pegasus"
+ },
+ "Sco": {
+  "nl": "Schorpioen",
+  "en": "Scorpius"
+ },
+ "Sgr": {
+  "nl": "Boogschutter",
+  "en": "Sagittarius"
+ },
+ "Oph": {
+  "nl": "Slangendrager",
+  "en": "Ophiuchus"
+ },
+ "Ser": {
+  "nl": "Slang",
+  "en": "Serpens"
+ },
+ "For": {
+  "nl": "Oven",
+  "en": "Fornax"
+ },
+ "Cyg": {
+  "nl": "Zwaan",
+  "en": "Cygnus"
+ },
+ "UMa": {
+  "nl": "Grote Beer",
+  "en": "Ursa Major"
+ },
+ "Gem": {
+  "nl": "Tweelingen",
+  "en": "Gemini"
+ },
+ "Pup": {
+  "nl": "Achtersteven",
+  "en": "Puppis"
+ },
+ "Crt": {
+  "nl": "Beker",
+  "en": "Crater"
+ },
+ "Com": {
+  "nl": "Hoofdhaar",
+  "en": "Coma Berenices"
+ },
+ "Scl": {
+  "nl": "Beeldhouwer-sterrenbeeld",
+  "en": "Sculptor"
+ },
+ "Men": {
+  "nl": "Tafelberg",
+  "en": "Mensa"
+ },
+ "Ara": {
+  "nl": "Altaar",
+  "en": "Ara"
+ },
+ "And": {
+  "nl": "Andromeda",
+  "en": "Andromeda"
+ },
+ "Del": {
+  "nl": "Dolfijn",
+  "en": "Delphinus"
+ },
+ "LMi": {
+  "nl": "Kleine Leeuw",
+  "en": "Leo Minor"
+ },
+ "CMi": {
+  "nl": "Kleine Hond",
+  "en": "Canis Minor"
+ },
+ "PsA": {
+  "nl": "Zuidervis",
+  "en": "Piscis Austrinus"
+ },
+ "CrA": {
+  "nl": "Zuiderkroon",
+  "en": "Corona Australis"
+ },
+ "CrB": {
+  "nl": "Noorderkroon",
+  "en": "Corona Borealis"
+ },
+ "Hyi": {
+  "nl": "Kleine Waterslang",
+  "en": "Hydrus"
+ },
+ "TrA": {
+  "nl": "Zuiderdriehoek",
+  "en": "Triangulum Australe"
+ },
+ "Lac": {
+  "nl": "Hagedis",
+  "en": "Lacerta"
+ },
+ "Phe": {
+  "nl": "Phoenix",
+  "en": "Phoenix"
+ },
+ "Col": {
+  "nl": "Duif",
+  "en": "Columba"
+ },
+ "Mon": {
+  "nl": "Eenhoorn",
+  "en": "Monoceros"
+ },
+ "Mus": {
+  "nl": "Vlieg",
+  "en": "Musca"
+ },
+ "Equ": {
+  "nl": "Veulen",
+  "en": "Equuleus"
+ },
+ "Vol": {
+  "nl": "Vliegende Vis",
+  "en": "Volans"
+ },
+ "Lep": {
+  "nl": "Haas",
+  "en": "Lepus"
+ },
+ "Eri": {
+  "nl": "Eridanus",
+  "en": "Eridanus"
+ },
+ "Her": {
+  "nl": "Hercules",
+  "en": "Hercules"
+ },
+ "Lyn": {
+  "nl": "Lynx",
+  "en": "Lynx"
+ },
+ "CVn": {
+  "nl": "Jachthonden",
+  "en": "Canes Venatici"
+ },
+ "Ind": {
+  "nl": "Indiaan",
+  "en": "Indus"
+ },
+ "Cha": {
+  "nl": "Kameleon",
+  "en": "Chamaeleon"
+ },
+ "Cas": {
+  "nl": "Cassiopeia",
+  "en": "Cassiopeia"
+ },
+ "Car": {
+  "nl": "Kiel",
+  "en": "Carina"
+ },
+ "Cep": {
+  "nl": "Cepheus",
+  "en": "Cepheus"
+ },
+ "Pyx": {
+  "nl": "Kompas",
+  "en": "Pyxis"
+ },
+ "Aur": {
+  "nl": "Voerman",
+  "en": "Auriga"
+ },
+ "UMi": {
+  "nl": "Kleine Beer",
+  "en": "Ursa Minor"
+ },
+ "Pic": {
+  "nl": "Schilder",
+  "en": "Pictor"
+ },
+ "Cae": {
+  "nl": "Graveerstift",
+  "en": "Caelum"
+ },
+ "Mic": {
+  "nl": "Microscoop",
+  "en": "Microscopium"
+ },
+ "Per": {
+  "nl": "Perseus",
+  "en": "Perseus"
+ },
+ "Cir": {
+  "nl": "Passer",
+  "en": "Circinus"
+ },
+ "Ant": {
+  "nl": "Luchtpomp",
+  "en": "Antlia"
+ },
+ "Lyr": {
+  "nl": "Lier",
+  "en": "Lyra"
+ },
+ "Ret": {
+  "nl": "Net",
+  "en": "Reticulum"
+ },
+ "Pav": {
+  "nl": "Pauw",
+  "en": "Pavo"
+ },
+ "Crv": {
+  "nl": "Raaf",
+  "en": "Corvus"
+ },
+ "Vul": {
+  "nl": "Vosje",
+  "en": "Vulpecula"
+ },
+ "Vel": {
+  "nl": "Zeilen",
+  "en": "Vela"
+ },
+ "Sex": {
+  "nl": "Sextant",
+  "en": "Sextans"
+ },
+ "Sge": {
+  "nl": "Pijl",
+  "en": "Sagitta"
+ },
+ "Sct": {
+  "nl": "Schild",
+  "en": "Scutum"
+ },
+ "Oct": {
+  "nl": "Octant",
+  "en": "Octans"
+ },
+ "Aps": {
+  "nl": "Paradijsvogel",
+  "en": "Apus"
+ },
+ "Cap": {
+  "nl": "Steenbok",
+  "en": "Capricornus"
+ },
+ "CMa": {
+  "nl": "Grote Hond",
+  "en": "Canis Major"
+ },
+ "Cru": {
+  "nl": "Zuiderkruis",
+  "en": "Crux"
+ },
+ "Tel": {
+  "nl": "Telescoop",
+  "en": "Telescopium"
+ },
+ "Gru": {
+  "nl": "Kraanvogel",
+  "en": "Grus"
+ },
+ "Tuc": {
+  "nl": "Toekan",
+  "en": "Tucana"
+ },
+ "Tri": {
+  "nl": "Driehoek",
+  "en": "Triangulum"
+ },
+ "Tau": {
+  "nl": "Stier",
+  "en": "Taurus"
+ },
+ "Lup": {
+  "nl": "Wolf",
+  "en": "Lupus"
+ },
+ "Hor": {
+  "nl": "Slingeruurwerk",
+  "en": "Horologium"
+ },
+ "Aqr": {
+  "nl": "Waterman",
+  "en": "Aquarius"
+ },
+ "Nor": {
+  "nl": "Winkelhaak",
+  "en": "Norma"
+ },
+ "Aql": {
+  "nl": "Arend",
+  "en": "Aquila"
+ },
+ "Hya": {
+  "nl": "Waterslang",
+  "en": "Hydra"
+ },
+ "Lib": {
+  "nl": "Weegschaal",
+  "en": "Libra"
+ }
+}

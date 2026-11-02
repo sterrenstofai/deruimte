@@ -1,0 +1,25 @@
+{
+ "kort": "De verste planeet: donker, koud en met harde wind.",
+ "kinderzin": "Neptunus is de verste planeet. Het licht van de zon doet er vier uur over om er te komen.",
+ "weetjes": [
+  {
+   "tekst": "Neptunus staat meer dan 30 keer zo ver van de zon als de aarde.",
+   "bron": "https://science.nasa.gov/neptune/facts/",
+   "controle": "more than 30 times as far from the Sun as Earth"
+  },
+  {
+   "tekst": "Een jaar op Neptunus duurt 165 aardse jaren. In 2011 was hij voor het eerst één keer rond sinds zijn ontdekking in 1846.",
+   "bron": "https://science.nasa.gov/neptune/facts/",
+   "controle": "In 2011 Neptune completed its first 165-year orbit since its discovery in 1846"
+  },
+  {
+   "tekst": "Neptunus werd gevonden door te rekenen, niet door te kijken.",
+   "bron": "https://science.nasa.gov/neptune/facts/",
+   "controle": "the first planet located through mathematical predictions"
+  }
+ ],
+ "foto": {
+  "kleur": "versterkt",
+  "uitleg": "Gemaakt door Voyager 2 in 1989, met een groen en een oranje filter. Het blauw is dieper dan echt: Neptunus is in het echt lichter blauw, bijna als Uranus."
+ }
+}

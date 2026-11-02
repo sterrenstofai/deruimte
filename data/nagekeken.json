@@ -1,0 +1,258 @@
+{
+ "aarde": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "betelgeuze": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "callisto": {
+  "weetjes": [
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "ceres": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "charon": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "enceladus": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "eris": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "europa": {
+  "weetjes": [
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "ganymedes": {
+  "weetjes": [
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "halley": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "io": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "iss": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "jupiter": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "maan": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "mars": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "mercurius": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "neptunus": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "phobos": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "pluto": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "poolster": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "saturnus": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "sirius": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "titan": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "triton": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "tsjoerjoemov": {
+  "weetjes": [
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "uranus": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "vega": {
+  "weetjes": [
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "venus": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ },
+ "zon": {
+  "weetjes": [
+   true,
+   true,
+   true
+  ],
+  "alles": true,
+  "datum": "2026-11-02"
+ }
+}

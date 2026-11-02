@@ -1,0 +1,25 @@
+{
+ "kort": "De planeet met de mooiste ringen, van ijs en steen.",
+ "kinderzin": "Saturnus heeft ringen van ijs en steentjes. Ze zijn heel breed, maar heel dun.",
+ "weetjes": [
+  {
+   "tekst": "De ringen van Saturnus zijn duizenden kilometers breed, maar meestal maar ongeveer 10 meter dik.",
+   "bron": "https://science.nasa.gov/saturn/facts/",
+   "controle": "the vertical height is typically about 30 feet (10 meters)"
+  },
+  {
+   "tekst": "Een dag op Saturnus duurt 10,7 uur; een jaar ongeveer 29 aardse jaren.",
+   "bron": "https://science.nasa.gov/saturn/facts/",
+   "controle": "One day on Saturn takes only 10.7 hours"
+  },
+  {
+   "tekst": "Zonlicht doet er 80 minuten over om bij Saturnus te komen.",
+   "bron": "https://science.nasa.gov/saturn/facts/",
+   "controle": "it takes sunlight 80 minutes"
+  }
+ ],
+ "foto": {
+  "kleur": "echt",
+  "uitleg": "Samengesteld uit foto's van de ruimtesonde Cassini, in natuurlijke kleur (oktober 2004)."
+ }
+}

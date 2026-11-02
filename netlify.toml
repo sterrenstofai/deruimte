@@ -1,0 +1,85 @@
+[build]
+  publish = "site"
+
+[[redirects]]
+  from = "/hemel/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/hemellichamen"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/vanavond"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/onderzoekjes"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/onderzoekjes/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/zoek"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/gevonden/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/mijn"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/kinderen"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/ontdek"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://commons.wikimedia.org https://upload.wikimedia.org; font-src 'self'; connect-src 'self' https://api.pdok.nl https://www.wikidata.org https://query.wikidata.org https://api.open-meteo.com; media-src 'self'; worker-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'"
+    Referrer-Policy = "no-referrer"
+    Permissions-Policy = "geolocation=(self), camera=(), microphone=(), interest-cohort=()"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/fotos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/klanken/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/js/vendor/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/data/iss.json"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"

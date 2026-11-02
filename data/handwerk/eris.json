@@ -1,0 +1,25 @@
+{
+ "kort": "Een dwergplaneet ver voorbij Pluto. Er bestaat geen scherpe foto van.",
+ "kinderzin": "Eris is een dwergplaneet, heel ver weg. Ze doet vijfhonderdzevenenvijftig jaar over één rondje om de zon.",
+ "weetjes": [
+  {
+   "tekst": "Eris doet 557 jaar over één rondje om de zon.",
+   "bron": "https://science.nasa.gov/dwarf-planets/eris/",
+   "controle": "Eris takes 557 Earth years"
+  },
+  {
+   "tekst": "Door de ontdekking van Eris in 2005 gingen sterrenkundigen opnieuw afspreken wat een planeet is. Pluto werd toen een dwergplaneet.",
+   "bron": "https://science.nasa.gov/dwarf-planets/eris/",
+   "controle": "led to the International Astronomical Union's decision in 2006"
+  },
+  {
+   "tekst": "Eris heeft een klein maantje.",
+   "bron": "https://science.nasa.gov/dwarf-planets/eris/",
+   "controle": "Xena has a tiny moon"
+  }
+ ],
+ "foto": {
+  "kleur": "geen",
+  "uitleg": "Er is geen foto waarop je Eris echt ziet: ook voor de ruimtetelescoop Hubble is ze een stipje."
+ }
+}

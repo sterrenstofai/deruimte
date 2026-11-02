@@ -2,7 +2,7 @@
 
 De volledige achtergrond staat in `docs/briefing.md`. Dit zijn de regels die altijd gelden.
 
-- **Fase 1 is een datacheck.** Niet bouwen voordat Thijs akkoord geeft.
+- **Fase 1 (datacheck) is klaar; fase 2 is gebouwd** na akkoord op 2 november 2026. Zie README.md voor de opbouw.
 - **Eerlijk over wat de site niet weet.** Geschat of nagemaakt krijgt een label: "simulatie" (mint), "nagekeken" alleen met een bron per feit. Een pagina "Hoe dit werkt / wat de site niet kan".
 - **Tekening is geen foto.** Kunstenaarsimpressies krijgen het label "tekening"; bij valse of versterkte kleuren zeggen welke kleuren echt zijn. Een reconstructie of sonificatie is geen opname.
 - **Geen cookies en geen tracking.** Wat iemand bijhoudt blijft in localStorage/IndexedDB. Locatie alleen in het geheugen.
@@ -13,3 +13,6 @@ De volledige achtergrond staat in `docs/briefing.md`. Dit zijn de regels die alt
 - **Code overnemen** uit `sterrenstofai/vogels` en `sterrenstofai/ikhooreengeluidje` in plaats van opnieuw schrijven.
 - **Geluid op iOS:** afspelen direct in de tik, zonder `await` ervoor. Gewoon `<audio>`-element.
 - **Testen:** Playwright met schermafbeeldingen op 360, 390, 768, 1024, 1366 en 1920 px.
+- **JPL Horizons en SBDB nooit vanuit de site** (hun voorwaarden): alleen in scripts en Actions. CelesTrak hooguit één keer per update, en stoppen bij een fout.
+- **Weetjes alleen met een controlezin** die letterlijk op de bronpagina staat (`scripts/nakijken.py`).
+- **Tijden altijd in Nederlandse tijd** (Europe/Amsterdam), ook als de browser in een andere tijdzone staat.

@@ -1,0 +1,25 @@
+{
+ "kort": "De grootste maan van Saturnus, met regen en meren.",
+ "kinderzin": "Op Titan regent het. Maar geen water: het regent er aardgas.",
+ "weetjes": [
+  {
+   "tekst": "Titan is de enige maan met een dikke dampkring.",
+   "bron": "https://science.nasa.gov/saturn/moons/titan/",
+   "controle": "It is the only moon with a thick atmosphere"
+  },
+  {
+   "tekst": "Op Titan zijn wolken, regen, rivieren en meren, maar van vloeibaar aardgas (methaan), niet van water.",
+   "bron": "https://science.nasa.gov/saturn/moons/titan/",
+   "controle": "It has clouds, rain, rivers, lakes and seas of liquid hydrocarbons"
+  },
+  {
+   "tekst": "In 2028 vertrekt de helikopter Dragonfly naar Titan.",
+   "bron": "https://science.nasa.gov/saturn/moons/titan/",
+   "controle": "will launch to Titan in 2028"
+  }
+ ],
+ "foto": {
+  "kleur": "echt",
+  "uitleg": "Gemaakt door Cassini, in natuurlijke kleur. De oranje waas is de dampkring; de grond zie je niet."
+ }
+}

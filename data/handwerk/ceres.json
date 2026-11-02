@@ -1,0 +1,25 @@
+{
+ "kort": "De grootste brok in de planetoïdengordel, tussen Mars en Jupiter.",
+ "kinderzin": "Ceres is een dwergplaneet tussen Mars en Jupiter. Er zit veel water in, als ijs.",
+ "weetjes": [
+  {
+   "tekst": "Ceres werd in 1801 ontdekt door Giuseppe Piazzi, als eerste in de planetoïdengordel.",
+   "bron": "https://science.nasa.gov/dwarf-planets/ceres/facts/",
+   "controle": "Giuseppe Piazzi spotted it in 1801"
+  },
+  {
+   "tekst": "Een dag op Ceres duurt maar 9 uur.",
+   "bron": "https://science.nasa.gov/dwarf-planets/ceres/facts/",
+   "controle": "it completes one rotation every 9 hours"
+  },
+  {
+   "tekst": "Ceres bestaat misschien voor een kwart uit water.",
+   "bron": "https://science.nasa.gov/dwarf-planets/ceres/facts/",
+   "controle": "as much as 25 percent water"
+  }
+ ],
+ "foto": {
+  "kleur": "echt",
+  "uitleg": "Gemaakt door de ruimtesonde Dawn. Ceres is echt donkergrijs; de witte vlek midden is zout."
+ }
+}

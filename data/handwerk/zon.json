@@ -1,0 +1,25 @@
+{
+ "kort": "Onze ster. Zonder haar geen licht en geen warmte.",
+ "kinderzin": "De zon is een ster. Ze is honderd keer zo breed als de aarde.",
+ "weetjes": [
+  {
+   "tekst": "De zon is ongeveer 100 keer zo breed als de aarde.",
+   "bron": "https://science.nasa.gov/sun/facts/",
+   "controle": "The Sun is about 100 times wider than Earth"
+  },
+  {
+   "tekst": "In het hart van de zon is het ongeveer 15 miljoen graden.",
+   "bron": "https://science.nasa.gov/sun/facts/",
+   "controle": "15 million degrees Celsius"
+  },
+  {
+   "tekst": "De zon draait ook rond: bij de evenaar in ongeveer 25 dagen, bij de polen in 36 dagen.",
+   "bron": "https://science.nasa.gov/sun/facts/",
+   "controle": "At its poles, the Sun rotates once on its axis every 36 Earth days"
+  }
+ ],
+ "foto": {
+  "kleur": "vals",
+  "uitleg": "Gemaakt in ultraviolet licht, dat je ogen niet zien. De gouden kleur heeft NASA gekozen. Kijk nooit zelf in de zon, ook niet met een verrekijker."
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "kort": "Een witte ijsmaan van Saturnus die water de ruimte in spuit.",
+ "kinderzin": "Enceladus is een maantje van ijs. Hij spuit water de ruimte in, als een fontein.",
+ "weetjes": [
+  {
+   "tekst": "Enceladus spuit water en ijs de ruimte in, uit een zee onder het ijs.",
+   "bron": "https://science.nasa.gov/saturn/moons/enceladus/",
+   "controle": "Enceladus sprays its ocean out into space"
+  },
+  {
+   "tekst": "Enceladus is maar 500 kilometer breed.",
+   "bron": "https://science.nasa.gov/saturn/moons/enceladus/",
+   "controle": "only about 310 miles (500 kilometers) across"
+  },
+  {
+   "tekst": "Het ijs dat Enceladus uitspuit vormt een eigen ring om Saturnus: de E-ring.",
+   "bron": "https://science.nasa.gov/saturn/moons/enceladus/",
+   "controle": "Saturn’s E ring"
+  }
+ ],
+ "foto": {
+  "kleur": "benaderd",
+  "uitleg": "Gemaakt door Voyager 2 in 1981. Enceladus is echt heel wit."
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "kort": "Een maan van Jupiter vol vulkanen.",
+ "kinderzin": "Io is een maan van Jupiter met honderden vulkanen.",
+ "weetjes": [
+  {
+   "tekst": "Io heeft honderden vulkanen; nergens anders is er zoveel vulkanisme.",
+   "bron": "https://science.nasa.gov/jupiter/jupiter-moons/io/",
+   "controle": "the most volcanically active world in the solar system"
+  },
+  {
+   "tekst": "Io is net iets groter dan onze maan.",
+   "bron": "https://science.nasa.gov/jupiter/jupiter-moons/io/",
+   "controle": "Only slightly larger than Earth’s Moon"
+  },
+  {
+   "tekst": "Voyager 1 zag in 1979 voor het eerst dat de vulkanen van Io uitbarsten.",
+   "bron": "https://science.nasa.gov/jupiter/jupiter-moons/io/",
+   "controle": "It was Voyager 1 that spotted the first signs"
+  }
+ ],
+ "foto": {
+  "kleur": "echt",
+  "uitleg": "Gemaakt door de ruimtesonde Galileo, in echte kleur. De gele en oranje kleuren komen van zwavel."
+ }
+}

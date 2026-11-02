@@ -1,0 +1,25 @@
+{
+ "kort": "De grootste maan van Neptunus. Hij draait achteruit.",
+ "kinderzin": "Triton is een maan van Neptunus. Hij draait de verkeerde kant op.",
+ "weetjes": [
+  {
+   "tekst": "Triton is de enige grote maan die de andere kant op draait dan zijn planeet.",
+   "bron": "https://science.nasa.gov/neptune/moons/triton/",
+   "controle": "the only large moon in our solar system that orbits in the opposite direction"
+  },
+  {
+   "tekst": "Triton werd ontdekt in 1846, 17 dagen na Neptunus zelf.",
+   "bron": "https://science.nasa.gov/neptune/moons/triton/",
+   "controle": "just 17 days after Neptune itself was discovered"
+  },
+  {
+   "tekst": "Triton was waarschijnlijk eerst een losse ijsbrok die Neptunus heeft ingevangen.",
+   "bron": "https://science.nasa.gov/neptune/moons/triton/",
+   "controle": "captured by Neptune's gravity"
+  }
+ ],
+ "foto": {
+  "kleur": "vals",
+  "uitleg": "Gemaakt door Voyager 2 in 1989 met oranje, violet en ultraviolet licht, getoond als rood, groen en blauw."
+ }
+}

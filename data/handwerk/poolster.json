@@ -1,0 +1,25 @@
+{
+ "kort": "De ster die bijna stilstaat, recht boven het noorden.",
+ "kinderzin": "Dit is de Poolster. Hij staat altijd in het noorden.",
+ "weetjes": [
+  {
+   "tekst": "De Poolster beweegt bijna niet aan de hemel. Waar hij staat, is het noorden.",
+   "bron": "https://nl.wikipedia.org/wiki/Poolster",
+   "controle": "De Poolster beweegt vrijwel niet"
+  },
+  {
+   "tekst": "Hoe hoog de Poolster staat, is bijna gelijk aan je breedtegraad. In Nederland is dat ongeveer 52 graden.",
+   "bron": "https://nl.wikipedia.org/wiki/Poolster",
+   "controle": "De hoogte van de Poolster aan de hemel is vrijwel gelijk aan de breedtegraad"
+  },
+  {
+   "tekst": "De Poolster is eigenlijk drie sterren. De ruimtetelescoop Hubble zag de kleinste in 2006.",
+   "bron": "https://hubblesite.org/contents/news-releases/2006/news-2006-02",
+   "controle": "The North Star is actually a triple star system"
+  }
+ ],
+ "foto": {
+  "kleur": "geen",
+  "uitleg": "Van een ster zie je op een foto alleen een stip. Daarom laten we zien waar hij aan de hemel staat."
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "kort": "Een ijsmaan van Jupiter met een zee onder het ijs.",
+ "kinderzin": "Europa is een maan van ijs. Onder het ijs zit waarschijnlijk een zoute zee.",
+ "weetjes": [
+  {
+   "tekst": "Onder het ijs van Europa ligt waarschijnlijk een zoute zee, met twee keer zoveel water als alle zeeën op aarde.",
+   "bron": "https://science.nasa.gov/jupiter/jupiter-moons/europa/",
+   "controle": "holding twice as much water as Earth's global ocean"
+  },
+  {
+   "tekst": "Europa is de vierde grootste maan van Jupiter.",
+   "bron": "https://science.nasa.gov/jupiter/jupiter-moons/europa/",
+   "controle": "Europa is the fourth largest of Jupiter’s moons"
+  }
+ ],
+ "foto": {
+  "kleur": "benaderd",
+  "uitleg": "Foto's van Galileo uit de jaren negentig, in ongeveer echte kleur. Gaten zijn opgevuld met de kleur van vergelijkbare stukken ernaast."
+ }
+}

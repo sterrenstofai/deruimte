@@ -1,0 +1,292 @@
+{
+ "zon": {
+  "qid": "Q525",
+  "sites": 362,
+  "nl": "zon",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Zon",
+  "ra": null,
+  "dec": null,
+  "parallax_mas": null,
+  "mag": "-26.74"
+ },
+ "mercurius": {
+  "qid": "Q308",
+  "sites": 274,
+  "nl": "Mercurius",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Mercurius_(planeet)",
+  "ra": "281.01",
+  "dec": "61.414",
+  "parallax_mas": null,
+  "mag": "1.9"
+ },
+ "venus": {
+  "qid": "Q313",
+  "sites": 279,
+  "nl": "Venus",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Venus_(planeet)",
+  "ra": "272.76",
+  "dec": "67.16",
+  "parallax_mas": null,
+  "mag": "-4.8"
+ },
+ "aarde": {
+  "qid": "Q2",
+  "sites": 370,
+  "nl": "Aarde",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Aarde_(planeet)",
+  "ra": null,
+  "dec": null,
+  "parallax_mas": null,
+  "mag": null
+ },
+ "mars": {
+  "qid": "Q111",
+  "sites": 291,
+  "nl": "Mars",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Mars_(planeet)",
+  "ra": null,
+  "dec": null,
+  "parallax_mas": null,
+  "mag": "-2.94"
+ },
+ "jupiter": {
+  "qid": "Q319",
+  "sites": 271,
+  "nl": "Jupiter",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Jupiter_(planeet)",
+  "ra": "268.057",
+  "dec": "64.496",
+  "parallax_mas": null,
+  "mag": "-2.94"
+ },
+ "saturnus": {
+  "qid": "Q193",
+  "sites": 262,
+  "nl": "Saturnus",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Saturnus_(planeet)",
+  "ra": null,
+  "dec": null,
+  "parallax_mas": null,
+  "mag": "-0.24"
+ },
+ "uranus": {
+  "qid": "Q324",
+  "sites": 262,
+  "nl": "Uranus",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Uranus_(planeet)",
+  "ra": "257.311",
+  "dec": "-15.175",
+  "parallax_mas": null,
+  "mag": "5.32"
+ },
+ "neptunus": {
+  "qid": "Q332",
+  "sites": 252,
+  "nl": "Neptunus",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Neptunus_(planeet)",
+  "ra": null,
+  "dec": null,
+  "parallax_mas": null,
+  "mag": "7.67"
+ },
+ "pluto": {
+  "qid": "Q339",
+  "sites": 223,
+  "nl": "Pluto",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Pluto_(dwergplaneet)",
+  "ra": null,
+  "dec": null,
+  "parallax_mas": null,
+  "mag": "15.1"
+ },
+ "ceres": {
+  "qid": "Q596",
+  "sites": 146,
+  "nl": "Ceres",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Ceres_(dwergplaneet)",
+  "ra": null,
+  "dec": null,
+  "parallax_mas": null,
+  "mag": "6.79"
+ },
+ "eris": {
+  "qid": "Q611",
+  "sites": 121,
+  "nl": "Eris",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Eris_(dwergplaneet)",
+  "ra": null,
+  "dec": null,
+  "parallax_mas": null,
+  "mag": "18.7"
+ },
+ "maan": {
+  "qid": "Q405",
+  "sites": 358,
+  "nl": "Maan",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Maan",
+  "ra": null,
+  "dec": null,
+  "parallax_mas": null,
+  "mag": "-12.74"
+ },
+ "phobos": {
+  "qid": "Q7547",
+  "sites": 116,
+  "nl": "Phobos",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Phobos_(maan)",
+  "ra": null,
+  "dec": null,
+  "parallax_mas": null,
+  "mag": "11.8"
+ },
+ "io": {
+  "qid": "Q3123",
+  "sites": 114,
+  "nl": "Io",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Io_(maan)",
+  "ra": null,
+  "dec": null,
+  "parallax_mas": null,
+  "mag": "5.02"
+ },
+ "europa": {
+  "qid": "Q3143",
+  "sites": 115,
+  "nl": "Europa",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Europa_(maan)",
+  "ra": null,
+  "dec": null,
+  "parallax_mas": null,
+  "mag": "5.29"
+ },
+ "ganymedes": {
+  "qid": "Q3169",
+  "sites": 113,
+  "nl": "Ganymedes",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Ganymedes_(maan)",
+  "ra": null,
+  "dec": null,
+  "parallax_mas": null,
+  "mag": "4.61"
+ },
+ "callisto": {
+  "qid": "Q3134",
+  "sites": 103,
+  "nl": "Callisto",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Callisto_(maan)",
+  "ra": null,
+  "dec": null,
+  "parallax_mas": null,
+  "mag": "5.65"
+ },
+ "titan": {
+  "qid": "Q2565",
+  "sites": 121,
+  "nl": "Titan",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Titan_(maan)",
+  "ra": null,
+  "dec": null,
+  "parallax_mas": null,
+  "mag": null
+ },
+ "enceladus": {
+  "qid": "Q3303",
+  "sites": 93,
+  "nl": "Enceladus",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Enceladus_(maan)",
+  "ra": null,
+  "dec": null,
+  "parallax_mas": null,
+  "mag": "11.8"
+ },
+ "triton": {
+  "qid": "Q3359",
+  "sites": 100,
+  "nl": "Triton",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Triton_(maan)",
+  "ra": null,
+  "dec": null,
+  "parallax_mas": null,
+  "mag": "13.47"
+ },
+ "charon": {
+  "qid": "Q6604",
+  "sites": 94,
+  "nl": "Charon",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Charon_(maan)",
+  "ra": null,
+  "dec": null,
+  "parallax_mas": null,
+  "mag": "16.8"
+ },
+ "halley": {
+  "qid": "Q23054",
+  "sites": 103,
+  "nl": "Komeet Halley",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Komeet_Halley",
+  "ra": null,
+  "dec": null,
+  "parallax_mas": null,
+  "mag": null
+ },
+ "tsjoerjoemov": {
+  "qid": "Q844672",
+  "sites": 69,
+  "nl": "Komeet 67P/Churyumov-Gerasimenko",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Komeet_67P/Tsjoerjoemov-Gerasimenko",
+  "ra": null,
+  "dec": null,
+  "parallax_mas": null,
+  "mag": null
+ },
+ "poolster": {
+  "qid": "Q12980",
+  "sites": 102,
+  "nl": "Polaris",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Polaris",
+  "ra": "37.95456067",
+  "dec": "89.26410897",
+  "parallax_mas": "7.54",
+  "mag": "2.02"
+ },
+ "sirius": {
+  "qid": "Q3409",
+  "sites": 105,
+  "nl": "Sirius",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Sirius_(ster)",
+  "ra": "101.287155333",
+  "dec": "-16.716115861",
+  "parallax_mas": "379.21",
+  "mag": "-1.46"
+ },
+ "betelgeuze": {
+  "qid": "Q12124",
+  "sites": 93,
+  "nl": "Betelgeuze",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Betelgeuze_(ster)",
+  "ra": "88.792938991",
+  "dec": "7.407063995",
+  "parallax_mas": "6.55",
+  "mag": "0.42"
+ },
+ "vega": {
+  "qid": "Q3427",
+  "sites": 86,
+  "nl": "Wega",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Wega",
+  "ra": "279.234734787",
+  "dec": "38.783688956",
+  "parallax_mas": "128.2",
+  "mag": "0.03"
+ },
+ "iss": {
+  "qid": "Q25271",
+  "sites": 136,
+  "nl": "internationaal ruimtestation ISS",
+  "nlwiki": "https://nl.wikipedia.org/wiki/ISS_(ruimtestation)",
+  "ra": null,
+  "dec": null,
+  "parallax_mas": null,
+  "mag": null
+ }
+}

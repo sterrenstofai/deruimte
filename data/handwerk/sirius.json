@@ -1,0 +1,25 @@
+{
+ "kort": "De helderste ster aan de nachthemel.",
+ "kinderzin": "Sirius is de helderste ster van de nacht. In de winter zie je hem laag in het zuiden.",
+ "weetjes": [
+  {
+   "tekst": "Sirius is de helderste ster aan de nachthemel.",
+   "bron": "https://esahubble.org/news/heic0516/",
+   "controle": "the brightest star in the nighttime sky"
+  },
+  {
+   "tekst": "Sirius heeft een klein, zwaar zusje: de witte dwerg Sirius B. Daar zou een mens van 68 kilo 25 miljoen kilo wegen.",
+   "bron": "https://esahubble.org/news/heic0516/",
+   "controle": "a 68 kilogram person would weigh 25 million kilograms"
+  },
+  {
+   "tekst": "Sirius staat in het sterrenbeeld Grote Hond. Hij heet ook wel de Hondsster.",
+   "bron": "https://esahubble.org/news/heic0516/",
+   "controle": "Dog Star, Sirius, located in the winter constellation Canis Major"
+  }
+ ],
+ "foto": {
+  "kleur": "geen",
+  "uitleg": "Van een ster zie je op een foto alleen een stip. Daarom laten we zien waar hij aan de hemel staat."
+ }
+}

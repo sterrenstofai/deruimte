@@ -1,0 +1,20 @@
+{
+ "kort": "Een heldere blauwwitte ster, hoog aan de zomerhemel.",
+ "kinderzin": "Wega is een heldere ster. In de zomer staat hij bijna recht boven je hoofd.",
+ "weetjes": [
+  {
+   "tekst": "Wega is een van de drie sterren van de Zomerdriehoek.",
+   "bron": "https://nl.wikipedia.org/wiki/Wega",
+   "controle": "Het is een van de drie sterren van de zomerdriehoek"
+  },
+  {
+   "tekst": "Ongeveer 14.000 jaar geleden was Wega de poolster.",
+   "bron": "https://nl.wikipedia.org/wiki/Wega",
+   "controle": "14 000 jaar geleden in de buurt van Wega"
+  }
+ ],
+ "foto": {
+  "kleur": "geen",
+  "uitleg": "Van een ster zie je op een foto alleen een stip. Daarom laten we zien waar hij aan de hemel staat."
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "kort": "De heetste planeet, onder een dikke laag wolken.",
+ "kinderzin": "Op Venus is het zo heet dat lood smelt. Je ziet haar vaak als heldere avondster.",
+ "weetjes": [
+  {
+   "tekst": "Venus is de heetste planeet: ongeveer 467 graden, heet genoeg om lood te laten smelten.",
+   "bron": "https://science.nasa.gov/venus/facts/",
+   "controle": "hot enough to melt lead"
+  },
+  {
+   "tekst": "Venus draait zo langzaam dat het er 117 aardse dagen duurt van zonsopkomst tot zonsondergang.",
+   "bron": "https://science.nasa.gov/venus/facts/",
+   "controle": "sunrise to sunset would take 117 Earth days"
+  },
+  {
+   "tekst": "De lucht drukt op Venus 93 keer zo hard als bij ons aan zee.",
+   "bron": "https://science.nasa.gov/venus/facts/",
+   "controle": "about 93 times what it is at sea level on Earth"
+  }
+ ],
+ "foto": {
+  "kleur": "vals",
+  "uitleg": "Gemaakt door Mariner 10 met oranje en ultraviolet licht, en daarna samengevoegd. Met je eigen ogen zie je een egale, lichtgele bol zonder strepen."
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "kort": "De eerste komeet waar een ruimtesonde omheen vloog en op landde.",
+ "kinderzin": "Op deze komeet is een robotje geland. Hij heet Philae.",
+ "weetjes": [
+  {
+   "tekst": "Op komeet 67P landde voor het eerst een robot op een komeet: Philae, van de Europese ruimtesonde Rosetta, in 2014.",
+   "bron": "https://science.nasa.gov/solar-system/comets/67p-churyumov-gerasimenko/",
+   "controle": "the first comet to be orbited and landed upon"
+  },
+  {
+   "tekst": "67P betekent: de 67e komeet waarvan we weten dat hij terugkomt. Tsjoerjoemov en Gerasimenko zijn de namen van de ontdekkers.",
+   "bron": "https://science.nasa.gov/solar-system/comets/67p-churyumov-gerasimenko/",
+   "controle": "67P indicates that this was the 67th periodic comet discovered"
+  }
+ ],
+ "foto": {
+  "kleur": "echt",
+  "uitleg": "Gemaakt door de camera OSIRIS van de Europese ruimtesonde Rosetta. Zwart-wit."
+ }
+}

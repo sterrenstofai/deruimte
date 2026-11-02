@@ -1,0 +1,25 @@
+{
+ "kort": "De kleinste planeet en het dichtst bij de zon.",
+ "kinderzin": "Mercurius is de snelste planeet. Hij rent in achtentachtig dagen rond de zon.",
+ "weetjes": [
+  {
+   "tekst": "Mercurius gaat in 88 dagen om de zon, sneller dan elke andere planeet.",
+   "bron": "https://science.nasa.gov/mercury/facts/",
+   "controle": "It speeds around the Sun every 88 days"
+  },
+  {
+   "tekst": "Overdag wordt het er 430 graden, 's nachts min 180 graden: er is geen dampkring die de warmte vasthoudt.",
+   "bron": "https://science.nasa.gov/mercury/facts/",
+   "controle": "minus 180 degrees Celsius"
+  },
+  {
+   "tekst": "Zonlicht doet er 3,2 minuten over om bij Mercurius te komen.",
+   "bron": "https://science.nasa.gov/mercury/facts/",
+   "controle": "it takes sunlight 3.2 minutes"
+  }
+ ],
+ "foto": {
+  "kleur": "benaderd",
+  "uitleg": "Een bol samengesteld uit veel foto's van de ruimtesonde MESSENGER. Mercurius is echt grijs."
+ }
+}

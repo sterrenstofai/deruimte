@@ -1,0 +1,25 @@
+{
+ "kort": "Onze planeet. De enige waarvan we weten dat er leven is.",
+ "kinderzin": "Dit is de aarde. Hier wonen wij.",
+ "weetjes": [
+  {
+   "tekst": "Bijna driekwart van de aarde (71 procent) is bedekt met water.",
+   "bron": "https://science.nasa.gov/earth/facts/",
+   "controle": "covers about 71% of the planet's surface"
+  },
+  {
+   "tekst": "De aarde staat een beetje scheef: 23,4 graden. Daardoor hebben we zomer en winter.",
+   "bron": "https://science.nasa.gov/earth/facts/",
+   "controle": "Earth's axis of rotation is tilted 23.4 degrees"
+  },
+  {
+   "tekst": "Tussen de aarde en de maan passen 30 aardes op een rij.",
+   "bron": "https://science.nasa.gov/earth/facts/",
+   "controle": "30 Earth-sized planets could fit in between Earth and its Moon"
+  }
+ ],
+ "foto": {
+  "kleur": "echt",
+  "uitleg": "Een gewone foto, gemaakt door de bemanning van Apollo 17 op weg naar de maan, december 1972."
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "kort": "De grootste maan van het zonnestelsel.",
+ "kinderzin": "Ganymedes is de grootste maan die er is. Hij is groter dan de planeet Mercurius.",
+ "weetjes": [
+  {
+   "tekst": "Ganymedes is de grootste maan van het zonnestelsel, groter dan de planeet Mercurius en de dwergplaneet Pluto.",
+   "bron": "https://science.nasa.gov/jupiter/jupiter-moons/ganymede/",
+   "controle": "even bigger than the planet Mercury, and the dwarf planet Pluto"
+  },
+  {
+   "tekst": "Ganymedes is de enige maan met een eigen magnetisch veld. Daardoor heeft hij noorderlicht.",
+   "bron": "https://science.nasa.gov/jupiter/jupiter-moons/ganymede/",
+   "controle": "Ganymede is the only moon known to have its own magnetic field"
+  }
+ ],
+ "foto": {
+  "kleur": "echt",
+  "uitleg": "Gemaakt door de camera van Juno in 2021, met een groen filter. Daarom is hij grijs."
+ }
+}

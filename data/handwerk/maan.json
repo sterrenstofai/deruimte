@@ -1,0 +1,25 @@
+{
+ "kort": "Onze maan. Altijd met dezelfde kant naar ons toe.",
+ "kinderzin": "Dit is de maan. Je kunt hem vaak zien, soms zelfs overdag.",
+ "weetjes": [
+  {
+   "tekst": "De maan staat gemiddeld 384.400 kilometer van de aarde.",
+   "bron": "https://science.nasa.gov/moon/facts/",
+   "controle": "238,855 miles (384,400 kilometers) away"
+  },
+  {
+   "tekst": "De maan draait in 27 dagen om de aarde, en in dezelfde tijd om zichzelf. Daarom zie je altijd dezelfde kant.",
+   "bron": "https://science.nasa.gov/moon/facts/",
+   "controle": "rotates or spins at that same rate"
+  },
+  {
+   "tekst": "Van volle maan tot volle maan duurt ongeveer 29 dagen.",
+   "bron": "https://science.nasa.gov/moon/facts/",
+   "controle": "the Moon appears to orbit us every 29 days"
+  }
+ ],
+ "foto": {
+  "kleur": "echt",
+  "uitleg": "Een gewone foto van de volle maan, gemaakt vanuit het ISS op 15 november 2024. Uitgesneden rond de maan."
+ }
+}

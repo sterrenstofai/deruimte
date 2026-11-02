@@ -1,0 +1,25 @@
+{
+ "kort": "De grote maan van Pluto: half zo groot als Pluto zelf.",
+ "kinderzin": "Charon is de maan van Pluto. Hij is half zo groot als Pluto.",
+ "weetjes": [
+  {
+   "tekst": "Charon is half zo groot als Pluto. Geen andere maan is zo groot naast zijn planeet.",
+   "bron": "https://science.nasa.gov/dwarf-planets/pluto/moons/charon/",
+   "controle": "Charon is the largest known satellite relative to its parent body"
+  },
+  {
+   "tekst": "Charon gaat in 6,4 dagen om Pluto.",
+   "bron": "https://science.nasa.gov/dwarf-planets/pluto/moons/charon/",
+   "controle": "Charon orbits Pluto every 6.4 Earth days"
+  },
+  {
+   "tekst": "James Christy ontdekte Charon in 1978, omdat Pluto op zijn foto's een rare bult had.",
+   "bron": "https://science.nasa.gov/dwarf-planets/pluto/moons/charon/",
+   "controle": "Christy noticed images of Pluto were strangely elongated"
+  }
+ ],
+ "foto": {
+  "kleur": "versterkt",
+  "uitleg": "Gemaakt door New Horizons in 2015. De kleuren zijn versterkt; de rode kap bovenaan is in het echt veel minder rood."
+ }
+}

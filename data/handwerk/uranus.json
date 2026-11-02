@@ -1,0 +1,25 @@
+{
+ "kort": "Een ijsreus die op zijn zij ligt.",
+ "kinderzin": "Uranus rolt op zijn zij om de zon, als een bal.",
+ "weetjes": [
+  {
+   "tekst": "Uranus ligt op zijn zij: hij staat bijna 98 graden scheef.",
+   "bron": "https://science.nasa.gov/uranus/facts/",
+   "controle": "with a tilt of 97.77 degrees"
+  },
+  {
+   "tekst": "Een jaar op Uranus duurt 84 aardse jaren.",
+   "bron": "https://science.nasa.gov/uranus/facts/",
+   "controle": "in about 84 Earth years"
+  },
+  {
+   "tekst": "William Herschel ontdekte Uranus in 1781. Eerst dacht hij dat het een komeet of een ster was.",
+   "bron": "https://science.nasa.gov/uranus/facts/",
+   "controle": "It was discovered in 1781 by astronomer William Herschel"
+  }
+ ],
+ "foto": {
+  "kleur": "echt",
+  "uitleg": "De linkerhelft van een NASA-plaatje met Uranus in echte kleur en in valse kleur; dit is de echte kleur. Gemaakt door Voyager 2 in 1986."
+ }
+}

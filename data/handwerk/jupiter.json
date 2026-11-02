@@ -1,0 +1,25 @@
+{
+ "kort": "De grootste planeet: een reus van gas met een storm groter dan de aarde.",
+ "kinderzin": "Jupiter is de grootste planeet. Er passen wel duizend aardes in.",
+ "weetjes": [
+  {
+   "tekst": "Jupiter is zo groot dat er 1000 aardes in zouden passen, als hij hol was.",
+   "bron": "https://science.nasa.gov/jupiter/facts/",
+   "controle": "1,000 Earths could fit inside"
+  },
+  {
+   "tekst": "Een dag op Jupiter duurt maar 9,9 uur: de kortste dag van alle planeten.",
+   "bron": "https://science.nasa.gov/jupiter/facts/",
+   "controle": "it has the shortest day in the solar system"
+  },
+  {
+   "tekst": "Galileo Galilei zag in 1610 de vier grootste manen van Jupiter, met een van de eerste telescopen.",
+   "bron": "https://science.nasa.gov/jupiter/facts/",
+   "controle": "were first observed by the astronomer Galileo Galilei in 1610"
+  }
+ ],
+ "foto": {
+  "kleur": "benaderd",
+  "uitleg": "Samengesteld uit vier foto's van de ruimtesonde Cassini, in ongeveer echte kleur."
+ }
+}

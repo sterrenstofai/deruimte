@@ -1,0 +1,25 @@
+{
+ "kort": "Een rode reuzenster in de schouder van Orion.",
+ "kinderzin": "Betelgeuze is een rode reus. Ooit ontploft hij.",
+ "weetjes": [
+  {
+   "tekst": "Betelgeuze is een rode superreus in het sterrenbeeld Orion.",
+   "bron": "https://www.eso.org/public/news/eso2003/",
+   "controle": "a red supergiant star in the constellation of Orion"
+  },
+  {
+   "tekst": "Eind 2019 werd Betelgeuze ineens veel zwakker. Ontploffen deed hij niet.",
+   "bron": "https://www.eso.org/public/news/eso2003/",
+   "controle": "astronomers don’t think this is happening now"
+  },
+  {
+   "tekst": "Ooit ontploft Betelgeuze als supernova. Niemand weet wanneer.",
+   "bron": "https://www.eso.org/public/news/eso2003/",
+   "controle": "Betelgeuse will one day go supernova"
+  }
+ ],
+ "foto": {
+  "kleur": "echt",
+  "uitleg": "Het oppervlak van Betelgeuze, gefotografeerd met de Very Large Telescope van ESO in Chili. Links januari 2019, rechts december 2019, toen hij zwakker werd. Een van de weinige sterren waarvan je meer ziet dan een stip."
+ }
+}

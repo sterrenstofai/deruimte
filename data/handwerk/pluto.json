@@ -1,0 +1,25 @@
+{
+ "kort": "Een dwergplaneet met een hart van ijs.",
+ "kinderzin": "Pluto is een dwergplaneet. Een meisje van elf jaar heeft hem zijn naam gegeven.",
+ "weetjes": [
+  {
+   "tekst": "Pluto kreeg zijn naam van een meisje van 11 jaar: Venetia Burney uit Engeland.",
+   "bron": "https://science.nasa.gov/dwarf-planets/pluto/facts/",
+   "controle": "Pluto was named by an 11-year-old girl"
+  },
+  {
+   "tekst": "Sinds 2006 heet Pluto een dwergplaneet, en niet meer de negende planeet.",
+   "bron": "https://science.nasa.gov/dwarf-planets/pluto/facts/",
+   "controle": "Pluto was reclassified as a dwarf planet in 2006"
+  },
+  {
+   "tekst": "Zonlicht doet er 5,5 uur over om bij Pluto te komen.",
+   "bron": "https://science.nasa.gov/dwarf-planets/pluto/facts/",
+   "controle": "it takes sunlight 5.5 hours"
+  }
+ ],
+ "foto": {
+  "kleur": "benaderd",
+  "uitleg": "Een zwart-witfoto van New Horizons (juli 2015), ingekleurd met kleurmetingen van een ander instrument aan boord."
+ }
+}

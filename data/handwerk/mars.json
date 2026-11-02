@@ -1,0 +1,25 @@
+{
+ "kort": "De rode planeet. Een dag duurt er bijna even lang als hier.",
+ "kinderzin": "Mars is rood door roestig stof. Een dag op Mars is bijna zo lang als bij ons.",
+ "weetjes": [
+  {
+   "tekst": "Een dag op Mars duurt 24,6 uur, bijna even lang als op aarde.",
+   "bron": "https://science.nasa.gov/mars/facts/",
+   "controle": "it completes one rotation every 24.6 hours"
+  },
+  {
+   "tekst": "Een jaar op Mars duurt 687 aardse dagen.",
+   "bron": "https://science.nasa.gov/mars/facts/",
+   "controle": "the same as 687 Earth days"
+  },
+  {
+   "tekst": "Zonlicht doet er 13 minuten over om bij Mars te komen.",
+   "bron": "https://science.nasa.gov/mars/facts/",
+   "controle": "it takes sunlight 13 minutes"
+  }
+ ],
+ "foto": {
+  "kleur": "benaderd",
+  "uitleg": "Gemaakt door de ruimtetelescoop Hubble in 2016, toen Mars dicht bij de aarde stond."
+ }
+}

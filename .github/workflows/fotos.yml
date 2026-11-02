@@ -1,0 +1,31 @@
+name: Foto's en geluid ophalen
+
+# Downloadt de met de hand gekozen foto's (data/foto_keuze.json) en geluiden (data/geluid_keuze.json).
+# Handmatig te starten; wat er al staat wordt overgeslagen. Bekijk elke nieuwe foto daarna zelf.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fotos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow && sudo apt-get install -y ffmpeg
+      - run: python3 scripts/fotos_nasa.py
+      - run: python3 scripts/geluid_ophalen.py
+      - run: python3 scripts/bouw_site_data.py
+      - name: Committen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/fotos site/klanken site/data
+          git diff --cached --quiet || git commit -m "Foto's en geluid bijgewerkt"
+          git pull --rebase origin main
+          git push

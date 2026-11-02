@@ -1,0 +1,20 @@
+{
+ "kort": "Een maan van Jupiter vol kraters.",
+ "kinderzin": "Callisto is een maan van Jupiter met heel veel kraters.",
+ "weetjes": [
+  {
+   "tekst": "Callisto is de op twee na grootste maan van het zonnestelsel.",
+   "bron": "https://science.nasa.gov/jupiter/jupiter-moons/callisto/",
+   "controle": "the third largest moon in our solar system"
+  },
+  {
+   "tekst": "Galileo Galilei ontdekte Callisto in 1610.",
+   "bron": "https://science.nasa.gov/jupiter/jupiter-moons/callisto/",
+   "controle": "were discovered in 1610 by Italian scientist Galileo Galilei"
+  }
+ ],
+ "foto": {
+  "kleur": "versterkt",
+  "uitleg": "Gemaakt door de ruimtesonde Galileo. De kleuren lijken sterker dan echt; NASA zegt er niet bij hoe echt ze zijn. Callisto is in het echt donker en grauw."
+ }
+}
