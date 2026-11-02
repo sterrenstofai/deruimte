@@ -368,12 +368,12 @@ function koppelBollen(D, raster) {
   const B = import("./bol.js");
   const stand = new WeakMap();
   const teken = async (doek) => {
-    const b = D.bollen[doek.dataset.bol], mod = await B, k = await mod.laadKaart(b.pad);
+    const b = D.bollen[doek.dataset.bol], mod = await B, k = await mod.laadKaart(b.pad), opt = await mod.optiesVoor(b);
     const dpr = Math.min(2, window.devicePixelRatio || 1), n = Math.round(doek.clientWidth * dpr);
     if (!n) return;
     if (doek.width !== n) doek.width = doek.height = n;
     if (!stand.has(doek)) stand.set(doek, b.begin ?? 0.5);
-    mod.tekenBol(doek, k, stand.get(doek), { kanteling: (b.kanteling || 0) * Math.PI / 180 });
+    mod.tekenBol(doek, k, stand.get(doek), opt);
     doek.classList.add("klaar");
   };
   // pas tekenen als de tegel in beeld komt
@@ -391,12 +391,12 @@ function koppelBollen(D, raster) {
     if (actief) { cancelAnimationFrame(actief.anim); actief.vak.classList.remove("draait"); }
     const mij = actief = { vak, anim: 0 };
     vak.classList.add("draait");
-    Promise.all([B, B.then((m) => m.laadKaart(b.pad))]).then(([mod, k]) => {
+    Promise.all([B, B.then((m) => m.laadKaart(b.pad)), B.then((m) => m.optiesVoor(b))]).then(([mod, k, opt]) => {
       let vorige = performance.now();
       const stap = (nu) => {
         if (actief !== mij) return;
         stand.set(doek, (stand.get(doek) ?? 0.5) - (nu - vorige) / 20000); vorige = nu; // van west naar oost
-        mod.tekenBol(doek, k, stand.get(doek), { kanteling: (b.kanteling || 0) * Math.PI / 180 });
+        mod.tekenBol(doek, k, stand.get(doek), opt);
         mij.anim = requestAnimationFrame(stap);
       };
       mij.anim = requestAnimationFrame(stap);

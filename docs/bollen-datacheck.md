@@ -30,3 +30,21 @@ Licenties:
 | Uranus, Neptunus | geen kaart | — | — | nee |
 | Zon | verandert elke dag; SDO-kaarten zijn ultraviolet | — | — | nee |
 | Eris | nooit van dichtbij gezien | — | — | nee |
+
+## Egaal (aangevuld 2 november 2026)
+
+Waar geen kaart bestaat: één kleur, uit een foto op de site of uit metingen, met het label "egaal". `scripts/bollen_ophalen.py` maakt de kleine kaartjes.
+
+| Hemellichaam | Kleur uit | Waarde |
+|---|---|---|
+| Zon | temperatuur 5772 K (NASA Sun Fact Sheet), als gloeiend lichaam | gloeit, donkere rand |
+| Venus | benaderd: lichte, gelige wolken zonder vlekken (de foto is vals van kleur) | 238, 230, 212 |
+| Saturnus | Cassini-foto PIA06193 (echte kleur), schijf zonder ringen | 206, 193, 152 |
+| Ringen van Saturnus | dichtheid: Cassini RSS, X-band, Rev007E, 10 km (NASA PDS Ring-Moon Systems Node, `data/ruw/cassini_rss_ringen_tau.tab`); kleur uit dezelfde foto | 1 - e^-tau |
+| Uranus | Voyager 2, PIA00032 (echte kleur) | 139, 159, 168 |
+| Neptunus | Voyager 2, PIA01492 (versterkt; zo gelabeld) | 67, 105, 251 |
+| Titan | Cassini, echte kleur | 212, 192, 96 |
+| Eris | geen beeld bekend; licht (albedo bijna 1) | 226, 226, 222 |
+| Sirius, Wega, Betelgeuze | kleurindex B-V uit d3-celestial (Hipparcos), via Ballesteros (2012) naar temperatuur | gloeit |
+
+Niet als bol: Phobos, Halley en 67P (niet rond). Een vormmodel van Phobos (PDS Small Bodies Node) was niet bereikbaar vanaf deze machine (403); NASA 3D Resources heeft alleen een kaart.

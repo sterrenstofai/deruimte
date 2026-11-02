@@ -1,5 +1,5 @@
 {
- "_uitleg": "Kaarten voor de draaiende bollen in het overzicht. Alleen kaarten van echte foto's (NASA, USGS), licentie per bron nagekeken op 2 november 2026 (docs/bollen-datacheck.md). Niet: Venus (alleen radar), Titan (alleen infrarood door de nevel), Saturnus, Uranus en Neptunus (geen kaart), de zon (verandert elke dag), Eris (nooit van dichtbij gezien).",
+ "_uitleg": "Kaarten voor de draaiende bollen in het overzicht. Alleen kaarten van echte foto's (NASA, USGS), licentie per bron nagekeken op 2 november 2026 (docs/bollen-datacheck.md). Niet: Venus (alleen radar), Titan (alleen infrarood door de nevel), Saturnus, Uranus en Neptunus (geen kaart), de zon (verandert elke dag), Eris (nooit van dichtbij gezien). Zonder kaart (egaal): de kleur uit een echte foto of uit metingen van het licht, met een label dat het egaal is. Niet als bol: Phobos en de kometen (niet rond; geen vrij vormmodel bereikbaar).",
  "lijst": [
   {
    "slug": "maan",
@@ -131,6 +131,138 @@
    "kleur": "benaderd",
    "uitleg": "Kleur benaderd en versterkt. Voyager 2 zag alleen het zuiden: zwart is nooit gefotografeerd.",
    "url_groot": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia18/pia18668/PIA18668.jpg"
+  }
+ ],
+ "egaal": [
+  {
+   "slug": "zon",
+   "soort": "ster",
+   "temperatuur": 5772,
+   "bron": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
+   "maker": "kleur uit de temperatuur van de zon (5772 K, NASA)",
+   "licentie": "eigen berekening",
+   "label": "egaal · kleur uit metingen",
+   "uitleg": "Egaal wit, met een donkerdere rand, zoals je de zon door een zonnefilter ziet. De zonnevlekken veranderen elke dag; die laten we weg."
+  },
+  {
+   "slug": "venus",
+   "rgb": [
+    238,
+    230,
+    212
+   ],
+   "bron": "https://science.nasa.gov/venus/",
+   "maker": "kleur benaderd; dikke wolken zonder vlekken",
+   "licentie": "eigen kleur",
+   "label": "egaal · kleur benaderd",
+   "uitleg": "Egaal. Met je eigen ogen zie je een lichte, gelige bol zonder vlekken: je kijkt op de wolken. De vlekken op foto's komen van ultraviolet licht."
+  },
+  {
+   "slug": "saturnus",
+   "foto": "saturnus",
+   "rgb": [
+    206,
+    193,
+    152
+   ],
+   "ringen": {
+    "rgb": [
+     188,
+     174,
+     157
+    ],
+    "binnen_km": 74490,
+    "buiten_km": 136780,
+    "straal_km": 60268
+   },
+   "kanteling": 26.7,
+   "helling": -22,
+   "maker": "kleur uit een foto van Cassini (NASA/JPL/Space Science Institute); dichtheid van de ringen gemeten door Cassini met radiogolven (NASA PDS)",
+   "licentie": "publiek domein (NASA)",
+   "label": "egaal · ringen uit metingen",
+   "uitleg": "De planeet egaal, in de kleur van een Cassini-foto: de echte wolkenbanden staan er niet op. Hoe dicht de ringen zijn, met de gaten ertussen, komt uit een meting van Cassini."
+  },
+  {
+   "slug": "uranus",
+   "foto": "uranus",
+   "rgb": [
+    139,
+    159,
+    168
+   ],
+   "maker": "kleur uit een foto van Voyager 2 (NASA/JPL)",
+   "licentie": "publiek domein (NASA)",
+   "label": "egaal · kleur uit een foto",
+   "uitleg": "Egaal, in de echte kleur van een Voyager-foto. Uranus heeft bijna geen vlekken."
+  },
+  {
+   "slug": "neptunus",
+   "foto": "neptunus",
+   "rgb": [
+    67,
+    105,
+    251
+   ],
+   "maker": "kleur uit een foto van Voyager 2 (NASA/JPL)",
+   "licentie": "publiek domein (NASA)",
+   "label": "egaal · kleur versterkt",
+   "uitleg": "Egaal, in de kleur van een Voyager-foto. Dat blauw is versterkt: in het echt is Neptunus lichter blauw."
+  },
+  {
+   "slug": "titan",
+   "foto": "titan",
+   "rgb": [
+    212,
+    192,
+    96
+   ],
+   "maker": "kleur uit een foto van Cassini (NASA/JPL-Caltech/Space Science Institute)",
+   "licentie": "publiek domein (NASA)",
+   "label": "egaal · kleur uit een foto",
+   "uitleg": "Egaal, in de echte kleur van een Cassini-foto: je ziet alleen de oranje nevel, niet de grond."
+  },
+  {
+   "slug": "eris",
+   "rgb": [
+    226,
+    226,
+    222
+   ],
+   "bron": "https://science.nasa.gov/dwarf-planets/eris/",
+   "maker": "geen beeld bekend",
+   "licentie": "eigen kleur",
+   "label": "egaal · geen beeld bekend",
+   "uitleg": "Niemand weet hoe Eris eruitziet: er is nooit een ruimtesonde geweest. Wel dat ze heel licht is. Daarom een egale, lichte bol."
+  },
+  {
+   "slug": "sirius",
+   "soort": "ster",
+   "bv": 0.01,
+   "bron": "https://github.com/ofrohn/d3-celestial",
+   "maker": "kleur uit de gemeten kleurindex (Hipparcos, via d3-celestial)",
+   "licentie": "eigen berekening",
+   "label": "egaal · kleur uit metingen",
+   "uitleg": "Een gloeiende bol in de kleur van zijn licht. Het oppervlak van Sirius heeft niemand gezien."
+  },
+  {
+   "slug": "betelgeuze",
+   "soort": "ster",
+   "bv": 1.5,
+   "bron": "https://github.com/ofrohn/d3-celestial",
+   "maker": "kleur uit de gemeten kleurindex (Hipparcos, via d3-celestial)",
+   "licentie": "eigen berekening",
+   "label": "egaal · kleur uit metingen",
+   "uitleg": "Een gloeiende bol in de kleur van haar licht. Van Betelgeuze bestaan een paar wazige foto's van het oppervlak (zie Foto); een kaart niet."
+  },
+  {
+   "slug": "vega",
+   "soort": "ster",
+   "bv": 0.0,
+   "bron": "https://github.com/ofrohn/d3-celestial",
+   "maker": "kleur uit de gemeten kleurindex (Hipparcos, via d3-celestial)",
+   "licentie": "eigen berekening",
+   "label": "egaal · kleur uit metingen",
+   "uitleg": "Een gloeiende bol in de kleur van haar licht. Het oppervlak van Wega heeft niemand gezien."
   }
  ]
 }
