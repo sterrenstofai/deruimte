@@ -11,7 +11,7 @@ export async function laadSterren() {
   return { sterren, beelden };
 }
 
-const NACHT = "#1A1A1A", MINT = "#A1FFCB", WIT = "#FFFFFF", ZACHT = "rgba(255,255,255,.6)";
+const NACHT = "#1A1A1A", PAARS = "#B5B1E5", WIT = "#FFFFFF", ZACHT = "rgba(255,255,255,.6)";
 const HEMEL_NACHT = [34, 36, 40], HEMEL_DAG = [58, 76, 102];
 const mix = (a, b, t) => a.map((x, i) => Math.round(x + (b[i] - x) * t));
 // kleurindex B-V naar een zachte sterkleur: blauwig wit, wit, geel, oranje
@@ -69,7 +69,7 @@ export async function teken(doek, D, plek, datum, opt = {}) {
   if (opt.lijnen !== false) {
     for (const [afk, b] of Object.entries(beelden)) {
       const uit = opt.uitgelicht?.includes(afk);
-      c.strokeStyle = uit ? MINT : `rgba(161,255,203,${0.28 * (1 - licht * 0.5)})`; c.lineWidth = uit ? 2 : 0.8;
+      c.strokeStyle = uit ? PAARS : `rgba(181,177,229,${0.28 * (1 - licht * 0.5)})`; c.lineWidth = uit ? 2 : 0.8;
       let midden = null, n = 0;
       for (const lijn of b.lijnen) {
         c.beginPath(); let eerst = true;
@@ -83,7 +83,7 @@ export async function teken(doek, D, plek, datum, opt = {}) {
         c.stroke();
       }
       if ((opt.beeldNamen || uit) && n > 2 && !opt.klein)
-        namen.push([b.nl, midden[0] / n, midden[1] / n, uit ? 3 : 6, `${uit ? 600 : 500} ${(uit ? 13 : 10.5) * schaal}px Geist, sans-serif`, uit ? MINT : "rgba(161,255,203,.6)", "center"]);
+        namen.push([b.nl, midden[0] / n, midden[1] / n, uit ? 3 : 6, `${uit ? 600 : 500} ${(uit ? 13 : 10.5) * schaal}px Geist, sans-serif`, uit ? PAARS : "rgba(181,177,229,.6)", "center"]);
     }
   }
   // sterren: grootte naar helderheid, kleur naar kleurindex; overdag vager
@@ -112,12 +112,12 @@ export async function teken(doek, D, plek, datum, opt = {}) {
     const hier = it.slug === opt.markeer;
     const ster = it.soort === "ster" && it.ae !== "Sun";
     const r = (it.ae === "Sun" ? 9 : it.ae === "Moon" ? 8 : hier ? 5 : ster ? 3 : 4) * (opt.groot ? 1.2 : 1);
-    c.fillStyle = it.ae === "Sun" ? "#FFD27A" : it.ae === "Moon" ? "#EDEDED" : ster ? WIT : MINT;
+    c.fillStyle = it.ae === "Sun" ? "#FFD27A" : it.ae === "Moon" ? "#EDEDED" : ster ? WIT : PAARS;
     c.beginPath(); c.arc(x, y, r, 0, 2 * Math.PI); c.fill();
-    if (hier) { c.strokeStyle = MINT; c.lineWidth = 2; c.beginPath(); c.arc(x, y, r + 7, 0, 2 * Math.PI); c.stroke(); }
+    if (hier) { c.strokeStyle = PAARS; c.lineWidth = 2; c.beginPath(); c.arc(x, y, r + 7, 0, 2 * Math.PI); c.stroke(); }
     vrij.push([x - r - 2, y - r - 2, 2 * r + 4, 2 * r + 4]);
     if (!opt.klein || hier)
-      namen.push([it.titel, x + r + 4, y + 4 * schaal, hier ? 0 : ster ? 2 : 1, `${hier ? 600 : 500} ${(hier ? 14 : ster ? 11 : 12) * schaal}px Geist, sans-serif`, hier ? MINT : WIT, "left", x - r - 4]);
+      namen.push([it.titel, x + r + 4, y + 4 * schaal, hier ? 0 : ster ? 2 : 1, `${hier ? 600 : 500} ${(hier ? 14 : ster ? 11 : 12) * schaal}px Geist, sans-serif`, hier ? PAARS : WIT, "left", x - r - 4]);
     plekken.push({ slug: it.slug, x, y, r: r + (opt.groot ? 14 : 10) });
   }
   // sternamen uit d3-celestial (Engels), niet als dezelfde ster al uit onze lijst op de kaart staat
@@ -154,7 +154,7 @@ export async function teken(doek, D, plek, datum, opt = {}) {
       const buiten = x < m || x > w - m || y < m || y > h - m;
       x = Math.max(m, Math.min(w - m, x)); y = Math.max(m, Math.min(h - m, y));
       if (buiten) { c.fillStyle = "rgba(26,26,26,.7)"; c.beginPath(); c.arc(x, y, m - 1, 0, 2 * Math.PI); c.fill(); }
-      c.fillStyle = az === zicht.kijk && opt.groot ? MINT : WIT; c.fillText(l, x, y + 0.5);
+      c.fillStyle = az === zicht.kijk && opt.groot ? PAARS : WIT; c.fillText(l, x, y + 0.5);
     }
     c.textBaseline = "alphabetic";
   }

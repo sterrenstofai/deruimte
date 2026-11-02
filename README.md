@@ -1,6 +1,6 @@
 # De Ruimte (werktitel)
 
-De zon, de maan, de planeten, manen, kometen en sterren, voor ouders en kinderen. Met echte foto's, en uitgerekend in de browser: wat zie je vanavond aan de hemel?
+De zon, de maan, de planeten, manen en sterren, voor ouders en kinderen. Met echte foto's, en uitgerekend in de browser: wat zie je vanavond aan de hemel?
 
 Statische site (HTML, CSS, losse ES-modules, geen framework, geen bouwstap). Netlify publiceert `site/`. Data ververst door GitHub Actions.
 
@@ -18,7 +18,7 @@ site/                 alles wat live gaat
   data/               hemel.json, fotos.json, geluid.json, bollen.json, sterren.json, sterrenbeelden.json, melkweg.json (gebouwd)
   fotos/ klanken/ fonts/
 data/
-  kern.json           de vaste kern van 27 hemellichamen, met de hand gekozen
+  kern.json           de vaste kern van 24 hemellichamen, met de hand gekozen
   handwerk/<slug>     weetjes met bron en controlezin, kleur van de foto, zin voor de kinderversie
   foto_keuze.json     welke foto (NASA-id), met de hand gekozen en bekeken
   geluid_keuze.json   welk geluid, en wat voor soort (opname, plasma, sonificatie, reconstructie)

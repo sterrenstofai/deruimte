@@ -77,15 +77,6 @@
   "alles": true,
   "datum": "2026-11-02"
  },
- "halley": {
-  "weetjes": [
-   true,
-   true,
-   true
-  ],
-  "alles": true,
-  "datum": "2026-11-02"
- },
  "io": {
   "weetjes": [
    true,
@@ -140,15 +131,6 @@
   "alles": true,
   "datum": "2026-11-02"
  },
- "phobos": {
-  "weetjes": [
-   true,
-   true,
-   true
-  ],
-  "alles": true,
-  "datum": "2026-11-02"
- },
  "pluto": {
   "weetjes": [
    true,
@@ -188,14 +170,6 @@
  "triton": {
   "weetjes": [
    true,
-   true,
-   true
-  ],
-  "alles": true,
-  "datum": "2026-11-02"
- },
- "tsjoerjoemov": {
-  "weetjes": [
    true,
    true
   ],

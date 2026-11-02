@@ -1,6 +1,6 @@
-// De ruimte voor kinderen: een grote foto, een grote mint knop, en een stem die de naam zegt als je op de foto tikt.
+// De ruimte voor kinderen: een grote foto, een grote paarse knop, en een stem die de naam zegt als je op de foto tikt.
 // Geen tekst die je moet kunnen lezen. Vegen of de pijlen gaan naar het volgende.
-// Overgenomen van ikhooreengeluidje (en die van Voggels). De mint knop speelt het geluid als er een is
+// Overgenomen van ikhooreengeluidje (en die van Voggels). De paarse knop speelt het geluid als er een is
 // (en alleen echte metingen of opnames); anders vertelt de stem één weetje.
 // De stem komt van het toestel zelf (Web Speech); we kiezen een Nederlandse stem die op het toestel draait.
 import * as G from "./geluid.js";
@@ -9,7 +9,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<
 let opruimen = null;
 
 // Volgorde: eerst wat een kind al kent
-const LIJST = ["maan", "zon", "aarde", "mars", "jupiter", "saturnus", "venus", "mercurius", "uranus", "neptunus", "pluto", "io", "europa", "titan", "ceres", "halley", "tsjoerjoemov", "ganymedes", "triton", "charon", "enceladus", "callisto", "phobos", "betelgeuze"];
+const LIJST = ["maan", "zon", "aarde", "mars", "jupiter", "saturnus", "venus", "mercurius", "uranus", "neptunus", "pluto", "io", "europa", "titan", "ceres", "ganymedes", "triton", "charon", "enceladus", "callisto", "betelgeuze"];
 
 /* ---------- de stem ---------- */
 
@@ -60,7 +60,7 @@ export function kinderPagina(app, D) {
         <figcaption class="kids-ballon" aria-live="polite"></figcaption>
         <button class="kids-tip" type="button" aria-label="Tik op de foto, dan hoor je de naam" hidden>
           <svg viewBox="0 0 48 48" aria-hidden="true">
-            <path d="M19 26V12.5a3 3 0 0 1 6 0V23l8.2 1.6a4 4 0 0 1 3.2 4.5l-1.3 8.2a5 5 0 0 1-4.9 4.2H22.6a5 5 0 0 1-4-2l-6.2-8.3a2.8 2.8 0 0 1 4.2-3.7z" fill="#A1FFCB" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+            <path d="M19 26V12.5a3 3 0 0 1 6 0V23l8.2 1.6a4 4 0 0 1 3.2 4.5l-1.3 8.2a5 5 0 0 1-4.9 4.2H22.6a5 5 0 0 1-4-2l-6.2-8.3a2.8 2.8 0 0 1 4.2-3.7z" fill="#B5B1E5" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
             <path d="M31 9.5c1.6 1.4 2.5 3.3 2.5 5.4M35 6c2.6 2.3 4.2 5.4 4.2 8.9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
           </svg>
         </button>

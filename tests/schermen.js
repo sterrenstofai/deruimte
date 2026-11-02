@@ -15,7 +15,6 @@ const PAGINAS = [
   ["sirius", "/hemel/sirius"],
   ["io-baan", "/hemel/io?tab=baan"],
   ["sirius-baan", "/hemel/sirius?tab=baan"],
-  ["phobos", "/hemel/phobos"],
   ["vanavond", "/vanavond"],
   ["hemelkaart", "/hemelkaart"],
   ["hemelkaart-mars", "/hemelkaart?markeer=mars"],

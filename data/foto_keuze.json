@@ -49,9 +49,6 @@
  "ceres": {
   "nasa_id": "PIA21906"
  },
- "phobos": {
-  "nasa_id": "PIA10369"
- },
  "io": {
   "nasa_id": "PIA02308"
  },
@@ -75,12 +72,6 @@
  },
  "charon": {
   "nasa_id": "PIA19968"
- },
- "halley": {
-  "nasa_id": "PIA17485"
- },
- "tsjoerjoemov": {
-  "nasa_id": "PIA21068"
  },
  "betelgeuze": {
   "eso": "eso2003c"

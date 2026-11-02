@@ -77,7 +77,7 @@ export function vanavondPagina(app, D) {
       }).filter((b) => b.gem > 15);
       const vak = app.querySelector("[data-beelden]");
       if (vak) vak.innerHTML = `<h2>Sterrenbeelden om ${klok(t)}</h2>${nu.length ? `<ul class="vv-beelden">${nu.map((b) => `<li><strong>${esc(b.naam[0].toUpperCase() + b.naam.slice(1))}</strong>, in het ${richting(b.az)}. <span class="zacht">${esc(b.uitleg)}</span></li>`).join("")}</ul>` : "<p>Geen van de bekende sterrenbeelden staat nu hoog genoeg.</p>"}
-        <p class="noot zacht">Op de kaart in mint. Lijnen en sterren: d3-celestial (Olaf Frohn), namen: Wikidata.</p>`;
+        <p class="noot zacht">Op de kaart in paars. Lijnen en sterren: d3-celestial (Olaf Frohn), namen: Wikidata.</p>`;
     });
   }
 

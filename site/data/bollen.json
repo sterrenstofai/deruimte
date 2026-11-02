@@ -11,7 +11,8 @@
   "kanteling": 0,
   "helling": 0,
   "begin": 0.5,
-  "gloeit": true
+  "gloeit": true,
+  "gloed": 0.16
  },
  "venus": {
   "pad": "/bollen/venus.jpg",
@@ -25,7 +26,15 @@
   "kanteling": 0,
   "helling": 0,
   "begin": 0.5,
-  "gloeit": false
+  "gloeit": false,
+  "atmosfeer": {
+   "rgb": [
+    240,
+    228,
+    200
+   ],
+   "dikte": 0.045
+  }
  },
  "maan": {
   "pad": "/bollen/maan.jpg",
@@ -53,7 +62,15 @@
   "kanteling": 23.4,
   "helling": 0,
   "begin": 0.5,
-  "gloeit": false
+  "gloeit": false,
+  "atmosfeer": {
+   "rgb": [
+    110,
+    165,
+    255
+   ],
+   "dikte": 0.035
+  }
  },
  "mars": {
   "pad": "/bollen/mars.jpg",
@@ -67,7 +84,15 @@
   "kanteling": 25.2,
   "helling": 0,
   "begin": 0.5,
-  "gloeit": false
+  "gloeit": false,
+  "atmosfeer": {
+   "rgb": [
+    235,
+    190,
+    160
+   ],
+   "dikte": 0.018
+  }
  },
  "jupiter": {
   "pad": "/bollen/jupiter.jpg",
@@ -81,7 +106,15 @@
   "kanteling": 3.1,
   "helling": 0,
   "begin": 0.5,
-  "gloeit": false
+  "gloeit": false,
+  "atmosfeer": {
+   "rgb": [
+    235,
+    220,
+    195
+   ],
+   "dikte": 0.03
+  }
  },
  "mercurius": {
   "pad": "/bollen/mercurius.jpg",
@@ -240,6 +273,14 @@
    "pad": "/bollen/saturnus-ringen.png",
    "binnen": 1.235979292493529,
    "buiten": 2.269529435189487
+  },
+  "atmosfeer": {
+   "rgb": [
+    225,
+    210,
+    170
+   ],
+   "dikte": 0.03
   }
  },
  "uranus": {
@@ -254,7 +295,15 @@
   "kanteling": 0,
   "helling": 0,
   "begin": 0.5,
-  "gloeit": false
+  "gloeit": false,
+  "atmosfeer": {
+   "rgb": [
+    170,
+    225,
+    235
+   ],
+   "dikte": 0.045
+  }
  },
  "neptunus": {
   "pad": "/bollen/neptunus.jpg",
@@ -268,7 +317,15 @@
   "kanteling": 0,
   "helling": 0,
   "begin": 0.5,
-  "gloeit": false
+  "gloeit": false,
+  "atmosfeer": {
+   "rgb": [
+    150,
+    200,
+    255
+   ],
+   "dikte": 0.045
+  }
  },
  "titan": {
   "pad": "/bollen/titan.png",
@@ -282,7 +339,15 @@
   "kanteling": 0,
   "helling": 0,
   "begin": 0.5,
-  "gloeit": false
+  "gloeit": false,
+  "atmosfeer": {
+   "rgb": [
+    235,
+    175,
+    90
+   ],
+   "dikte": 0.09
+  }
  },
  "eris": {
   "pad": "/bollen/eris.png",
@@ -310,7 +375,8 @@
   "kanteling": 0,
   "helling": 0,
   "begin": 0.5,
-  "gloeit": true
+  "gloeit": true,
+  "gloed": 0.16
  },
  "betelgeuze": {
   "pad": "/bollen/betelgeuze.png",
@@ -324,7 +390,8 @@
   "kanteling": 0,
   "helling": 0,
   "begin": 0.5,
-  "gloeit": true
+  "gloeit": true,
+  "gloed": 0.16
  },
  "vega": {
   "pad": "/bollen/vega.png",
@@ -338,6 +405,7 @@
   "kanteling": 0,
   "helling": 0,
   "begin": 0.5,
-  "gloeit": true
+  "gloeit": true,
+  "gloed": 0.16
  }
 }

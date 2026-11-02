@@ -108,6 +108,8 @@ def main():
         lijst[k["slug"]] = {"pad": f"/bollen/{k['slug']}.jpg", "groot": groot or f"/bollen/{k['slug']}.jpg", "label": f"kaart · {LABEL[k['kleur']]}", "kleur": k["kleur"], "uitleg": k["uitleg"],
                             "maker": k["maker"], "licentie": k["licentie"], "bron": k["bron"], "kanteling": k.get("kanteling", 0), "helling": k.get("helling", 0), "begin": k.get("begin", 0.5), "gloeit": bool(k.get("gloeit"))}
         if k.get("ringen"): lijst[k["slug"]]["ringen"] = ringen(k["ringen"], uit_map / f"{k['slug']}-ringen.png")
+        for veld in ("atmosfeer", "gloed"):
+            if k.get(veld): lijst[k["slug"]][veld] = k[veld]
         print(f"{k['slug']}: {pad.stat().st_size // 1024} kB" + (f", groot {(uit_map / (k['slug'] + '-groot.jpg')).stat().st_size // 1024} kB" if groot else ""))
     # zonder kaart: een egale bol in de kleur van een echte foto of uit metingen
     fotos = json.loads((ROOT / "site" / "data" / "fotos.json").read_text())
@@ -120,6 +122,8 @@ def main():
                 "gloeit": k.get("soort") == "ster"}
         if k.get("ringen"):
             item["ringen"] = ringen(k["ringen"], uit_map / f"{k['slug']}-ringen.png")
+        for veld in ("atmosfeer", "gloed"):
+            if k.get(veld): item[veld] = k[veld]
         lijst[k["slug"]] = item
         print(f"{k['slug']}: egaal {rgb}")
     (ROOT / "site" / "data" / "bollen.json").write_text(json.dumps(lijst, ensure_ascii=False, indent=1))

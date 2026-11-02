@@ -167,20 +167,6 @@
   "kleur": "echt",
   "uitleg": "Gemaakt door de ruimtesonde Dawn. Ceres is echt donkergrijs; de witte vlek midden is zout."
  },
- "phobos": {
-  "id": "PIA10369",
-  "titel": "Phobos from 5,800 Kilometers Color",
-  "credit": "NASA/JPL-Caltech/University of Arizona",
-  "pagina": "https://images.nasa.gov/details/PIA10369",
-  "bron": "NASA Image and Video Library",
-  "licentie": "NASA-mediarichtlijnen: vrij te gebruiken met naamsvermelding",
-  "pad": "/fotos/phobos.webp",
-  "breed": 1200,
-  "hoog": 1186,
-  "uitsnede": false,
-  "kleur": "versterkt",
-  "uitleg": "Gemaakt door de camera HiRISE rond Mars. De kleuren zijn versterkt om verschillen in de bodem te laten zien."
- },
  "io": {
   "id": "PIA02308",
   "titel": "Global image of Io true color",
@@ -292,34 +278,6 @@
   "uitsnede": false,
   "kleur": "versterkt",
   "uitleg": "Gemaakt door New Horizons in 2015. De kleuren zijn versterkt; de rode kap bovenaan is in het echt veel minder rood."
- },
- "halley": {
-  "id": "PIA17485",
-  "titel": "Comet Halley",
-  "credit": "NASA/ESA/Giotto Project",
-  "pagina": "https://images.nasa.gov/details/PIA17485",
-  "bron": "NASA Image and Video Library",
-  "licentie": "NASA-mediarichtlijnen: vrij te gebruiken met naamsvermelding",
-  "pad": "/fotos/halley.webp",
-  "breed": 1200,
-  "hoog": 628,
-  "uitsnede": false,
-  "kleur": "benaderd",
-  "uitleg": "De kern van Halley, gefotografeerd door de Europese ruimtesonde Giotto in 1986. De komeet zelf is donker; het licht is stof en gas dat eraf komt."
- },
- "tsjoerjoemov": {
-  "id": "PIA21068",
-  "titel": "Farewell Rosetta: ESA Mission to End on Comet Surface",
-  "credit": "ESA/Rosetta/MPS for OSIRIS Team MPS/UPD/LAM/IAA/SSO/INTA/UPM/DASP/IDA",
-  "pagina": "https://images.nasa.gov/details/PIA21068",
-  "bron": "NASA Image and Video Library",
-  "licentie": "NASA-mediarichtlijnen: vrij te gebruiken met naamsvermelding",
-  "pad": "/fotos/tsjoerjoemov.webp",
-  "breed": 1200,
-  "hoog": 1200,
-  "uitsnede": false,
-  "kleur": "echt",
-  "uitleg": "Gemaakt door de camera OSIRIS van de Europese ruimtesonde Rosetta. Zwart-wit."
  },
  "betelgeuze": {
   "id": "eso2003c",

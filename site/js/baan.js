@@ -4,7 +4,7 @@
 // - Een ster: geen baan om de zon; je ziet hoe hij in één nacht rond de Poolster lijkt te draaien (dat is de aarde die draait).
 import { helio } from "./hemel.js";
 
-const MINT = "#A1FFCB", WIT = "#FFFFFF", ZACHT = "rgba(255,255,255,.45)", NACHT = "#1A1A1A";
+const PAARS = "#B5B1E5", WIT = "#FFFFFF", ZACHT = "rgba(255,255,255,.45)", NACHT = "#1A1A1A";
 const PLANETEN = ["mercurius", "venus", "aarde", "mars", "jupiter", "saturnus", "uranus", "neptunus"];
 
 function baanGewoon(vak, item, D) {
@@ -41,7 +41,7 @@ function baanGewoon(vak, item, D) {
 
   function stip(c, x, y, r, kleur, label, sterk) {
     c.fillStyle = kleur; c.beginPath(); c.arc(x, y, r, 0, 2 * Math.PI); c.fill();
-    if (label) { c.fillStyle = sterk ? MINT : ZACHT; c.font = `${sterk ? 600 : 500} ${sterk ? 13 : 11}px Geist, sans-serif`; c.textAlign = "left"; c.fillText(label, x + r + 4, y + 4); }
+    if (label) { c.fillStyle = sterk ? PAARS : ZACHT; c.font = `${sterk ? 600 : 500} ${sterk ? 13 : 11}px Geist, sans-serif`; c.textAlign = "left"; c.fillText(label, x + r + 4, y + 4); }
   }
 
   function tekenZon(c, datum) {
@@ -56,11 +56,11 @@ function baanGewoon(vak, item, D) {
     const teken = (it, sterk, zonderNaam = false) => {
       // de baan: het pad van de komende omloop
       const P = it.baan.periode_d, n = 160;
-      c.strokeStyle = sterk ? "rgba(161,255,203,.6)" : "rgba(255,255,255,.14)"; c.lineWidth = sterk ? 1.5 : 1; c.beginPath();
+      c.strokeStyle = sterk ? "rgba(181,177,229,.6)" : "rgba(255,255,255,.14)"; c.lineWidth = sterk ? 1.5 : 1; c.beginPath();
       for (let k = 0; k <= n; k++) { const v = helio(it, new Date(+datum + (k / n) * P * 864e5)); if (!v) return; const x = cx + v.x * s, y = cy - v.y * s; k ? c.lineTo(x, y) : c.moveTo(x, y); }
       c.stroke();
       const v = helio(it, datum);
-      stip(c, cx + v.x * s, cy - v.y * s, sterk ? 5.5 : zonderNaam ? 2 : 3.5, sterk ? MINT : WIT, zonderNaam ? "" : it.titel, sterk);
+      stip(c, cx + v.x * s, cy - v.y * s, sterk ? 5.5 : zonderNaam ? 2 : 3.5, sterk ? PAARS : WIT, zonderNaam ? "" : it.titel, sterk);
     };
     for (const p of lijst) if (p.slug !== item.slug) teken(p, false, maxAE > 20 && p.baan.a_km < 3e8);
     if (item.slug !== "zon") teken(item, true);
@@ -80,9 +80,9 @@ function baanGewoon(vak, item, D) {
     const dagen = (+datum - t0) / 864e5;
     for (const m of zussen) {
       const sterk = m.slug === item.slug, r = m.baan.a_km * s;
-      c.strokeStyle = sterk ? "rgba(161,255,203,.6)" : "rgba(255,255,255,.14)"; c.lineWidth = 1; c.beginPath(); c.arc(cx, cy, r, 0, 2 * Math.PI); c.stroke();
+      c.strokeStyle = sterk ? "rgba(181,177,229,.6)" : "rgba(255,255,255,.14)"; c.lineWidth = 1; c.beginPath(); c.arc(cx, cy, r, 0, 2 * Math.PI); c.stroke();
       const hoek = (m.slug === "triton" ? -1 : 1) * 2 * Math.PI * dagen / m.baan.periode_d + m.slug.length;
-      stip(c, cx + r * Math.cos(hoek), cy - r * Math.sin(hoek), sterk ? 5 : 3, sterk ? MINT : WIT, m.titel, sterk);
+      stip(c, cx + r * Math.cos(hoek), cy - r * Math.sin(hoek), sterk ? 5 : 3, sterk ? PAARS : WIT, m.titel, sterk);
     }
   }
 
@@ -92,10 +92,10 @@ function baanGewoon(vak, item, D) {
     const r = ((90 - dec) / 50) * R; // tot 50 graden van de pool past op de kaart
     stip(c, cx, cy - 2, 3.5, WIT, "Poolster"); // het punt waar de hemel om draait
     const uren = (+datum - t0) / 3600e3, hoek = (uren / 23.934) * 2 * Math.PI;
-    c.strokeStyle = "rgba(161,255,203,.25)"; c.lineWidth = 1.2; c.beginPath(); c.arc(cx, cy, Math.min(r, R), 0, 2 * Math.PI); c.stroke();
-    c.strokeStyle = "rgba(161,255,203,.8)"; c.lineWidth = 2.5; c.beginPath(); c.arc(cx, cy, Math.min(r, R), -Math.PI / 2 - Math.min(hoek, 2 * Math.PI), -Math.PI / 2, false); c.stroke();
+    c.strokeStyle = "rgba(181,177,229,.25)"; c.lineWidth = 1.2; c.beginPath(); c.arc(cx, cy, Math.min(r, R), 0, 2 * Math.PI); c.stroke();
+    c.strokeStyle = "rgba(181,177,229,.8)"; c.lineWidth = 2.5; c.beginPath(); c.arc(cx, cy, Math.min(r, R), -Math.PI / 2 - Math.min(hoek, 2 * Math.PI), -Math.PI / 2, false); c.stroke();
     const a = -Math.PI / 2 - hoek;
-    stip(c, cx + Math.min(r, R) * Math.cos(a), cy + Math.min(r, R) * Math.sin(a), 5, MINT, item.titel, true);
+    stip(c, cx + Math.min(r, R) * Math.cos(a), cy + Math.min(r, R) * Math.sin(a), 5, PAARS, item.titel, true);
     if (r > R) { c.fillStyle = ZACHT; c.font = "500 11px Geist, sans-serif"; c.textAlign = "center"; c.fillText(`${item.titel} staat verder van de Poolster dan deze kaart laat zien`, cx, h - 12); }
     c.fillStyle = ZACHT; c.font = "500 11px Geist Mono, monospace"; c.textAlign = "left"; c.fillText("NOORD", 12, 18);
   }
@@ -122,7 +122,7 @@ function baanGewoon(vak, item, D) {
 
 function stip(c, x, y, r, kleur, label, sterk) {
   c.fillStyle = kleur; c.beginPath(); c.arc(x, y, r, 0, 2 * Math.PI); c.fill();
-  if (label) { c.fillStyle = sterk ? MINT : ZACHT; c.font = `${sterk ? 600 : 500} ${sterk ? 13 : 11}px Geist, sans-serif`; c.textAlign = "left"; c.fillText(label, x + r + 4, y + 4); }
+  if (label) { c.fillStyle = sterk ? PAARS : ZACHT; c.font = `${sterk ? 600 : 500} ${sterk ? 13 : 11}px Geist, sans-serif`; c.textAlign = "left"; c.fillText(label, x + r + 4, y + 4); }
 }
 export function baan(vak, item, D) {
   return baanGewoon(vak, item, D);

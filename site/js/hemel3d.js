@@ -10,7 +10,7 @@ import { laadSterren } from "./kaart.js";
 const rad = Math.PI / 180;
 const mix = (a, b, t) => a + (b - a) * t;
 const glad = (a, b, x) => { const t = Math.max(0, Math.min(1, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
-const MINT = "#A1FFCB";
+const PAARS = "#B5B1E5";
 const sterKleur = (bv) => bv < 0 ? [205, 220, 255] : bv < 0.4 ? [235, 240, 255] : bv < 0.8 ? [255, 248, 232] : bv < 1.3 ? [255, 222, 180] : [255, 196, 150];
 const PLANEETKLEUR = { Mercury: "#D8D2C8", Venus: "#FFFBEA", Mars: "#FF9D6B", Jupiter: "#F6E7C8", Saturn: "#F2DDA4", Uranus: "#BFF3F0", Neptune: "#9DB8FF" };
 
@@ -210,7 +210,7 @@ export class Hemel3D {
     // ---------- lijnen van sterrenbeelden ----------
     if (lagen.lijnen !== false || lagen.beeldNamen !== false) {
       c.lineWidth = 0.9;
-      c.strokeStyle = `rgba(161,255,203,${0.32 * (1 - dag * 0.6)})`;
+      c.strokeStyle = `rgba(181,177,229,${0.32 * (1 - dag * 0.6)})`;
       for (const b of this.lijnen) {
         let sx = 0, sy = 0, n = 0;
         if (lagen.lijnen !== false) c.beginPath();
@@ -224,7 +224,7 @@ export class Hemel3D {
           }
         }
         if (lagen.lijnen !== false) c.stroke();
-        if (lagen.beeldNamen !== false && n > 2) { const x = sx / n, y = sy / n; if (zichtbaar(x, y, -10)) namen.push([b.nl, x, y, 6, `500 ${11 * Math.min(1.3, zoom)}px Geist, sans-serif`, "rgba(161,255,203,.7)", "center"]); }
+        if (lagen.beeldNamen !== false && n > 2) { const x = sx / n, y = sy / n; if (zichtbaar(x, y, -10)) namen.push([b.nl, x, y, 6, `500 ${11 * Math.min(1.3, zoom)}px Geist, sans-serif`, "rgba(181,177,229,.7)", "center"]); }
       }
     }
 
@@ -263,8 +263,8 @@ export class Hemel3D {
       const hier = it.slug === markeer, onder = pos.hoogte < 0;
       let rr;
       if (onder) { // alleen het gemarkeerde hemellichaam, als een stippellijntje onder de grond
-        c.save(); c.setLineDash([3, 4]); c.strokeStyle = MINT; c.lineWidth = 1.5; c.beginPath(); c.arc(p[0], p[1], 10, 0, 2 * Math.PI); c.stroke(); c.restore();
-        namen.push([`${it.titel} (onder de horizon)`, p[0] + 16, p[1] + 4, 0, "600 13px Geist, sans-serif", MINT, "left", p[0] - 16]);
+        c.save(); c.setLineDash([3, 4]); c.strokeStyle = PAARS; c.lineWidth = 1.5; c.beginPath(); c.arc(p[0], p[1], 10, 0, 2 * Math.PI); c.stroke(); c.restore();
+        namen.push([`${it.titel} (onder de horizon)`, p[0] + 16, p[1] + 4, 0, "600 13px Geist, sans-serif", PAARS, "left", p[0] - 16]);
         plekken.push({ slug: it.slug, x: p[0], y: p[1], r: 22 });
         continue;
       }
@@ -289,11 +289,11 @@ export class Hemel3D {
         if (!ster) { c.globalAlpha = 0.7 * (1 - dag * 0.7); const g = rr * 6; c.drawImage(this.gloed, p[0] - g, p[1] - g, 2 * g, 2 * g); c.globalAlpha = 1; }
         c.fillStyle = kleur; c.beginPath(); c.arc(p[0], p[1], rr, 0, 2 * Math.PI); c.fill();
       }
-      if (hier) { c.strokeStyle = MINT; c.lineWidth = 2; c.beginPath(); c.arc(p[0], p[1], rr + 8, 0, 2 * Math.PI); c.stroke(); }
+      if (hier) { c.strokeStyle = PAARS; c.lineWidth = 2; c.beginPath(); c.arc(p[0], p[1], rr + 8, 0, 2 * Math.PI); c.stroke(); }
       vrij.push([p[0] - rr - 2, p[1] - rr - 2, 2 * rr + 4, 2 * rr + 4]);
       if (!verborgen(o)) {
         const ster = it.soort === "ster" && it.ae !== "Sun";
-        namen.push([it.titel, p[0] + rr + 6, p[1] + 4, hier ? 0 : ster ? 2 : 1, `${hier ? 600 : 500} ${hier ? 15 : ster ? 12 : 13.5}px Geist, sans-serif`, hier ? MINT : "#FFFFFF", "left", p[0] - rr - 6]);
+        namen.push([it.titel, p[0] + rr + 6, p[1] + 4, hier ? 0 : ster ? 2 : 1, `${hier ? 600 : 500} ${hier ? 15 : ster ? 12 : 13.5}px Geist, sans-serif`, hier ? PAARS : "#FFFFFF", "left", p[0] - rr - 6]);
         plekken.push({ slug: it.slug, x: p[0], y: p[1], r: rr + 16 });
       }
     }
@@ -354,7 +354,7 @@ export class Hemel3D {
       if (!p || !zichtbaar(p[0], p[1], -10)) continue;
       const groot = l.length === 1;
       c.font = `${groot ? 600 : 500} ${groot ? 15 : 11}px Geist, sans-serif`;
-      c.fillStyle = groot && az === kijk ? MINT : groot ? "rgba(255,255,255,.9)" : "rgba(255,255,255,.5)";
+      c.fillStyle = groot && az === kijk ? PAARS : groot ? "rgba(255,255,255,.9)" : "rgba(255,255,255,.5)";
       c.fillText(l, p[0], p[1]);
     }
     c.textBaseline = "alphabetic";

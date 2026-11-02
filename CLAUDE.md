@@ -3,7 +3,7 @@
 De volledige achtergrond staat in `docs/briefing.md`. Dit zijn de regels die altijd gelden.
 
 - **Fase 1 (datacheck) is klaar; fase 2 is gebouwd** na akkoord op 2 november 2026. Zie README.md voor de opbouw.
-- **Eerlijk over wat de site niet weet.** Geschat of nagemaakt krijgt een label: "simulatie" (mint), "nagekeken" alleen met een bron per feit. Een pagina "Hoe dit werkt / wat de site niet kan".
+- **Eerlijk over wat de site niet weet.** Geschat of nagemaakt krijgt een label: "simulatie" (paars), "nagekeken" alleen met een bron per feit. Een pagina "Hoe dit werkt / wat de site niet kan".
 - **Tekening is geen foto.** Kunstenaarsimpressies krijgen het label "tekening"; bij valse of versterkte kleuren zeggen welke kleuren echt zijn. Een reconstructie of sonificatie is geen opname.
 - **Geen cookies en geen tracking.** Wat iemand bijhoudt blijft in localStorage/IndexedDB. Locatie alleen in het geheugen.
 - **Browser-first:** statische site (HTML, CSS, losse ES-modules, geen framework, geen build-stap), live via Netlify, data ververst door GitHub Actions. Strikte CSP. `[hidden] { display: none !important }`.
@@ -16,4 +16,5 @@ De volledige achtergrond staat in `docs/briefing.md`. Dit zijn de regels die alt
 - **JPL Horizons en SBDB nooit vanuit de site** (hun voorwaarden): alleen in scripts en Actions.
 - **Weetjes alleen met een controlezin** die letterlijk op de bronpagina staat (`scripts/nakijken.py`).
 - **Tijden altijd in Nederlandse tijd** (Europe/Amsterdam), ook als de browser in een andere tijdzone staat.
-- **Alleen hemellichamen**: geen ruimtevaartuigen, astronauten of het ISS (besluit 2 november 2026).
+- **Kleur**: lavendel #B5B1E5 (donker #8C86C7) als accent, de kleur van De Ruimte in de familie met Voggels (zalm) en Ik hoor een geluidje (mint).
+- **Alleen hemellichamen**: planeten, dwergplaneten, manen en sterren. Geen ruimtevaartuigen, astronauten, het ISS, kometen of Phobos (besluit 2 november 2026).

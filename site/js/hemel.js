@@ -1,7 +1,7 @@
 // Rekenen aan de hemel, helemaal in de browser. Getest in fase 1 tegen JPL Horizons en Skyfield:
 // zon, maan, planeten en Pluto binnen 0,3 boogminuut; op- en ondergang op de minuut.
 // - astronomy-engine (MIT, Don Cross): zon, maan, planeten, manen van Jupiter, sterren
-// - Ceres, Eris en kometen: een Kepler-baan uit de JPL Small-Body Database (zonder storingen door planeten)
+// - Ceres en Eris: een Kepler-baan uit de JPL Small-Body Database (zonder storingen door planeten)
 import * as A from "./vendor/astronomy.js";
 
 export { A };
@@ -141,7 +141,7 @@ export function vanavond(D, plek, datum = new Date(), { tot = "middernacht" } = 
   const av = avond(datum, plek);
   const start = av.schemering || av.zonOnder;
   const eind = tot === "ochtend" ? av.ochtend : middernachtNa(start);
-  const kandidaten = D.hemel.filter((h) => h.ae && h.ae !== "Sun" || h.baan?.ster || ["ceres", "halley", "tsjoerjoemov", "eris"].includes(h.slug));
+  const kandidaten = D.hemel.filter((h) => h.ae && h.ae !== "Sun" || h.baan?.ster || ["ceres", "eris"].includes(h.slug));
   const uit = [];
   for (const h of kandidaten) {
     let best = null, eerste = null, laatste = null;

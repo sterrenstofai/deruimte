@@ -1,5 +1,5 @@
 {
- "_uitleg": "Kaarten voor de draaiende bollen in het overzicht. Alleen kaarten van echte foto's (NASA, USGS), licentie per bron nagekeken op 2 november 2026 (docs/bollen-datacheck.md). Niet: Venus (alleen radar), Titan (alleen infrarood door de nevel), Saturnus, Uranus en Neptunus (geen kaart), de zon (verandert elke dag), Eris (nooit van dichtbij gezien). Zonder kaart (egaal): de kleur uit een echte foto of uit metingen van het licht, met een label dat het egaal is. Niet als bol: Phobos en de kometen (niet rond; geen vrij vormmodel bereikbaar).",
+ "_uitleg": "Kaarten voor de draaiende bollen in het overzicht. Alleen kaarten van echte foto's (NASA, USGS), licentie per bron nagekeken op 2 november 2026 (docs/bollen-datacheck.md). Niet: Venus (alleen radar), Titan (alleen infrarood door de nevel), Saturnus, Uranus en Neptunus (geen kaart), de zon (verandert elke dag), Eris (nooit van dichtbij gezien). Zonder kaart (egaal): de kleur uit een echte foto of uit metingen van het licht, met een label dat het egaal is.",
  "lijst": [
   {
    "slug": "zon",
@@ -15,7 +15,8 @@
    "maker": "NASA/SDO en de teams van AIA, EVE en HMI (Courtesy of NASA/SDO and the AIA, EVE, and HMI science teams)",
    "licentie": "publiek domein (SDO: niet auteursrechtelijk beschermd)",
    "kleur": "vals",
-   "uitleg": "Valse kleur: ultraviolet licht (30,4 nanometer), dat je ogen niet zien; de kleur heeft NASA gekozen. Een kaart van één rondje van de zon, gemaakt door de satelliet SDO in mei 2026. De zon verandert elke dag."
+   "uitleg": "Valse kleur: ultraviolet licht (30,4 nanometer), dat je ogen niet zien; de kleur heeft NASA gekozen. Een kaart van één rondje van de zon, gemaakt door de satelliet SDO in mei 2026. De zon verandert elke dag.",
+   "gloed": 0.16
   },
   {
    "slug": "venus",
@@ -25,7 +26,15 @@
    "licentie": "publiek domein",
    "kleur": "radar",
    "uitleg": "Geen licht maar radar: de bodem onder de wolken, gemeten door Magellan. Zo zie je Venus nooit; met je ogen zie je alleen een lichte bol van wolken. Gedempt: geen meting.",
-   "vul_onbekend": true
+   "vul_onbekend": true,
+   "atmosfeer": {
+    "rgb": [
+     240,
+     228,
+     200
+    ],
+    "dikte": 0.045
+   }
   },
   {
    "slug": "maan",
@@ -44,7 +53,15 @@
    "licentie": "publiek domein (NASA)",
    "kleur": "echt",
    "uitleg": "Echte kleur, maar zonder wolken: samengesteld uit een maand satellietfoto's. De diepe oceaan is één kleur blauw.",
-   "kanteling": 23.4
+   "kanteling": 23.4,
+   "atmosfeer": {
+    "rgb": [
+     110,
+     165,
+     255
+    ],
+    "dikte": 0.035
+   }
   },
   {
    "slug": "mars",
@@ -55,7 +72,15 @@
    "kleur": "benaderd",
    "uitleg": "Kleur benaderd: Viking fotografeerde met een rood en een violet filter, het groen is daaruit nagemaakt.",
    "kanteling": 25.2,
-   "url_groot": "https://astrogeology.usgs.gov/ckan/dataset/7131d503-cdc9-45a5-8f83-5126c0fd397e/resource/5ea881c6-01b3-41fa-a7af-42d2131b54f1/download/mars_viking_mdim21_clrmosaic_1km.jpg"
+   "url_groot": "https://astrogeology.usgs.gov/ckan/dataset/7131d503-cdc9-45a5-8f83-5126c0fd397e/resource/5ea881c6-01b3-41fa-a7af-42d2131b54f1/download/mars_viking_mdim21_clrmosaic_1km.jpg",
+   "atmosfeer": {
+    "rgb": [
+     235,
+     190,
+     160
+    ],
+    "dikte": 0.018
+   }
   },
   {
    "slug": "jupiter",
@@ -65,7 +90,15 @@
    "licentie": "publiek domein (NASA)",
    "kleur": "benaderd",
    "uitleg": "Kleur benaderd, uit twee filters. De wolken van december 2000: ze veranderen steeds.",
-   "kanteling": 3.1
+   "kanteling": 3.1,
+   "atmosfeer": {
+    "rgb": [
+     235,
+     220,
+     195
+    ],
+    "dikte": 0.03
+   }
   },
   {
    "slug": "mercurius",
@@ -188,7 +221,15 @@
     206,
     193,
     152
-   ]
+   ],
+   "atmosfeer": {
+    "rgb": [
+     225,
+     210,
+     170
+    ],
+    "dikte": 0.03
+   }
   },
   {
    "slug": "uranus",
@@ -199,7 +240,15 @@
    "kleur": "benaderd",
    "uitleg": "Kaart van de ruimtetelescoop Hubble uit 2023: ongeveer echte kleur, met de lichte kap om de noordpool. Het zuiden ligt nu in het donker: gedempt is niet gezien.",
    "vul_onbekend": true,
-   "randen_weg": true
+   "randen_weg": true,
+   "atmosfeer": {
+    "rgb": [
+     170,
+     225,
+     235
+    ],
+    "dikte": 0.045
+   }
   },
   {
    "slug": "neptunus",
@@ -210,7 +259,15 @@
    "kleur": "benaderd",
    "uitleg": "Kaart van de ruimtetelescoop Hubble uit 2022: ongeveer echte kleur. Neptunus is lichter blauw dan op de bekende Voyager-foto's. Gedempt is niet gezien.",
    "vul_onbekend": true,
-   "randen_weg": true
+   "randen_weg": true,
+   "atmosfeer": {
+    "rgb": [
+     150,
+     200,
+     255
+    ],
+    "dikte": 0.045
+   }
   }
  ],
  "egaal": [
@@ -225,7 +282,15 @@
    "maker": "kleur uit een foto van Cassini (NASA/JPL-Caltech/Space Science Institute)",
    "licentie": "publiek domein (NASA)",
    "label": "egaal · kleur uit een foto",
-   "uitleg": "Egaal, in de echte kleur van een Cassini-foto: je ziet alleen de oranje nevel, niet de grond."
+   "uitleg": "Egaal, in de echte kleur van een Cassini-foto: je ziet alleen de oranje nevel, niet de grond.",
+   "atmosfeer": {
+    "rgb": [
+     235,
+     175,
+     90
+    ],
+    "dikte": 0.09
+   }
   },
   {
    "slug": "eris",
@@ -248,7 +313,8 @@
    "maker": "kleur uit de gemeten kleurindex (Hipparcos, via d3-celestial)",
    "licentie": "eigen berekening",
    "label": "egaal · kleur uit metingen",
-   "uitleg": "Een gloeiende bol in de kleur van zijn licht. Het oppervlak van Sirius heeft niemand gezien."
+   "uitleg": "Een gloeiende bol in de kleur van zijn licht. Het oppervlak van Sirius heeft niemand gezien.",
+   "gloed": 0.16
   },
   {
    "slug": "betelgeuze",
@@ -258,7 +324,8 @@
    "maker": "kleur uit de gemeten kleurindex (Hipparcos, via d3-celestial)",
    "licentie": "eigen berekening",
    "label": "egaal · kleur uit metingen",
-   "uitleg": "Een gloeiende bol in de kleur van haar licht. Van Betelgeuze bestaan een paar wazige foto's van het oppervlak (zie Foto); een kaart niet."
+   "uitleg": "Een gloeiende bol in de kleur van haar licht. Van Betelgeuze bestaan een paar wazige foto's van het oppervlak (zie Foto); een kaart niet.",
+   "gloed": 0.16
   },
   {
    "slug": "vega",
@@ -268,7 +335,8 @@
    "maker": "kleur uit de gemeten kleurindex (Hipparcos, via d3-celestial)",
    "licentie": "eigen berekening",
    "label": "egaal · kleur uit metingen",
-   "uitleg": "Een gloeiende bol in de kleur van haar licht. Het oppervlak van Wega heeft niemand gezien."
+   "uitleg": "Een gloeiende bol in de kleur van haar licht. Het oppervlak van Wega heeft niemand gezien.",
+   "gloed": 0.16
   }
  ]
 }

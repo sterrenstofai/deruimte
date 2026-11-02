@@ -120,7 +120,7 @@ function teken() {
       c.drawImage(eigen.beeld, 0, 0, eigen.kolommen, eigen.beeld.height, 0, 0, doek.width, doek.height);
       if (speeltDit && audio.currentTime) {
         const x = (audio.currentTime / eigen.duur) * doek.width;
-        c.fillStyle = "#A1FFCB"; c.fillRect(x - 2, 0, 4, doek.height);
+        c.fillStyle = "#B5B1E5"; c.fillRect(x - 2, 0, 4, doek.height);
       }
       continue;
     }

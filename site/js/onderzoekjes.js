@@ -169,7 +169,7 @@ async function tekenCertificaat(doek, naam, lb) {
   await Promise.all([document.fonts.load('300 100px "Geist"'), document.fonts.load('400 40px "Geist Mono"')]).catch(() => {});
   const beeld = await laadCertBeeld();
   const W = doek.width, H = doek.height, u = W / 1000, c = doek.getContext("2d");
-  const inkt = "#232323", mint = "#A1FFCB", zacht = "#6E6E6E", lijn = "#D9D9D9";
+  const inkt = "#232323", paars = "#B5B1E5", zacht = "#6E6E6E", lijn = "#D9D9D9";
   const spatie = (px, em) => { if ("letterSpacing" in c) c.letterSpacing = `${(px * em).toFixed(2)}px`; };
   c.fillStyle = "#FFFFFF"; c.fillRect(0, 0, W, H);
   const rand = 30 * u, midden = W * 0.56;
@@ -195,7 +195,7 @@ async function tekenCertificaat(doek, naam, lb) {
   let maat = 96;
   do { c.font = `300 ${maat * u}px "Geist", sans-serif`; spatie(maat * u, -0.05); maat -= 4; } while (c.measureText(naam || " ").width > 440 * u && maat > 30);
   const nb = c.measureText(naam || " ").width, nh = (maat + 4) * u;
-  c.fillStyle = mint; c.fillRect(x - 8 * u, 352 * u - nh * 0.8, nb + 16 * u, nh * 0.98);
+  c.fillStyle = paars; c.fillRect(x - 8 * u, 352 * u - nh * 0.8, nb + 16 * u, nh * 0.98);
   c.fillStyle = inkt; c.fillText(naam || "", x, 352 * u);
   c.fillStyle = inkt; c.font = `400 ${18 * u}px "Geist", sans-serif`; spatie(18 * u, -0.02);
   ["heeft als echte ruimteonderzoeker alle zes", "onderzoekjes gedaan: kijken, tekenen, meten,", "raden, wegen en sterren leggen."].forEach((r, i) => c.fillText(r, x, 420 * u + i * 26 * u));
@@ -208,7 +208,7 @@ async function tekenCertificaat(doek, naam, lb) {
   });
   const sx = W - 150 * u, sy = H - 140 * u;
   c.save(); c.translate(sx, sy); c.rotate(-0.12);
-  c.fillStyle = mint; c.beginPath(); c.arc(0, 0, 62 * u, 0, Math.PI * 2); c.fill();
+  c.fillStyle = paars; c.beginPath(); c.arc(0, 0, 62 * u, 0, Math.PI * 2); c.fill();
   c.strokeStyle = inkt; c.lineWidth = 1.2 * u; c.beginPath(); c.arc(0, 0, 54 * u, 0, Math.PI * 2); c.stroke();
   c.textAlign = "center"; c.fillStyle = inkt;
   c.font = `500 ${23 * u}px "Geist", sans-serif`; spatie(23 * u, -0.04); c.fillText("Gedaan", 0, 6 * u);
@@ -407,7 +407,7 @@ function sterrenbeeldLeggen(werk, D) {
     const uniek = [...new Map(alle.map((p) => [p.join(","), p])).values()];
     const helder = (p) => sterren.reduce((b, st) => (Math.abs(st[0] - p[0]) < 0.3 && Math.abs(st[1] - p[1]) < 0.3 && st[2] < b ? st[2] : b), 6);
     werk.querySelector(".oz-leg-svg").innerHTML = `<rect width="400" height="260" rx="14" fill="#1A1A1A"/>
-      ${pts.map((l) => `<polyline points="${l.map((p) => P(p).join(",")).join(" ")}" fill="none" stroke="rgba(161,255,203,.55)" stroke-width="1.5"/>`).join("")}
+      ${pts.map((l) => `<polyline points="${l.map((p) => P(p).join(",")).join(" ")}" fill="none" stroke="rgba(181,177,229,.55)" stroke-width="1.5"/>`).join("")}
       ${uniek.map((p) => { const [x, y] = P(p); return `<circle cx="${x}" cy="${y}" r="${Math.max(3, 9 - helder(p) * 1.4)}" fill="#fff"/>`; }).join("")}`;
     const p = PLEK.huidig(), nu = new Date();
     const hoog = alle.map(([ra, dec]) => positie({ baan: { ster: { ra, dec, parallax_mas: 1 } }, cijfers: [] }, nu, p, D));

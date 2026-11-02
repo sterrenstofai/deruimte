@@ -36,9 +36,9 @@ const bronLink = (url) => {
   return `<a class="bron" href="${esc(url)}" rel="noopener">${esc(host)}</a>`;
 };
 const hoofd = (s) => s.charAt(0).toUpperCase() + s.slice(1);
-const SOORTEN = { planeet: "Planeten", maan: "Manen", dwergplaneet: "Dwergplaneten", komeet: "Kometen", ster: "Sterren" };
+const SOORTEN = { planeet: "Planeten", maan: "Manen", dwergplaneet: "Dwergplaneten", ster: "Sterren" };
 const inSoort = (h, k) => h.soort === k;
-const SOORT_EEN = { planeet: "Planeet", maan: "Maan", dwergplaneet: "Dwergplaneet", komeet: "Komeet", ster: "Ster" };
+const SOORT_EEN = { planeet: "Planeet", maan: "Maan", dwergplaneet: "Dwergplaneet", ster: "Ster" };
 // Het plusje van Mijn hemel: bij alles wat je aan de hemel kunt zien (de aarde niet: daar sta je op)
 const kunJeZien = (h) => h.slug !== "aarde";
 const tabsVoor = () => TABS;
@@ -219,7 +219,7 @@ function home(D) {
     <div class="held-binnen breed">
       ${etiket("De ruimte, voor ouders en kinderen")}
       <h1>Wat staat er <span class="accent">vanavond</span> boven je huis?</h1>
-      <p class="held-sub">De zon, de maan, de planeten, hun manen, kometen en sterren. Met echte foto's, en uitgerekend in je eigen browser: wat je vanavond kunt zien, en waar je moet kijken.</p>
+      <p class="held-sub">De zon, de maan, de planeten, hun manen en sterren. Met echte foto's, en uitgerekend in je eigen browser: wat je vanavond kunt zien, en waar je moet kijken.</p>
       <div class="held-knoppen">
         <a class="knop-pil knop-accent" href="/vanavond" data-link>Wat zie je vanavond?</a>
         <a class="knop-pil" href="/hemelkaart" data-link>Kijk zelf rond</a>
@@ -607,7 +607,6 @@ function paneelNu(D, h, vak) {
     if (oo) zinnen.push(`<dl class="weetjes">${oo.op ? `<dt>Komt op</dt><dd>${dag(oo.op)} om ${klok(oo.op)}</dd>` : ""}${oo.hoogst ? `<dt>Hoogst</dt><dd>${klok(oo.hoogst)}, ${Math.round(oo.hoogsteHoogte)}° hoog</dd>` : ""}${oo.onder ? `<dt>Gaat onder</dt><dd>${dag(oo.onder)} om ${klok(oo.onder)}</dd>` : ""}${!oo.op && !oo.onder ? `<dt>De hele nacht</dt><dd>${pos?.hoogte > 0 ? "gaat hier nooit onder" : "komt hier nooit op"}</dd>` : ""}</dl>`);
     if (pos?.mag != null && h.ae !== "Sun") zinnen.push(`<p>Helderheid nu: ${pos.mag.toLocaleString("nl-NL", { maximumFractionDigits: 1 })}. ${pos.mag < 1 ? "Een van de helderste dingen aan de hemel." : pos.mag < 5.5 ? "Met het blote oog te zien als het donker is." : "Te zwak voor het blote oog; je hebt een telescoop nodig."}</p>`);
     if (h.slug === "zon") zinnen.push(`<p class="let-op">Kijk nooit recht in de zon, ook niet met een zonnebril, verrekijker of telescoop.</p>`);
-    if (h.soort === "komeet" && pos) zinnen.push(`<p>${h.slug === "halley" ? "Halley is nu ver weg en veel te zwak om te zien. Hij komt in 2061 terug." : "Deze komeet is nu veel te zwak om te zien."} De plek is uitgerekend uit zijn baan, zonder de trek van de planeten; hij kan er een stukje naast zitten.</p>`);
     if (h.slug === "eris" || h.slug === "pluto") zinnen.push(`<p>${hoofd(h.naam)} is veel te zwak voor het blote oog en voor een verrekijker.</p>`);
     zinnen.push(`<p class="noot zacht">Uitgerekend in je browser voor ${esc(p.naam)}, ${klok(nu)}. <span class="label">simulatie</span> Of het bewolkt is, weet de site niet.</p>`);
     tekst.innerHTML = zinnen.join("");

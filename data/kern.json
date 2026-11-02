@@ -125,15 +125,6 @@
    "jpl": "Moon"
   },
   {
-   "slug": "phobos",
-   "naam": "Phobos",
-   "kort": "Phobos",
-   "soort": "maan",
-   "en": "Phobos",
-   "ouder": "mars",
-   "jpl": "Phobos"
-  },
-  {
    "slug": "io",
    "naam": "Io",
    "kort": "Io",
@@ -204,22 +195,6 @@
    "en": "Charon",
    "ouder": "pluto",
    "jpl": "Charon"
-  },
-  {
-   "slug": "halley",
-   "naam": "de komeet Halley",
-   "kort": "Komeet Halley",
-   "soort": "komeet",
-   "en": "Halley's Comet",
-   "sbdb": "1P"
-  },
-  {
-   "slug": "tsjoerjoemov",
-   "naam": "de komeet Tsjoerjoemov-Gerasimenko",
-   "kort": "Komeet 67P",
-   "soort": "komeet",
-   "en": "67P/Churyumov–Gerasimenko",
-   "sbdb": "67P"
   },
   {
    "slug": "sirius",

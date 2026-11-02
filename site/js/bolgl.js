@@ -5,17 +5,34 @@
 // Sleep om te draaien en te kantelen. Zonder WebGL tekenen we hem met bol.js.
 import { laadKaart, tekenBol, optiesVoor } from "./bol.js";
 
+// gemiddelde kleur van een afbeelding (voor de gloed), even helder als het felste kanaal
+function gemiddeldeVan(img) {
+  const c = document.createElement("canvas"); c.width = 32; c.height = 16;
+  const g = c.getContext("2d", { willReadFrequently: true }); g.drawImage(img, 0, 0, 32, 16);
+  const d = g.getImageData(0, 0, 32, 16).data; let r = 0, gg = 0, b = 0;
+  for (let i = 0; i < d.length; i += 4) { r += d[i]; gg += d[i + 1]; b += d[i + 2]; }
+  const m = Math.max(r, gg, b) || 1;
+  return [r * 255 / m, gg * 255 / m, b * 255 / m];
+}
+
 const VS = `attribute vec2 p; void main() { gl_Position = vec4(p, 0.0, 1.0); }`;
 const FS = `precision highp float;
 uniform sampler2D kaart, ringen;
 uniform vec2 maat; uniform vec3 pool;
-uniform float straal, schaal, lengte, kantel, helling, gloeit, heeftRing, binnen, buiten;
+uniform float straal, schaal, lengte, kantel, helling, gloeit, heeftRing, binnen, buiten, dikte, gloed;
+uniform vec3 halokleur;
 void main() {
   vec2 q = (gl_FragCoord.xy - maat * 0.5) / straal * schaal;
   float r = length(q);
   vec3 L = normalize(vec3(-0.45, 0.4, 0.8));
   vec4 uit = vec4(0.0);
   float zBol = -1e9;
+  // dampkring: een zachte rand van licht, het sterkst aan de kant van de zon; de zon en sterren gloeien rondom
+  float kant = r > 0.0 ? 0.25 + 0.75 * max(0.0, dot(q / r, normalize(L.xy))) : 1.0;
+  if (r > 1.0) {
+    float a = gloed > 0.0 ? 0.85 * exp(-((r - 1.0) / gloed) * 2.4) : dikte > 0.0 ? 0.75 * kant * exp(-((r - 1.0) / dikte) * 1.7) : 0.0;
+    uit = vec4(halokleur * a, a);
+  }
   if (r <= 1.0) {
     float rand = 1.0 - smoothstep(1.0 - 1.5 * schaal / straal, 1.0, r);
     vec3 n = vec3(q, sqrt(max(0.0, 1.0 - r * r)));
@@ -29,7 +46,9 @@ void main() {
     vec3 b = vec3(a.x, ch * a.y - sh * a.z, sh * a.y + ch * a.z);
     float u = fract(atan(b.x, b.z) / 6.2831853 + lengte);
     float v = 0.5 - asin(clamp(b.y, -1.0, 1.0)) / 3.1415927;
-    uit = vec4(texture2D(kaart, vec2(u, v)).rgb * licht * rand, rand);
+    vec3 kleur = texture2D(kaart, vec2(u, v)).rgb * licht;
+    if (dikte > 0.0) kleur = mix(kleur, halokleur, 0.55 * kant * pow(1.0 - n.z, 2.5));
+    uit = vec4(kleur * rand, rand) + uit * (1.0 - rand);
   }
   if (heeftRing > 0.5 && abs(pool.z) > 0.001) {
     float zr = -(pool.x * q.x + pool.y * q.y) / pool.z;
@@ -51,7 +70,9 @@ export function groteBol(doek, b, { stil = false } = {}) {
   const rad = Math.PI / 180;
   const stand = { lengte: b.begin ?? 0.5, helling: (b.helling || 0) * rad, vaart: 0, laatsteSleep: -1e9 };
   const kantel = (b.kanteling || 0) * rad;
-  const ring = b.ringen || null, schaal = ring ? ring.buiten * 1.02 : 1;
+  const ring = b.ringen || null;
+  const dikte = b.atmosfeer?.dikte || 0, gloed = b.gloed || 0;
+  const schaal = Math.max(ring ? ring.buiten * 1.02 : 1, dikte ? 1 + dikte * 2.6 : 1, gloed ? 1 + gloed * 2.2 : 1);
   let teken = null, anim = 0, weg = false, vorige = 0, wijzer = null;
   const gl = doek.getContext("webgl", { premultipliedAlpha: true, antialias: true, alpha: true });
 
@@ -64,7 +85,7 @@ export function groteBol(doek, b, { stil = false } = {}) {
     const buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buf);
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
     const loc = gl.getAttribLocation(prog, "p"); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
-    const U = Object.fromEntries(["kaart", "ringen", "maat", "pool", "straal", "schaal", "lengte", "kantel", "helling", "gloeit", "heeftRing", "binnen", "buiten"].map((n) => [n, gl.getUniformLocation(prog, n)]));
+    const U = Object.fromEntries(["kaart", "ringen", "maat", "pool", "straal", "schaal", "lengte", "kantel", "helling", "gloeit", "heeftRing", "binnen", "buiten", "dikte", "gloed", "halokleur"].map((n) => [n, gl.getUniformLocation(prog, n)]));
     const textuur = (eenheid, img, rgba, herhaal) => {
       const tex = gl.createTexture();
       gl.activeTexture(gl.TEXTURE0 + eenheid); gl.bindTexture(gl.TEXTURE_2D, tex);
@@ -84,6 +105,9 @@ export function groteBol(doek, b, { stil = false } = {}) {
       gl.uniform1i(U.kaart, 0); gl.uniform1i(U.ringen, 1);
       gl.uniform1f(U.gloeit, b.gloeit ? 1 : 0); gl.uniform1f(U.heeftRing, ring ? 1 : 0);
       gl.uniform1f(U.schaal, schaal);
+      gl.uniform1f(U.dikte, dikte); gl.uniform1f(U.gloed, gloed);
+      const hk = b.atmosfeer ? b.atmosfeer.rgb : gemiddeldeVan(img);
+      gl.uniform3f(U.halokleur, hk[0] / 255, hk[1] / 255, hk[2] / 255);
       if (ring) { gl.uniform1f(U.binnen, ring.binnen); gl.uniform1f(U.buiten, ring.buiten); }
       teken = () => {
         gl.viewport(0, 0, doek.width, doek.height);

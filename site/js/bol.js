@@ -32,13 +32,16 @@ function naarBol(x, y, z, kc, ks, hc, hs) {
 // tabel per maat en stand: per beeldpunt de rij in de kaart, de lengte, het licht, en waar de ringen zitten
 const tabellen = new Map();
 function tabel(n, o) {
-  const sleutel = `${n}|${o.kanteling}|${o.helling}|${o.gloeit}|${o.ringen?.buiten || 0}`;
+  const sleutel = `${n}|${o.kanteling}|${o.helling}|${o.gloeit}|${o.ringen?.buiten || 0}|${o.dikte || 0}|${o.gloed || 0}`;
   if (tabellen.has(sleutel)) return tabellen.get(sleutel);
   const m = n * n, rij = new Float32Array(m), lengte = new Float32Array(m), licht = new Float32Array(m).fill(-1);
   const ring = new Float32Array(m).fill(-1), voor = new Uint8Array(m), ringLicht = new Float32Array(m);
+  const halo = new Float32Array(m), tint = new Float32Array(m); // dampkring of gloed buiten de rand; tint bij de rand
   const kc = Math.cos(o.kanteling), ks = Math.sin(o.kanteling), hc = Math.cos(o.helling), hs = Math.sin(o.helling);
   const L = [-0.45, 0.4, 0.8], lm = Math.hypot(...L);
-  const f = o.ringen ? o.ringen.buiten * 1.02 : 1; // met ringen past de bol kleiner in het vak
+  // met ringen, een dampkring of een gloed past de bol kleiner in het vak
+  const f = Math.max(o.ringen ? o.ringen.buiten * 1.02 : 1, o.dikte ? 1 + o.dikte * 2.6 : 1, o.gloed ? 1 + o.gloed * 2.2 : 1);
+  const Ln = Math.hypot(L[0], L[1]);
   // de poolas in beeld, voor het vlak van de ringen
   const N = [-ks * hc, kc * hc, -hs]; // de as (0,1,0) van de bol, terug naar beeld
   for (let j = 0; j < n; j++) for (let i = 0; i < n; i++) {
@@ -52,6 +55,12 @@ function tabel(n, o) {
       if (o.gloeit) licht[k] = 1 - 0.55 * (1 - z) - 0.15 * (1 - z) ** 2; // donkere rand, zoals bij de zon
       else { const d = (x * L[0] + y * L[1] + z * L[2]) / lm; licht[k] = Math.min(1.08, 0.18 + 0.95 * Math.max(0, d) ** 0.8) * (0.82 + 0.18 * z); }
     }
+    // de dampkring: een zachte rand van licht, het sterkst aan de kant van de zon; de zon en sterren gloeien rondom
+    const rr0 = Math.sqrt(r2), kant = rr0 > 0 ? 0.25 + 0.75 * Math.max(0, (x * L[0] + y * L[1]) / (rr0 * Ln)) : 1;
+    if (r2 > 1) {
+      if (o.gloed) halo[k] = 0.85 * Math.exp(-((rr0 - 1) / o.gloed) * 2.4);
+      else if (o.dikte) halo[k] = 0.75 * kant * Math.exp(-((rr0 - 1) / o.dikte) * 1.7);
+    } else if (o.dikte) tint[k] = 0.55 * kant * (1 - Math.sqrt(1 - r2)) ** 2.5;
     if (o.ringen && Math.abs(N[2]) > 1e-3) {
       const zr = -(N[0] * x + N[1] * y) / N[2], rr = Math.hypot(x, y, zr);
       if (rr >= o.ringen.binnen && rr <= o.ringen.buiten && zr > zBol) {
@@ -63,17 +72,18 @@ function tabel(n, o) {
       }
     }
   }
-  const t = { rij, lengte, licht, ring, voor, ringLicht };
+  const t = { rij, lengte, licht, ring, voor, ringLicht, halo, tint };
   tabellen.set(sleutel, t);
   return t;
 }
 
 // teken de bol op een canvas; draai: 0..1 (een hele omwenteling); hoeken in radialen
-export function tekenBol(doek, kaart, draai, { kanteling = 0, helling = 0, gloeit = false, ringen = null } = {}) {
+export function tekenBol(doek, kaart, draai, { kanteling = 0, helling = 0, gloeit = false, ringen = null, atmosfeer = null, gloed = 0 } = {}) {
   const n = doek.width, g = doek.getContext("2d");
   if (!doek._beeld || doek._beeld.width !== n) doek._beeld = g.createImageData(n, n);
-  const uit = doek._beeld.data, T = tabel(n, { kanteling, helling, gloeit, ringen });
+  const uit = doek._beeld.data, T = tabel(n, { kanteling, helling, gloeit, ringen, dikte: atmosfeer?.dikte || 0, gloed });
   const { w, h, data } = kaart, rd = ringen?.kaart;
+  const ak = atmosfeer ? atmosfeer.rgb : gloed ? gemiddelde(kaart) : null;
   for (let k = 0, m = n * n; k < m; k++) {
     const o = k * 4, s = T.licht[k];
     let R = 0, G = 0, B = 0, A = 0;
@@ -81,7 +91,9 @@ export function tekenBol(doek, kaart, draai, { kanteling = 0, helling = 0, gloei
       let u = T.lengte[k] + draai; u -= Math.floor(u);
       const px = Math.min(w - 1, (u * w) | 0), py = Math.min(h - 1, (T.rij[k] * h) | 0), q = (py * w + px) * 4;
       R = data[q] * s; G = data[q + 1] * s; B = data[q + 2] * s; A = 255;
-    }
+      const t = T.tint[k];
+      if (t > 0) { R += (ak[0] - R) * t; G += (ak[1] - G) * t; B += (ak[2] - B) * t; }
+    } else if (ak && T.halo[k] > 0.004) { R = ak[0]; G = ak[1]; B = ak[2]; A = T.halo[k] * 255; }
     if (rd && T.ring[k] >= 0) {
       const q = Math.min(rd.w - 1, (T.ring[k] * rd.w) | 0) * 4, a = rd.data[q + 3] / 255, l = T.ringLicht[k];
       if (a > 0) {
@@ -96,9 +108,19 @@ export function tekenBol(doek, kaart, draai, { kanteling = 0, helling = 0, gloei
   g.putImageData(doek._beeld, 0, 0);
 }
 
+// de gemiddelde kleur van een kaart, voor de gloed van de zon en sterren (één keer uitgerekend)
+function gemiddelde(k) {
+  if (k.gem) return k.gem;
+  let r = 0, g = 0, b = 0, n = 0;
+  for (let i = 0; i < k.data.length; i += 4 * 7) { r += k.data[i]; g += k.data[i + 1]; b += k.data[i + 2]; n++; }
+  const m = Math.max(r, g, b) / n || 1; // even helder als het felste kanaal: een gloed is licht
+  return (k.gem = [(r / n) * 255 / m, (g / n) * 255 / m, (b / n) * 255 / m]);
+}
+export { gemiddelde };
+
 // opties uit een regel van bollen.json (laadt ook de ringen)
 export async function optiesVoor(b) {
-  const o = { kanteling: (b.kanteling || 0) * rad, helling: (b.helling || 0) * rad, gloeit: !!b.gloeit, ringen: null };
+  const o = { kanteling: (b.kanteling || 0) * rad, helling: (b.helling || 0) * rad, gloeit: !!b.gloeit, ringen: null, atmosfeer: b.atmosfeer || null, gloed: b.gloed || 0 };
   if (b.ringen) o.ringen = { ...b.ringen, kaart: await laadKaart(b.ringen.pad) };
   return o;
 }
