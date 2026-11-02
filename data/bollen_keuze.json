@@ -2,6 +2,32 @@
  "_uitleg": "Kaarten voor de draaiende bollen in het overzicht. Alleen kaarten van echte foto's (NASA, USGS), licentie per bron nagekeken op 2 november 2026 (docs/bollen-datacheck.md). Niet: Venus (alleen radar), Titan (alleen infrarood door de nevel), Saturnus, Uranus en Neptunus (geen kaart), de zon (verandert elke dag), Eris (nooit van dichtbij gezien). Zonder kaart (egaal): de kleur uit een echte foto of uit metingen van het licht, met een label dat het egaal is. Niet als bol: Phobos en de kometen (niet rond; geen vrij vormmodel bereikbaar).",
  "lijst": [
   {
+   "slug": "zon",
+   "url": "https://sdo.gsfc.nasa.gov/assets/img/synoptic/AIA0304/CR2311.png",
+   "uitsnede": [
+    80,
+    33,
+    1095,
+    490
+   ],
+   "gloeit": true,
+   "bron": "https://sdo.gsfc.nasa.gov/data/synoptic/",
+   "maker": "NASA/SDO en de teams van AIA, EVE en HMI (Courtesy of NASA/SDO and the AIA, EVE, and HMI science teams)",
+   "licentie": "publiek domein (SDO: niet auteursrechtelijk beschermd)",
+   "kleur": "vals",
+   "uitleg": "Valse kleur: ultraviolet licht (30,4 nanometer), dat je ogen niet zien; de kleur heeft NASA gekozen. Een kaart van één rondje van de zon, gemaakt door de satelliet SDO in mei 2026. De zon verandert elke dag."
+  },
+  {
+   "slug": "venus",
+   "url": "https://astrogeology.usgs.gov/ckan/dataset/bf10c4f9-7587-4357-b0d9-81d5b6e6637c/resource/12345d86-e2a3-45eb-af88-c1e8bf3ac358/download/full.jpg",
+   "bron": "https://astrogeology.usgs.gov/search/map/venus_magellan_global_c3_mdir_mosaic_2025m",
+   "maker": "NASA/JPL, radar van Magellan; PDS Geosciences Node; USGS",
+   "licentie": "publiek domein",
+   "kleur": "radar",
+   "uitleg": "Geen licht maar radar: de bodem onder de wolken, gemeten door Magellan. Zo zie je Venus nooit; met je ogen zie je alleen een lichte bol van wolken. Gedempt: geen meting.",
+   "vul_onbekend": true
+  },
+  {
    "slug": "maan",
    "url": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_2k.jpg",
    "bron": "https://svs.gsfc.nasa.gov/4720",
@@ -66,7 +92,8 @@
    "maker": "NASA/JHUAPL/SwRI, foto's van New Horizons; USGS",
    "licentie": "publiek domein",
    "kleur": "zwart-wit",
-   "uitleg": "Zwart-wit. Zwart is nooit gefotografeerd: het zuiden lag in het donker toen New Horizons langsvloog. De kant die naar Charon kijkt is wazig."
+   "uitleg": "Zwart-wit. Gedempt is nooit gefotografeerd: het zuiden lag in het donker toen New Horizons langsvloog. De kant die naar Charon kijkt is wazig.",
+   "vul_onbekend": true
   },
   {
    "slug": "charon",
@@ -75,7 +102,8 @@
    "maker": "NASA/JHUAPL/SwRI, foto's van New Horizons; USGS",
    "licentie": "publiek domein",
    "kleur": "zwart-wit",
-   "uitleg": "Zwart-wit. Zwart is nooit gefotografeerd: het zuiden lag in het donker."
+   "uitleg": "Zwart-wit. Gedempt is nooit gefotografeerd: het zuiden lag in het donker.",
+   "vul_onbekend": true
   },
   {
    "slug": "io",
@@ -129,42 +157,20 @@
    "maker": "NASA/JPL-Caltech/Lunar and Planetary Institute (Paul Schenk), foto's van Voyager 2; USGS",
    "licentie": "publiek domein",
    "kleur": "benaderd",
-   "uitleg": "Kleur benaderd en versterkt. Voyager 2 zag alleen het zuiden: zwart is nooit gefotografeerd.",
-   "url_groot": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia18/pia18668/PIA18668.jpg"
-  }
- ],
- "egaal": [
-  {
-   "slug": "zon",
-   "soort": "ster",
-   "temperatuur": 5772,
-   "bron": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/sunfact.html",
-   "maker": "kleur uit de temperatuur van de zon (5772 K, NASA)",
-   "licentie": "eigen berekening",
-   "label": "egaal · kleur uit metingen",
-   "uitleg": "Egaal wit, met een donkerdere rand, zoals je de zon door een zonnefilter ziet. De zonnevlekken veranderen elke dag; die laten we weg."
-  },
-  {
-   "slug": "venus",
-   "rgb": [
-    238,
-    230,
-    212
-   ],
-   "bron": "https://science.nasa.gov/venus/",
-   "maker": "kleur benaderd; dikke wolken zonder vlekken",
-   "licentie": "eigen kleur",
-   "label": "egaal · kleur benaderd",
-   "uitleg": "Egaal. Met je eigen ogen zie je een lichte, gelige bol zonder vlekken: je kijkt op de wolken. De vlekken op foto's komen van ultraviolet licht."
+   "uitleg": "Kleur benaderd en versterkt. Voyager 2 zag alleen het zuiden: gedempt is nooit gefotografeerd.",
+   "url_groot": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia18/pia18668/PIA18668.jpg",
+   "vul_onbekend": true
   },
   {
    "slug": "saturnus",
-   "foto": "saturnus",
-   "rgb": [
-    206,
-    193,
-    152
-   ],
+   "url": "https://archive.stsci.edu/hlsps/opal/cycle31/saturn/hlsp_opal_hst_wfc3-uvis_saturn-2024a_f395n-f502n-f631n_v1_globalmap.tif",
+   "bron": "https://archive.stsci.edu/hlsp/opal",
+   "maker": "NASA, ESA, A. Simon (NASA GSFC), M. H. Wong (UC Berkeley) en het OPAL-team, Hubble (Simon et al. 2015, doi:10.17909/T9G593); ringen: dichtheid gemeten door Cassini (NASA PDS)",
+   "licentie": "CC BY 4.0",
+   "kleur": "benaderd",
+   "uitleg": "Kaart van de ruimtetelescoop Hubble uit 2024, uit een violet, een groen en een rood filter. De kleurbalans is afgestemd op een Cassini-foto in echte kleur; de banden zijn zoals Hubble ze zag. Een strook van ongeveer 5 graden bij de evenaar zat achter de ringen; die is bijgevuld met de rijen erboven en eronder. De ringen: hoe dicht ze zijn, gemeten door Cassini.",
+   "vul_onbekend": true,
+   "evenaar_bijvullen": true,
    "ringen": {
     "rgb": [
      188,
@@ -177,37 +183,37 @@
    },
    "kanteling": 26.7,
    "helling": -22,
-   "maker": "kleur uit een foto van Cassini (NASA/JPL/Space Science Institute); dichtheid van de ringen gemeten door Cassini met radiogolven (NASA PDS)",
-   "licentie": "publiek domein (NASA)",
-   "label": "egaal · ringen uit metingen",
-   "uitleg": "De planeet egaal, in de kleur van een Cassini-foto: de echte wolkenbanden staan er niet op. Hoe dicht de ringen zijn, met de gaten ertussen, komt uit een meting van Cassini."
+   "randen_weg": true,
+   "kleur_naar": [
+    206,
+    193,
+    152
+   ]
   },
   {
    "slug": "uranus",
-   "foto": "uranus",
-   "rgb": [
-    139,
-    159,
-    168
-   ],
-   "maker": "kleur uit een foto van Voyager 2 (NASA/JPL)",
-   "licentie": "publiek domein (NASA)",
-   "label": "egaal · kleur uit een foto",
-   "uitleg": "Egaal, in de echte kleur van een Voyager-foto. Uranus heeft bijna geen vlekken."
+   "url": "https://archive.stsci.edu/hlsps/opal/cycle31/uranus/hlsp_opal_hst_wfc3-uvis_uranus-2023a_f467m-f547m-f657n_v1_globalmap.tif",
+   "bron": "https://archive.stsci.edu/hlsp/opal",
+   "maker": "NASA, ESA, A. Simon (NASA GSFC), M. H. Wong (UC Berkeley) en het OPAL-team, Hubble (Simon et al. 2015, doi:10.17909/T9G593)",
+   "licentie": "CC BY 4.0",
+   "kleur": "benaderd",
+   "uitleg": "Kaart van de ruimtetelescoop Hubble uit 2023: ongeveer echte kleur, met de lichte kap om de noordpool. Het zuiden ligt nu in het donker: gedempt is niet gezien.",
+   "vul_onbekend": true,
+   "randen_weg": true
   },
   {
    "slug": "neptunus",
-   "foto": "neptunus",
-   "rgb": [
-    67,
-    105,
-    251
-   ],
-   "maker": "kleur uit een foto van Voyager 2 (NASA/JPL)",
-   "licentie": "publiek domein (NASA)",
-   "label": "egaal · kleur versterkt",
-   "uitleg": "Egaal, in de kleur van een Voyager-foto. Dat blauw is versterkt: in het echt is Neptunus lichter blauw."
-  },
+   "url": "https://archive.stsci.edu/hlsps/opal/cycle29/neptune/hlsp_opal_hst_wfc3-uvis_neptune-2022b_f467m-f547m-f657n_v1_globalmap.tif",
+   "bron": "https://archive.stsci.edu/hlsp/opal",
+   "maker": "NASA, ESA, A. Simon (NASA GSFC), M. H. Wong (UC Berkeley) en het OPAL-team, Hubble (Simon et al. 2015, doi:10.17909/T9G593)",
+   "licentie": "CC BY 4.0",
+   "kleur": "benaderd",
+   "uitleg": "Kaart van de ruimtetelescoop Hubble uit 2022: ongeveer echte kleur. Neptunus is lichter blauw dan op de bekende Voyager-foto's. Gedempt is niet gezien.",
+   "vul_onbekend": true,
+   "randen_weg": true
+  }
+ ],
+ "egaal": [
   {
    "slug": "titan",
    "foto": "titan",

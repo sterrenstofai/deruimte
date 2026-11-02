@@ -48,3 +48,16 @@ Waar geen kaart bestaat: één kleur, uit een foto op de site of uit metingen, m
 | Sirius, Wega, Betelgeuze | kleurindex B-V uit d3-celestial (Hipparcos), via Ballesteros (2012) naar temperatuur | gloeit |
 
 Niet als bol: Phobos, Halley en 67P (niet rond). Een vormmodel van Phobos (PDS Small Bodies Node) was niet bereikbaar vanaf deze machine (403); NASA 3D Resources heeft alleen een kaart.
+
+## Kaarten erbij (aangevuld 2 november 2026)
+
+| Hemellichaam | Kaart | Licentie | Kleur | Bewerking |
+|---|---|---|---|---|
+| Zon | SDO AIA 304 Å, Carrington-rotatie 2311 (mei 2026) | SDO: niet auteursrechtelijk beschermd; vermelding "Courtesy of NASA/SDO and the AIA, EVE, and HMI science teams" | vals (ultraviolet) | assen en titel eraf gesneden |
+| Venus | Magellan C3-MDIR 2025m (USGS) | publiek domein | radar | geen meting: gedempt |
+| Saturnus | Hubble OPAL 2024a, f395n-f502n-f631n | CC BY 4.0 (Simon et al. 2015, doi:10.17909/T9G593) | benaderd | ~5° bij de evenaar (achter de ringen) bijgevuld uit de rijen erboven en eronder; randen gedempt |
+| Uranus | Hubble OPAL 2023a, f467m-f547m-f657n | CC BY 4.0 | benaderd | zuiden niet gezien: gedempt; kleurranden weg |
+| Neptunus | Hubble OPAL 2022b, f467m-f547m-f657n | CC BY 4.0 | benaderd | idem |
+
+archive.stsci.edu stuurt zijn tussencertificaat (InCommon OVG2C, uitgegeven door emSign) niet mee; `scripts/certs/incommon-ovg2c.pem` vult dat aan. De controle van het certificaat blijft aan.
+Gedempt (niet gezien) geldt nu ook voor Pluto, Charon en Triton.
