@@ -117,6 +117,14 @@ const ok = (v, wat) => { console.log(`${v ? "ok  " : "FOUT"} ${wat}`); if (!v) f
   await page.waitForTimeout(400);
   ok(await page.evaluate(() => !document.body.classList.contains("kaartmodus")), "hemel: weg van de kaart, kaartmodus uit");
 
+  // overzicht: met de muis over de maan wordt het een draaiende bol, en weer terug
+  await page.goto(BASIS + "/hemellichamen", { waitUntil: "networkidle" });
+  await page.locator('.hemel-beeld[href="/hemel/maan"]').hover();
+  await page.waitForTimeout(1200);
+  ok(await page.locator('.hemel-beeld[href="/hemel/maan"].met-bol canvas').count() === 1, "overzicht: muis over de maan geeft een draaiende bol");
+  await page.mouse.move(2, 2); await page.waitForTimeout(600);
+  ok(await page.locator(".met-bol").count() === 0, "overzicht: muis weg, foto terug");
+
   // kinderversie: vegen en de knop
   await page.goto(BASIS + "/kinderen", { waitUntil: "networkidle" });
   const voor = await page.locator(".kids-plaat img").getAttribute("src");

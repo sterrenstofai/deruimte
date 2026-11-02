@@ -370,7 +370,7 @@ function koppelBollen(D, raster) {
     if (!actief) return;
     const { vak, doek, label } = actief;
     cancelAnimationFrame(actief.anim); actief = null;
-    vak.classList.remove("met-bol");
+    vak.classList.remove("met-bol"); vak.removeAttribute("title");
     setTimeout(() => { if (!vak.classList.contains("met-bol")) { doek.remove(); label.remove(); } }, 400);
   };
   raster.addEventListener("pointerover", (e) => {
@@ -385,15 +385,16 @@ function koppelBollen(D, raster) {
     const doek = Object.assign(document.createElement("canvas"), { className: "hemel-bol" });
     doek.width = doek.height = Math.round(vak.clientWidth * (b.maat || 0.8) * dpr);
     doek.style.width = doek.style.height = `${(b.maat || 0.8) * 100}%`;
-    const label = Object.assign(document.createElement("span"), { className: "hemel-bol-label", textContent: b.label });
+    const label = Object.assign(document.createElement("span"), { className: "hemel-bol-label", textContent: b.label, title: `${b.uitleg} Kaart: ${b.maker}, ${b.licentie}.` });
     vak.append(doek, label);
+    vak.title = label.title; // maker en licentie van de kaart
     const mij = actief = { vak, doek, label, anim: 0 };
     Promise.all([import("./bol.js"), import("./bol.js").then((B) => B.laadKaart(b.pad))]).then(([B, k]) => {
       if (actief !== mij) return;
       let draai = b.begin || 0, vorige = performance.now();
       const stap = (nu) => {
         if (actief !== mij) return;
-        draai += stil ? 0 : (nu - vorige) / 20000; vorige = nu; // een omwenteling in twintig seconden
+        draai -= stil ? 0 : (nu - vorige) / 20000; vorige = nu; // een omwenteling in twintig seconden, van west naar oost
         B.tekenBol(doek, k, draai, { kanteling: (b.kanteling || 0) * Math.PI / 180 });
         if (!vak.classList.contains("met-bol")) vak.classList.add("met-bol");
         if (!stil) mij.anim = requestAnimationFrame(stap);
