@@ -1,19 +1,136 @@
 {
-  "_uitleg": "Kaarten voor de draaiende bollen in het overzicht. Alleen kaarten van echte foto's (NASA, USGS), licentie per bron nagekeken op 2 november 2026 (docs/bollen-datacheck.md). Niet: Venus (alleen radar), Titan (alleen infrarood door de nevel), Saturnus, Uranus en Neptunus (geen kaart), de zon (verandert elke dag), Eris (nooit van dichtbij gezien).",
-  "lijst": [
-    {"slug": "maan", "url": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_2k.jpg", "bron": "https://svs.gsfc.nasa.gov/4720", "maker": "NASA Scientific Visualization Studio, foto's van Lunar Reconnaissance Orbiter", "licentie": "publiek domein", "kleur": "echt", "uitleg": "Ongeveer de kleur die je ogen zien. Boven 70° noorder- en zuiderbreedte bijgevuld met een zwart-witkaart."},
-    {"slug": "aarde", "url": "https://eoimages.gsfc.nasa.gov/images/imagerecords/74000/74218/world.200412.3x5400x2700.jpg", "bron": "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/", "maker": "NASA Earth Observatory (Reto Stöckli), Blue Marble", "licentie": "publiek domein (NASA)", "kleur": "echt", "uitleg": "Echte kleur, maar zonder wolken: samengesteld uit een maand satellietfoto's. De diepe oceaan is één kleur blauw.", "kanteling": 23.4},
-    {"slug": "mars", "url": "https://astrogeology.usgs.gov/ckan/dataset/7131d503-cdc9-45a5-8f83-5126c0fd397e/resource/6afad901-1caa-48a7-8b62-3911da0004c2/download/mars_viking_mdim21_clrmosaic_global_1024.jpg", "bron": "https://astrogeology.usgs.gov/search/map/mars_viking_colorized_global_mosaic_232m", "maker": "NASA Ames en USGS, foto's van Viking", "licentie": "publiek domein", "kleur": "benaderd", "uitleg": "Kleur benaderd: Viking fotografeerde met een rood en een violet filter, het groen is daaruit nagemaakt.", "kanteling": 25.2},
-    {"slug": "jupiter", "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia07/pia07782/PIA07782.jpg", "bron": "https://photojournal.jpl.nasa.gov/catalog/PIA07782", "maker": "NASA/JPL/Space Science Institute, foto's van Cassini", "licentie": "publiek domein (NASA)", "kleur": "benaderd", "uitleg": "Kleur benaderd, uit twee filters. De wolken van december 2000: ze veranderen steeds.", "kanteling": 3.1},
-    {"slug": "mercurius", "url": "https://astrogeology.usgs.gov/ckan/dataset/279e5d50-ff2f-4250-bde3-bb510096079e/resource/2b5865c2-bd0d-4962-bdb0-c12f0502def1/download/mercury_messenger_mosaic_global_1024.jpg", "bron": "https://astrogeology.usgs.gov/search/map/mercury_messenger_mdis_global_mosaic_250m", "maker": "NASA/JHUAPL/Carnegie Institution, foto's van MESSENGER; USGS", "licentie": "publiek domein", "kleur": "zwart-wit", "uitleg": "Zwart-wit. Een kaart in echte kleur bestaat niet."},
-    {"slug": "ceres", "url": "https://astrogeology.usgs.gov/ckan/dataset/39338f6b-5fef-4ac4-9310-ce5b1cdd0f69/resource/8b1e5592-c2b0-4ed7-8cd2-5a3590d88bf7/download/ceres_dawn_fc_dlr_global_1024.jpg", "bron": "https://astrogeology.usgs.gov/search/map/ceres_dawn_fc_global_mosaic_140m", "maker": "NASA/JPL/DLR, foto's van Dawn; USGS", "licentie": "publiek domein", "kleur": "zwart-wit", "uitleg": "Zwart-wit."},
-    {"slug": "pluto", "url": "https://astrogeology.usgs.gov/ckan/dataset/a5f1b7f4-9822-4697-a201-e23ef4bd3e16/resource/96be2aa1-f384-4a9f-9458-a8431a0e7956/download/pluto_newhorizons_global_mosaic_300m_jul2017_1024.jpg", "bron": "https://astrogeology.usgs.gov/search/map/pluto_new_horizons_lorri_mvic_global_mosaic_300m", "maker": "NASA/JHUAPL/SwRI, foto's van New Horizons; USGS", "licentie": "publiek domein", "kleur": "zwart-wit", "uitleg": "Zwart-wit. Zwart is nooit gefotografeerd: het zuiden lag in het donker toen New Horizons langsvloog. De kant die naar Charon kijkt is wazig."},
-    {"slug": "charon", "url": "https://astrogeology.usgs.gov/ckan/dataset/93827f6c-8feb-42b6-98e6-b0ce57c7d2c8/resource/1abf318c-3290-4aa0-932e-a34f32d7f6ad/download/charon_newhorizons_global_mosaic_300m_jul2017_1024.jpg", "bron": "https://astrogeology.usgs.gov/search/map/charon_new_horizons_lorri_mvic_global_mosaic_300m", "maker": "NASA/JHUAPL/SwRI, foto's van New Horizons; USGS", "licentie": "publiek domein", "kleur": "zwart-wit", "uitleg": "Zwart-wit. Zwart is nooit gefotografeerd: het zuiden lag in het donker."},
-    {"slug": "io", "url": "https://astrogeology.usgs.gov/ckan/dataset/f6924861-ce9c-490d-8a4b-7812a20f2de5/resource/a9fab679-8081-4144-9f58-45848836c8f5/download/full.jpg", "bron": "https://astrogeology.usgs.gov/search/map/io_galileo_ssi_voyager_color_merged_global_mosaic_1km", "maker": "NASA/JPL, foto's van Galileo en Voyager; USGS", "licentie": "publiek domein (NASA)", "kleur": "versterkt", "uitleg": "Kleur versterkt: in het echt zijn de kleuren veel flauwer. De kant naar Jupiter is wazig."},
-    {"slug": "europa", "url": "https://astrogeology.usgs.gov/ckan/dataset/4080036f-afc5-422e-abe9-1c0c8e4f98ea/resource/3647e7b3-425e-4dcf-951b-cc4a22fb0129/download/europa_voyager_galileossi_global_mosaic_500m_1024.jpg", "bron": "https://astrogeology.usgs.gov/search/map/europa_voyager_galileo_ssi_global_mosaic_500m", "maker": "NASA/JPL, foto's van Voyager en Galileo; USGS", "licentie": "publiek domein (NASA)", "kleur": "zwart-wit", "uitleg": "Zwart-wit. Grote stukken zijn alleen wazig gefotografeerd."},
-    {"slug": "ganymedes", "url": "https://astrogeology.usgs.gov/ckan/dataset/e1422336-3291-4b65-b903-c942d53de073/resource/eb32abd7-fee2-47d1-9f96-9d7d8824cc3a/download/ganymede_voyager_galileossi_global_clrmosaic_1024.jpg", "bron": "https://astrogeology.usgs.gov/search/map/ganymede_voyager_galileo_ssi_color_global_mosaic_1_4km", "maker": "NASA/JPL, foto's van Voyager en Galileo; USGS", "licentie": "publiek domein", "kleur": "vals", "uitleg": "Valse kleur: rood is infrarood licht, dat je ogen niet zien."},
-    {"slug": "callisto", "url": "https://astrogeology.usgs.gov/ckan/dataset/a80abd68-7ed9-440e-829a-76376779164f/resource/ac628525-cb1c-4742-928b-5a0a60f372cd/download/callisto_voyager_galileossi_global_mosaic_1024.jpg", "bron": "https://astrogeology.usgs.gov/search/map/callisto_galileo_voyager_global_mosaic_1km", "maker": "NASA/JPL, foto's van Galileo en Voyager; USGS", "licentie": "publiek domein", "kleur": "zwart-wit", "uitleg": "Zwart-wit."},
-    {"slug": "enceladus", "url": "https://astrogeology.usgs.gov/ckan/dataset/64282c9f-ed8e-49cd-b7bb-e520d8a46908/resource/8ca2ddc0-0e54-4fda-9a27-7ccedee12fc9/download/enceladus_cassini_mosaic_global_100m_schenk2024_1024.jpg", "bron": "https://astrogeology.usgs.gov/search/map/enceladus-cassini-global-mosaic-100m-schenk", "maker": "NASA/JPL/Space Science Institute, foto's van Cassini; P. Schenk en W. McKinnon; USGS", "licentie": "publiek domein (NASA)", "kleur": "zwart-wit", "uitleg": "Zwart-wit."},
-    {"slug": "triton", "url": "https://astrogeology.usgs.gov/ckan/dataset/445b4c39-e87a-4e4d-88a8-e48d8e755c5c/resource/de0ba9f1-303e-4e5f-a99a-3201fba9a764/download/triton_voyager2_clrmosaic_1024.jpg", "bron": "https://photojournal.jpl.nasa.gov/catalog/PIA18668", "maker": "NASA/JPL-Caltech/Lunar and Planetary Institute (Paul Schenk), foto's van Voyager 2; USGS", "licentie": "publiek domein", "kleur": "benaderd", "uitleg": "Kleur benaderd en versterkt. Voyager 2 zag alleen het zuiden: zwart is nooit gefotografeerd."}
-  ]
+ "_uitleg": "Kaarten voor de draaiende bollen in het overzicht. Alleen kaarten van echte foto's (NASA, USGS), licentie per bron nagekeken op 2 november 2026 (docs/bollen-datacheck.md). Niet: Venus (alleen radar), Titan (alleen infrarood door de nevel), Saturnus, Uranus en Neptunus (geen kaart), de zon (verandert elke dag), Eris (nooit van dichtbij gezien).",
+ "lijst": [
+  {
+   "slug": "maan",
+   "url": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_2k.jpg",
+   "bron": "https://svs.gsfc.nasa.gov/4720",
+   "maker": "NASA Scientific Visualization Studio, foto's van Lunar Reconnaissance Orbiter",
+   "licentie": "publiek domein",
+   "kleur": "echt",
+   "uitleg": "Ongeveer de kleur die je ogen zien. Boven 70° noorder- en zuiderbreedte bijgevuld met een zwart-witkaart."
+  },
+  {
+   "slug": "aarde",
+   "url": "https://eoimages.gsfc.nasa.gov/images/imagerecords/74000/74218/world.200412.3x5400x2700.jpg",
+   "bron": "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/",
+   "maker": "NASA Earth Observatory (Reto Stöckli), Blue Marble",
+   "licentie": "publiek domein (NASA)",
+   "kleur": "echt",
+   "uitleg": "Echte kleur, maar zonder wolken: samengesteld uit een maand satellietfoto's. De diepe oceaan is één kleur blauw.",
+   "kanteling": 23.4
+  },
+  {
+   "slug": "mars",
+   "url": "https://astrogeology.usgs.gov/ckan/dataset/7131d503-cdc9-45a5-8f83-5126c0fd397e/resource/6afad901-1caa-48a7-8b62-3911da0004c2/download/mars_viking_mdim21_clrmosaic_global_1024.jpg",
+   "bron": "https://astrogeology.usgs.gov/search/map/mars_viking_colorized_global_mosaic_232m",
+   "maker": "NASA Ames en USGS, foto's van Viking",
+   "licentie": "publiek domein",
+   "kleur": "benaderd",
+   "uitleg": "Kleur benaderd: Viking fotografeerde met een rood en een violet filter, het groen is daaruit nagemaakt.",
+   "kanteling": 25.2,
+   "url_groot": "https://astrogeology.usgs.gov/ckan/dataset/7131d503-cdc9-45a5-8f83-5126c0fd397e/resource/5ea881c6-01b3-41fa-a7af-42d2131b54f1/download/mars_viking_mdim21_clrmosaic_1km.jpg"
+  },
+  {
+   "slug": "jupiter",
+   "url": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia07/pia07782/PIA07782.jpg",
+   "bron": "https://photojournal.jpl.nasa.gov/catalog/PIA07782",
+   "maker": "NASA/JPL/Space Science Institute, foto's van Cassini",
+   "licentie": "publiek domein (NASA)",
+   "kleur": "benaderd",
+   "uitleg": "Kleur benaderd, uit twee filters. De wolken van december 2000: ze veranderen steeds.",
+   "kanteling": 3.1
+  },
+  {
+   "slug": "mercurius",
+   "url": "https://astrogeology.usgs.gov/ckan/dataset/279e5d50-ff2f-4250-bde3-bb510096079e/resource/2b5865c2-bd0d-4962-bdb0-c12f0502def1/download/mercury_messenger_mosaic_global_1024.jpg",
+   "bron": "https://astrogeology.usgs.gov/search/map/mercury_messenger_mdis_global_mosaic_250m",
+   "maker": "NASA/JHUAPL/Carnegie Institution, foto's van MESSENGER; USGS",
+   "licentie": "publiek domein",
+   "kleur": "zwart-wit",
+   "uitleg": "Zwart-wit. Een kaart in echte kleur bestaat niet."
+  },
+  {
+   "slug": "ceres",
+   "url": "https://astrogeology.usgs.gov/ckan/dataset/39338f6b-5fef-4ac4-9310-ce5b1cdd0f69/resource/8b1e5592-c2b0-4ed7-8cd2-5a3590d88bf7/download/ceres_dawn_fc_dlr_global_1024.jpg",
+   "bron": "https://astrogeology.usgs.gov/search/map/ceres_dawn_fc_global_mosaic_140m",
+   "maker": "NASA/JPL/DLR, foto's van Dawn; USGS",
+   "licentie": "publiek domein",
+   "kleur": "zwart-wit",
+   "uitleg": "Zwart-wit."
+  },
+  {
+   "slug": "pluto",
+   "url": "https://astrogeology.usgs.gov/ckan/dataset/a5f1b7f4-9822-4697-a201-e23ef4bd3e16/resource/96be2aa1-f384-4a9f-9458-a8431a0e7956/download/pluto_newhorizons_global_mosaic_300m_jul2017_1024.jpg",
+   "bron": "https://astrogeology.usgs.gov/search/map/pluto_new_horizons_lorri_mvic_global_mosaic_300m",
+   "maker": "NASA/JHUAPL/SwRI, foto's van New Horizons; USGS",
+   "licentie": "publiek domein",
+   "kleur": "zwart-wit",
+   "uitleg": "Zwart-wit. Zwart is nooit gefotografeerd: het zuiden lag in het donker toen New Horizons langsvloog. De kant die naar Charon kijkt is wazig."
+  },
+  {
+   "slug": "charon",
+   "url": "https://astrogeology.usgs.gov/ckan/dataset/93827f6c-8feb-42b6-98e6-b0ce57c7d2c8/resource/1abf318c-3290-4aa0-932e-a34f32d7f6ad/download/charon_newhorizons_global_mosaic_300m_jul2017_1024.jpg",
+   "bron": "https://astrogeology.usgs.gov/search/map/charon_new_horizons_lorri_mvic_global_mosaic_300m",
+   "maker": "NASA/JHUAPL/SwRI, foto's van New Horizons; USGS",
+   "licentie": "publiek domein",
+   "kleur": "zwart-wit",
+   "uitleg": "Zwart-wit. Zwart is nooit gefotografeerd: het zuiden lag in het donker."
+  },
+  {
+   "slug": "io",
+   "url": "https://astrogeology.usgs.gov/ckan/dataset/f6924861-ce9c-490d-8a4b-7812a20f2de5/resource/a9fab679-8081-4144-9f58-45848836c8f5/download/full.jpg",
+   "bron": "https://astrogeology.usgs.gov/search/map/io_galileo_ssi_voyager_color_merged_global_mosaic_1km",
+   "maker": "NASA/JPL, foto's van Galileo en Voyager; USGS",
+   "licentie": "publiek domein (NASA)",
+   "kleur": "versterkt",
+   "uitleg": "Kleur versterkt: in het echt zijn de kleuren veel flauwer. De kant naar Jupiter is wazig."
+  },
+  {
+   "slug": "europa",
+   "url": "https://astrogeology.usgs.gov/ckan/dataset/4080036f-afc5-422e-abe9-1c0c8e4f98ea/resource/3647e7b3-425e-4dcf-951b-cc4a22fb0129/download/europa_voyager_galileossi_global_mosaic_500m_1024.jpg",
+   "bron": "https://astrogeology.usgs.gov/search/map/europa_voyager_galileo_ssi_global_mosaic_500m",
+   "maker": "NASA/JPL, foto's van Voyager en Galileo; USGS",
+   "licentie": "publiek domein (NASA)",
+   "kleur": "zwart-wit",
+   "uitleg": "Zwart-wit. Grote stukken zijn alleen wazig gefotografeerd."
+  },
+  {
+   "slug": "ganymedes",
+   "url": "https://astrogeology.usgs.gov/ckan/dataset/e1422336-3291-4b65-b903-c942d53de073/resource/eb32abd7-fee2-47d1-9f96-9d7d8824cc3a/download/ganymede_voyager_galileossi_global_clrmosaic_1024.jpg",
+   "bron": "https://astrogeology.usgs.gov/search/map/ganymede_voyager_galileo_ssi_color_global_mosaic_1_4km",
+   "maker": "NASA/JPL, foto's van Voyager en Galileo; USGS",
+   "licentie": "publiek domein",
+   "kleur": "vals",
+   "uitleg": "Valse kleur: rood is infrarood licht, dat je ogen niet zien."
+  },
+  {
+   "slug": "callisto",
+   "url": "https://astrogeology.usgs.gov/ckan/dataset/a80abd68-7ed9-440e-829a-76376779164f/resource/ac628525-cb1c-4742-928b-5a0a60f372cd/download/callisto_voyager_galileossi_global_mosaic_1024.jpg",
+   "bron": "https://astrogeology.usgs.gov/search/map/callisto_galileo_voyager_global_mosaic_1km",
+   "maker": "NASA/JPL, foto's van Galileo en Voyager; USGS",
+   "licentie": "publiek domein",
+   "kleur": "zwart-wit",
+   "uitleg": "Zwart-wit."
+  },
+  {
+   "slug": "enceladus",
+   "url": "https://astrogeology.usgs.gov/ckan/dataset/64282c9f-ed8e-49cd-b7bb-e520d8a46908/resource/8ca2ddc0-0e54-4fda-9a27-7ccedee12fc9/download/enceladus_cassini_mosaic_global_100m_schenk2024_1024.jpg",
+   "bron": "https://astrogeology.usgs.gov/search/map/enceladus-cassini-global-mosaic-100m-schenk",
+   "maker": "NASA/JPL/Space Science Institute, foto's van Cassini; P. Schenk en W. McKinnon; USGS",
+   "licentie": "publiek domein (NASA)",
+   "kleur": "zwart-wit",
+   "uitleg": "Zwart-wit."
+  },
+  {
+   "slug": "triton",
+   "url": "https://astrogeology.usgs.gov/ckan/dataset/445b4c39-e87a-4e4d-88a8-e48d8e755c5c/resource/de0ba9f1-303e-4e5f-a99a-3201fba9a764/download/triton_voyager2_clrmosaic_1024.jpg",
+   "bron": "https://photojournal.jpl.nasa.gov/catalog/PIA18668",
+   "maker": "NASA/JPL-Caltech/Lunar and Planetary Institute (Paul Schenk), foto's van Voyager 2; USGS",
+   "licentie": "publiek domein",
+   "kleur": "benaderd",
+   "uitleg": "Kleur benaderd en versterkt. Voyager 2 zag alleen het zuiden: zwart is nooit gefotografeerd.",
+   "url_groot": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia18/pia18668/PIA18668.jpg"
+  }
+ ]
 }

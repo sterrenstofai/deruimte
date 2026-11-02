@@ -117,13 +117,19 @@ const ok = (v, wat) => { console.log(`${v ? "ok  " : "FOUT"} ${wat}`); if (!v) f
   await page.waitForTimeout(400);
   ok(await page.evaluate(() => !document.body.classList.contains("kaartmodus")), "hemel: weg van de kaart, kaartmodus uit");
 
-  // overzicht: met de muis over de maan wordt het een draaiende bol, en weer terug
+  // overzicht: de maan staat er als bol; met de muis erover draait hij. Op de pagina zelf de grote bol.
   await page.goto(BASIS + "/hemellichamen", { waitUntil: "networkidle" });
+  await page.waitForTimeout(800);
+  ok(await page.locator('.hemel-beeld[href="/hemel/maan"] canvas.klaar').count() === 1, "overzicht: de maan staat er als bol");
+  const voorDraai = await page.locator('.hemel-beeld[href="/hemel/maan"] canvas').evaluate((c) => c.toDataURL().length);
   await page.locator('.hemel-beeld[href="/hemel/maan"]').hover();
+  await page.waitForTimeout(1500);
+  ok(await page.locator('.hemel-beeld[href="/hemel/maan"].draait').count() === 1 && voorDraai !== await page.locator('.hemel-beeld[href="/hemel/maan"] canvas').evaluate((c) => c.toDataURL().length), "overzicht: muis over de maan laat hem draaien");
+  await page.mouse.move(2, 2); await page.waitForTimeout(300);
+  ok(await page.locator(".draait").count() === 0, "overzicht: muis weg, hij stopt");
+  await page.goto(BASIS + "/hemel/maan", { waitUntil: "networkidle" });
   await page.waitForTimeout(1200);
-  ok(await page.locator('.hemel-beeld[href="/hemel/maan"].met-bol canvas').count() === 1, "overzicht: muis over de maan geeft een draaiende bol");
-  await page.mouse.move(2, 2); await page.waitForTimeout(600);
-  ok(await page.locator(".met-bol").count() === 0, "overzicht: muis weg, foto terug");
+  ok(await page.locator('[role=tab][aria-selected=true]').textContent() === "3D" && await page.locator(".bol-groot.klaar").count() === 1, "pagina: de maan opent als grote draaiende bol");
 
   // kinderversie: vegen en de knop
   await page.goto(BASIS + "/kinderen", { waitUntil: "networkidle" });

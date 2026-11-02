@@ -1,6 +1,7 @@
 {
  "maan": {
   "pad": "/bollen/maan.jpg",
+  "groot": "/bollen/maan-groot.jpg",
   "label": "kaart · echte kleur",
   "kleur": "echt",
   "uitleg": "Ongeveer de kleur die je ogen zien. Boven 70° noorder- en zuiderbreedte bijgevuld met een zwart-witkaart.",
@@ -12,6 +13,7 @@
  },
  "aarde": {
   "pad": "/bollen/aarde.jpg",
+  "groot": "/bollen/aarde-groot.jpg",
   "label": "kaart · echte kleur",
   "kleur": "echt",
   "uitleg": "Echte kleur, maar zonder wolken: samengesteld uit een maand satellietfoto's. De diepe oceaan is één kleur blauw.",
@@ -23,6 +25,7 @@
  },
  "mars": {
   "pad": "/bollen/mars.jpg",
+  "groot": "/bollen/mars-groot.jpg",
   "label": "kaart · kleur benaderd",
   "kleur": "benaderd",
   "uitleg": "Kleur benaderd: Viking fotografeerde met een rood en een violet filter, het groen is daaruit nagemaakt.",
@@ -34,6 +37,7 @@
  },
  "jupiter": {
   "pad": "/bollen/jupiter.jpg",
+  "groot": "/bollen/jupiter-groot.jpg",
   "label": "kaart · kleur benaderd",
   "kleur": "benaderd",
   "uitleg": "Kleur benaderd, uit twee filters. De wolken van december 2000: ze veranderen steeds.",
@@ -45,6 +49,7 @@
  },
  "mercurius": {
   "pad": "/bollen/mercurius.jpg",
+  "groot": "/bollen/mercurius.jpg",
   "label": "kaart · zwart-wit",
   "kleur": "zwart-wit",
   "uitleg": "Zwart-wit. Een kaart in echte kleur bestaat niet.",
@@ -56,6 +61,7 @@
  },
  "ceres": {
   "pad": "/bollen/ceres.jpg",
+  "groot": "/bollen/ceres.jpg",
   "label": "kaart · zwart-wit",
   "kleur": "zwart-wit",
   "uitleg": "Zwart-wit.",
@@ -67,6 +73,7 @@
  },
  "pluto": {
   "pad": "/bollen/pluto.jpg",
+  "groot": "/bollen/pluto.jpg",
   "label": "kaart · zwart-wit",
   "kleur": "zwart-wit",
   "uitleg": "Zwart-wit. Zwart is nooit gefotografeerd: het zuiden lag in het donker toen New Horizons langsvloog. De kant die naar Charon kijkt is wazig.",
@@ -78,6 +85,7 @@
  },
  "charon": {
   "pad": "/bollen/charon.jpg",
+  "groot": "/bollen/charon.jpg",
   "label": "kaart · zwart-wit",
   "kleur": "zwart-wit",
   "uitleg": "Zwart-wit. Zwart is nooit gefotografeerd: het zuiden lag in het donker.",
@@ -89,6 +97,7 @@
  },
  "io": {
   "pad": "/bollen/io.jpg",
+  "groot": "/bollen/io.jpg",
   "label": "kaart · kleur versterkt",
   "kleur": "versterkt",
   "uitleg": "Kleur versterkt: in het echt zijn de kleuren veel flauwer. De kant naar Jupiter is wazig.",
@@ -100,6 +109,7 @@
  },
  "europa": {
   "pad": "/bollen/europa.jpg",
+  "groot": "/bollen/europa.jpg",
   "label": "kaart · zwart-wit",
   "kleur": "zwart-wit",
   "uitleg": "Zwart-wit. Grote stukken zijn alleen wazig gefotografeerd.",
@@ -111,6 +121,7 @@
  },
  "ganymedes": {
   "pad": "/bollen/ganymedes.jpg",
+  "groot": "/bollen/ganymedes.jpg",
   "label": "kaart · valse kleur",
   "kleur": "vals",
   "uitleg": "Valse kleur: rood is infrarood licht, dat je ogen niet zien.",
@@ -122,6 +133,7 @@
  },
  "callisto": {
   "pad": "/bollen/callisto.jpg",
+  "groot": "/bollen/callisto.jpg",
   "label": "kaart · zwart-wit",
   "kleur": "zwart-wit",
   "uitleg": "Zwart-wit.",
@@ -133,6 +145,7 @@
  },
  "enceladus": {
   "pad": "/bollen/enceladus.jpg",
+  "groot": "/bollen/enceladus.jpg",
   "label": "kaart · zwart-wit",
   "kleur": "zwart-wit",
   "uitleg": "Zwart-wit.",
@@ -144,6 +157,7 @@
  },
  "triton": {
   "pad": "/bollen/triton.jpg",
+  "groot": "/bollen/triton-groot.jpg",
   "label": "kaart · kleur benaderd",
   "kleur": "benaderd",
   "uitleg": "Kleur benaderd en versterkt. Voyager 2 zag alleen het zuiden: zwart is nooit gefotografeerd.",

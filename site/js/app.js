@@ -202,7 +202,7 @@ function mijnPagina(D) {
 function kaart(D, h) {
   const labels = [h.nagekeken ? "nagekeken" : null].filter(Boolean);
   return `<article class="hemel-kaart">
-    <a class="hemel-beeld${h.soort === "ster" ? " is-ster" : ""}" href="/hemel/${h.slug}" data-link aria-hidden="true" tabindex="-1">${beeld(D, h, true)}</a>
+    <a class="hemel-beeld${h.soort === "ster" ? " is-ster" : ""}${D.bollen[h.slug] ? " is-bol" : ""}" href="/hemel/${h.slug}" data-link aria-hidden="true" tabindex="-1">${D.bollen[h.slug] ? `<canvas class="hemel-bol" data-bol="${h.slug}"></canvas><span class="hemel-bol-label">${esc(D.bollen[h.slug].label)}</span>` : beeld(D, h, true)}</a>
     ${kunJeZien(h) ? mijnKnop(h.slug, infoVan(D, h), true) : ""}
     <div class="hemel-tekst">
       <a class="hemel-titel" href="/hemel/${h.slug}" data-link>${esc(h.titel)}</a>
@@ -360,49 +360,52 @@ function koppelLijst(D) {
   teken();
 }
 
-// Met de muis over een foto: de foto wordt een langzaam draaiende bol, gemaakt van een kaart van echte foto's.
-// Alleen met een muis (op een telefoon tik je door), alleen waar zo'n kaart bestaat, en één bol tegelijk.
+// De bollen in het overzicht: een kaart van echte foto's om een bol gevouwen, stil en belicht.
+// Met de muis erover draait hij langzaam (alleen met een muis, één tegelijk).
 function koppelBollen(D, raster) {
-  if (!Object.keys(D.bollen).length || !matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+  if (!Object.keys(D.bollen).length) return;
   const stil = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  let actief = null;
-  const stop = () => {
-    if (!actief) return;
-    const { vak, doek, label } = actief;
-    cancelAnimationFrame(actief.anim); actief = null;
-    vak.classList.remove("met-bol"); vak.removeAttribute("title");
-    setTimeout(() => { if (!vak.classList.contains("met-bol")) { doek.remove(); label.remove(); } }, 400);
+  const muis = matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const B = import("./bol.js");
+  const stand = new WeakMap();
+  const teken = async (doek) => {
+    const b = D.bollen[doek.dataset.bol], mod = await B, k = await mod.laadKaart(b.pad);
+    const dpr = Math.min(2, window.devicePixelRatio || 1), n = Math.round(doek.clientWidth * dpr);
+    if (!n) return;
+    if (doek.width !== n) doek.width = doek.height = n;
+    if (!stand.has(doek)) stand.set(doek, b.begin ?? 0.5);
+    mod.tekenBol(doek, k, stand.get(doek), { kanteling: (b.kanteling || 0) * Math.PI / 180 });
+    doek.classList.add("klaar");
   };
+  // pas tekenen als de tegel in beeld komt
+  const io = new IntersectionObserver((lijst) => { for (const x of lijst) if (x.isIntersecting) { io.unobserve(x.target); teken(x.target); } }, { rootMargin: "200px" });
+  const kijk = () => raster.querySelectorAll("canvas[data-bol]:not(.klaar)").forEach((d) => io.observe(d));
+  new MutationObserver(kijk).observe(raster, { childList: true });
+  kijk();
+  if (!muis || stil) return;
+  let actief = null;
   raster.addEventListener("pointerover", (e) => {
     if (e.pointerType !== "mouse") return;
-    const vak = e.target.closest(".hemel-beeld");
+    const vak = e.target.closest(".hemel-beeld.is-bol");
     if (!vak || vak === actief?.vak) return;
-    const b = D.bollen[vak.getAttribute("href").split("/")[2]];
-    if (!b) return;
-    stop();
-    vak.querySelectorAll(".hemel-bol, .hemel-bol-label").forEach((x) => x.remove());
-    const dpr = Math.min(2, window.devicePixelRatio || 1);
-    const doek = Object.assign(document.createElement("canvas"), { className: "hemel-bol" });
-    doek.width = doek.height = Math.round(vak.clientWidth * (b.maat || 0.8) * dpr);
-    doek.style.width = doek.style.height = `${(b.maat || 0.8) * 100}%`;
-    const label = Object.assign(document.createElement("span"), { className: "hemel-bol-label", textContent: b.label, title: `${b.uitleg} Kaart: ${b.maker}, ${b.licentie}.` });
-    vak.append(doek, label);
-    vak.title = label.title; // maker en licentie van de kaart
-    const mij = actief = { vak, doek, label, anim: 0 };
-    Promise.all([import("./bol.js"), import("./bol.js").then((B) => B.laadKaart(b.pad))]).then(([B, k]) => {
-      if (actief !== mij) return;
-      let draai = b.begin || 0, vorige = performance.now();
+    const doek = vak.querySelector("canvas"), b = D.bollen[doek.dataset.bol];
+    if (actief) { cancelAnimationFrame(actief.anim); actief.vak.classList.remove("draait"); }
+    const mij = actief = { vak, anim: 0 };
+    vak.classList.add("draait");
+    Promise.all([B, B.then((m) => m.laadKaart(b.pad))]).then(([mod, k]) => {
+      let vorige = performance.now();
       const stap = (nu) => {
         if (actief !== mij) return;
-        draai -= stil ? 0 : (nu - vorige) / 20000; vorige = nu; // een omwenteling in twintig seconden, van west naar oost
-        B.tekenBol(doek, k, draai, { kanteling: (b.kanteling || 0) * Math.PI / 180 });
-        if (!vak.classList.contains("met-bol")) vak.classList.add("met-bol");
-        if (!stil) mij.anim = requestAnimationFrame(stap);
+        stand.set(doek, (stand.get(doek) ?? 0.5) - (nu - vorige) / 20000); vorige = nu; // van west naar oost
+        mod.tekenBol(doek, k, stand.get(doek), { kanteling: (b.kanteling || 0) * Math.PI / 180 });
+        mij.anim = requestAnimationFrame(stap);
       };
       mij.anim = requestAnimationFrame(stap);
-    }).catch(() => {});
+    });
   });
-  raster.addEventListener("pointerout", (e) => { if (actief && !actief.vak.contains(e.relatedTarget)) stop(); });
+  raster.addEventListener("pointerout", (e) => {
+    if (actief && !actief.vak.contains(e.relatedTarget)) { cancelAnimationFrame(actief.anim); actief.vak.classList.remove("draait"); actief = null; }
+  });
 }
 
 /* ---------- Eén scherm per hemellichaam ---------- */
@@ -425,8 +428,8 @@ function hemelPagina(D, slug) {
   if (!h) return nietGevonden();
   document.title = `${hoofd(h.naam)} · ${TITEL}`;
   const v = verwant(D, h).filter(Boolean);
-  const tabs = tabsVoor(h);
-  const startTab = tabs.some(([k]) => k === new URLSearchParams(location.search).get("tab")) ? new URLSearchParams(location.search).get("tab") : "foto";
+  const tabs = D.bollen[h.slug] ? [["bol", "3D"], ...tabsVoor(h)] : tabsVoor(h);
+  const startTab = tabs.some(([k]) => k === new URLSearchParams(location.search).get("tab")) ? new URLSearchParams(location.search).get("tab") : tabs[0][0];
   const weetjes = [
     ["Soort", `${SOORT_EEN[h.soort]}${h.soort === "maan" && h.ouder ? ` van ${esc(D.perSlug[h.ouder]?.naam)}` : ""}`],
     ...h.cijfers.slice(0, 5).map((c) => [esc(c.naam), `${esc(c.tekst)} ${bronLink(c.bron)}`]),
@@ -469,9 +472,11 @@ function kiesTab(D, h, tab) {
   for (const b of app.querySelectorAll("[data-tab]")) b.setAttribute("aria-selected", b.dataset.tab === tab);
   for (const p of app.querySelectorAll(".podium-paneel")) p.hidden = p.id !== `paneel-${tab}`;
   const vak = app.querySelector(`#paneel-${tab}`);
-  const url = new URL(location.href); if (tab === "foto") url.searchParams.delete("tab"); else url.searchParams.set("tab", tab);
+  const standaard = D.bollen[h.slug] ? "bol" : "foto";
+  const url = new URL(location.href); if (tab === standaard) url.searchParams.delete("tab"); else url.searchParams.set("tab", tab);
   history.replaceState(history.state, "", url.pathname + url.search);
-  if (tab === "foto") vak.innerHTML = paneelFoto(D, h);
+  if (tab === "bol") paneelBol(D, h, vak);
+  else if (tab === "foto") vak.innerHTML = paneelFoto(D, h);
   else if (tab === "schaal") vak.innerHTML = paneelSchaal(D, h);
   else if (tab === "geluid") { vak.innerHTML = paneelGeluid(D, h); koppelGeluid(D, h, vak); }
   else if (tab === "baan") import("./baan.js").then((B) => { if (vak.isConnected && !vak.hidden) tabOpruimen = B.baan(vak, h, D); });
@@ -484,10 +489,26 @@ function fotoOnderschrift(f) {
   return `<figcaption>${kleur}${esc(f.uitleg || "")} <span class="zacht">Foto: ${esc(f.credit)}${f.uitsnede ? " (uitsnede)" : ""}, <a href="${esc(f.pagina)}" rel="noopener">${esc(f.bron)}</a>, ${esc(f.licentie)}.</span></figcaption>`;
 }
 
-function paneelFoto(D, h) {
-  const f = D.fotos[h.foto];
+function feitjes(h) {
   const wt = h.weetjes.length ? `<div class="weetjes-lijst">${etiket(h.nagekeken ? "Weetjes, nagekeken" : "Weetjes")}<ul>${h.weetjes.map((w) => `<li>${esc(w.tekst)} ${bronLink(w.bron)}</li>`).join("")}</ul></div>` : "";
   const alle = `<details class="alle-cijfers"><summary>Alle getallen, met bron</summary><dl class="weetjes">${h.cijfers.map((c) => `<dt>${esc(c.naam)}</dt><dd>${esc(c.tekst)}${c.uitleg ? ` <span class="zacht">(${esc(c.uitleg)})</span>` : ""} ${bronLink(c.bron)}</dd>`).join("")}</dl></details>`;
+  return wt + alle;
+}
+
+/* 3D: de bol zo groot mogelijk, draaiend; een kaart van echte foto's om een bol gevouwen */
+function paneelBol(D, h, vak) {
+  const b = D.bollen[h.slug];
+  vak.innerHTML = `<figure class="bol-podium">
+      <canvas class="bol-groot" aria-label="${esc(hoofd(h.naam))} als draaiende bol. Sleep om hem te draaien."></canvas>
+      <figcaption><span class="label${b.kleur === "echt" ? "" : " label-zacht"}">${esc(b.label)}</span> ${esc(b.uitleg)} Geen foto: een kaart van veel foto's, om een bol gevouwen. <span class="zacht">Sleep om hem te draaien. Kaart: ${esc(b.maker)}, <a href="${esc(b.bron)}" rel="noopener">bron</a>, ${esc(b.licentie)}.</span></figcaption>
+    </figure>${feitjes(h)}`;
+  const stil = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  import("./bolgl.js").then((G) => { if (vak.isConnected && !vak.hidden) tabOpruimen = G.groteBol(vak.querySelector(".bol-groot"), b, { stil }); });
+}
+
+function paneelFoto(D, h) {
+  const f = D.fotos[h.foto];
+  const wt = feitjes(h), alle = "";
   if (!f) {
     const uitleg = h.soort === "ster" ? "Van een ster zie je op een foto alleen een stip, zelfs met de grootste telescoop. Kijk bij Nu waar hij aan de hemel staat." : h.slug === "eris" ? "Er bestaat geen foto waarop je Eris echt ziet: ook voor de ruimtetelescoop Hubble is ze een stipje. Een tekening laten we hier niet zien, want die zou er net zo echt uitzien als een foto." : "Hiervan hebben we geen foto gevonden met een vrije licentie.";
     return `<div class="foto-podium foto-leeg"><div class="foto-nacht">${h.soort === "ster" ? STER_SVG : ""}<p>${esc(uitleg)}</p></div></div>${wt}${alle}`;

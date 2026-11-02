@@ -982,10 +982,20 @@ button.sim-chip, a.sim-chip { cursor: pointer; min-height: 40px; }
 @media (prefers-reduced-motion: reduce) { .held-doek { transition: none; } }
 .held-hemel .etiket::before { background: var(--mint); }
 
-/* Met de muis over een foto in het overzicht: een draaiende bol van een kaart van echte foto's */
+/* Het overzicht: hemellichamen met een kaart staan er als bol, zonder zwart vlak */
 .hemel-beeld { position: relative; }
-.hemel-bol { position: absolute; left: 50%; top: 50%; translate: -50% -50%; opacity: 0; transition: opacity 350ms ease; pointer-events: none; }
-.hemel-bol-label { position: absolute; left: .45rem; bottom: .45rem; font: 500 .62rem/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--papier); background: rgb(26 26 26 / .7); padding: .3rem .45rem; border-radius: 999px; opacity: 0; transition: opacity 350ms ease; pointer-events: none; }
-.hemel-beeld img { transition: transform 500ms cubic-bezier(.2, .7, .1, 1), opacity 350ms ease; }
-.met-bol .hemel-bol, .met-bol .hemel-bol-label { opacity: 1; }
-.met-bol img { opacity: 0; }
+.hemel-beeld.is-bol { background: none; }
+.hemel-bol { width: 88%; height: 88%; opacity: 0; transition: opacity 400ms ease, transform 500ms cubic-bezier(.2, .7, .1, 1); }
+.hemel-bol.klaar { opacity: 1; }
+.hemel-kaart:hover .hemel-bol { transform: scale(1.04); }
+.hemel-bol-label { position: absolute; left: .45rem; bottom: .45rem; font: 500 .62rem/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--inkt-zacht); background: var(--papier-licht); padding: .3rem .45rem; border-radius: 999px; opacity: 0; transition: opacity 300ms ease; pointer-events: none; }
+.draait .hemel-bol-label { opacity: 1; }
+
+/* De pagina van een hemellichaam: de bol zo groot mogelijk */
+.bol-podium { margin: 0; display: grid; gap: .6rem; max-width: 52rem; }
+.bol-groot { width: 100%; height: auto; aspect-ratio: 1; max-height: 70svh; display: block; cursor: grab; touch-action: pan-y; opacity: 0; transition: opacity 600ms ease; }
+.bol-groot.klaar { opacity: 1; }
+.bol-groot:active { cursor: grabbing; }
+.bol-podium figcaption { font: 400 .82rem/1.5 var(--letter); max-width: 44rem; }
+.bol-podium figcaption .label { margin-right: .3rem; }
+@media (min-width: 1000px) { .bol-groot { aspect-ratio: auto; max-height: none; height: max(20rem, calc(100svh - 21rem)); } }
