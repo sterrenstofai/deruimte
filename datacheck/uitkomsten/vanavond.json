@@ -1,0 +1,458 @@
+{
+ "plek": {
+  "naam": "Enschede (Oude Markt)",
+  "lat": 52.2196,
+  "lon": 6.8952,
+  "hoogte_m": 40
+ },
+ "zon_onder": "2026-11-02T16:01:40.263Z",
+ "schemering_voorbij": "2026-11-02T16:37:34.782Z",
+ "donker": "2026-11-02T17:17:44.024Z",
+ "hemel": [
+  {
+   "naam": "de maan",
+   "helderheid": -9.7,
+   "met_blote_oog": true,
+   "op": "2026-11-02T23:21:33.816Z",
+   "onder": "2026-11-02T13:36:38.369Z",
+   "zichtbaar": []
+  },
+  {
+   "naam": "Mercurius",
+   "helderheid": 4.9,
+   "met_blote_oog": true,
+   "op": "2026-11-03T06:54:25.626Z",
+   "onder": "2026-11-02T16:02:07.073Z",
+   "zichtbaar": []
+  },
+  {
+   "naam": "Venus",
+   "helderheid": -4.3,
+   "met_blote_oog": true,
+   "op": "2026-11-03T05:19:15.917Z",
+   "onder": "2026-11-02T15:01:22.379Z",
+   "zichtbaar": []
+  },
+  {
+   "naam": "Mars",
+   "helderheid": 0.9,
+   "met_blote_oog": true,
+   "op": "2026-11-02T22:39:43.309Z",
+   "onder": "2026-11-02T13:48:47.344Z",
+   "zichtbaar": []
+  },
+  {
+   "naam": "Jupiter",
+   "helderheid": -2,
+   "met_blote_oog": true,
+   "op": "2026-11-02T23:12:48.328Z",
+   "onder": "2026-11-02T13:52:17.799Z",
+   "zichtbaar": []
+  },
+  {
+   "naam": "Saturnus",
+   "helderheid": 0.4,
+   "met_blote_oog": true,
+   "op": "2026-11-02T15:12:59.336Z",
+   "onder": "2026-11-03T03:30:17.789Z",
+   "zichtbaar": [
+    {
+     "tijd": "17:37",
+     "hoogte": 12,
+     "richting": "oost"
+    },
+    {
+     "tijd": "18:07",
+     "hoogte": 17,
+     "richting": "oost"
+    },
+    {
+     "tijd": "18:37",
+     "hoogte": 21,
+     "richting": "zuidoost"
+    },
+    {
+     "tijd": "19:07",
+     "hoogte": 25,
+     "richting": "zuidoost"
+    },
+    {
+     "tijd": "19:37",
+     "hoogte": 29,
+     "richting": "zuidoost"
+    },
+    {
+     "tijd": "20:07",
+     "hoogte": 32,
+     "richting": "zuidoost"
+    },
+    {
+     "tijd": "20:37",
+     "hoogte": 35,
+     "richting": "zuidoost"
+    },
+    {
+     "tijd": "21:07",
+     "hoogte": 37,
+     "richting": "zuidoost"
+    },
+    {
+     "tijd": "21:37",
+     "hoogte": 38,
+     "richting": "zuid"
+    },
+    {
+     "tijd": "22:07",
+     "hoogte": 39,
+     "richting": "zuid"
+    },
+    {
+     "tijd": "22:37",
+     "hoogte": 39,
+     "richting": "zuid"
+    },
+    {
+     "tijd": "23:07",
+     "hoogte": 38,
+     "richting": "zuid"
+    },
+    {
+     "tijd": "23:37",
+     "hoogte": 37,
+     "richting": "zuidwest"
+    }
+   ]
+  },
+  {
+   "naam": "Uranus",
+   "helderheid": 5.6,
+   "met_blote_oog": false,
+   "op": "2026-11-02T16:52:31.177Z",
+   "onder": "2026-11-03T08:55:09.631Z",
+   "zichtbaar": [
+    {
+     "tijd": "18:37",
+     "hoogte": 5,
+     "richting": "noordoost"
+    },
+    {
+     "tijd": "19:07",
+     "hoogte": 10,
+     "richting": "oost"
+    },
+    {
+     "tijd": "19:37",
+     "hoogte": 14,
+     "richting": "oost"
+    },
+    {
+     "tijd": "20:07",
+     "hoogte": 18,
+     "richting": "oost"
+    },
+    {
+     "tijd": "20:37",
+     "hoogte": 23,
+     "richting": "oost"
+    },
+    {
+     "tijd": "21:07",
+     "hoogte": 27,
+     "richting": "oost"
+    },
+    {
+     "tijd": "21:37",
+     "hoogte": 32,
+     "richting": "oost"
+    },
+    {
+     "tijd": "22:07",
+     "hoogte": 37,
+     "richting": "oost"
+    },
+    {
+     "tijd": "22:37",
+     "hoogte": 41,
+     "richting": "oost"
+    },
+    {
+     "tijd": "23:07",
+     "hoogte": 45,
+     "richting": "zuidoost"
+    },
+    {
+     "tijd": "23:37",
+     "hoogte": 49,
+     "richting": "zuidoost"
+    }
+   ]
+  },
+  {
+   "naam": "Neptunus",
+   "helderheid": 7.8,
+   "met_blote_oog": false,
+   "op": "2026-11-02T14:53:23.745Z",
+   "onder": "2026-11-03T02:53:48.114Z",
+   "zichtbaar": [
+    {
+     "tijd": "17:37",
+     "hoogte": 15,
+     "richting": "oost"
+    },
+    {
+     "tijd": "18:07",
+     "hoogte": 19,
+     "richting": "zuidoost"
+    },
+    {
+     "tijd": "18:37",
+     "hoogte": 23,
+     "richting": "zuidoost"
+    },
+    {
+     "tijd": "19:07",
+     "hoogte": 27,
+     "richting": "zuidoost"
+    },
+    {
+     "tijd": "19:37",
+     "hoogte": 30,
+     "richting": "zuidoost"
+    },
+    {
+     "tijd": "20:07",
+     "hoogte": 33,
+     "richting": "zuidoost"
+    },
+    {
+     "tijd": "20:37",
+     "hoogte": 35,
+     "richting": "zuidoost"
+    },
+    {
+     "tijd": "21:07",
+     "hoogte": 36,
+     "richting": "zuid"
+    },
+    {
+     "tijd": "21:37",
+     "hoogte": 37,
+     "richting": "zuid"
+    },
+    {
+     "tijd": "22:07",
+     "hoogte": 37,
+     "richting": "zuid"
+    },
+    {
+     "tijd": "22:37",
+     "hoogte": 37,
+     "richting": "zuid"
+    },
+    {
+     "tijd": "23:07",
+     "hoogte": 35,
+     "richting": "zuidwest"
+    },
+    {
+     "tijd": "23:37",
+     "hoogte": 33,
+     "richting": "zuidwest"
+    }
+   ]
+  }
+ ],
+ "maan": {
+  "fasehoek": 282,
+  "verlicht_procent": 39.7,
+  "volgende_fasen": [
+   {
+    "fase": "nieuwe maan",
+    "datum": "2026-11-09T07:02:42.392Z"
+   },
+   {
+    "fase": "eerste kwartier",
+    "datum": "2026-11-17T11:48:27.140Z"
+   },
+   {
+    "fase": "volle maan",
+    "datum": "2026-11-24T14:54:04.191Z"
+   },
+   {
+    "fase": "laatste kwartier",
+    "datum": "2026-12-01T06:09:14.538Z"
+   }
+  ]
+ },
+ "iss": [
+  {
+   "op": "2026-11-02T21:29:50.000Z",
+   "top": "2026-11-02T21:31:20.000Z",
+   "onder": "2026-11-02T21:33:00.000Z",
+   "max_hoogte": 12.9,
+   "richting_top": "zuidoost",
+   "iss_in_zon": false,
+   "zon_hoogte": -47.3,
+   "zichtbaar": false
+  },
+  {
+   "op": "2026-11-02T23:04:20.000Z",
+   "top": "2026-11-02T23:07:30.000Z",
+   "onder": "2026-11-02T23:10:50.000Z",
+   "max_hoogte": 44.6,
+   "richting_top": "zuidoost",
+   "iss_in_zon": false,
+   "zon_hoogte": -52.7,
+   "zichtbaar": false
+  },
+  {
+   "op": "2026-11-03T00:40:50.000Z",
+   "top": "2026-11-03T00:44:10.000Z",
+   "onder": "2026-11-03T00:47:40.000Z",
+   "max_hoogte": 82.4,
+   "richting_top": "zuid",
+   "iss_in_zon": false,
+   "zon_hoogte": -48.9,
+   "zichtbaar": false
+  },
+  {
+   "op": "2026-11-03T02:17:40.000Z",
+   "top": "2026-11-03T02:20:50.000Z",
+   "onder": "2026-11-03T02:24:20.000Z",
+   "max_hoogte": 55.9,
+   "richting_top": "zuid",
+   "iss_in_zon": false,
+   "zon_hoogte": -37.9,
+   "zichtbaar": false
+  },
+  {
+   "op": "2026-11-03T03:54:50.000Z",
+   "top": "2026-11-03T03:57:10.000Z",
+   "onder": "2026-11-03T03:59:40.000Z",
+   "max_hoogte": 17.9,
+   "richting_top": "zuidwest",
+   "iss_in_zon": false,
+   "zon_hoogte": -23.9,
+   "zichtbaar": false
+  }
+ ],
+ "sterren": [
+  {
+   "ster": "poolster",
+   "op": "gaat niet onder",
+   "posities": [
+    {
+     "utc": "2026-11-02 17:00",
+     "az": 0.987,
+     "hoogte": 52.072,
+     "skyfield_az": 0.987,
+     "skyfield_hoogte": 52.072
+    },
+    {
+     "utc": "2026-11-02 19:00",
+     "az": 0.978,
+     "hoogte": 52.395,
+     "skyfield_az": 0.978,
+     "skyfield_hoogte": 52.395
+    },
+    {
+     "utc": "2026-11-02 21:00",
+     "az": 0.703,
+     "hoogte": 52.672,
+     "skyfield_az": 0.703,
+     "skyfield_hoogte": 52.672
+    }
+   ]
+  },
+  {
+   "ster": "sirius",
+   "op": "2026-11-02T22:57:02.897Z",
+   "posities": [
+    {
+     "utc": "2026-11-02 17:00",
+     "az": 34.732,
+     "hoogte": -50.399,
+     "skyfield_az": 34.733,
+     "skyfield_hoogte": -50.399
+    },
+    {
+     "utc": "2026-11-02 19:00",
+     "az": 69.361,
+     "hoogte": -35.864,
+     "skyfield_az": 69.361,
+     "skyfield_hoogte": -35.864
+    },
+    {
+     "utc": "2026-11-02 21:00",
+     "az": 94.639,
+     "hoogte": -17.742,
+     "skyfield_az": 94.64,
+     "skyfield_hoogte": -17.742
+    }
+   ]
+  },
+  {
+   "ster": "betelgeuze",
+   "op": "2026-11-02T19:58:13.092Z",
+   "posities": [
+    {
+     "utc": "2026-11-02 17:00",
+     "az": 37.984,
+     "hoogte": -23.415,
+     "skyfield_az": 37.984,
+     "skyfield_hoogte": -23.415
+    },
+    {
+     "utc": "2026-11-02 19:00",
+     "az": 65.296,
+     "hoogte": -9.016,
+     "skyfield_az": 65.296,
+     "skyfield_hoogte": -9.016
+    },
+    {
+     "utc": "2026-11-02 21:00",
+     "az": 89.283,
+     "hoogte": 8.839,
+     "skyfield_az": 89.284,
+     "skyfield_hoogte": 8.839
+    }
+   ]
+  }
+ ],
+ "vergelijking": {
+  "op_onder_minuten": {
+   "zon_onder": 1.9,
+   "maan": {
+    "op": -1.95,
+    "onder": 1.94
+   },
+   "mercurius": {
+    "op": 0.03,
+    "onder": -0.02
+   },
+   "venus": {
+    "op": 0,
+    "onder": -0.03
+   },
+   "mars": {
+    "op": 0.02,
+    "onder": -0.01
+   },
+   "jupiter": {
+    "op": 0.02,
+    "onder": -0.02
+   },
+   "saturnus": {
+    "op": 0.01,
+    "onder": -0.02
+   }
+  },
+  "iss_top_seconden": [
+   3,
+   2,
+   2,
+   -2,
+   -2
+  ]
+ }
+}

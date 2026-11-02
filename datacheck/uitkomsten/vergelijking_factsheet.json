@@ -1,0 +1,162 @@
+{
+ "mercurius": {
+  "wikidata": {
+   "massa": 0.33,
+   "diameter": 4878.0,
+   "g": 3.7278,
+   "omloop": 87.969,
+   "P398": 1
+  },
+  "nasa": {
+   "massa": 0.33,
+   "diameter": 4879.0,
+   "g": 3.7,
+   "omloop": 88.0,
+   "manen": 0
+  }
+ },
+ "venus": {
+  "wikidata": {
+   "massa": 4.867500000000001,
+   "diameter": 12103.6,
+   "g": 8.9,
+   "omloop": 224.7,
+   "P398": 1
+  },
+  "nasa": {
+   "massa": 4.87,
+   "diameter": 12104.0,
+   "g": 8.9,
+   "omloop": 224.7,
+   "manen": 0
+  }
+ },
+ "aarde": {
+  "wikidata": {
+   "massa": 5.97237,
+   "diameter": 12742.0,
+   "g": 9.798,
+   "omloop": 365.256363004,
+   "P398": 91
+  },
+  "nasa": {
+   "massa": 5.97,
+   "diameter": 12756.0,
+   "g": 9.8,
+   "omloop": 365.2,
+   "manen": 1
+  }
+ },
+ "maan": {
+  "wikidata": {
+   "massa": 0.07347669999999999,
+   "diameter": 3476.2,
+   "g": 1.62,
+   "omloop": 27.321661,
+   "P398": 4
+  },
+  "nasa": {
+   "massa": 0.073,
+   "diameter": 3475.0,
+   "g": 1.6,
+   "omloop": 27.3,
+   "manen": 0
+  }
+ },
+ "mars": {
+  "wikidata": {
+   "massa": 0.641691,
+   "diameter": null,
+   "g": 3.71,
+   "omloop": 686.98,
+   "P398": 17
+  },
+  "nasa": {
+   "massa": 0.642,
+   "diameter": 6792.0,
+   "g": 3.7,
+   "omloop": 687.0,
+   "manen": 2
+  }
+ },
+ "jupiter": {
+  "wikidata": {
+   "massa": 1898.13,
+   "diameter": 142984.0,
+   "g": 23.1,
+   "omloop": 4332.589,
+   "P398": 88
+  },
+  "nasa": {
+   "massa": 1898.0,
+   "diameter": 142984.0,
+   "g": 23.1,
+   "omloop": 4331.0,
+   "manen": 95
+  }
+ },
+ "saturnus": {
+  "wikidata": {
+   "massa": 568.36,
+   "diameter": 120536.0,
+   "g": 8.96,
+   "omloop": 10757.7365,
+   "P398": 171
+  },
+  "nasa": {
+   "massa": 568.0,
+   "diameter": 120536.0,
+   "g": 9.0,
+   "omloop": 10747.0,
+   "manen": 274
+  }
+ },
+ "uranus": {
+  "wikidata": {
+   "massa": 86.81,
+   "diameter": 51118.0,
+   "g": 8.7,
+   "omloop": 30688.5,
+   "P398": 41
+  },
+  "nasa": {
+   "massa": 86.8,
+   "diameter": 51118.0,
+   "g": 8.7,
+   "omloop": 30589.0,
+   "manen": 28
+  }
+ },
+ "neptunus": {
+  "wikidata": {
+   "massa": 102.43,
+   "diameter": 49528.0,
+   "g": 11.0,
+   "omloop": 60193.2,
+   "P398": 26
+  },
+  "nasa": {
+   "massa": 102.0,
+   "diameter": 49528.0,
+   "g": 11.0,
+   "omloop": 59800.0,
+   "manen": 16
+  }
+ },
+ "pluto": {
+  "wikidata": {
+   "massa": 0.013050000000000003,
+   "diameter": 2376.0,
+   "g": 0.62,
+   "omloop": 90553.02,
+   "P398": 6
+  },
+  "nasa": {
+   "massa": 0.013,
+   "diameter": 2376.0,
+   "g": 0.7,
+   "omloop": 90560.0,
+   "manen": 5
+  }
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "_uitleg": "Met de hand verzameld op 2 november 2026 door de pagina's te lezen en naar audiobestanden te zoeken. 'soort': opname = echte trilling door lucht/gas met een microfoon; plasma = elektrische/magnetische golven, door een antenne gemeten en afgespeeld (soms versneld); sonificatie = metingen of een beeld omgezet in muziek met gekozen klanken; reconstructie = in het lab nagemaakt op basis van metingen.",
+ "zon":      [{"bron": "University of Iowa, Space Audio (o.a. type III-radiouitbarstingen)", "soort": "plasma", "url": "https://space.physics.uiowa.edu/plasma-wave/space-audio/typeIII.html", "licentie": "CC BY 4.0 (citation.html)"}],
+ "aarde":    [{"bron": "Iowa, 'chorus' (Van Allen-gordels)", "soort": "plasma", "url": "https://space.physics.uiowa.edu/~dag/chorus.wav", "licentie": "CC BY 4.0"}],
+ "mars":     [{"bron": "NASA/JPL-Caltech, Perseverance-microfoons (wind, Ingenuity)", "soort": "opname", "url": "https://science.nasa.gov/mission/mars-2020-perseverance/sounds-of-mars/", "licentie": "NASA-media, zie voorwaarden.md"}],
+ "jupiter":  [{"bron": "Iowa, Voyager 1 PWS, scheervlucht 5 maart 1979", "soort": "plasma", "url": "https://space.physics.uiowa.edu/voyager/V1PWS_Jupiter_1979-03-05T0000-2359.mp3", "licentie": "CC BY 3.0 (volgens die pagina)"},
+              {"bron": "Iowa, Juno Waves", "soort": "plasma", "url": "https://space.physics.uiowa.edu/plasma-wave/juno/audio/", "licentie": "CC BY 4.0"},
+              {"bron": "Chandra, sonificatie Jupiter (röntgen + infrarood, 2026)", "soort": "sonificatie", "url": "https://chandra.si.edu/photo/2026/sonify11/sonify11_jupiter.mp4", "licentie": "zie voorwaarden.md"}],
+ "saturnus": [{"bron": "Iowa, Cassini RPWS, Saturn Kilometric Radiation", "soort": "plasma (versneld)", "url": "https://space.physics.uiowa.edu/plasma-wave/space-audio/cassini/SKR1/", "licentie": "CC BY 4.0"},
+              {"bron": "Chandra, sonificatie 'Saturn' (2026; pagina gaat deels over Uranus)", "soort": "sonificatie", "url": "https://chandra.si.edu/sound/saturn.html", "licentie": "zie voorwaarden.md"}],
+ "titan":    [{"bron": "ESA, Huygens-afdaling 14 jan 2005: 'Speeding through Titan's haze'", "soort": "reconstructie", "url": "https://esamultimedia.esa.int/images/huygens_alien_winds_descent.mp3", "licentie": "ESA, zie voorwaarden.md", "let_op": "ESA zegt zelf: 'a laboratory reconstruction of the sounds heard by Huygens' microphones'. Geen ruwe opname."},
+              {"bron": "ESA, Huygens radarecho's omgezet in geluid", "soort": "sonificatie", "url": "https://esamultimedia.esa.int/images/huygens_alien_winds_descent_radar.mp3"}],
+ "geen_gevonden": ["maan", "mercurius", "venus (alleen Sovjet-Venera 13/14-microfoon; rechten onduidelijk, niet gezocht)", "uranus/neptunus (Voyager 2 plasma bestaat wel bij Iowa, niet per bestand nagekeken)", "pluto", "ceres", "io", "europa", "halley", "poolster", "sirius", "betelgeuze", "iss (wel binnengeluid van NASA-video's)"],
+ "nasa_beeldbank_audio": "images-api.nasa.gov met media_type=audio geeft vooral podcastafleveringen (Houston We Have a Podcast), geen sonificaties.",
+ "hubble_sonificaties": "25 mp4's op science.nasa.gov/mission/hubble/multimedia/sonifications/, allemaal nevels en sterrenstelsels, geen hemellichamen uit de testset."
+}

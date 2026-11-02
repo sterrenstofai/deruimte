@@ -1,0 +1,432 @@
+{
+ "Boo": {
+  "en": "Boötes",
+  "nl": "Ossenhoeder",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/BootesCC.jpg"
+ },
+ "Dra": {
+  "en": "Draco",
+  "nl": "Draak",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/DracoCC.jpg"
+ },
+ "Psc": {
+  "en": "Pisces",
+  "nl": "Vissen",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/PiscesCC.jpg"
+ },
+ "Cam": {
+  "en": "Camelopardalis",
+  "nl": "Giraffe",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/CamelopardalisCC.jpg"
+ },
+ "Dor": {
+  "en": "Dorado",
+  "nl": "Goudvis",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Dorado.jpg"
+ },
+ "Cet": {
+  "en": "Cetus",
+  "nl": "Walvis",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/CetusCC.jpg"
+ },
+ "Leo": {
+  "en": "Leo",
+  "nl": "Leeuw",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/LeoCC.jpg"
+ },
+ "Ori": {
+  "en": "Orion",
+  "nl": "Orion",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/OrionCC.jpg"
+ },
+ "Peg": {
+  "en": "Pegasus",
+  "nl": "Pegasus",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/PegasusCC.jpg"
+ },
+ "Sgr": {
+  "en": "Sagittarius",
+  "nl": "Boogschutter",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/SagittariusCC.jpg"
+ },
+ "Vir": {
+  "en": "Virgo",
+  "nl": "Maagd",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/VirgoCC.jpg"
+ },
+ "Cen": {
+  "en": "Centaurus",
+  "nl": "Centaur",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Centaurus.jpg"
+ },
+ "Sco": {
+  "en": "Scorpius",
+  "nl": "Schorpioen",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/ScorpiusCC.jpg"
+ },
+ "Cyg": {
+  "en": "Cygnus",
+  "nl": "Zwaan",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Kru%C5%A1n%C3%A9%20hory%2C%20Hora%20sv.%20%C5%A0ebesti%C3%A1na%2C%20imgp0651-71info%20%282018-05%29.jpg"
+ },
+ "Oph": {
+  "en": "Ophiuchus",
+  "nl": "Slangendrager",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/OphiuchusCC.jpg"
+ },
+ "Ser": {
+  "en": "Serpens",
+  "nl": "Slang",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/SerpensCaudaCC.jpg"
+ },
+ "For": {
+  "en": "Fornax",
+  "nl": "Oven",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Fornax.jpg"
+ },
+ "UMa": {
+  "en": "Ursa Major",
+  "nl": "Grote Beer",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/UrsaMajorCC.jpg"
+ },
+ "Vol": {
+  "en": "Volans",
+  "nl": "Vliegende Vis",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Volans.jpg"
+ },
+ "Equ": {
+  "en": "Equuleus",
+  "nl": "Veulen",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/EquuleusCC.jpg"
+ },
+ "Lac": {
+  "en": "Lacerta",
+  "nl": "Hagedis",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/LacertaCC.jpg"
+ },
+ "Crt": {
+  "en": "Crater",
+  "nl": "Beker",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/CraterCC.jpg"
+ },
+ "Eri": {
+  "en": "Eridanus",
+  "nl": "Eridanus",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Eridanus.jpg"
+ },
+ "Phe": {
+  "en": "Phoenix",
+  "nl": "Phoenix",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Phoenix.jpg"
+ },
+ "Lyn": {
+  "en": "Lynx",
+  "nl": "Lynx",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Lynx.jpg"
+ },
+ "Her": {
+  "en": "Hercules",
+  "nl": "Hercules",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/HerculesCC.jpg"
+ },
+ "CVn": {
+  "en": "Canes Venatici",
+  "nl": "Jachthonden",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/CanesVenaticiCC.jpg"
+ },
+ "Cep": {
+  "en": "Cepheus",
+  "nl": "Cepheus",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/CepheusCC.jpg"
+ },
+ "Car": {
+  "en": "Carina",
+  "nl": "Kiel",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Carina.jpg"
+ },
+ "Pyx": {
+  "en": "Pyxis",
+  "nl": "Kompas",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Pyxis.jpg"
+ },
+ "Aur": {
+  "en": "Auriga",
+  "nl": "Voerman",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/AurigaCC.jpg"
+ },
+ "Mus": {
+  "en": "Musca",
+  "nl": "Vlieg",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Musca.jpg"
+ },
+ "Com": {
+  "en": "Coma Berenices",
+  "nl": "Hoofdhaar",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/ComaBerenicesCC.jpg"
+ },
+ "CMi": {
+  "en": "Canis Minor",
+  "nl": "Kleine Hond",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/CanisMinorCC.jpg"
+ },
+ "Del": {
+  "en": "Delphinus",
+  "nl": "Dolfijn",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/DelphinusCC.jpg"
+ },
+ "Ara": {
+  "en": "Ara",
+  "nl": "Altaar",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Ara.jpg"
+ },
+ "And": {
+  "en": "Andromeda",
+  "nl": "Andromeda",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/AndromedaCC.jpg"
+ },
+ "Gem": {
+  "en": "Gemini",
+  "nl": "Tweelingen",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/GeminiCC.jpg"
+ },
+ "Pup": {
+  "en": "Puppis",
+  "nl": "Achtersteven",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/PuppisCC.jpg"
+ },
+ "Aql": {
+  "en": "Aquila",
+  "nl": "Arend",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/AquilaCC.jpg"
+ },
+ "Hor": {
+  "en": "Horologium",
+  "nl": "Slingeruurwerk",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Horologium.jpg"
+ },
+ "Lep": {
+  "en": "Lepus",
+  "nl": "Haas",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/LepusCC.jpg"
+ },
+ "Ant": {
+  "en": "Antlia",
+  "nl": "Luchtpomp",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Antlia.jpg"
+ },
+ "Lyr": {
+  "en": "Lyra",
+  "nl": "Lier",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/LyraCC.jpg"
+ },
+ "UMi": {
+  "en": "Ursa Minor",
+  "nl": "Kleine Beer",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/UrsaMinorCC.jpg"
+ },
+ "Cha": {
+  "en": "Chamaeleon",
+  "nl": "Kameleon",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Chamaeleon.jpg"
+ },
+ "Cas": {
+  "en": "Cassiopeia",
+  "nl": "Cassiopeia",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/CassiopeiaCC.jpg"
+ },
+ "Ind": {
+  "en": "Indus",
+  "nl": "Indiaan",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Indus.jpg"
+ },
+ "Pic": {
+  "en": "Pictor",
+  "nl": "Schilder",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Pictor.jpg"
+ },
+ "Cae": {
+  "en": "Caelum",
+  "nl": "Graveerstift",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Caelum.jpg"
+ },
+ "Mic": {
+  "en": "Microscopium",
+  "nl": "Microscoop",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Microscopium.jpg"
+ },
+ "Ret": {
+  "en": "Reticulum",
+  "nl": "Net",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Reticulum.jpg"
+ },
+ "Oct": {
+  "en": "Octans",
+  "nl": "Octant",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Octans.jpg"
+ },
+ "CrB": {
+  "en": "Corona Borealis",
+  "nl": "Noorderkroon",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/CoronaBorealisCC.jpg"
+ },
+ "Scl": {
+  "en": "Sculptor",
+  "nl": "Beeldhouwer-sterrenbeeld",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Sculptor.jpg"
+ },
+ "Men": {
+  "en": "Mensa",
+  "nl": "Tafelberg",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Mensa.jpg"
+ },
+ "LMi": {
+  "en": "Leo Minor",
+  "nl": "Kleine Leeuw",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/LeoMinorCC.jpg"
+ },
+ "CrA": {
+  "en": "Corona Australis",
+  "nl": "Zuiderkroon",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Corona%20Australis.jpg"
+ },
+ "Hyi": {
+  "en": "Hydrus",
+  "nl": "Kleine Waterslang",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Hydrus.jpg"
+ },
+ "TrA": {
+  "en": "Triangulum Australe",
+  "nl": "Zuiderdriehoek",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Triangulum%20Australe.jpg"
+ },
+ "PsA": {
+  "en": "Piscis Austrinus",
+  "nl": "Zuidervis",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/PiscisAustrinusCC.jpg"
+ },
+ "Aps": {
+  "en": "Apus",
+  "nl": "Paradijsvogel",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Apus.jpg"
+ },
+ "Pav": {
+  "en": "Pavo",
+  "nl": "Pauw",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Pavo.jpg"
+ },
+ "Vul": {
+  "en": "Vulpecula",
+  "nl": "Vosje",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/VulpeculaCC.jpg"
+ },
+ "Col": {
+  "en": "Columba",
+  "nl": "Duif",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Columba.jpg"
+ },
+ "Mon": {
+  "en": "Monoceros",
+  "nl": "Eenhoorn",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/MonocerosCC.jpg"
+ },
+ "Cir": {
+  "en": "Circinus",
+  "nl": "Passer",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Circinus.jpg"
+ },
+ "Per": {
+  "en": "Perseus",
+  "nl": "Perseus",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/PerseusCC.jpg"
+ },
+ "Crv": {
+  "en": "Corvus",
+  "nl": "Raaf",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/CorvusCC.jpg"
+ },
+ "Sge": {
+  "en": "Sagitta",
+  "nl": "Pijl",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/SagittaCC.jpg"
+ },
+ "Sct": {
+  "en": "Scutum",
+  "nl": "Schild",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/ScutumCC.jpg"
+ },
+ "Vel": {
+  "en": "Vela",
+  "nl": "Zeilen",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Vela.jpg"
+ },
+ "Sex": {
+  "en": "Sextans",
+  "nl": "Sextant",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/SextansCC.jpg"
+ },
+ "Cap": {
+  "en": "Capricornus",
+  "nl": "Steenbok",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/CapricornusCC.jpg"
+ },
+ "Tel": {
+  "en": "Telescopium",
+  "nl": "Telescoop",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Telescopium.jpg"
+ },
+ "Gru": {
+  "en": "Grus",
+  "nl": "Kraanvogel",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Grus.jpg"
+ },
+ "CMa": {
+  "en": "Canis Major",
+  "nl": "Grote Hond",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/CanisMajorCC.jpg"
+ },
+ "Cru": {
+  "en": "Crux",
+  "nl": "Zuiderkruis",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Crux.jpg"
+ },
+ "Tri": {
+  "en": "Triangulum",
+  "nl": "Driehoek",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/TriangulumCC.jpg"
+ },
+ "Tau": {
+  "en": "Taurus",
+  "nl": "Stier",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/TaurusCC.jpg"
+ },
+ "Tuc": {
+  "en": "Tucana",
+  "nl": "Toekan",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Tucana.jpg"
+ },
+ "Aqr": {
+  "en": "Aquarius",
+  "nl": "Waterman",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/AquariusCC.jpg"
+ },
+ "Hya": {
+  "en": "Hydra",
+  "nl": "Waterslang",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/HydraCC.jpg"
+ },
+ "Lib": {
+  "en": "Libra",
+  "nl": "Weegschaal",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/LibraCC.jpg"
+ },
+ "Nor": {
+  "en": "Norma",
+  "nl": "Winkelhaak",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Norma.jpg"
+ },
+ "Lup": {
+  "en": "Lupus",
+  "nl": "Wolf",
+  "img": "http://commons.wikimedia.org/wiki/Special:FilePath/Constellation%20Lupus.jpg"
+ }
+}

@@ -1,0 +1,2095 @@
+{
+ "zon": {
+  "naam": "de zon",
+  "en": "Sun",
+  "qid": "Q525",
+  "sitelinks": 362,
+  "eigenschappen": {
+   "P398": {
+    "naam": "manen/kind",
+    "n": 519,
+    "met_bron": 499,
+    "voorbeeld": "http://www.wikidata.org/entity/Q1422215",
+    "eenheid": null
+   },
+   "P2076": {
+    "naam": "temperatuur",
+    "n": 3,
+    "met_bron": 3,
+    "voorbeeld": "15710000",
+    "eenheid": "kelvin"
+   },
+   "P2120": {
+    "naam": "straal",
+    "n": 2,
+    "met_bron": 2,
+    "voorbeeld": "1",
+    "eenheid": "solar radius"
+   },
+   "P2067": {
+    "naam": "massa",
+    "n": 2,
+    "met_bron": 2,
+    "voorbeeld": "1",
+    "eenheid": "solar mass"
+   },
+   "P1215": {
+    "naam": "schijnbare helderheid",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "-26.74",
+    "eenheid": "1"
+   },
+   "P397": {
+    "naam": "draait om",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://www.wikidata.org/entity/Q649112",
+    "eenheid": null
+   },
+   "P7015": {
+    "naam": "zwaartekracht aan oppervlak",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "274",
+    "eenheid": "metre per square second"
+   },
+   "P215": {
+    "naam": "spectraalklasse",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "G2V",
+    "eenheid": null
+   },
+   "P2054": {
+    "naam": "dichtheid",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "162.2",
+    "eenheid": "gram per cubic centimetre"
+   },
+   "P2583": {
+    "naam": "afstand tot aarde",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "1",
+    "eenheid": "astronomical unit"
+   },
+   "P367": {
+    "naam": "astronomisch symbool",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Sun%20symbol%20%28fixed%20wid",
+    "eenheid": null
+   },
+   "P18": {
+    "naam": "afbeelding",
+    "n": 2,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Our%20Sun%20at%20a%20distance",
+    "eenheid": null
+   }
+  },
+  "img": [
+   "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Sun%20in%20white%20light.jpg"
+  ],
+  "nl": "zon",
+  "nldesc": "ster in het centrum van het zonnestelsel",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Zon"
+ },
+ "maan": {
+  "naam": "de maan",
+  "en": "Moon",
+  "qid": "Q405",
+  "sitelinks": 358,
+  "eigenschappen": {
+   "P7015": {
+    "naam": "zwaartekracht aan oppervlak",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "1.62",
+    "eenheid": "metre per square second"
+   },
+   "P2067": {
+    "naam": "massa",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "73.4767",
+    "eenheid": "yottagram"
+   },
+   "P1215": {
+    "naam": "schijnbare helderheid",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "-12.74",
+    "eenheid": "1"
+   },
+   "P398": {
+    "naam": "manen/kind",
+    "n": 4,
+    "met_bron": 2,
+    "voorbeeld": "http://www.wikidata.org/entity/Q29098442",
+    "eenheid": null
+   },
+   "P397": {
+    "naam": "draait om",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://www.wikidata.org/entity/Q2",
+    "eenheid": null
+   },
+   "P2386": {
+    "naam": "diameter",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "3476.2",
+    "eenheid": "kilometre"
+   },
+   "P2146": {
+    "naam": "omlooptijd",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "27.321661",
+    "eenheid": "day"
+   },
+   "P2583": {
+    "naam": "afstand tot aarde",
+    "n": 3,
+    "met_bron": 3,
+    "voorbeeld": "356565",
+    "eenheid": "kilometre"
+   },
+   "P4896": {
+    "naam": "3D-model",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Moon%20elevation.stl",
+    "eenheid": null
+   },
+   "P2120": {
+    "naam": "straal",
+    "n": 3,
+    "met_bron": 2,
+    "voorbeeld": "1738.14",
+    "eenheid": "kilometre"
+   },
+   "P2076": {
+    "naam": "temperatuur",
+    "n": 2,
+    "met_bron": 1,
+    "voorbeeld": "390",
+    "eenheid": "kelvin"
+   },
+   "P2054": {
+    "naam": "dichtheid",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "3.344",
+    "eenheid": "gram per cubic centimetre"
+   },
+   "P367": {
+    "naam": "astronomisch symbool",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Decrescent%20icon.svg",
+    "eenheid": null
+   },
+   "P18": {
+    "naam": "afbeelding",
+    "n": 2,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/FullMoon2010.jpg",
+    "eenheid": null
+   },
+   "P2233": {
+    "naam": "halve lange as",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "384400",
+    "eenheid": "kilometre"
+   }
+  },
+  "img": [
+   "http://commons.wikimedia.org/wiki/Special:FilePath/FullMoon2010.jpg"
+  ],
+  "nl": "Maan",
+  "nldesc": "de natuurlijke satelliet van de Aarde",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Maan"
+ },
+ "mercurius": {
+  "naam": "Mercurius",
+  "en": "Mercury",
+  "qid": "Q308",
+  "sitelinks": 274,
+  "eigenschappen": {
+   "P2147": {
+    "naam": "rotatietijd",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "5097600",
+    "eenheid": "second"
+   },
+   "P1215": {
+    "naam": "schijnbare helderheid",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "1.9",
+    "eenheid": "1"
+   },
+   "P2054": {
+    "naam": "dichtheid",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "5.427",
+    "eenheid": "gram per cubic centimetre"
+   },
+   "P61": {
+    "naam": "ontdekker",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://www.wikidata.org/.well-known/genid/2f1356288a627b8bb6a4064a15d06dcc",
+    "eenheid": null
+   },
+   "P2233": {
+    "naam": "halve lange as",
+    "n": 2,
+    "met_bron": 1,
+    "voorbeeld": "0.38709893",
+    "eenheid": "astronomical unit"
+   },
+   "P397": {
+    "naam": "draait om",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://www.wikidata.org/entity/Q525",
+    "eenheid": null
+   },
+   "P2120": {
+    "naam": "straal",
+    "n": 3,
+    "met_bron": 3,
+    "voorbeeld": "2439.7",
+    "eenheid": "kilometre"
+   },
+   "P7015": {
+    "naam": "zwaartekracht aan oppervlak",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "3.7278",
+    "eenheid": "metre per square second"
+   },
+   "P2076": {
+    "naam": "temperatuur",
+    "n": 3,
+    "met_bron": 1,
+    "voorbeeld": "700",
+    "eenheid": "kelvin"
+   },
+   "P2386": {
+    "naam": "diameter",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "4878",
+    "eenheid": "kilometre"
+   },
+   "P2067": {
+    "naam": "massa",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "330",
+    "eenheid": "yottagram"
+   },
+   "P367": {
+    "naam": "astronomisch symbool",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Mercury%20symbol%20%28fixed%2",
+    "eenheid": null
+   },
+   "P2146": {
+    "naam": "omlooptijd",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "87.969",
+    "eenheid": "day"
+   },
+   "P398": {
+    "naam": "manen/kind",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://www.wikidata.org/entity/Q1349809",
+    "eenheid": null
+   },
+   "P18": {
+    "naam": "afbeelding",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Mercury%20in%20color%20-%20Pr",
+    "eenheid": null
+   },
+   "P2583": {
+    "naam": "afstand tot aarde",
+    "n": 2,
+    "met_bron": 0,
+    "voorbeeld": "217000000",
+    "eenheid": "kilometre"
+   },
+   "P575": {
+    "naam": "ontdekt (datum)",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://www.wikidata.org/.well-known/genid/7251178c5f7836a68eca6c7801d54c3d",
+    "eenheid": null
+   }
+  },
+  "img": [
+   "http://commons.wikimedia.org/wiki/Special:FilePath/Mercury%20in%20color%20-%20Prockter07%20centered.jpg"
+  ],
+  "nl": "Mercurius",
+  "nldesc": "binnenste planeet van ons zonnestelsel",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Mercurius_(planeet)"
+ },
+ "venus": {
+  "naam": "Venus",
+  "en": "Venus",
+  "qid": "Q313",
+  "sitelinks": 279,
+  "eigenschappen": {
+   "P2146": {
+    "naam": "omlooptijd",
+    "n": 2,
+    "met_bron": 2,
+    "voorbeeld": "19414148",
+    "eenheid": "second"
+   },
+   "P2120": {
+    "naam": "straal",
+    "n": 3,
+    "met_bron": 3,
+    "voorbeeld": "6051.8",
+    "eenheid": "kilometre"
+   },
+   "P2147": {
+    "naam": "rotatietijd",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "-5832.5",
+    "eenheid": "hour"
+   },
+   "P2076": {
+    "naam": "temperatuur",
+    "n": 2,
+    "met_bron": 2,
+    "voorbeeld": "464",
+    "eenheid": "degree Celsius"
+   },
+   "P7015": {
+    "naam": "zwaartekracht aan oppervlak",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "8.9",
+    "eenheid": "metre per square second"
+   },
+   "P2386": {
+    "naam": "diameter",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "12103.6",
+    "eenheid": "kilometre"
+   },
+   "P2054": {
+    "naam": "dichtheid",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "5.243",
+    "eenheid": "gram per cubic centimetre"
+   },
+   "P1215": {
+    "naam": "schijnbare helderheid",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "-4.8",
+    "eenheid": "1"
+   },
+   "P397": {
+    "naam": "draait om",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://www.wikidata.org/entity/Q525",
+    "eenheid": null
+   },
+   "P2583": {
+    "naam": "afstand tot aarde",
+    "n": 3,
+    "met_bron": 1,
+    "voorbeeld": "108000000",
+    "eenheid": "kilometre"
+   },
+   "P367": {
+    "naam": "astronomisch symbool",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Venus%20symbol%20%28fixed%20w",
+    "eenheid": null
+   },
+   "P2233": {
+    "naam": "halve lange as",
+    "n": 2,
+    "met_bron": 0,
+    "voorbeeld": "0.723332",
+    "eenheid": "astronomical unit"
+   },
+   "P18": {
+    "naam": "afbeelding",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/PIA23791-Venus-RealAndEnhance",
+    "eenheid": null
+   },
+   "P2067": {
+    "naam": "massa",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "4867.5",
+    "eenheid": "yottagram"
+   },
+   "P398": {
+    "naam": "manen/kind",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://www.wikidata.org/entity/Q248795",
+    "eenheid": null
+   }
+  },
+  "img": [
+   "http://commons.wikimedia.org/wiki/Special:FilePath/PIA23791-Venus-RealAndEnhancedContrastViews-20200608%20%28cropped%29.jpg"
+  ],
+  "nl": "Venus",
+  "nldesc": "tweede planeet in ons zonnestelsel",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Venus_(planeet)"
+ },
+ "aarde": {
+  "naam": "de aarde",
+  "en": "Earth",
+  "qid": "Q2",
+  "sitelinks": 370,
+  "eigenschappen": {
+   "P398": {
+    "naam": "manen/kind",
+    "n": 91,
+    "met_bron": 80,
+    "voorbeeld": "http://www.wikidata.org/entity/Q1891259",
+    "eenheid": null
+   },
+   "P4896": {
+    "naam": "3D-model",
+    "n": 2,
+    "met_bron": 1,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Earth%20dry%20elevation.stl",
+    "eenheid": null
+   },
+   "P7015": {
+    "naam": "zwaartekracht aan oppervlak",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "9.798",
+    "eenheid": "metre per square second"
+   },
+   "P2076": {
+    "naam": "temperatuur",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "15",
+    "eenheid": "degree Celsius"
+   },
+   "P2120": {
+    "naam": "straal",
+    "n": 4,
+    "met_bron": 1,
+    "voorbeeld": "6371",
+    "eenheid": "kilometre"
+   },
+   "P367": {
+    "naam": "astronomisch symbool",
+    "n": 2,
+    "met_bron": 1,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Earth%20symbol%20%28fixed%20w",
+    "eenheid": null
+   },
+   "P2146": {
+    "naam": "omlooptijd",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "365.256363004",
+    "eenheid": "day"
+   },
+   "P2067": {
+    "naam": "massa",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "5972.37",
+    "eenheid": "yottagram"
+   },
+   "P2054": {
+    "naam": "dichtheid",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "5.513",
+    "eenheid": "gram per cubic centimetre"
+   },
+   "P2147": {
+    "naam": "rotatietijd",
+    "n": 2,
+    "met_bron": 1,
+    "voorbeeld": "86164.098903691",
+    "eenheid": "second"
+   },
+   "P2386": {
+    "naam": "diameter",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "12742",
+    "eenheid": "kilometre"
+   },
+   "P397": {
+    "naam": "draait om",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://www.wikidata.org/entity/Q525",
+    "eenheid": null
+   },
+   "P575": {
+    "naam": "ontdekt (datum)",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://www.wikidata.org/.well-known/genid/17415099103bc63399f63abaeed08c4a",
+    "eenheid": null
+   },
+   "P2233": {
+    "naam": "halve lange as",
+    "n": 2,
+    "met_bron": 0,
+    "voorbeeld": "1",
+    "eenheid": "astronomical unit"
+   },
+   "P18": {
+    "naam": "afbeelding",
+    "n": 2,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Blue%20Marble%20%285052",
+    "eenheid": null
+   },
+   "P2583": {
+    "naam": "afstand tot aarde",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "0",
+    "eenheid": "kilometre"
+   }
+  },
+  "img": [
+   "http://commons.wikimedia.org/wiki/Special:FilePath/Meteosat-12-fci-march-equinox-2025-noon.jpg"
+  ],
+  "nl": "Aarde",
+  "nldesc": "derde planeet in het zonnestelsel",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Aarde_(planeet)"
+ },
+ "mars": {
+  "naam": "Mars",
+  "en": "Mars",
+  "qid": "Q111",
+  "sitelinks": 291,
+  "eigenschappen": {
+   "P2147": {
+    "naam": "rotatietijd",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "24.6229633",
+    "eenheid": "hour"
+   },
+   "P398": {
+    "naam": "manen/kind",
+    "n": 17,
+    "met_bron": 17,
+    "voorbeeld": "http://www.wikidata.org/entity/Q1065662",
+    "eenheid": null
+   },
+   "P7015": {
+    "naam": "zwaartekracht aan oppervlak",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "3.71",
+    "eenheid": "metre per square second"
+   },
+   "P4896": {
+    "naam": "3D-model",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Mars%20elevation.stl",
+    "eenheid": null
+   },
+   "P2076": {
+    "naam": "temperatuur",
+    "n": 3,
+    "met_bron": 3,
+    "voorbeeld": "37",
+    "eenheid": "degree Celsius"
+   },
+   "P367": {
+    "naam": "astronomisch symbool",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Mars%20symbol%20%28fixed%20wi",
+    "eenheid": null
+   },
+   "P2146": {
+    "naam": "omlooptijd",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "686.98",
+    "eenheid": "day"
+   },
+   "P2054": {
+    "naam": "dichtheid",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "3.9335",
+    "eenheid": "gram per cubic centimetre"
+   },
+   "P2120": {
+    "naam": "straal",
+    "n": 3,
+    "met_bron": 3,
+    "voorbeeld": "3396.19",
+    "eenheid": "kilometre"
+   },
+   "P2583": {
+    "naam": "afstand tot aarde",
+    "n": 2,
+    "met_bron": 2,
+    "voorbeeld": "401400000",
+    "eenheid": "kilometre"
+   },
+   "P2067": {
+    "naam": "massa",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "641.691",
+    "eenheid": "yottagram"
+   },
+   "P1215": {
+    "naam": "schijnbare helderheid",
+    "n": 2,
+    "met_bron": 2,
+    "voorbeeld": "-2.94",
+    "eenheid": "1"
+   },
+   "P2233": {
+    "naam": "halve lange as",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "227936636",
+    "eenheid": "kilometre"
+   },
+   "P397": {
+    "naam": "draait om",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://www.wikidata.org/entity/Q525",
+    "eenheid": null
+   },
+   "P18": {
+    "naam": "afbeelding",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Mars%20-%20August%2030%202021",
+    "eenheid": null
+   }
+  },
+  "img": [
+   "http://commons.wikimedia.org/wiki/Special:FilePath/Mars%20-%20August%2030%202021%20-%20Flickr%20-%20Kevin%20M.%20Gill.png"
+  ],
+  "nl": "Mars",
+  "nldesc": "vierde planeet in ons zonnestelsel",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Mars_(planeet)"
+ },
+ "jupiter": {
+  "naam": "Jupiter",
+  "en": "Jupiter",
+  "qid": "Q319",
+  "sitelinks": 271,
+  "eigenschappen": {
+   "P2147": {
+    "naam": "rotatietijd",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "9.9",
+    "eenheid": "hour"
+   },
+   "P398": {
+    "naam": "manen/kind",
+    "n": 88,
+    "met_bron": 83,
+    "voorbeeld": "http://www.wikidata.org/entity/Q1458744",
+    "eenheid": null
+   },
+   "P2120": {
+    "naam": "straal",
+    "n": 3,
+    "met_bron": 3,
+    "voorbeeld": "69911",
+    "eenheid": "kilometre"
+   },
+   "P2386": {
+    "naam": "diameter",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "142984",
+    "eenheid": "kilometre"
+   },
+   "P2146": {
+    "naam": "omlooptijd",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "4332.589",
+    "eenheid": "day"
+   },
+   "P397": {
+    "naam": "draait om",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://www.wikidata.org/entity/Q525",
+    "eenheid": null
+   },
+   "P2067": {
+    "naam": "massa",
+    "n": 2,
+    "met_bron": 1,
+    "voorbeeld": "1898130",
+    "eenheid": "yottagram"
+   },
+   "P2054": {
+    "naam": "dichtheid",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "1326",
+    "eenheid": "kilogram per cubic metre"
+   },
+   "P7015": {
+    "naam": "zwaartekracht aan oppervlak",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "23.1",
+    "eenheid": "metre per square second"
+   },
+   "P2233": {
+    "naam": "halve lange as",
+    "n": 2,
+    "met_bron": 2,
+    "voorbeeld": "5.20336301",
+    "eenheid": "astronomical unit"
+   },
+   "P367": {
+    "naam": "astronomisch symbool",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Jupiter%20symbol%20%28fixed%2",
+    "eenheid": null
+   },
+   "P18": {
+    "naam": "afbeelding",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Jupiter%20OPAL%202024.png",
+    "eenheid": null
+   },
+   "P1215": {
+    "naam": "schijnbare helderheid",
+    "n": 2,
+    "met_bron": 0,
+    "voorbeeld": "-2.94",
+    "eenheid": "1"
+   },
+   "P2583": {
+    "naam": "afstand tot aarde",
+    "n": 2,
+    "met_bron": 0,
+    "voorbeeld": "967000000",
+    "eenheid": "kilometre"
+   }
+  },
+  "img": [
+   "http://commons.wikimedia.org/wiki/Special:FilePath/Jupiter%20OPAL%202024.png"
+  ],
+  "nl": "Jupiter",
+  "nldesc": "vanaf de zon berekend de vijfde en tevens grootste planeet van het zonnestelsel",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Jupiter_(planeet)"
+ },
+ "saturnus": {
+  "naam": "Saturnus",
+  "en": "Saturn",
+  "qid": "Q193",
+  "sitelinks": 262,
+  "eigenschappen": {
+   "P398": {
+    "naam": "manen/kind",
+    "n": 171,
+    "met_bron": 104,
+    "voorbeeld": "http://www.wikidata.org/entity/Q70072809",
+    "eenheid": null
+   },
+   "P2067": {
+    "naam": "massa",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "568360",
+    "eenheid": "yottagram"
+   },
+   "P367": {
+    "naam": "astronomisch symbool",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Saturn%20symbol%20%28fixed%20",
+    "eenheid": null
+   },
+   "P2120": {
+    "naam": "straal",
+    "n": 3,
+    "met_bron": 3,
+    "voorbeeld": "54364",
+    "eenheid": "kilometre"
+   },
+   "P2076": {
+    "naam": "temperatuur",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "134",
+    "eenheid": "kelvin"
+   },
+   "P2233": {
+    "naam": "halve lange as",
+    "n": 3,
+    "met_bron": 3,
+    "voorbeeld": "1429394069",
+    "eenheid": "kilometre"
+   },
+   "P397": {
+    "naam": "draait om",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://www.wikidata.org/entity/Q525",
+    "eenheid": null
+   },
+   "P2054": {
+    "naam": "dichtheid",
+    "n": 2,
+    "met_bron": 2,
+    "voorbeeld": "0.867",
+    "eenheid": "gram per cubic centimetre"
+   },
+   "P7015": {
+    "naam": "zwaartekracht aan oppervlak",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "8.96",
+    "eenheid": "metre per square second"
+   },
+   "P2147": {
+    "naam": "rotatietijd",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "10.7",
+    "eenheid": "hour"
+   },
+   "P2386": {
+    "naam": "diameter",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "120536",
+    "eenheid": "kilometre"
+   },
+   "P2146": {
+    "naam": "omlooptijd",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "10757.7365",
+    "eenheid": "day"
+   },
+   "P1215": {
+    "naam": "schijnbare helderheid",
+    "n": 2,
+    "met_bron": 1,
+    "voorbeeld": "-0.24",
+    "eenheid": "1"
+   },
+   "P2583": {
+    "naam": "afstand tot aarde",
+    "n": 2,
+    "met_bron": 0,
+    "voorbeeld": "1660000000",
+    "eenheid": "kilometre"
+   },
+   "P18": {
+    "naam": "afbeelding",
+    "n": 2,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Saturn%2C%20Four%20Years%20On",
+    "eenheid": null
+   }
+  },
+  "img": [
+   "http://commons.wikimedia.org/wiki/Special:FilePath/8423%2020181%201saturn2016.jpg"
+  ],
+  "nl": "Saturnus",
+  "nldesc": "zesde planeet in ons zonnestelsel",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Saturnus_(planeet)"
+ },
+ "uranus": {
+  "naam": "Uranus",
+  "en": "Uranus",
+  "qid": "Q324",
+  "sitelinks": 262,
+  "eigenschappen": {
+   "P2147": {
+    "naam": "rotatietijd",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "17",
+    "eenheid": "hour"
+   },
+   "P2076": {
+    "naam": "temperatuur",
+    "n": 3,
+    "met_bron": 3,
+    "voorbeeld": "57",
+    "eenheid": "kelvin"
+   },
+   "P398": {
+    "naam": "manen/kind",
+    "n": 41,
+    "met_bron": 28,
+    "voorbeeld": "http://www.wikidata.org/entity/Q18495",
+    "eenheid": null
+   },
+   "P2233": {
+    "naam": "halve lange as",
+    "n": 2,
+    "met_bron": 1,
+    "voorbeeld": "19.18916464",
+    "eenheid": "astronomical unit"
+   },
+   "P2054": {
+    "naam": "dichtheid",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "1.271",
+    "eenheid": "gram per cubic centimetre"
+   },
+   "P2120": {
+    "naam": "straal",
+    "n": 3,
+    "met_bron": 3,
+    "voorbeeld": "24973",
+    "eenheid": "kilometre"
+   },
+   "P575": {
+    "naam": "ontdekt (datum)",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "1781-03-13T00:00:00Z",
+    "eenheid": null
+   },
+   "P7015": {
+    "naam": "zwaartekracht aan oppervlak",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "8.7",
+    "eenheid": "metre per square second"
+   },
+   "P1215": {
+    "naam": "schijnbare helderheid",
+    "n": 2,
+    "met_bron": 1,
+    "voorbeeld": "5.32",
+    "eenheid": "1"
+   },
+   "P2386": {
+    "naam": "diameter",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "51118",
+    "eenheid": "kilometre"
+   },
+   "P397": {
+    "naam": "draait om",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://www.wikidata.org/entity/Q525",
+    "eenheid": null
+   },
+   "P61": {
+    "naam": "ontdekker",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://www.wikidata.org/entity/Q14277",
+    "eenheid": null
+   },
+   "P367": {
+    "naam": "astronomisch symbool",
+    "n": 2,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Uranus%20monogram%20%28fixed%",
+    "eenheid": null
+   },
+   "P2146": {
+    "naam": "omlooptijd",
+    "n": 2,
+    "met_bron": 0,
+    "voorbeeld": "30688.5",
+    "eenheid": "day"
+   },
+   "P2067": {
+    "naam": "massa",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "86810",
+    "eenheid": "yottagram"
+   },
+   "P18": {
+    "naam": "afbeelding",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Uranus%20Voyager2%20color%20c",
+    "eenheid": null
+   },
+   "P2583": {
+    "naam": "afstand tot aarde",
+    "n": 2,
+    "met_bron": 0,
+    "voorbeeld": "3150000000",
+    "eenheid": "kilometre"
+   }
+  },
+  "img": [
+   "http://commons.wikimedia.org/wiki/Special:FilePath/Uranus%20Voyager2%20color%20calibrated.png"
+  ],
+  "nl": "Uranus",
+  "nldesc": "zevende planeet in ons zonnestelsel",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Uranus_(planeet)"
+ },
+ "neptunus": {
+  "naam": "Neptunus",
+  "en": "Neptune",
+  "qid": "Q332",
+  "sitelinks": 252,
+  "eigenschappen": {
+   "P2147": {
+    "naam": "rotatietijd",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "16",
+    "eenheid": "hour"
+   },
+   "P398": {
+    "naam": "manen/kind",
+    "n": 26,
+    "met_bron": 15,
+    "voorbeeld": "http://www.wikidata.org/entity/Q19471",
+    "eenheid": null
+   },
+   "P2120": {
+    "naam": "straal",
+    "n": 3,
+    "met_bron": 3,
+    "voorbeeld": "24341",
+    "eenheid": "kilometre"
+   },
+   "P397": {
+    "naam": "draait om",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://www.wikidata.org/entity/Q525",
+    "eenheid": null
+   },
+   "P61": {
+    "naam": "ontdekker",
+    "n": 4,
+    "met_bron": 3,
+    "voorbeeld": "http://www.wikidata.org/entity/Q20015",
+    "eenheid": null
+   },
+   "P2233": {
+    "naam": "halve lange as",
+    "n": 2,
+    "met_bron": 1,
+    "voorbeeld": "30.06992276",
+    "eenheid": "astronomical unit"
+   },
+   "P18": {
+    "naam": "afbeelding",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Neptune%20Voyager2%20color%20",
+    "eenheid": null
+   },
+   "P2386": {
+    "naam": "diameter",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "49528",
+    "eenheid": "kilometre"
+   },
+   "P2054": {
+    "naam": "dichtheid",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "1.638",
+    "eenheid": "gram per cubic centimetre"
+   },
+   "P575": {
+    "naam": "ontdekt (datum)",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "1846-09-23T00:00:00Z",
+    "eenheid": null
+   },
+   "P7015": {
+    "naam": "zwaartekracht aan oppervlak",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "11",
+    "eenheid": "metre per square second"
+   },
+   "P1215": {
+    "naam": "schijnbare helderheid",
+    "n": 2,
+    "met_bron": 1,
+    "voorbeeld": "8",
+    "eenheid": "1"
+   },
+   "P367": {
+    "naam": "astronomisch symbool",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Neptune%20symbol%20%28fixed%2",
+    "eenheid": null
+   },
+   "P2583": {
+    "naam": "afstand tot aarde",
+    "n": 2,
+    "met_bron": 0,
+    "voorbeeld": "4600000000",
+    "eenheid": "kilometre"
+   },
+   "P2146": {
+    "naam": "omlooptijd",
+    "n": 2,
+    "met_bron": 0,
+    "voorbeeld": "60193.2",
+    "eenheid": "day"
+   },
+   "P2067": {
+    "naam": "massa",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "102430",
+    "eenheid": "yottagram"
+   },
+   "P2076": {
+    "naam": "temperatuur",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "72",
+    "eenheid": "kelvin"
+   }
+  },
+  "img": [
+   "http://commons.wikimedia.org/wiki/Special:FilePath/Neptune%20Voyager2%20color%20calibrated.png"
+  ],
+  "nl": "Neptunus",
+  "nldesc": "achtste planeet in ons zonnestelsel",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Neptunus_(planeet)"
+ },
+ "pluto": {
+  "naam": "Pluto",
+  "en": "Pluto",
+  "qid": "Q339",
+  "sitelinks": 223,
+  "eigenschappen": {
+   "P2233": {
+    "naam": "halve lange as",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "39.48211675",
+    "eenheid": "astronomical unit"
+   },
+   "P2386": {
+    "naam": "diameter",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "2376",
+    "eenheid": "kilometre"
+   },
+   "P2120": {
+    "naam": "straal",
+    "n": 3,
+    "met_bron": 3,
+    "voorbeeld": "1185",
+    "eenheid": "kilometre"
+   },
+   "P398": {
+    "naam": "manen/kind",
+    "n": 6,
+    "met_bron": 5,
+    "voorbeeld": "http://www.wikidata.org/entity/Q105713",
+    "eenheid": null
+   },
+   "P2067": {
+    "naam": "massa",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "13.05",
+    "eenheid": "yottagram"
+   },
+   "P1215": {
+    "naam": "schijnbare helderheid",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "15.1",
+    "eenheid": "1"
+   },
+   "P2146": {
+    "naam": "omlooptijd",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "90553.02",
+    "eenheid": "day"
+   },
+   "P397": {
+    "naam": "draait om",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://www.wikidata.org/entity/Q525",
+    "eenheid": null
+   },
+   "P367": {
+    "naam": "astronomisch symbool",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Pluto%20symbol%20%28large%20o",
+    "eenheid": null
+   },
+   "P18": {
+    "naam": "afbeelding",
+    "n": 2,
+    "met_bron": 1,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Global%20LORRI%20mosaic%20of%",
+    "eenheid": null
+   },
+   "P2054": {
+    "naam": "dichtheid",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "1.85",
+    "eenheid": "gram per cubic centimetre"
+   },
+   "P2076": {
+    "naam": "temperatuur",
+    "n": 3,
+    "met_bron": 1,
+    "voorbeeld": "55",
+    "eenheid": "kelvin"
+   },
+   "P7015": {
+    "naam": "zwaartekracht aan oppervlak",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "0.62",
+    "eenheid": "metre per square second"
+   },
+   "P575": {
+    "naam": "ontdekt (datum)",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "1930-02-18T00:00:00Z",
+    "eenheid": null
+   },
+   "P2147": {
+    "naam": "rotatietijd",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "6.38723",
+    "eenheid": "day"
+   },
+   "P61": {
+    "naam": "ontdekker",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://www.wikidata.org/entity/Q190232",
+    "eenheid": null
+   }
+  },
+  "img": [
+   "http://commons.wikimedia.org/wiki/Special:FilePath/Pluto%20in%20True%20Color%20-%20High-Res.jpg"
+  ],
+  "nl": "Pluto",
+  "nldesc": "dwergplaneet in ons zonnestelsel",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Pluto_(dwergplaneet)"
+ },
+ "ceres": {
+  "naam": "Ceres",
+  "en": "Ceres",
+  "qid": "Q596",
+  "sitelinks": 146,
+  "eigenschappen": {
+   "P2054": {
+    "naam": "dichtheid",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "2.1616",
+    "eenheid": "gram per cubic centimetre"
+   },
+   "P575": {
+    "naam": "ontdekt (datum)",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "1801-01-01T00:00:00Z",
+    "eenheid": null
+   },
+   "P61": {
+    "naam": "ontdekker",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://www.wikidata.org/entity/Q14280",
+    "eenheid": null
+   },
+   "P397": {
+    "naam": "draait om",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://www.wikidata.org/entity/Q525",
+    "eenheid": null
+   },
+   "P2386": {
+    "naam": "diameter",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "939.4",
+    "eenheid": "kilometre"
+   },
+   "P2147": {
+    "naam": "rotatietijd",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "9.07417",
+    "eenheid": "hour"
+   },
+   "P1215": {
+    "naam": "schijnbare helderheid",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "6.79",
+    "eenheid": "1"
+   },
+   "P2067": {
+    "naam": "massa",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "939300000000000000000",
+    "eenheid": "kilogram"
+   },
+   "P2233": {
+    "naam": "halve lange as",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "2.765615651508659",
+    "eenheid": "astronomical unit"
+   },
+   "P2146": {
+    "naam": "omlooptijd",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "1679.910572771899",
+    "eenheid": "day"
+   },
+   "P367": {
+    "naam": "astronomisch symbool",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Ceres%20symbol%20%28fixed%20w",
+    "eenheid": null
+   },
+   "P18": {
+    "naam": "afbeelding",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Ceres%20-%20RC3%20-%20Haulani",
+    "eenheid": null
+   }
+  },
+  "img": [
+   "http://commons.wikimedia.org/wiki/Special:FilePath/Ceres%20-%20RC3%20-%20Haulani%20Crater%20%2822381131691%29%20%28cropped%29.jpg"
+  ],
+  "nl": "Ceres",
+  "nldesc": "dwergplaneet",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Ceres_(dwergplaneet)"
+ },
+ "io": {
+  "naam": "Io",
+  "en": "Io",
+  "qid": "Q3123",
+  "sitelinks": 114,
+  "eigenschappen": {
+   "P18": {
+    "naam": "afbeelding",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Image%20of%20Io%20from%20Juno",
+    "eenheid": null
+   },
+   "P2076": {
+    "naam": "temperatuur",
+    "n": 3,
+    "met_bron": 3,
+    "voorbeeld": "130",
+    "eenheid": "kelvin"
+   },
+   "P2067": {
+    "naam": "massa",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "89.296",
+    "eenheid": "yottagram"
+   },
+   "P2120": {
+    "naam": "straal",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "1821.6",
+    "eenheid": "kilometre"
+   },
+   "P61": {
+    "naam": "ontdekker",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://www.wikidata.org/entity/Q307",
+    "eenheid": null
+   },
+   "P397": {
+    "naam": "draait om",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://www.wikidata.org/entity/Q319",
+    "eenheid": null
+   },
+   "P575": {
+    "naam": "ontdekt (datum)",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "1610-01-07T00:00:00Z",
+    "eenheid": null
+   },
+   "P1215": {
+    "naam": "schijnbare helderheid",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "5.02",
+    "eenheid": "1"
+   },
+   "P2054": {
+    "naam": "dichtheid",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "3.528",
+    "eenheid": "gram per cubic centimetre"
+   },
+   "P2233": {
+    "naam": "halve lange as",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "421800",
+    "eenheid": "kilometre"
+   },
+   "P367": {
+    "naam": "astronomisch symbool",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Io%20symbol%20%28fixed%20widt",
+    "eenheid": null
+   },
+   "P2386": {
+    "naam": "diameter",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "3660",
+    "eenheid": "kilometre"
+   },
+   "P7015": {
+    "naam": "zwaartekracht aan oppervlak",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "1.796",
+    "eenheid": "centimetre per square second"
+   },
+   "P2146": {
+    "naam": "omlooptijd",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "1.769137786",
+    "eenheid": "day"
+   }
+  },
+  "img": [
+   "http://commons.wikimedia.org/wiki/Special:FilePath/Image%20of%20Io%20from%20Juno%20JunoCam%20from%20December%202023.png"
+  ],
+  "nl": "Io",
+  "nldesc": "maan van Jupiter",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Io_(maan)"
+ },
+ "europa": {
+  "naam": "Europa",
+  "en": "Europa",
+  "qid": "Q3143",
+  "sitelinks": 115,
+  "eigenschappen": {
+   "P2076": {
+    "naam": "temperatuur",
+    "n": 3,
+    "met_bron": 1,
+    "voorbeeld": "125",
+    "eenheid": "kelvin"
+   },
+   "P2054": {
+    "naam": "dichtheid",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "3.013",
+    "eenheid": "gram per cubic centimetre"
+   },
+   "P61": {
+    "naam": "ontdekker",
+    "n": 2,
+    "met_bron": 1,
+    "voorbeeld": "http://www.wikidata.org/entity/Q307",
+    "eenheid": null
+   },
+   "P2067": {
+    "naam": "massa",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "47.986",
+    "eenheid": "yottagram"
+   },
+   "P1215": {
+    "naam": "schijnbare helderheid",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "5.29",
+    "eenheid": "1"
+   },
+   "P397": {
+    "naam": "draait om",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://www.wikidata.org/entity/Q319",
+    "eenheid": null
+   },
+   "P2146": {
+    "naam": "omlooptijd",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "3.551181",
+    "eenheid": "day"
+   },
+   "P367": {
+    "naam": "astronomisch symbool",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Europa%20moon%20symbol%20%28f",
+    "eenheid": null
+   },
+   "P7015": {
+    "naam": "zwaartekracht aan oppervlak",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "1.314",
+    "eenheid": "metre per square second"
+   },
+   "P575": {
+    "naam": "ontdekt (datum)",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "1610-01-07T00:00:00Z",
+    "eenheid": null
+   },
+   "P18": {
+    "naam": "afbeelding",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Europa-moon.jpg",
+    "eenheid": null
+   },
+   "P2233": {
+    "naam": "halve lange as",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "671100",
+    "eenheid": "kilometre"
+   },
+   "P2120": {
+    "naam": "straal",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "1560.8",
+    "eenheid": "kilometre"
+   }
+  },
+  "img": [
+   "http://commons.wikimedia.org/wiki/Special:FilePath/Europa-moon.jpg"
+  ],
+  "nl": "Europa",
+  "nldesc": "Maan van Jupiter",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Europa_(maan)"
+ },
+ "titan": {
+  "naam": "Titan",
+  "en": "Titan",
+  "qid": "Q2565",
+  "sitelinks": 121,
+  "eigenschappen": {
+   "P61": {
+    "naam": "ontdekker",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://www.wikidata.org/entity/Q39599",
+    "eenheid": null
+   },
+   "P7015": {
+    "naam": "zwaartekracht aan oppervlak",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "1.354",
+    "eenheid": "metre per square second"
+   },
+   "P2076": {
+    "naam": "temperatuur",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "93.7",
+    "eenheid": "kelvin"
+   },
+   "P2054": {
+    "naam": "dichtheid",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "1.8798",
+    "eenheid": "gram per cubic centimetre"
+   },
+   "P2067": {
+    "naam": "massa",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "134.518",
+    "eenheid": "yottagram"
+   },
+   "P397": {
+    "naam": "draait om",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://www.wikidata.org/entity/Q193",
+    "eenheid": null
+   },
+   "P367": {
+    "naam": "astronomisch symbool",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Titan%20T%20symbol%20%28fixed",
+    "eenheid": null
+   },
+   "P575": {
+    "naam": "ontdekt (datum)",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "1655-03-25T00:00:00Z",
+    "eenheid": null
+   },
+   "P2233": {
+    "naam": "halve lange as",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "1221870",
+    "eenheid": "kilometre"
+   },
+   "P2146": {
+    "naam": "omlooptijd",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "15.945421",
+    "eenheid": "day"
+   },
+   "P18": {
+    "naam": "afbeelding",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Titan%20in%20true%20color%20b",
+    "eenheid": null
+   },
+   "P2120": {
+    "naam": "straal",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "2574",
+    "eenheid": "kilometre"
+   }
+  },
+  "img": [
+   "http://commons.wikimedia.org/wiki/Special:FilePath/Titan%20in%20true%20color%20by%20Kevin%20M.%20Gill.jpg"
+  ],
+  "nl": "Titan",
+  "nldesc": "maan van Saturnus",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Titan_(maan)"
+ },
+ "halley": {
+  "naam": "de komeet Halley",
+  "en": "Halley's Comet",
+  "qid": "Q23054",
+  "sitelinks": 103,
+  "eigenschappen": {
+   "P2233": {
+    "naam": "halve lange as",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "17.92863504856923",
+    "eenheid": "astronomical unit"
+   },
+   "P2146": {
+    "naam": "omlooptijd",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "27728.04608790421",
+    "eenheid": "day"
+   },
+   "P398": {
+    "naam": "manen/kind",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://www.wikidata.org/entity/Q249546",
+    "eenheid": null
+   },
+   "P2054": {
+    "naam": "dichtheid",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "850",
+    "eenheid": "kilogram per cubic metre"
+   },
+   "P2067": {
+    "naam": "massa",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "220",
+    "eenheid": "teragram"
+   },
+   "P575": {
+    "naam": "ontdekt (datum)",
+    "n": 4,
+    "met_bron": 4,
+    "voorbeeld": "1758-12-25T00:00:00Z",
+    "eenheid": null
+   },
+   "P2386": {
+    "naam": "diameter",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "11",
+    "eenheid": "kilometre"
+   },
+   "P18": {
+    "naam": "afbeelding",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Lspn%20comet%20halley.jpg",
+    "eenheid": null
+   },
+   "P367": {
+    "naam": "astronomisch symbool",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Comet%20Halley%20symbol%20%28",
+    "eenheid": null
+   },
+   "P61": {
+    "naam": "ontdekker",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://www.wikidata.org/entity/Q47434",
+    "eenheid": null
+   },
+   "P397": {
+    "naam": "draait om",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://www.wikidata.org/entity/Q525",
+    "eenheid": null
+   }
+  },
+  "img": [
+   "http://commons.wikimedia.org/wiki/Special:FilePath/Lspn%20comet%20halley.jpg"
+  ],
+  "nl": "Komeet Halley",
+  "nldesc": "astronomisch verschijnsel",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Komeet_Halley"
+ },
+ "poolster": {
+  "naam": "de Poolster",
+  "en": "Polaris",
+  "qid": "Q12980",
+  "sitelinks": 102,
+  "eigenschappen": {
+   "P2120": {
+    "naam": "straal",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "30",
+    "eenheid": "solar radius"
+   },
+   "P7015": {
+    "naam": "zwaartekracht aan oppervlak",
+    "n": 2,
+    "met_bron": 2,
+    "voorbeeld": "90",
+    "eenheid": "centimetre per square second"
+   },
+   "P215": {
+    "naam": "spectraalklasse",
+    "n": 4,
+    "met_bron": 4,
+    "voorbeeld": "F8Ib",
+    "eenheid": null
+   },
+   "P59": {
+    "naam": "sterrenbeeld",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://www.wikidata.org/entity/Q10478",
+    "eenheid": null
+   },
+   "P2067": {
+    "naam": "massa",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "6",
+    "eenheid": "solar mass"
+   },
+   "P1215": {
+    "naam": "schijnbare helderheid",
+    "n": 9,
+    "met_bron": 9,
+    "voorbeeld": "2.02",
+    "eenheid": "1"
+   },
+   "P2583": {
+    "naam": "afstand tot aarde",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "432",
+    "eenheid": "light-year"
+   },
+   "P18": {
+    "naam": "afbeelding",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Polaris%20alpha%20ursae%20min",
+    "eenheid": null
+   }
+  },
+  "img": [
+   "http://commons.wikimedia.org/wiki/Special:FilePath/Polaris%20alpha%20ursae%20minoris.jpg"
+  ],
+  "nl": "Polaris",
+  "nldesc": "poolster — helderste ster in het sterrenbeeld Kleine Beer",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Polaris"
+ },
+ "sirius": {
+  "naam": "Sirius",
+  "en": "Sirius",
+  "qid": "Q3409",
+  "sitelinks": 105,
+  "eigenschappen": {
+   "P215": {
+    "naam": "spectraalklasse",
+    "n": 9,
+    "met_bron": 9,
+    "voorbeeld": "A0mA1 Va+DA2",
+    "eenheid": null
+   },
+   "P1215": {
+    "naam": "schijnbare helderheid",
+    "n": 8,
+    "met_bron": 8,
+    "voorbeeld": "-1.33",
+    "eenheid": "1"
+   },
+   "P7015": {
+    "naam": "zwaartekracht aan oppervlak",
+    "n": 5,
+    "met_bron": 5,
+    "voorbeeld": "16000",
+    "eenheid": "centimetre per square second"
+   },
+   "P59": {
+    "naam": "sterrenbeeld",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://www.wikidata.org/entity/Q10538",
+    "eenheid": null
+   },
+   "P2583": {
+    "naam": "afstand tot aarde",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "8.6",
+    "eenheid": "light-year"
+   },
+   "P18": {
+    "naam": "afbeelding",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Sirius.jpg",
+    "eenheid": null
+   }
+  },
+  "img": [
+   "http://commons.wikimedia.org/wiki/Special:FilePath/Sirius.jpg"
+  ],
+  "nl": "Sirius",
+  "nldesc": "helderste ster van de nachtelijke sterrenhemel",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Sirius_(ster)"
+ },
+ "betelgeuze": {
+  "naam": "Betelgeuze",
+  "en": "Betelgeuse",
+  "qid": "Q12124",
+  "sitelinks": 93,
+  "eigenschappen": {
+   "P7015": {
+    "naam": "zwaartekracht aan oppervlak",
+    "n": 4,
+    "met_bron": 4,
+    "voorbeeld": "1",
+    "eenheid": "centimetre per square second"
+   },
+   "P215": {
+    "naam": "spectraalklasse",
+    "n": 10,
+    "met_bron": 10,
+    "voorbeeld": "M1-M2Ia-Iab",
+    "eenheid": null
+   },
+   "P1215": {
+    "naam": "schijnbare helderheid",
+    "n": 8,
+    "met_bron": 8,
+    "voorbeeld": "-3.73",
+    "eenheid": "1"
+   },
+   "P18": {
+    "naam": "afbeelding",
+    "n": 2,
+    "met_bron": 2,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/Position%20Alpha%20Ori.png",
+    "eenheid": null
+   },
+   "P2120": {
+    "naam": "straal",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "768",
+    "eenheid": "solar radius"
+   },
+   "P2067": {
+    "naam": "massa",
+    "n": 2,
+    "met_bron": 2,
+    "voorbeeld": "14",
+    "eenheid": "solar mass"
+   },
+   "P2583": {
+    "naam": "afstand tot aarde",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "548",
+    "eenheid": "light-year"
+   },
+   "P59": {
+    "naam": "sterrenbeeld",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "http://www.wikidata.org/entity/Q8860",
+    "eenheid": null
+   }
+  },
+  "img": [
+   "http://commons.wikimedia.org/wiki/Special:FilePath/Location%20of%20the%20binary%20system%20of%20Betelgeuse%20in%20constellation%20Orion.png"
+  ],
+  "nl": "Betelgeuze",
+  "nldesc": "ster",
+  "nlwiki": "https://nl.wikipedia.org/wiki/Betelgeuze_(ster)"
+ },
+ "iss": {
+  "naam": "het ISS",
+  "en": "International Space Station",
+  "qid": "Q25271",
+  "sitelinks": 136,
+  "eigenschappen": {
+   "P2067": {
+    "naam": "massa",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "419725",
+    "eenheid": "kilogram"
+   },
+   "P2146": {
+    "naam": "omlooptijd",
+    "n": 1,
+    "met_bron": 1,
+    "voorbeeld": "92.88",
+    "eenheid": "minute"
+   },
+   "P4896": {
+    "naam": "3D-model",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/ISS%202016.stl",
+    "eenheid": null
+   },
+   "P367": {
+    "naam": "astronomisch symbool",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/ISS%20symbol%20%28fixed%20wid",
+    "eenheid": null
+   },
+   "P397": {
+    "naam": "draait om",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://www.wikidata.org/entity/Q2",
+    "eenheid": null
+   },
+   "P18": {
+    "naam": "afbeelding",
+    "n": 1,
+    "met_bron": 0,
+    "voorbeeld": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20station%20pictured%20fr",
+    "eenheid": null
+   }
+  },
+  "img": [
+   "http://commons.wikimedia.org/wiki/Special:FilePath/The%20station%20pictured%20from%20the%20SpaceX%20Crew%20Dragon%205%20%28cropped%29.jpg"
+  ],
+  "nl": "internationaal ruimtestation ISS",
+  "nldesc": "ruimtestation",
+  "nlwiki": "https://nl.wikipedia.org/wiki/ISS_(ruimtestation)"
+ }
+}

@@ -1,0 +1,1366 @@
+{
+ "uranus": {
+  "straal": [
+   [
+    25559.0,
+    "kilometre",
+    "equator",
+    true
+   ],
+   [
+    25362.0,
+    "kilometre",
+    "mean",
+    true
+   ],
+   [
+    24973.0,
+    "kilometre",
+    "polar",
+    true
+   ]
+  ],
+  "temperatuur": [
+   [
+    53.0,
+    "kelvin",
+    "mean",
+    true
+   ],
+   [
+    57.0,
+    "kelvin",
+    "maximum",
+    true
+   ],
+   [
+    49.0,
+    "kelvin",
+    "minimum",
+    true
+   ]
+  ],
+  "afstand tot aarde": [
+   [
+    3150000000.0,
+    "kilometre",
+    "apogee",
+    false
+   ],
+   [
+    2600000000.0,
+    "kilometre",
+    "perigee",
+    false
+   ]
+  ],
+  "diameter": [
+   [
+    51118.0,
+    "kilometre",
+    "equator",
+    true
+   ]
+  ],
+  "zwaartekracht": [
+   [
+    8.7,
+    "metre per square second",
+    null,
+    true
+   ]
+  ],
+  "omlooptijd": [
+   [
+    30688.5,
+    "day",
+    null,
+    false
+   ],
+   [
+    84.0205,
+    "year",
+    null,
+    false
+   ]
+  ],
+  "massa": [
+   [
+    86810.0,
+    "yottagram",
+    null,
+    false
+   ]
+  ],
+  "rotatietijd": [
+   [
+    17.0,
+    "hour",
+    null,
+    true
+   ]
+  ]
+ },
+ "neptunus": {
+  "straal": [
+   [
+    24764.0,
+    "kilometre",
+    "equator",
+    true
+   ],
+   [
+    24622.0,
+    "kilometre",
+    "mean",
+    true
+   ],
+   [
+    24341.0,
+    "kilometre",
+    "polar",
+    true
+   ]
+  ],
+  "temperatuur": [
+   [
+    72.0,
+    "kelvin",
+    "mean",
+    false
+   ]
+  ],
+  "afstand tot aarde": [
+   [
+    4600000000.0,
+    "kilometre",
+    "apogee",
+    false
+   ],
+   [
+    4300000000.0,
+    "kilometre",
+    "perigee",
+    false
+   ]
+  ],
+  "diameter": [
+   [
+    49528.0,
+    "kilometre",
+    null,
+    true
+   ]
+  ],
+  "omlooptijd": [
+   [
+    60193.2,
+    "day",
+    null,
+    false
+   ],
+   [
+    164.8,
+    "year",
+    null,
+    false
+   ]
+  ],
+  "massa": [
+   [
+    102430.0,
+    "yottagram",
+    null,
+    false
+   ]
+  ],
+  "zwaartekracht": [
+   [
+    11.0,
+    "metre per square second",
+    null,
+    true
+   ]
+  ],
+  "rotatietijd": [
+   [
+    16.0,
+    "hour",
+    null,
+    true
+   ]
+  ]
+ },
+ "pluto": {
+  "diameter": [
+   [
+    2376.0,
+    "kilometre",
+    "equator",
+    true
+   ]
+  ],
+  "temperatuur": [
+   [
+    44.0,
+    "kelvin",
+    "mean",
+    false
+   ],
+   [
+    55.0,
+    "kelvin",
+    "maximum",
+    true
+   ],
+   [
+    33.0,
+    "kelvin",
+    "minimum",
+    false
+   ]
+  ],
+  "straal": [
+   [
+    1185.0,
+    "kilometre",
+    "mean",
+    true
+   ],
+   [
+    1185.0,
+    "kilometre",
+    "equator",
+    true
+   ],
+   [
+    1185.0,
+    "kilometre",
+    "polar",
+    true
+   ]
+  ],
+  "massa": [
+   [
+    13.05,
+    "yottagram",
+    null,
+    true
+   ]
+  ],
+  "omlooptijd": [
+   [
+    90553.02,
+    "day",
+    null,
+    true
+   ]
+  ],
+  "rotatietijd": [
+   [
+    6.38723,
+    "day",
+    null,
+    false
+   ]
+  ],
+  "zwaartekracht": [
+   [
+    0.62,
+    "metre per square second",
+    null,
+    true
+   ]
+  ]
+ },
+ "venus": {
+  "diameter": [
+   [
+    12103.6,
+    "kilometre",
+    "equator",
+    true
+   ]
+  ],
+  "straal": [
+   [
+    6051.8,
+    "kilometre",
+    "equator",
+    true
+   ],
+   [
+    6051.8,
+    "kilometre",
+    "mean",
+    true
+   ],
+   [
+    6051.8,
+    "kilometre",
+    "polar",
+    true
+   ]
+  ],
+  "temperatuur": [
+   [
+    464.0,
+    "degree Celsius",
+    "mean",
+    true
+   ],
+   [
+    474.0,
+    "degree Celsius",
+    null,
+    true
+   ]
+  ],
+  "afstand tot aarde": [
+   [
+    108000000.0,
+    "kilometre",
+    "average",
+    true
+   ],
+   [
+    38000000.0,
+    "kilometre",
+    "perihelion",
+    false
+   ],
+   [
+    261000000.0,
+    "kilometre",
+    "aphelion",
+    false
+   ]
+  ],
+  "omlooptijd": [
+   [
+    19414148.0,
+    "second",
+    null,
+    true
+   ],
+   [
+    224.7,
+    "day",
+    null,
+    true
+   ]
+  ],
+  "rotatietijd": [
+   [
+    -5832.5,
+    "hour",
+    null,
+    true
+   ]
+  ],
+  "zwaartekracht": [
+   [
+    8.9,
+    "metre per square second",
+    null,
+    true
+   ]
+  ],
+  "massa": [
+   [
+    4867.5,
+    "yottagram",
+    null,
+    false
+   ]
+  ]
+ },
+ "jupiter": {
+  "straal": [
+   [
+    71492.0,
+    "kilometre",
+    "equator",
+    true
+   ],
+   [
+    69911.0,
+    "kilometre",
+    "mean",
+    true
+   ],
+   [
+    66854.0,
+    "kilometre",
+    "polar",
+    true
+   ]
+  ],
+  "afstand tot aarde": [
+   [
+    967000000.0,
+    "kilometre",
+    "apogee",
+    false
+   ],
+   [
+    588000000.0,
+    "kilometre",
+    "perigee",
+    false
+   ]
+  ],
+  "massa": [
+   [
+    1.0,
+    "Jupiter mass",
+    "definition",
+    false
+   ],
+   [
+    1898130.0,
+    "yottagram",
+    null,
+    true
+   ]
+  ],
+  "diameter": [
+   [
+    142984.0,
+    "kilometre",
+    null,
+    true
+   ]
+  ],
+  "omlooptijd": [
+   [
+    4332.589,
+    "day",
+    null,
+    true
+   ]
+  ],
+  "zwaartekracht": [
+   [
+    23.1,
+    "metre per square second",
+    null,
+    true
+   ]
+  ],
+  "rotatietijd": [
+   [
+    9.9,
+    "hour",
+    null,
+    true
+   ]
+  ]
+ },
+ "io": {
+  "temperatuur": [
+   [
+    130.0,
+    "kelvin",
+    "maximum",
+    true
+   ],
+   [
+    110.0,
+    "kelvin",
+    "mean",
+    true
+   ],
+   [
+    90.0,
+    "kelvin",
+    "minimum",
+    true
+   ]
+  ],
+  "massa": [
+   [
+    89.296,
+    "yottagram",
+    null,
+    true
+   ]
+  ],
+  "straal": [
+   [
+    1821.6,
+    "kilometre",
+    null,
+    true
+   ]
+  ],
+  "diameter": [
+   [
+    3660.0,
+    "kilometre",
+    null,
+    false
+   ]
+  ],
+  "zwaartekracht": [
+   [
+    1.796,
+    "centimetre per square second",
+    null,
+    false
+   ]
+  ],
+  "omlooptijd": [
+   [
+    1.769137786,
+    "day",
+    null,
+    false
+   ]
+  ]
+ },
+ "europa": {
+  "temperatuur": [
+   [
+    125.0,
+    "kelvin",
+    "maximum",
+    true
+   ],
+   [
+    102.0,
+    "kelvin",
+    "mean",
+    false
+   ],
+   [
+    50.0,
+    "kelvin",
+    "minimum",
+    false
+   ]
+  ],
+  "zwaartekracht": [
+   [
+    1.314,
+    "metre per square second",
+    null,
+    false
+   ]
+  ],
+  "massa": [
+   [
+    47.986,
+    "yottagram",
+    null,
+    true
+   ]
+  ],
+  "straal": [
+   [
+    1560.8,
+    "kilometre",
+    null,
+    false
+   ]
+  ],
+  "omlooptijd": [
+   [
+    3.551181,
+    "day",
+    null,
+    true
+   ]
+  ]
+ },
+ "maan": {
+  "diameter": [
+   [
+    3476.2,
+    "kilometre",
+    "equator",
+    true
+   ]
+  ],
+  "straal": [
+   [
+    1738.14,
+    "kilometre",
+    "equator",
+    true
+   ],
+   [
+    1737.1,
+    "kilometre",
+    "mean",
+    true
+   ],
+   [
+    1735.97,
+    "kilometre",
+    "geographical pole",
+    false
+   ]
+  ],
+  "temperatuur": [
+   [
+    390.0,
+    "kelvin",
+    "maximum",
+    true
+   ],
+   [
+    95.0,
+    "kelvin",
+    "minimum",
+    false
+   ]
+  ],
+  "afstand tot aarde": [
+   [
+    385000.5,
+    "kilometre",
+    "orbit",
+    true
+   ],
+   [
+    356565.0,
+    "kilometre",
+    "perigee",
+    true
+   ],
+   [
+    406464.0,
+    "kilometre",
+    "apogee",
+    true
+   ]
+  ],
+  "zwaartekracht": [
+   [
+    1.62,
+    "metre per square second",
+    null,
+    true
+   ]
+  ],
+  "massa": [
+   [
+    73.4767,
+    "yottagram",
+    null,
+    true
+   ]
+  ],
+  "omlooptijd": [
+   [
+    27.321661,
+    "day",
+    null,
+    true
+   ]
+  ]
+ },
+ "mercurius": {
+  "straal": [
+   [
+    2439.7,
+    "kilometre",
+    "mean",
+    true
+   ],
+   [
+    2439.7,
+    "kilometre",
+    "equator",
+    true
+   ],
+   [
+    2439.7,
+    "kilometre",
+    "polar",
+    true
+   ]
+  ],
+  "temperatuur": [
+   [
+    440.0,
+    "kelvin",
+    "mean",
+    false
+   ],
+   [
+    700.0,
+    "kelvin",
+    "maximum",
+    true
+   ],
+   [
+    100.0,
+    "kelvin",
+    "minimum",
+    false
+   ]
+  ],
+  "afstand tot aarde": [
+   [
+    82000000.0,
+    "kilometre",
+    "perigee",
+    false
+   ],
+   [
+    217000000.0,
+    "kilometre",
+    "apogee",
+    false
+   ]
+  ],
+  "zwaartekracht": [
+   [
+    3.7278,
+    "metre per square second",
+    null,
+    true
+   ]
+  ],
+  "diameter": [
+   [
+    4878.0,
+    "kilometre",
+    null,
+    true
+   ]
+  ],
+  "massa": [
+   [
+    330.0,
+    "yottagram",
+    null,
+    true
+   ]
+  ],
+  "omlooptijd": [
+   [
+    87.969,
+    "day",
+    null,
+    true
+   ]
+  ],
+  "rotatietijd": [
+   [
+    5097600.0,
+    "second",
+    null,
+    true
+   ]
+  ]
+ },
+ "saturnus": {
+  "straal": [
+   [
+    60268.0,
+    "kilometre",
+    "equator",
+    true
+   ],
+   [
+    58232.0,
+    "kilometre",
+    "mean",
+    true
+   ],
+   [
+    54364.0,
+    "kilometre",
+    "polar",
+    true
+   ]
+  ],
+  "diameter": [
+   [
+    120536.0,
+    "kilometre",
+    "equator",
+    true
+   ]
+  ],
+  "temperatuur": [
+   [
+    134.0,
+    "kelvin",
+    "mean",
+    true
+   ]
+  ],
+  "afstand tot aarde": [
+   [
+    1195000000.0,
+    "kilometre",
+    "perigee",
+    false
+   ],
+   [
+    1660000000.0,
+    "kilometre",
+    "apogee",
+    false
+   ]
+  ],
+  "massa": [
+   [
+    568360.0,
+    "yottagram",
+    null,
+    true
+   ]
+  ],
+  "zwaartekracht": [
+   [
+    8.96,
+    "metre per square second",
+    null,
+    true
+   ]
+  ],
+  "omlooptijd": [
+   [
+    10757.7365,
+    "day",
+    null,
+    true
+   ]
+  ],
+  "rotatietijd": [
+   [
+    10.7,
+    "hour",
+    null,
+    true
+   ]
+  ]
+ },
+ "aarde": {
+  "straal": [
+   [
+    6378.137,
+    "kilometre",
+    "equator",
+    false
+   ],
+   [
+    6339.9,
+    "kilometre",
+    "Al-Biruni",
+    false
+   ],
+   [
+    6371.0,
+    "kilometre",
+    "mean",
+    true
+   ],
+   [
+    6356.8,
+    "kilometre",
+    "geographical pole",
+    false
+   ],
+   [
+    6378.137,
+    "kilometre",
+    "Earth radius",
+    false
+   ],
+   [
+    6371.0,
+    "kilometre",
+    "Earth radius",
+    true
+   ]
+  ],
+  "temperatuur": [
+   [
+    15.0,
+    "degree Celsius",
+    "atmosphere of Earth",
+    true
+   ]
+  ],
+  "rotatietijd": [
+   [
+    86164.098903691,
+    "second",
+    "stellar day",
+    true
+   ],
+   [
+    24.0,
+    "hour",
+    "solar time",
+    false
+   ]
+  ],
+  "massa": [
+   [
+    5972.37,
+    "yottagram",
+    "mass of the Earth",
+    true
+   ]
+  ],
+  "diameter": [
+   [
+    12742.0,
+    "kilometre",
+    "Earth diameter",
+    true
+   ]
+  ],
+  "zwaartekracht": [
+   [
+    9.798,
+    "metre per square second",
+    null,
+    true
+   ]
+  ],
+  "omlooptijd": [
+   [
+    365.256363004,
+    "day",
+    null,
+    true
+   ]
+  ],
+  "afstand tot aarde": [
+   [
+    0.0,
+    "kilometre",
+    null,
+    false
+   ]
+  ]
+ },
+ "zon": {
+  "straal": [
+   [
+    1.0,
+    "solar radius",
+    "definition",
+    true
+   ],
+   [
+    695700.0,
+    "kilometre",
+    null,
+    true
+   ]
+  ],
+  "temperatuur": [
+   [
+    2000000.0,
+    "kelvin",
+    "solar corona",
+    true
+   ],
+   [
+    5772.0,
+    "kelvin",
+    "photosphere",
+    true
+   ],
+   [
+    15710000.0,
+    "kelvin",
+    "center",
+    true
+   ],
+   [
+    5772.0,
+    "kelvin",
+    "effective temperature",
+    true
+   ]
+  ],
+  "afstand tot aarde": [
+   [
+    1.0,
+    "astronomical unit",
+    "definition",
+    true
+   ]
+  ],
+  "massa": [
+   [
+    1.0,
+    "solar mass",
+    null,
+    true
+   ],
+   [
+    1988475.0,
+    "ronnagram",
+    null,
+    true
+   ]
+  ],
+  "zwaartekracht": [
+   [
+    274.0,
+    "metre per square second",
+    null,
+    true
+   ]
+  ]
+ },
+ "mars": {
+  "afstand tot aarde": [
+   [
+    401400000.0,
+    "kilometre",
+    "apogee",
+    true
+   ],
+   [
+    54600000.0,
+    "kilometre",
+    "perigee",
+    true
+   ]
+  ],
+  "temperatuur": [
+   [
+    37.0,
+    "degree Celsius",
+    "maximum temperature",
+    true
+   ],
+   [
+    -63.0,
+    "degree Celsius",
+    "average temperature",
+    true
+   ],
+   [
+    -139.0,
+    "degree Celsius",
+    "minimum temperature",
+    true
+   ]
+  ],
+  "straal": [
+   [
+    3396.19,
+    "kilometre",
+    "equatorial radius",
+    true
+   ],
+   [
+    3389.5,
+    "kilometre",
+    "mean radius",
+    true
+   ],
+   [
+    3379.2,
+    "kilometre",
+    "polar",
+    true
+   ]
+  ],
+  "rotatietijd": [
+   [
+    24.6229633,
+    "hour",
+    null,
+    true
+   ]
+  ],
+  "zwaartekracht": [
+   [
+    3.71,
+    "metre per square second",
+    null,
+    true
+   ]
+  ],
+  "omlooptijd": [
+   [
+    686.98,
+    "day",
+    null,
+    true
+   ]
+  ],
+  "massa": [
+   [
+    641.691,
+    "yottagram",
+    null,
+    true
+   ]
+  ]
+ },
+ "ceres": {
+  "omlooptijd": [
+   [
+    1679.910572771899,
+    "day",
+    "November 21, 2025",
+    true
+   ]
+  ],
+  "diameter": [
+   [
+    939.4,
+    "kilometre",
+    null,
+    true
+   ]
+  ],
+  "rotatietijd": [
+   [
+    9.07417,
+    "hour",
+    null,
+    true
+   ]
+  ],
+  "massa": [
+   [
+    9.393e+20,
+    "kilogram",
+    null,
+    true
+   ]
+  ]
+ },
+ "halley": {
+  "omlooptijd": [
+   [
+    27728.04608790421,
+    "day",
+    "January 20, 1968",
+    true
+   ]
+  ],
+  "massa": [
+   [
+    220.0,
+    "teragram",
+    null,
+    true
+   ]
+  ],
+  "diameter": [
+   [
+    11.0,
+    "kilometre",
+    null,
+    true
+   ]
+  ]
+ },
+ "betelgeuze": {
+  "zwaartekracht": [
+   [
+    1.0,
+    "centimetre per square second",
+    null,
+    true
+   ],
+   [
+    2.7,
+    "centimetre per square second",
+    null,
+    true
+   ],
+   [
+    2.5,
+    "centimetre per square second",
+    null,
+    true
+   ],
+   [
+    2.0,
+    "centimetre per square second",
+    null,
+    true
+   ]
+  ],
+  "straal": [
+   [
+    768.0,
+    "solar radius",
+    null,
+    true
+   ]
+  ],
+  "massa": [
+   [
+    14.0,
+    "solar mass",
+    null,
+    true
+   ],
+   [
+    17.8,
+    "solar mass",
+    null,
+    true
+   ]
+  ],
+  "afstand tot aarde": [
+   [
+    548.0,
+    "light-year",
+    null,
+    true
+   ]
+  ]
+ },
+ "poolster": {
+  "straal": [
+   [
+    30.0,
+    "solar radius",
+    null,
+    true
+   ]
+  ],
+  "afstand tot aarde": [
+   [
+    432.0,
+    "light-year",
+    null,
+    false
+   ]
+  ],
+  "zwaartekracht": [
+   [
+    90.0,
+    "centimetre per square second",
+    null,
+    true
+   ],
+   [
+    44.0,
+    "centimetre per square second",
+    null,
+    true
+   ]
+  ],
+  "massa": [
+   [
+    6.0,
+    "solar mass",
+    null,
+    true
+   ]
+  ]
+ },
+ "iss": {
+  "massa": [
+   [
+    419725.0,
+    "kilogram",
+    null,
+    true
+   ]
+  ],
+  "omlooptijd": [
+   [
+    92.88,
+    "minute",
+    null,
+    true
+   ]
+  ]
+ },
+ "titan": {
+  "massa": [
+   [
+    134.518,
+    "yottagram",
+    null,
+    true
+   ]
+  ],
+  "omlooptijd": [
+   [
+    15.945421,
+    "day",
+    null,
+    false
+   ]
+  ],
+  "straal": [
+   [
+    2574.0,
+    "kilometre",
+    null,
+    false
+   ]
+  ],
+  "zwaartekracht": [
+   [
+    1.354,
+    "metre per square second",
+    null,
+    true
+   ]
+  ],
+  "temperatuur": [
+   [
+    93.7,
+    "kelvin",
+    null,
+    true
+   ]
+  ]
+ },
+ "sirius": {
+  "zwaartekracht": [
+   [
+    16000.0,
+    "centimetre per square second",
+    null,
+    true
+   ],
+   [
+    3160.0,
+    "centimetre per square second",
+    null,
+    true
+   ],
+   [
+    27500.0,
+    "centimetre per square second",
+    null,
+    true
+   ],
+   [
+    21000.0,
+    "centimetre per square second",
+    null,
+    true
+   ],
+   [
+    25000.0,
+    "centimetre per square second",
+    null,
+    true
+   ]
+  ],
+  "afstand tot aarde": [
+   [
+    8.6,
+    "light-year",
+    null,
+    true
+   ]
+  ]
+ }
+}

@@ -1,0 +1,627 @@
+{
+ "plek": {
+  "naam": "Enschede (Oude Markt)",
+  "lat": 52.2196,
+  "lon": 6.8952,
+  "hoogte_m": 40
+ },
+ "tle": {
+  "requested_timestamp": 1793632223,
+  "tle_timestamp": 1793559386,
+  "id": "25544",
+  "name": "iss",
+  "header": "ISS (ZARYA)",
+  "line1": "1 25544U 98067A   26305.78918650  .00005925  00000+0  11503-3 0  9993",
+  "line2": "2 25544  51.6332 339.1679 0007094 336.8847  23.1822 15.49143202593083"
+ },
+ "uit": {
+  "zon": [
+   {
+    "utc": "2026-11-02T17:00:00.000Z",
+    "horizons": {
+     "az": 257.667619617,
+     "hoogte": -9.327733122
+    },
+    "astronomy_engine": {
+     "az": 257.66792244996185,
+     "hoogte": -9.327864106027334
+    },
+    "verschil_boogminuten": 0.02
+   },
+   {
+    "utc": "2026-11-02T19:00:00.000Z",
+    "horizons": {
+     "az": 281.521555273,
+     "hoogte": -27.594576288
+    },
+    "astronomy_engine": {
+     "az": 281.52187002323194,
+     "hoogte": -27.594689998128743
+    },
+    "verschil_boogminuten": 0.018
+   },
+   {
+    "utc": "2026-11-02T21:00:00.000Z",
+    "horizons": {
+     "az": 311.326888307,
+     "hoogte": -44.005329342
+    },
+    "astronomy_engine": {
+     "az": 311.3272721659776,
+     "hoogte": -44.0053847452603
+    },
+    "verschil_boogminuten": 0.017
+   }
+  ],
+  "maan": [
+   {
+    "utc": "2026-11-02T17:00:00.000Z",
+    "horizons": {
+     "az": 339.411268251,
+     "hoogte": -21.600765131
+    },
+    "astronomy_engine": {
+     "az": 339.41045415522973,
+     "hoogte": -21.601175122206442
+    },
+    "verschil_boogminuten": 0.052
+   },
+   {
+    "utc": "2026-11-02T19:00:00.000Z",
+    "horizons": {
+     "az": 9.566761179,
+     "hoogte": -23.76618563
+    },
+    "astronomy_engine": {
+     "az": 9.56610896723581,
+     "hoogte": -23.766820124457823
+    },
+    "verschil_boogminuten": 0.052
+   },
+   {
+    "utc": "2026-11-02T21:00:00.000Z",
+    "horizons": {
+     "az": 38.551363165,
+     "hoogte": -17.009770416
+    },
+    "astronomy_engine": {
+     "az": 38.550961161861736,
+     "hoogte": -17.01055399410417
+    },
+    "verschil_boogminuten": 0.052
+   }
+  ],
+  "mercurius": [
+   {
+    "utc": "2026-11-02T17:00:00.000Z",
+    "horizons": {
+     "az": 253.186431754,
+     "hoogte": -8.772958959
+    },
+    "astronomy_engine": {
+     "az": 253.18497089640204,
+     "hoogte": -8.772859660984409
+    },
+    "verschil_boogminuten": 0.087
+   },
+   {
+    "utc": "2026-11-02T19:00:00.000Z",
+    "horizons": {
+     "az": 276.760462495,
+     "hoogte": -27.012566671
+    },
+    "astronomy_engine": {
+     "az": 276.7588284669735,
+     "hoogte": -27.01237277558795
+    },
+    "verschil_boogminuten": 0.088
+   },
+   {
+    "utc": "2026-11-02T21:00:00.000Z",
+    "horizons": {
+     "az": 305.649883901,
+     "hoogte": -44.110378247
+    },
+    "astronomy_engine": {
+     "az": 305.6478116966829,
+     "hoogte": -44.110349156385666
+    },
+    "verschil_boogminuten": 0.089
+   }
+  ],
+  "venus": [
+   {
+    "utc": "2026-11-02T17:00:00.000Z",
+    "horizons": {
+     "az": 270.666818656,
+     "hoogte": -18.319571205
+    },
+    "astronomy_engine": {
+     "az": 270.6709384757173,
+     "hoogte": -18.322351644322424
+    },
+    "verschil_boogminuten": 0.288
+   },
+   {
+    "utc": "2026-11-02T19:00:00.000Z",
+    "horizons": {
+     "az": 296.958434095,
+     "hoogte": -36.087051121
+    },
+    "astronomy_engine": {
+     "az": 296.9635218108791,
+     "hoogte": -36.089460770527225
+    },
+    "verschil_boogminuten": 0.286
+   },
+   {
+    "utc": "2026-11-02T21:00:00.000Z",
+    "horizons": {
+     "az": 333.011298358,
+     "hoogte": -49.134895203
+    },
+    "astronomy_engine": {
+     "az": 333.0183695446933,
+     "hoogte": -49.13593663365282
+    },
+    "verschil_boogminuten": 0.285
+   }
+  ],
+  "mars": [
+   {
+    "utc": "2026-11-02T17:00:00.000Z",
+    "horizons": {
+     "az": 341.136226666,
+     "hoogte": -19.386478173
+    },
+    "astronomy_engine": {
+     "az": 341.1364434330322,
+     "hoogte": -19.386875504220313
+    },
+    "verschil_boogminuten": 0.027
+   },
+   {
+    "utc": "2026-11-02T19:00:00.000Z",
+    "horizons": {
+     "az": 11.767320886,
+     "hoogte": -20.540404237
+    },
+    "astronomy_engine": {
+     "az": 11.767663890910345,
+     "hoogte": -20.54070059651545
+    },
+    "verschil_boogminuten": 0.026
+   },
+   {
+    "utc": "2026-11-02T21:00:00.000Z",
+    "horizons": {
+     "az": 40.61173908,
+     "hoogte": -12.424917759
+    },
+    "astronomy_engine": {
+     "az": 40.612149607180775,
+     "hoogte": -12.425092547021464
+    },
+    "verschil_boogminuten": 0.026
+   }
+  ],
+  "jupiter": [
+   {
+    "utc": "2026-11-02T17:00:00.000Z",
+    "horizons": {
+     "az": 335.880528567,
+     "hoogte": -20.806227196
+    },
+    "astronomy_engine": {
+     "az": 335.88121147542586,
+     "hoogte": -20.806722379333777
+    },
+    "verschil_boogminuten": 0.048
+   },
+   {
+    "utc": "2026-11-02T19:00:00.000Z",
+    "horizons": {
+     "az": 7.291001136,
+     "hoogte": -23.513815851
+    },
+    "astronomy_engine": {
+     "az": 7.291833508302052,
+     "hoogte": -23.51406230559958
+    },
+    "verschil_boogminuten": 0.048
+   },
+   {
+    "utc": "2026-11-02T21:00:00.000Z",
+    "horizons": {
+     "az": 37.477103104,
+     "hoogte": -16.490302432
+    },
+    "astronomy_engine": {
+     "az": 37.47794778473881,
+     "hoogte": -16.49029069679878
+    },
+    "verschil_boogminuten": 0.049
+   }
+  ],
+  "saturnus": [
+   {
+    "utc": "2026-11-02T17:00:00.000Z",
+    "horizons": {
+     "az": 109.012602627,
+     "hoogte": 15.611246659
+    },
+    "astronomy_engine": {
+     "az": 109.01544216890274,
+     "hoogte": 15.612804312004982
+    },
+    "verschil_boogminuten": 0.189
+   },
+   {
+    "utc": "2026-11-02T19:00:00.000Z",
+    "horizons": {
+     "az": 137.348270114,
+     "hoogte": 30.974938232
+    },
+    "astronomy_engine": {
+     "az": 137.3517682297546,
+     "hoogte": 30.975961498677925
+    },
+    "verschil_boogminuten": 0.19
+   },
+   {
+    "utc": "2026-11-02T21:00:00.000Z",
+    "horizons": {
+     "az": 173.023756025,
+     "hoogte": 38.747255879
+    },
+    "astronomy_engine": {
+     "az": 173.0278306894494,
+     "hoogte": 38.74717817241651
+    },
+    "verschil_boogminuten": 0.191
+   }
+  ],
+  "uranus": [
+   {
+    "utc": "2026-11-02T17:00:00.000Z",
+    "horizons": {
+     "az": 54.943919955,
+     "hoogte": 0.365735629
+    },
+    "astronomy_engine": {
+     "az": 54.94357810039294,
+     "hoogte": 0.3673622765311393
+    },
+    "verschil_boogminuten": 0.1
+   },
+   {
+    "utc": "2026-11-02T19:00:00.000Z",
+    "horizons": {
+     "az": 77.788080752,
+     "hoogte": 17.152240694
+    },
+    "astronomy_engine": {
+     "az": 77.78752733797367,
+     "hoogte": 17.15382963511186
+    },
+    "verschil_boogminuten": 0.1
+   },
+   {
+    "utc": "2026-11-02T21:00:00.000Z",
+    "horizons": {
+     "az": 101.734254209,
+     "hoogte": 35.449724875
+    },
+    "astronomy_engine": {
+     "az": 101.73363001362473,
+     "hoogte": 35.45132867905613
+    },
+    "verschil_boogminuten": 0.101
+   }
+  ],
+  "neptunus": [
+   {
+    "utc": "2026-11-02T17:00:00.000Z",
+    "horizons": {
+     "az": 116.067182751,
+     "hoogte": 18.231427731
+    },
+    "astronomy_engine": {
+     "az": 116.06334580995204,
+     "hoogte": 18.233545920518125
+    },
+    "verschil_boogminuten": 0.253
+   },
+   {
+    "utc": "2026-11-02T19:00:00.000Z",
+    "horizons": {
+     "az": 145.732747696,
+     "hoogte": 32.128122695
+    },
+    "astronomy_engine": {
+     "az": 145.72915170007903,
+     "hoogte": 32.13102499746569
+    },
+    "verschil_boogminuten": 0.252
+   },
+   {
+    "utc": "2026-11-02T21:00:00.000Z",
+    "horizons": {
+     "az": 182.016130018,
+     "hoogte": 37.27919633
+    },
+    "astronomy_engine": {
+     "az": 182.01390758393782,
+     "hoogte": 37.28301053600999
+    },
+    "verschil_boogminuten": 0.252
+   }
+  ],
+  "pluto": [
+   {
+    "utc": "2026-11-02T17:00:00.000Z",
+    "horizons": {
+     "az": 177.511729497,
+     "hoogte": 14.138470948
+    },
+    "astronomy_engine": {
+     "az": 177.51230046467248,
+     "hoogte": 14.138562431727223
+    },
+    "verschil_boogminuten": 0.034
+   },
+   {
+    "utc": "2026-11-02T19:00:00.000Z",
+    "horizons": {
+     "az": 205.436991468,
+     "hoogte": 10.466969816
+    },
+    "astronomy_engine": {
+     "az": 205.43755222118102,
+     "hoogte": 10.466893467769737
+    },
+    "verschil_boogminuten": 0.033
+   },
+   {
+    "utc": "2026-11-02T21:00:00.000Z",
+    "horizons": {
+     "az": 230.638189335,
+     "hoogte": -0.866561492
+    },
+    "astronomy_engine": {
+     "az": 230.6386918914134,
+     "hoogte": -0.8667570628684729
+    },
+    "verschil_boogminuten": 0.032
+   }
+  ],
+  "ceres": [
+   {
+    "utc": "2026-11-02T17:00:00.000Z",
+    "horizons": {
+     "az": 8.37157964,
+     "hoogte": -13.367596551
+    },
+    "astronomy_engine": {
+     "az": 8.375476832436675,
+     "hoogte": -13.366438396660229
+    },
+    "verschil_boogminuten": 0.238
+   },
+   {
+    "utc": "2026-11-02T19:00:00.000Z",
+    "horizons": {
+     "az": 35.340734678,
+     "hoogte": -6.502950498
+    },
+    "astronomy_engine": {
+     "az": 35.34404912707498,
+     "hoogte": -6.500700326013508
+    },
+    "verschil_boogminuten": 0.239
+   },
+   {
+    "utc": "2026-11-02T21:00:00.000Z",
+    "horizons": {
+     "az": 59.256494851,
+     "hoogte": 6.993323645
+    },
+    "astronomy_engine": {
+     "az": 59.25927103563453,
+     "hoogte": 6.996254630568226
+    },
+    "verschil_boogminuten": 0.241
+   }
+  ],
+  "io": [
+   {
+    "utc": "2026-11-02T17:00:00.000Z",
+    "horizons": {
+     "az": 335.850751859,
+     "hoogte": -20.809477465
+    },
+    "astronomy_engine": {
+     "az": 335.8514358815082,
+     "hoogte": -20.809971603667044
+    },
+    "verschil_boogminuten": 0.048
+   },
+   {
+    "utc": "2026-11-02T19:00:00.000Z",
+    "horizons": {
+     "az": 7.267446912,
+     "hoogte": -23.524422646
+    },
+    "astronomy_engine": {
+     "az": 7.268280335647887,
+     "hoogte": -23.52466840220564
+    },
+    "verschil_boogminuten": 0.048
+   },
+   {
+    "utc": "2026-11-02T21:00:00.000Z",
+    "horizons": {
+     "az": 37.463611736,
+     "hoogte": -16.502825324
+    },
+    "astronomy_engine": {
+     "az": 37.46445762866034,
+     "hoogte": -16.502813133454744
+    },
+    "verschil_boogminuten": 0.049
+   }
+  ],
+  "europa": [
+   {
+    "utc": "2026-11-02T17:00:00.000Z",
+    "horizons": {
+     "az": 335.865309893,
+     "hoogte": -20.80738867
+    },
+    "astronomy_engine": {
+     "az": 335.866000196654,
+     "hoogte": -20.807889032076844
+    },
+    "verschil_boogminuten": 0.049
+   },
+   {
+    "utc": "2026-11-02T19:00:00.000Z",
+    "horizons": {
+     "az": 7.283325902,
+     "hoogte": -23.516712147
+    },
+    "astronomy_engine": {
+     "az": 7.284167224684893,
+     "hoogte": -23.51696159860242
+    },
+    "verschil_boogminuten": 0.049
+   },
+   {
+    "utc": "2026-11-02T21:00:00.000Z",
+    "horizons": {
+     "az": 37.476164052,
+     "hoogte": -16.490462626
+    },
+    "astronomy_engine": {
+     "az": 37.47701776869883,
+     "hoogte": -16.490451576430466
+    },
+    "verschil_boogminuten": 0.049
+   }
+  ],
+  "titan": [
+   {
+    "utc": "2026-11-02T17:00:00.000Z",
+    "horizons": {
+     "az": 108.990826637,
+     "hoogte": 15.588138976
+    },
+    "astronomy_engine": {
+     "az": 109.01544216890274,
+     "hoogte": 15.612804312004982
+    },
+    "verschil_boogminuten": 2.053
+   },
+   {
+    "utc": "2026-11-02T19:00:00.000Z",
+    "horizons": {
+     "az": 137.317549319,
+     "hoogte": 30.955612748
+    },
+    "astronomy_engine": {
+     "az": 137.3517682297546,
+     "hoogte": 30.975961498677925
+    },
+    "verschil_boogminuten": 2.142
+   },
+   {
+    "utc": "2026-11-02T21:00:00.000Z",
+    "horizons": {
+     "az": 172.981608694,
+     "hoogte": 38.738185909
+    },
+    "astronomy_engine": {
+     "az": 173.0278306894494,
+     "hoogte": 38.74717817241651
+    },
+    "verschil_boogminuten": 2.229
+   }
+  ],
+  "halley": [
+   {
+    "utc": "2026-11-02T17:00:00.000Z",
+    "horizons": {
+     "az": 358.008906267,
+     "hoogte": -35.160650697
+    },
+    "astronomy_engine": {
+     "az": 358.2159405078819,
+     "hoogte": -35.12519043078894
+    },
+    "verschil_boogminuten": 10.378
+   },
+   {
+    "utc": "2026-11-02T19:00:00.000Z",
+    "horizons": {
+     "az": 33.39361391,
+     "hoogte": -30.14572706
+    },
+    "astronomy_engine": {
+     "az": 33.561760540831756,
+     "hoogte": -30.052115250935344
+    },
+    "verschil_boogminuten": 10.379
+   },
+   {
+    "utc": "2026-11-02T21:00:00.000Z",
+    "horizons": {
+     "az": 62.693061995,
+     "hoogte": -16.47383511
+    },
+    "astronomy_engine": {
+     "az": 62.81829373314122,
+     "hoogte": -16.349310401587147
+    },
+    "verschil_boogminuten": 10.381
+   }
+  ],
+  "iss": [
+   {
+    "utc": "2026-11-02T17:00:00.000Z",
+    "horizons": {
+     "az": 36.418556015,
+     "hoogte": -29.287040415
+    },
+    "astronomy_engine": {
+     "az": 36.417188733550105,
+     "hoogte": -29.287507321640017
+    },
+    "verschil_boogminuten": 0.077
+   },
+   {
+    "utc": "2026-11-02T19:00:00.000Z",
+    "horizons": {
+     "az": 346.058558635,
+     "hoogte": -68.417709512
+    },
+    "astronomy_engine": {
+     "az": 346.05564468023755,
+     "hoogte": -68.41862479391021
+    },
+    "verschil_boogminuten": 0.085
+   },
+   {
+    "utc": "2026-11-02T21:00:00.000Z",
+    "horizons": {
+     "az": 233.151084536,
+     "hoogte": -57.120888786
+    },
+    "astronomy_engine": {
+     "az": 233.15048039439242,
+     "hoogte": -57.1196752466338
+    },
+    "verschil_boogminuten": 0.075
+   }
+  ]
+ }
+}
