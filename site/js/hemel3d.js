@@ -327,6 +327,7 @@ export class Hemel3D {
     }
 
     // ---------- namen, zonder overlap ----------
+    if (lagen.namen === false) namen.length = 0; // de kop van de homepage: geen namen door de tekst heen
     namen.sort((a, b) => a[3] - b[3]);
     c.textBaseline = "alphabetic"; c.textAlign = "left";
     for (const [tekst, x, y, , letter, kleur, uitlijning, links, bx, by] of namen) {

@@ -958,3 +958,26 @@ button.sim-chip, a.sim-chip { cursor: pointer; min-height: 40px; }
 .hk .sim-ui { transition: opacity 700ms ease; }
 .hk-3d .hk-doek { cursor: grab; }
 @media (prefers-reduced-motion: reduce) { .hk-opening .hk-intro { animation: none; } .hk .sim-ui { transition: none; } }
+
+/* De kop van de homepage: de echte hemel, langzaam draaiend */
+.held-hemel { position: relative; overflow: hidden; isolation: isolate; padding: 0; min-height: clamp(34rem, 82svh, 60rem); display: grid; align-content: space-between;
+  background: linear-gradient(#04060D 0%, #0D1020 55%, #1E2032 78%, #08090A 80%); color: var(--papier); }
+.held-doek { position: absolute; inset: 0; width: 100%; height: 100%; display: block; z-index: -2; opacity: 0; transition: opacity 1.4s ease; cursor: pointer; }
+.held-klaar .held-doek { opacity: 1; }
+.held-hemel::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(180deg, rgb(4 6 13 / .55) 0%, rgb(4 6 13 / .15) 45%, transparent 70%); }
+@media (min-width: 900px) { .held-hemel::after { background: linear-gradient(90deg, rgb(4 6 13 / .6) 0%, rgb(4 6 13 / .25) 45%, transparent 70%); } }
+.held-binnen { padding-top: clamp(2.5rem, 9vh, 7rem); pointer-events: none; }
+.held-binnen > * { pointer-events: auto; }
+.held-hemel .etiket { color: var(--mint); }
+.held-hemel h1 { color: var(--papier); text-shadow: 0 4px 30px rgb(0 0 0 / .45); }
+.held-hemel h1 .accent { color: var(--inkt); text-shadow: none; }
+.held-hemel .held-sub { color: rgb(255 255 255 / .82); text-shadow: 0 2px 14px rgb(0 0 0 / .5); }
+.held-hemel .knop-pil:not(.knop-accent) { color: var(--papier); border-color: rgb(255 255 255 / .45); background: rgb(10 12 20 / .35); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.held-hemel .knop-pil:not(.knop-accent):hover { background: rgb(255 255 255 / .14); }
+.held-onder { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .7rem; padding-block: 1rem 1.2rem; color: rgb(255 255 255 / .75); text-decoration: none; font: 400 .85rem var(--letter); }
+.held-onder .label { margin: 0; }
+.held-pijl { color: var(--papier); font-weight: 500; }
+.held-onder:hover .held-pijl { color: var(--mint); }
+@media (prefers-reduced-motion: reduce) { .held-doek { transition: none; } }
+.held-hemel .etiket::before { background: var(--mint); }

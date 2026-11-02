@@ -2,7 +2,7 @@
 import * as G from "./geluid.js";
 import * as MIJN from "./mijn.js";
 import * as PLEK from "./plek.js";
-import { positie, opOnder, klok, richting, issOvergangen, tleLeeftijd, maanfase, vanavond, dag, sondeNu } from "./hemel.js";
+import { positie, opOnder, klok, richting, issOvergangen, tleLeeftijd, maanfase, vanavond, dag, sondeNu, avond } from "./hemel.js";
 import * as KAART from "./kaart.js";
 
 const app = document.getElementById("app");
@@ -215,16 +215,20 @@ function kaart(D, h) {
 function home(D) {
   document.title = `${TITEL} · Wat staat er vanavond boven je huis?`;
   app.innerHTML = `
-  <section class="held breed">
-    ${etiket("De ruimte, voor ouders en kinderen")}
-    <h1>Wat staat er <span class="accent">vanavond</span> boven je huis?</h1>
-    <p class="held-sub">De zon, de maan, de planeten, hun manen, kometen en sterren. Met echte foto's, en uitgerekend in je eigen browser: wat je vanavond kunt zien, en waar je moet kijken.</p>
-    <div class="held-knoppen">
-      <a class="knop-pil knop-accent" href="/vanavond" data-link>Wat zie je vanavond?</a>
-      <a class="knop-pil" href="/hemelkaart" data-link>De hemel boven je</a>
-      <a class="knop-pil" href="/hemel/maan" data-link>Begin bij de maan</a>
-      <a class="knop-pil" href="/kinderen" data-link>Voor kinderen</a>
+  <section class="held held-hemel">
+    <canvas class="held-doek" aria-hidden="true"></canvas>
+    <div class="held-binnen breed">
+      ${etiket("De ruimte, voor ouders en kinderen")}
+      <h1>Wat staat er <span class="accent">vanavond</span> boven je huis?</h1>
+      <p class="held-sub">De zon, de maan, de planeten, hun manen, kometen en sterren. Met echte foto's, en uitgerekend in je eigen browser: wat je vanavond kunt zien, en waar je moet kijken.</p>
+      <div class="held-knoppen">
+        <a class="knop-pil knop-accent" href="/vanavond" data-link>Wat zie je vanavond?</a>
+        <a class="knop-pil" href="/hemelkaart" data-link>Kijk zelf rond</a>
+        <a class="knop-pil" href="/hemel/maan" data-link>Begin bij de maan</a>
+        <a class="knop-pil" href="/kinderen" data-link>Voor kinderen</a>
+      </div>
     </div>
+    <a class="held-onder breed" href="/hemelkaart" data-link><span class="label">simulatie</span><span data-held-waar>De hemel boven Nederland</span><span class="held-pijl">Kijk zelf rond →</span></a>
   </section>
   <section class="breed blok vanavond-kort" data-vanavond-kort><p class="laden"><span></span>Even uitrekenen wat er vanavond te zien is…</p></section>
   ${lijst(D, "Alle hemellichamen", true)}
@@ -246,6 +250,64 @@ function home(D) {
   };
   requestAnimationFrame(teken);
   opruimers.push(PLEK.opVerandering(teken));
+  heldHemel(D);
+}
+
+// De kop van de homepage: de echte hemel, langzaam draaiend. Niet zelf te bedienen (dat botst met scrollen);
+// wie wil rondkijken, gaat naar /hemelkaart. Overdag de hemel van vanavond, als het donker is.
+function heldHemel(D) {
+  const sectie = app.querySelector(".held-hemel"), doek = sectie.querySelector(".held-doek");
+  const stil = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let h3d = null, lus = 0, zichtbaar = true, vorige = 0, weg = false;
+  const t0 = performance.now();
+  // welk moment: nu als het donker is, anders vanavond als het donker wordt
+  const moment = () => {
+    const nu = new Date(), p = PLEK.huidig();
+    if (positie(D.perSlug.zon, nu, p, D).hoogte < -10) return { t: new Date(Math.floor(+nu / 60e3) * 60e3), nu: true };
+    let av = avond(nu, p);
+    if (av.donker < nu) av = avond(new Date(+nu + 12 * 3600e3), p);
+    return { t: av.donker, nu: false };
+  };
+  let m = moment();
+  const zetTekst = () => {
+    const p = PLEK.huidig(), waar = p.standaard ? "Nederland" : p.naam;
+    sectie.querySelector("[data-held-waar]").textContent = m.nu ? `De hemel boven ${waar}, nu` : `De hemel boven ${waar}, vanavond om ${klok(m.t)}`;
+  };
+  zetTekst();
+  const stap = (nu) => {
+    lus = 0;
+    if (weg || !doek.isConnected) return;
+    if (zichtbaar && !document.hidden && nu - vorige > 32) {
+      vorige = nu;
+      const w = doek.clientWidth, h = doek.clientHeight;
+      const fov = w < 700 ? 110 : 100;
+      // de horizon op ongeveer vier vijfde van de hoogte
+      const S = (Math.min(w, h) / 2) / (2 * Math.tan((fov * Math.PI) / 720));
+      const pitch = (2 * Math.atan((0.36 * h) / (2 * S)) * 180) / Math.PI;
+      Object.assign(h3d.cam, { yaw: (165 + (stil ? 0 : ((nu - t0) / 1000) * 1.2)) % 360, pitch, fov });
+      h3d.teken({ plek: PLEK.huidig(), t: m.t, lagen: { lijnen: true, beeldNamen: false, sterNamen: false, namen: false }, tijd: nu, beweging: !stil });
+      if (!sectie.classList.contains("held-klaar")) sectie.classList.add("held-klaar");
+    }
+    if (!stil) lus = requestAnimationFrame(stap);
+  };
+  const start = () => { if (!lus && !weg && h3d) lus = requestAnimationFrame(stap); };
+  const io = new IntersectionObserver(([e]) => { zichtbaar = e.isIntersecting; if (zichtbaar) start(); });
+  io.observe(sectie);
+  const ro = new ResizeObserver(() => { vorige = 0; start(); });
+  ro.observe(doek);
+  doek.addEventListener("click", () => naar("/hemelkaart"));
+  const klokje = setInterval(() => { m = moment(); zetTekst(); }, 60e3);
+  const wegPlek = PLEK.opVerandering(() => { m = moment(); zetTekst(); vorige = 0; start(); });
+  // pas laden als de pagina er staat
+  setTimeout(() => import("./hemel3d.js").then(async ({ Hemel3D }) => {
+    if (weg) return;
+    const nieuw = new Hemel3D(doek, D);
+    await nieuw.laad();
+    if (weg) return;
+    h3d = nieuw; // pas tekenen als de sterren er zijn
+    start();
+  }), 50);
+  opruimers.push(() => { weg = true; cancelAnimationFrame(lus); io.disconnect(); ro.disconnect(); clearInterval(klokje); wegPlek(); });
 }
 
 // De maan zoals hij er nu uitziet: verlicht deel naar de fasehoek (0 = nieuw, 180 = vol). Vanaf het noordelijk halfrond: wassend rechts verlicht.
